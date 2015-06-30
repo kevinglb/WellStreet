@@ -16,6 +16,7 @@
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <allow-navigation href="http://*/*" />
     <name>WellStreet</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

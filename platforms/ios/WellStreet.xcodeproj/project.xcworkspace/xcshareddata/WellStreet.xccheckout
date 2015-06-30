@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C08D5EDE-FBB9-4E45-8C2F-00BEA603842E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WellStreet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7ED5172B45934ECEAC0414DF80B83F2FEE84D041</key>
+		<string>https://github.com/kevinglb/WellStreet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/WellStreet.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7ED5172B45934ECEAC0414DF80B83F2FEE84D041</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kevinglb/WellStreet.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7ED5172B45934ECEAC0414DF80B83F2FEE84D041</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7ED5172B45934ECEAC0414DF80B83F2FEE84D041</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WellStreet</string>
+		</dict>
+	</array>
+</dict>
+</plist>
