@@ -1,12 +1,14 @@
 function initialMap(){
 //var map = L.map('map').setView([53.3478, -6.2579], 14);
 	var map = L.map('map', {zoomControl: false, attributionControl: false});
-	var myIcon = L.icon({
-    			iconUrl: 'icon/location-dark.svg',
-    			iconRetinaUrl: 'icon/location-dark.svg',
-    			iconSize: [30, 30],
+	// var myIcon = L.icon({
+ //    			iconUrl: 'icon/location-dark.svg',
+ //    			iconRetinaUrl: 'icon/location-dark.svg',
+ //    			iconSize: [30, 30],
 
-			});
+	// 		});
+
+	var myIcon = L.divIcon({className: 'my-divIcon', html:"1 hour 30 min",iconSize:[100,20] });
 	var center = L.latLng(53.3478, -6.2579);
 	var marker_1 = L.latLng(53.3468, -6.257);
 	console.log("before initial tileLayer");
@@ -52,7 +54,7 @@ function initialMap(){
 	for(var i = 0; i< markers_array.length;i++){
 		var div='';
 		console.log(markers_array[i].latlng);
-		var marker =   L.marker(markers_array[i].latlng,{icon:myIcon}).bindPopup(markers_array[i].title).on('click',clickOnMarker);
+		var marker =   L.marker(markers_array[i].latlng,{icon:myIcon}).on('click',clickOnMarker);
 		marker.sliderIndex = i;
 		marker.addTo(map);
 		console.log('before add into slick');
@@ -76,7 +78,7 @@ function initialMap(){
 		}
 	}
 
-	
+
 }
 
 
