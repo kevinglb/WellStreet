@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8" />
@@ -9,7 +8,8 @@
 
         <!-- css & font libraries  -->
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+        <link rel="stylesheet" type="text/css" href="css/leaflet-master.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
          <!-- main css -->
         <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
@@ -18,24 +18,54 @@
         <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
         
         <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="plugins/leaflet.js"></script>
+        <script type="text/javascript" src="plugins/leaflet-master.js"></script>
+        <script type="text/javascript" src="plugins/slick.min.js"></script>
         
         <title>WellStreet</title>
     </head>
 
-    <body onload="initialMap()">
-       
-            <div id="map" style="height: 100vh; width:100vw;">
+    <body>
+
+        <!--  page for showing the map -->
+        <div id="map_page" data-role="page">
+           
+                <div id="map" style="height:100vh; width: 100vw;">
+                </div>
+                <div id="detail_slider" >
+                </div>
+           
+        </div>
+        <!-- page for showing the details of selected marker -->
+        <div id="detail_page" data-role="page">
+            <div class="ui-header" role="header">
+                <a href="#" data-rel="back" data-transition="slide">back</a>
+                <a></a>
             </div>
-      
-
-
+            <div role="main" class="ui-content">
+            </div>
+        </div>
     
     <script type="text/javascript" src="cordova.js"></script>
     <script src="plugins/com.phonegap.plugins.sqlite/www/SQLitePlugin.js"></script>
+
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
+    <script type="text/javascript">
+    $('#detail_slider').slick({
+                arrows: false,
+                infinite: false,
+                dots: false
+
+            });
+        $(document).ready(function(){
+             initialMap();
+        })
+           
         
+
+        
+    </script>
         
     </body>
 </html>

@@ -1,14 +1,19 @@
 L.WSMarker = L.Marker.extend({
-	options:{
-		address: 'custom address',
-		type: 'custom address'
+	options :{
+		address: '',
+		draggable: false,
+		type: '',
+		index: 0	
 	},
 
 	initialize : function(latlng,options){
-		L.Marker.prototype.initialize.call(this, latlng);
-		this._address = '' || options.address;
-		this._type = '' || options.type;
+		L.Marker.prototype.initialize.call(this, latlng,options);
 		
+		//options = L.setOptions(this, options);
+		// this._address = '' || options.address;
+		// this._type = '' || options.type;
+		
+		//this._icon = L.Icon()
 		//tag might be an array
 		//this._tag = tag;
 	},
@@ -28,11 +33,16 @@ L.WSMarker = L.Marker.extend({
 	getType: function(){
 		return this._type;
 	}
-
-
-
 });
 
-L.WSMarker = function (latlng,options) {
-  return new L.WSMarker(latlng, options);
-};
+	L.WSMarker = function(latlng,options) {
+    	return new L.WSMarker(latlng, options);
+	};
+
+
+// var WSIcon = L.Icon.extend({
+//     options: {
+//     	iconRetinaUrl: 'icon/location-dark.svg',
+//     	iconSize: [30, 30],
+//     }
+// });

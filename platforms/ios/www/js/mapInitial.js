@@ -1,6 +1,6 @@
 function initialMap(){
 //var map = L.map('map').setView([53.3478, -6.2579], 14);
-	var map = L.map('map');
+	var map = L.map('map', {zoomControl: false, attributionControl: false});
 	var myIcon = L.icon({
     			iconUrl: 'icon/location-dark.svg',
     			iconRetinaUrl: 'icon/location-dark.svg',
@@ -31,17 +31,52 @@ function initialMap(){
 	// }
 
 	// map.on('locationfound', onLocationFound);
-
-
-
-
+	var markers_array = [
+		{
+			latlng: [53.3478, -6.2579],
+			title: 'marker-1'
+		},
+		{
+			latlng: [53.3468, -6.2589],
+			title: 'marker-2'
+		},
+		{
+			latlng: [53.3448, -6.2599],
+			title: 'marker-3'
+		},
+		{
+			latlng: [53.3472, -6.2579],
+			title: 'marker-4'
+		}];
 	console.log('before marker');
-	var marker = L.marker(marker_1,{icon: myIcon}).bindPopup('Liffey RIver </br>'+ marker_1.distanceTo(center).toFixed(0) +' m' )
-				  .on('click', function(){map.panTo(marker.getLatLng());}).addTo(map);
+	for(var i = 0; i< markers_array.length;i++){
+		var div='';
+		console.log(markers_array[i].latlng);
+		var marker =   L.marker(markers_array[i].latlng,{icon:myIcon}).bindPopup(markers_array[i].title).on('click',clickOnMarker);
+		marker.sliderIndex = i;
+		marker.addTo(map);
+		console.log('before add into slick');
+		div += '<div class="detail_content"><a href="#detail_page" data-transition="slide"><label>'+markers_array[i].latlng+'</label><label>'+markers_array[i].title+'</label></a></div>';
+		$("#detail_slider").slick('slickAdd',div);
+	}
+
+	function clickOnMarker(e){
+		map.setZoom(16);
+		detectSlider();
+		map.panTo(e.target.getLatLng());
+		$("#detail_slider").slick('slickGoTo',e.target.sliderIndex);
+	}
 	
+	function detectSlider(){
+		if($("#detail_slider").is(":visible")){
+			return;
+		}
+		else{
+			$("#detail_slider").fadeIn();
+		}
+	}
 
-
-
+	
 }
 
 

@@ -103,7 +103,52 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+#map_page{
+    height: 100%;
+    overflow: hidden;;
 
+}
 #map {
     height: 100%;
+    width: 100vw;
+}
+
+#detail_slider{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #fff;
+    z-index: 10;
+}
+#detail_slider .detail_content{
+    width: 100%;
+    height: 15vh;
+    float: left;
+    position: relative;
+}
+#detail_slider::after{
+    clear: both;
+}
+
+/* ui-header*/
+.ui-page .ui-header{
+    padding-top: 20px;
+    height: 65px;
+    background-color: #A0B279;
+}
+
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+}
+ 
+.leaflet-marker-icon .number{
+    position: relative;
+    top: -37px;
+    font-size: 12px;
+    width: 25px;
+    text-align: center;
 }
