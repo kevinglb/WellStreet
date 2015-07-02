@@ -5,18 +5,20 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com *.ionic.io *.openstreetmap.org; style-src 'self' 'unsafe-inline'; media-src *; img-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
         <!-- css & font libraries  -->
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/leaflet-master.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 736px)" href="css/mobile.css" />
          <!-- main css -->
         <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
 
         <!-- javascript libraries -->
         <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
-        
+        /
         <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="plugins/leaflet-master.js"></script>
         <script type="text/javascript" src="plugins/slick.min.js"></script>
@@ -28,8 +30,32 @@
 
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
-           
-                <div id="map" style="height:100vh; width: 100vw;">
+                <div class="overlay"></div>
+                <div class="search_content">
+                    <div class="input_wrap">
+                        <form id="search_form">
+                            <input type="search" id="search_input"></input>
+                        </form>
+                    </div>
+                    <div class="timepicker_wrap">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button>Date</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button >Time</button>
+                            </div>
+                            <div class="row">
+                                <button class="time_btn">Apply Time</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="arrow_wrap">
+                        <a herf="#" class="ui-btn no-border">Select time</a>
+                    </div>
+                </div>
+                <div id="map">
                 </div>
                 <div id="detail_slider" >
                 </div>
@@ -52,7 +78,7 @@
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
-    $('#detail_slider').slick({
+        $('#detail_slider').slick({
                 arrows: false,
                 infinite: false,
                 dots: false
@@ -60,10 +86,30 @@
             });
         $(document).ready(function(){
              initialMap();
+             $(".timepicker_wrap").height($(".timepicker_wrap").height());
         })
-           
-        
+        //checks to see if the "touchend" event is supported in the browser and if not then we use the "click" event.    
+        var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+        $(".arrow_wrap a").on(clickOrTouch,function(){
+            
+            $(".arrow_wrap a").toggle();
+            $(".timepicker_wrap").animate({
+                height: 'toggle'
+            },100);
+            $(".overlay").toggle();
+        })
 
+        $(".time_btn").on(clickOrTouch,function(){
+
+            $(".arrow_wrap a").toggle();
+            $(".timepicker_wrap").animate({
+                height: 'toggle'
+            },100);
+            $(".overlay").toggle();
+        })
+        $("#search_form").submit(function(){
+            getCurrentLocation();
+        });
         
     </script>
         

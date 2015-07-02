@@ -42,7 +42,9 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-   
+    -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
 
 }
 
@@ -106,14 +108,45 @@ a{
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+.clear{
+    clear: both;
+}
+.row{
+    padding: 0 15px;
+}
 #map_page{
     height: 100%;
     overflow: hidden;;
-
 }
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(22, 22, 22, 0.7);
+    display: none;
+}
+.search_content{
+    position: absolute;
+    width: 95%;
+    margin: 25px 2.5%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.search_content .timepicker_wrap{
+    display: none;
+    padding: 20px 10px 0px 10px;
+}
+
 #map {
     height: 100%;
     width: 100vw;
+    z-index: 1;
 }
 
 #detail_slider{
@@ -122,9 +155,9 @@ a{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 15vh;
+    height: 15%;
     background-color: #fff;
-    z-index: 10;
+    z-index: 3;
 }
 /* bottom slider*/
 #detail_slider .detail_content{
@@ -174,4 +207,10 @@ div.my-divIcon:after {
     border-top: solid 12px #fff;
     border-left: solid 12px transparent;
     border-right: solid 12px transparent;
+}
+
+.no-border {
+    border:none;
+    background-color: transparent;
+    padding: 0;
 }
