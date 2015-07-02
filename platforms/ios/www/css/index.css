@@ -38,13 +38,12 @@ body {
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
+    width:100%;
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
-    width:100%;
-    padding: 0;
-    margin: 0;
+   
+
 }
 
 /* Portrait layout (default) */
@@ -68,6 +67,10 @@ h1 {
     text-align:center;
 }
 
+a{
+    color:#000;
+    text-decoration: none;
+}
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -123,10 +126,10 @@ h1 {
     background-color: #fff;
     z-index: 10;
 }
+/* bottom slider*/
 #detail_slider .detail_content{
     width: 100%;
-    height: 15vh;
-    float: left;
+    height: 100%;
     position: relative;
 }
 #detail_slider::after{

@@ -58,7 +58,7 @@ function initialMap(){
 		marker.sliderIndex = i;
 		marker.addTo(map);
 		console.log('before add into slick');
-		div += '<div class="detail_content"><a href="#detail_page" data-transition="slide"><label>'+markers_array[i].latlng+'</label><label>'+markers_array[i].title+'</label></a></div>';
+		div += '<div><a href="#detail_page" data-transition="slide"><div  class="detail_content"><label>'+markers_array[i].latlng+'</label><label>'+markers_array[i].title+'</label></div></a></div>';
 		$("#detail_slider").slick('slickAdd',div);
 	}
 
