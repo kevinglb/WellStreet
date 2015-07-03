@@ -114,6 +114,9 @@ a{
 .row{
     padding: 0 15px;
 }
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    background-color: transparent;
+}
 #map_page{
     height: 100%;
     overflow: hidden;;
@@ -173,7 +176,7 @@ a{
 .ui-page .ui-header{
     padding-top: 20px;
     height: 65px;
-    background-color: #A0B279;
+    background-color: rgba(143, 205, 190, 0.9);
 }
 
 .leaflet-div-icon {
@@ -213,4 +216,59 @@ div.my-divIcon:after {
     border:none;
     background-color: transparent;
     padding: 0;
+}
+.location_btn{
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: inherit;
+  color: #fff;
+  border-radius: 0;
+  float: left;
+  border: none;
+  
+  outline: none;
+  
+}
+.has-feedback .right-feedback .form-control {
+    padding-right:  0;
+    padding-right: 45px;
+    height: 3em;
+    line-height: 53em;
+    font-size: 1.2em;
+}
+
+.form-control[readonly]{
+    background: none;
+}
+
+.form-control-feedback {
+
+    width: 42.5px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    top: 0;
+}
+.form-control-feedback .icon{
+    vertical-align: middle;
+    text-align: center;
+}
+.icon{
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+}
+.icon-2x {
+    width: 2em;
+    height: 2em;
+}
+.icon-location{
+    background-image: url('../icon/location-dark.svg'); 
+
 }

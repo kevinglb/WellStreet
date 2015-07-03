@@ -1,4 +1,4 @@
-
+var map;
 
 function initialMap(){
 	//var map = L.map('map').setView([53.3478, -6.2579], 14);
@@ -67,11 +67,10 @@ function initialMap(){
     	// create a marker at the users "latlng" and add it to the map
    	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
 	}
-
 	function clickOnMarker(e){
 		//map.setZoom(16);
-		if(map.getZoom() <= 15){
-			map.setZoom(16);
+		if(map.getZoom() < 15){
+			map.zoomIn();
 		}
 		detectSlider();
 		map.panTo(e.target.getLatLng());
@@ -87,16 +86,6 @@ function initialMap(){
 		}
 	}
 
-	// $(".slick-slide").on(clickOrTouch, function(e){
-	// 	var element = e.target;
-	// 	console.log(element.toString());
-	// 	$.mobile.changePage("#detail_page", 
- //        {
- //            transition: "slide",
- //            reverse: false,
- //            changeHash: true
- //        });
-	// })
 
 }
 
