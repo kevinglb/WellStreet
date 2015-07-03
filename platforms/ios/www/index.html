@@ -19,7 +19,6 @@
 
         <!-- javascript libraries -->
         <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
-        /
         <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="plugins/leaflet-master.js"></script>
         <script type="text/javascript" src="plugins/slick.min.js"></script>
@@ -32,6 +31,30 @@
        <!--  <div id="category_page" data-role="page">
 
         </div> -->
+
+        <!-- page for user logining -->
+        <div id="login_page" data-role="page">
+
+            <div data-role="header" class="ui-header" data-position="fixed">
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="text-center">
+                    <h1 style="color:white">Well Street</h1>
+                    <!-- <img src="img/"/> -->
+                </div>
+            </div>
+
+            <div data-role="footer" class="ui-content" data-position="fixed">
+                <div class="row">
+                    <div class="below-content">
+                        <a id="register_btn" name="register_btn" class="btn btn-large btn-block">Create an Account</a>
+                        <a id="login_btn" name="login_btn" class="btn btn-large btn-block">Login In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
                 <div class="overlay" onClick=""></div>
@@ -100,12 +123,34 @@
             dots: false
         });
 
-        $(document).ready(function(){
-             initialMap();
-             $(".timepicker_wrap").height($(".timepicker_wrap").height());
-             //initial the page with noClickDelay() that the inner elements wont have delay in click event
-             $('#detail_page').noClickDelay();
-             $('#map_page').noClickDelay();
+        var hasChanged = false;
+        function changeBackgroundImage()
+        {
+            if (hasChanged)
+            {
+                console.log("change background image");
+                $("#login_page").css("background","url(img/b1.png)");
+                hasChanged = false;
+            }
+              
+            else
+            { 
+                console.log("change background image back");                   
+                $("#login_page").css("background","url(img/b2.png)");
+                hasChanged = true;
+            }
+        }
+
+        $(document).ready(function()
+        {
+            console.log("document ready");          
+            setInterval(changeBackgroundImage, 3000);  
+
+            initialMap();
+            $(".timepicker_wrap").height($(".timepicker_wrap").height());
+            //initial the page with noClickDelay() that the inner elements wont have delay in click event
+            $('#detail_page').noClickDelay();
+            $('#map_page').noClickDelay();
         })
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").on('click',function(){

@@ -48,6 +48,43 @@ body {
 
 }
 
+/* login page goes here */
+.ui-header.ui-bar-inherit.ui-header-fixed.slidedown
+{
+    background-color: transparent;
+}
+
+.ui-content.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup
+{
+    background-color: transparent;
+}
+
+#login_page
+{
+    background: url(../img/b1.png);
+    height: 100%;
+    width: 100%;
+}
+
+.below-content
+{
+    margin-bottom: 8vh;
+}
+
+#register_btn
+{
+    color: white;
+    background-color: red;
+    margin-bottom: 3vh;
+}
+#login_btn
+{
+    color:white;
+    background: green;
+}
+
+/* login page end */
+
 /* Portrait layout (default) */
 
 /* Landscape layout (with min-width) */
