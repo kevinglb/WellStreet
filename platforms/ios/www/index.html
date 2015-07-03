@@ -10,7 +10,7 @@
         <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" /> -->
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
         <link rel="stylesheet" type="text/css" href="css/leaflet-master.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 736px)" href="css/mobile.css" />
@@ -28,18 +28,16 @@
     </head>
 
     <body>
+        <!-- first load page showing a list of categories -->
+       <!--  <div id="category_page" data-role="page">
 
+        </div> -->
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
-                <div class="overlay"></div>
+                <div class="overlay" onClick=""></div>
                 <div class="search_content">
                     <div class="input_wrap">
                         <form id="search_form">
-                          <!--  <div class="form-group has-feedback">
-                                <input type="search" class="form-control" id="search_input" aria-describedby="inputGroupSuccess1Status">
-                                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                            </div> -->
                             <div class="form-group has-feedback right-feedback">
                                 <input type="search" id="search_input" class="form-control " placeholder="Search">
                                     <span  class="form-control-feedback" id="location_btn">
@@ -50,21 +48,23 @@
                         </form>
                     </div>
                     <div class="timepicker_wrap">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <button>Date</button>
+                        <div class="container">
+                           <div class="row">
+                                <div class="col-xs-6">
+                                    <button>Date</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button>Time</button>
+                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="col-xs-6">
-                                <button>Time</button>
-                            </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <button class="time_btn">Apply Time</button>
-                            </div>
-                            <div class="clear"></div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="arrow_wrap">
-                        <a herf="#" class="ui-btn no-border">Select time</a>
+                        <a herf="#" class="ui-btn no-border">Select Time</a>
                     </div>
                 </div>
                 <div id="map">
@@ -73,9 +73,10 @@
                 </div>
            
         </div>
+
         <!-- page for showing the details of selected marker -->
         <div id="detail_page" data-role="page">
-            <div data-role="header"  class="ui-header">
+            <div data-role="header"  class="ui-header" position="fixed">
                 <a href="#" data-direction="reverse" data-rel="back" data-transition="slide" class="header-back-btn">Back</i></a>
                 <h1>Detail Page</h1>
                 <a href="#" class="menu_btn">Menu</a>
@@ -94,11 +95,11 @@
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
         $('#detail_slider').slick({
-                arrows: false,
-                infinite: false,
-                dots: false
+            arrows: false,
+            infinite: false,
+            dots: false
+        });
 
-            });
         $(document).ready(function(){
              initialMap();
              $(".timepicker_wrap").height($(".timepicker_wrap").height());
@@ -108,11 +109,13 @@
         })
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").on('click',function(){
-            
-            $(".arrow_wrap a").toggle();
+            var text = $(this).text();
+            $(this).toggleClass('extend');
+            $(this).text(
+                    text == "Select Time" ? "Apply Time" : "Select Time");
             $(".timepicker_wrap").animate({
                 height: 'toggle'
-            },100);
+            },300);
             $(".overlay").toggle();
         })
         $(".time_btn").on('click',function(){
@@ -120,7 +123,7 @@
             $(".arrow_wrap a").toggle();
             $(".timepicker_wrap").animate({
                 height: 'toggle'
-            },100);
+            },300);
             $(".overlay").toggle();
         })
         // $("#location_btn").on('click',function(){

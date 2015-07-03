@@ -1420,8 +1420,6 @@ div.ui-mobile-viewport {
 }
 .ui-header,
 .ui-footer {
-	border-width: 1px 0;
-	border-style: solid;
 	position: relative;
 }
 .ui-header:empty,

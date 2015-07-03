@@ -70,11 +70,19 @@ function initialMap(){
 
 	function clickOnMarker(e){
 		//map.setZoom(16);
+
 		if(map.getZoom() <= 15){
-			map.setZoom(16);
+			map.panTo(e.target.getLatLng());
+			setTimeout(function(){map.setZoom(16);},200);
+			
 		}
+		else{
+			map.panTo(e.target.getLatLng());
+		}
+
+
 		detectSlider();
-		map.panTo(e.target.getLatLng());
+		
 		$("#detail_slider").slick('slickGoTo',e.target.sliderIndex);
 	}
 	
