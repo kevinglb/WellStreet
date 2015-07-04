@@ -123,28 +123,26 @@
             dots: false
         });
 
-        var hasChanged = false;
+
+        var loop_number = 0;
+
         function changeBackgroundImage()
         {
-            if (hasChanged)
-            {
-                console.log("change background image");
-                $("#login_page").css("background","url(img/b1.png)");
-                hasChanged = false;
-            }
-              
-            else
-            { 
-                console.log("change background image back");                   
-                $("#login_page").css("background","url(img/b2.png)");
-                hasChanged = true;
-            }
+             var numberOfImages = [1, 2];
+
+             $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
+
+             loop_number ++;
+
+             if(loop_number == numberOfImages.length)
+                loop_number = 0;
         }
 
         $(document).ready(function()
         {
             console.log("document ready");          
-            setInterval(changeBackgroundImage, 3000);  
+            var background_timer = setInterval(changeBackgroundImage, 3000); 
+            // clearInterval(background_timer); 
 
             initialMap();
             $(".timepicker_wrap").height($(".timepicker_wrap").height());
