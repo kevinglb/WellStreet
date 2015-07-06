@@ -12,11 +12,16 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="KeyboardShrinksView" value="true" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="fullscreen" value="false" />
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
@@ -28,6 +33,12 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
+    <plugin name="Geolocation" value="CDVLocation" />
+    <gap:config-file overwrite="false" parent="NSLocationAlwaysUsageDescription" platform="ios">
+        <array>
+            <string>NSLocationAlwaysUsageDescription</string>
+        </array>
+    </gap:config-file>
     <content src="index.html" />
     <access origin="*" />
     <access origin="*.openstreetmap.org" />
@@ -37,4 +48,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
 </widget>

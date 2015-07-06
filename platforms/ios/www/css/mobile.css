@@ -6,3 +6,7 @@ body{
 .row{
 	padding: 0 5px;
 }
+div[class^="col-xs-"]{
+	padding-left: 5px;
+	padding-right: 5px;
+}

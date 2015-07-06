@@ -34,6 +34,15 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var myOptions = { enableHighAccuracy: true };
+        // navigator.geolocation.getCurrentPosition(onSuccess, onError,myOptions);
+        // function onSuccess(){
+        //     console.log('geolocation success');
+        // }
+        // function onError(){
+        //     console.log('geolocation failed');
+        // }
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -44,7 +53,7 @@ var app = {
         // listeningElement.setAttribute('style', 'display:none;');
         // receivedElement.setAttribute('style', 'display:block;');
 
-        //console.log('Received Event: ' + id);
+        // console.log('Received Event: ' + id);
     }
 };
 
