@@ -147,13 +147,11 @@
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
-        $('#detail_slider').slick({
+        $mapslider.slick({
             arrows: false,
             infinite: false,
             dots: false
         });
-
-
         var loop_number = 0;
 
         function changeBackgroundImage()
@@ -185,7 +183,7 @@
             // clearInterval(background_timer); 
 
             initialMap();
-            $(".timepicker_wrap").height($(".timepicker_wrap").height());
+            
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $('#detail_page').noClickDelay();
             $('#map_page').noClickDelay();
@@ -194,21 +192,13 @@
         $(".arrow_wrap a").on('click',function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
-            $(this).text(
-                    text == "Select Time" ? "Apply Time" : "Select Time");
+            $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
+            $("#search_form").slideToggle(200);
             $(".timepicker_wrap").slideToggle(200);
-            // $(".timepicker_wrap").animate({
-            //     height: 'toggle'
-            // },200);
             $(".overlay").toggle();
+
         })
-        // $("#location_btn").on('click',function(){
-        //     getUserLocation();
-        //     //alert("get location button is clicked");
-
-        // });
-            
-
+    
         $("#search_form").on('submit', function(){
             resetMapPage();
             console.log('search submitted');
