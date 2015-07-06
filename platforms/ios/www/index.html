@@ -208,6 +208,12 @@
 
         // });
             
+
+        $("#search_form").on('submit', function(){
+            resetMapPage();
+            console.log('search submitted');
+            return false;
+        })
     </script>
         
     </body>

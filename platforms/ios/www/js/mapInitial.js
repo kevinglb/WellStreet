@@ -18,21 +18,9 @@ function initialMap(){
       		minZoom: 10
     	}).addTo(map);
 	console.log('after initial tileLayer');
-
-	//map.locate() will crash on mobile
 	map.setView([53.3478, -6.2579], 14);
 
-	// function onLocationFound(e) {
- //    	var radius = e.accuracy / 2;
-
-	//     L.marker(e.latlng).addTo(map)
- //    	 .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
- //    	L.circle(e.latlng, radius).addTo(map);
-	// }
-
-	// map.on('locationfound', onLocationFound);
-	var markers_array = [
+	var store_array = [
 		{
 			latlng: [53.3478, -6.2579],
 			title: 'marker-1'
@@ -48,62 +36,68 @@ function initialMap(){
 		{
 			latlng: [53.3472, -6.2579],
 			title: 'marker-4'
-		}];
+		},
+		{
+			latlng: [53.3390, -6.2577],
+			title: 'marker-5'
+		},
+		{
+			latlng: [53.3468, -6.2575],
+			title: 'marker-6'
+		},
+		];
 	console.log('before marker');
-	for(var i = 0; i< markers_array.length;i++){
+	for(var i = 0; i< store_array.length;i++){
+
 		var div='';
-		console.log(markers_array[i].latlng);
-		var marker =   L.marker(markers_array[i].latlng,{icon:myIcon}).bindPopup(markers_array[i].title).on('click',clickOnMarker);
+		//console.log(markers_array[i].latlng);
+		var marker =   L.marker(store_array[i].latlng,{icon:myIcon}).bindPopup(store_array[i].title).on('click',clickOnMarker);
 		marker.sliderIndex = i;
 		marker.addTo(map);
+		markers_array.push(marker);
 		console.log('before add into slick');
-		div += '<div><a href="#detail_page" data-transition="slide"><div  class="detail_content"><label>'+markers_array[i].latlng+'</label><label>'+markers_array[i].title+'</label></div></a></div>';
-		$("#detail_slider").slick('slickAdd',div);
+		div += '<div><a href="#detail_page" data-transition="slide"><div  class="detail_content"><label>'+store_array[i].latlng+'</label><label>'+store_array[i].title+'</label></div></a></div>';
+		$mapslider.slick('slickAdd',div);
 	}
- 
+	 
 	function onLocationFound(e) {
     	// create a marker at the users "latlng" and add it to the map
    	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
 	}
 
 	function clickOnMarker(e){
-		//map.setZoom(16);
-
+		
 		if(map.getZoom() <= 15){
 			map.panTo(e.target.getLatLng());
+			// zoom the map to a suitable number
 			setTimeout(function(){map.setZoom(16);},200);
-			
 		}
 		else{
 			map.panTo(e.target.getLatLng());
 		}
-
-
 		detectSlider();
-		
-		$("#detail_slider").slick('slickGoTo',e.target.sliderIndex);
+		$mapslider.slick('slickGoTo',e.target.sliderIndex);
 	}
 	
+	/*detect whether the slider is visible when click on any marker on the map*/
 	function detectSlider(){
-		if($("#detail_slider").is(":visible")){
+		if($mapslider.is(":visible")){
 			return;
 		}
 		else{
-			$("#detail_slider").fadeIn();
+			$mapslider.fadeIn();
 		}
 	}
 
-	// $(".slick-slide").on(clickOrTouch, function(e){
-	// 	var element = e.target;
-	// 	console.log(element.toString());
-	// 	$.mobile.changePage("#detail_page", 
- //        {
- //            transition: "slide",
- //            reverse: false,
- //            changeHash: true
- //        });
-	// })
-
+	/*find marker by swipe on the slider and the popup is then open*/
+	$mapslider.on('swipe', function(e){
+		var currentindex =$mapslider.slick('slickCurrentSlide');
+		//console.log("current index: "+currentindex);
+		/*openPopup() should ahead of panTo() and the latter function takes a delay in animation*/
+		markers_array[currentindex].openPopup();
+		map.panTo(markers_array[currentindex].getLatLng());
+		
+	});
 }
 
 function getUserLocation(){
