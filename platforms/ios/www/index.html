@@ -147,11 +147,7 @@
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
-        $mapslider.slick({
-            arrows: false,
-            infinite: false,
-            dots: false
-        });
+        
         var loop_number = 0;
 
         function changeBackgroundImage()
@@ -178,15 +174,21 @@
 
         $(document).ready(function()
         {
-            console.log("document ready");          
+            
+            //console.log("document ready");          
             var background_timer = setInterval(changeBackgroundImage, 3000); 
             // clearInterval(background_timer); 
-
+             $mapslider.slick({
+                arrows: false,
+                infinite: false,
+                dots: false
+            });
             initialMap();
-            
+           
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $('#detail_page').noClickDelay();
             $('#map_page').noClickDelay();
+
         })
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").on('click',function(){

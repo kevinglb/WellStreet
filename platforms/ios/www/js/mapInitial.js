@@ -56,10 +56,10 @@ function initialMap(){
 		marker.addTo(map);
 		markers_array.push(marker);
 		console.log('before add into slick');
-		div += '<div><a href="#detail_page" data-transition="slide"><div  class="detail_content"><label>'+store_array[i].latlng+'</label><label>'+store_array[i].title+'</label></div></a></div>';
+		div += '<div><a href="#detail_page" data-transition="slide"><div class="detail_content"><div class="col-xs-4"><img class="img-circle"></img></div><div class="col-xs-8"><label>'+store_array[i].latlng+'</label><label>'+store_array[i].title+'</label></div></div></a></div>';
 		$mapslider.slick('slickAdd',div);
 	}
-	 
+	$mapslider.slideToggle(200);
 	function onLocationFound(e) {
     	// create a marker at the users "latlng" and add it to the map
    	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
@@ -85,7 +85,7 @@ function initialMap(){
 			return;
 		}
 		else{
-			$mapslider.fadeIn();
+			$mapslider.slideToggle(300);
 		}
 	}
 
