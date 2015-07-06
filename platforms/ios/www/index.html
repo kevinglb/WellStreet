@@ -184,6 +184,8 @@
                 infinite: false,
                 dots: false
             });
+            
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
             initialMap();
            
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
@@ -207,6 +209,19 @@
             console.log('search submitted');
             return false;
         })
+
+        // Get user current gps data
+        function onSuccess(position)
+        {
+            getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
+        }
+
+        function onError(error) 
+        {
+            alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+        }
+
     </script>
         
     </body>

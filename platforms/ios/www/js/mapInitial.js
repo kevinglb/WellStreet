@@ -100,6 +100,22 @@ function initialMap(){
 	});
 }
 
+function getUserCurrentLocation(latitude, longitude)
+{
+	var user_location = [latitude, longitude];
+
+	var myIcon = L.icon
+			({
+    			iconUrl: 'icon/location-dark.svg',
+    			iconRetinaUrl: 'icon/location-dark.svg',
+    			iconSize: [30, 30],
+
+			});
+
+	L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+
+}
+
 function getUserLocation(){
 	console.log('before locate');
 	var myIcon = L.icon({
