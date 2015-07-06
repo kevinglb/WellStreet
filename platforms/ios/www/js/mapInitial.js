@@ -1,5 +1,3 @@
-
-
 function initialMap(){
 	//var map = L.map('map').setView([53.3478, -6.2579], 14);
 	map = L.map('map', {zoomControl: false, attributionControl: false});
@@ -110,25 +108,38 @@ function initialMap(){
 
 function getUserLocation(){
 	console.log('before locate');
-	// map.locate({setView: true});
-	
-	// map.on('locationfound', function (e){
- //  		L.marker(e.latlng).addTo(map).bindPopup("You are here").openPopup();
- //    });
-	// map.on('locationerror', function (e){
-  
- //    	alert(e.message);
+	var myIcon = L.icon({
+    			iconUrl: 'icon/location-dark.svg',
+    			iconRetinaUrl: 'icon/location-dark.svg',
+    			iconSize: [30, 30],
 
- //     });
-	var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
-	navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+			});
+	map.locate({setView: true, maxZoom: 16});
+	map.on('locationfound', onLocationFound);
+	map.on('locationerror', onLocationError);
+
+	function onLocationError(e) {
+    	alert(e.message);
+    	console.log('location error');
+	}
+
+	function onLocationFound(e) {
+		console.log('lcation found');
+    	L.marker(e.latlng,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+    	map.panTo(e.latlng);
+	}
+
+
 	
-	function onSuccess(position){
-		console.log(JSON.stringify(position));
-	}
-	function onError(error){
-		console.log(error);
-	}
+	// var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
+	// navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+	
+	// function onSuccess(position){
+	// 	console.log(JSON.stringify(position));
+	// }
+	// function onError(error){
+	// 	console.log(error);
+	// }
     
      console.log('after locate');
 	// navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
@@ -147,5 +158,22 @@ function getUserLocation(){
 	// 	console.log('code: '+ error.code+ '\n' +'message: ' + error.message + '\n');
 	// }
 }
+
+
+
+function alertDismissed() {
+            // do something
+        }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
 
 

@@ -38,12 +38,81 @@ body {
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
+    width:100%;
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
-    width:100%;
+    -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+
 }
+
+/* Login page goes here */
+.ui-header.ui-bar-inherit.ui-header-fixed.slidedown
+{
+    background-color: transparent;
+}
+
+.ui-content.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup
+{
+    background-color: transparent;
+}
+
+#login_page
+{
+    background: url(../img/b1.png);
+    height: 100%;
+    width: 100%;
+}
+
+.below-content
+{
+    margin-bottom: 8vh;
+}
+
+#register_btn
+{
+    color: white;
+    background-color: red;
+    margin-bottom: 3vh;
+}
+
+#login_btn
+{
+    color:white;
+    background: green;
+}
+/* Login page end */
+
+/* Registration page goes here */
+
+#register_page
+{
+    background: url(../img/b1.png);
+    height: 100%;
+    width: 100%;
+}
+
+#register_fb_btn
+{
+    color: white;
+    background-color: blue;
+    margin-bottom: 2vh;
+}
+
+#more_btn
+{
+    color: white;
+}
+
+#register_google_btn
+{
+    color: white;
+    background-color: red;
+}
+/* Registration page end */
+
 
 /* Portrait layout (default) */
 
@@ -66,6 +135,10 @@ h1 {
     text-align:center;
 }
 
+a{
+    color:#000;
+    text-decoration: none;
+}
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -100,4 +173,182 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+.clear{
+    clear: both;
+}
+.row{
+    padding: 0 15px;
+}
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    background-color: transparent;
+}
+#map_page{
+    height: 100%;
+    overflow: hidden;;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(22, 22, 22, 0.7);
+    display: none;
+}
+.search_content{
+    position: absolute;
+    width: 95%;
+    margin: 25px 2.5%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 0.5em;
+}
+
+.search_content .timepicker_wrap{
+    display: none;
+    height: 70vh;
+    padding: 20px 10px 0px 10px;
+
+}
+.arrow_wrap a{
+    transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+   -webkit-transition: all .2s ease-in-out;
+}
+.arrow_wrap a.extend{
+    width: 80%;
+    padding: 0.5em 0.7em;
+    margin: 0 auto 20px auto;
+    border: 1px solid #333;
+    border-radius: 0.325em;
+}
+#map {
+    height: 100%;
+    width: 100vw;
+    z-index: 1;
+}
+
+#detail_slider{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+    z-index: 3;
+}
+/* bottom slider*/
+#detail_slider .detail_content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#detail_slider::after{
+    clear: both;
+}
+
+/* ui-header*/
+.ui-page .ui-header{
+    padding-top: 20px;
+    height: 65px;
+    background-color: rgba(143, 205, 190, 0.9);
+}
+
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+}
+ 
+.leaflet-marker-icon .number{
+    position: relative;
+    top: -37px;
+    font-size: 12px;
+    width: 25px;
+    text-align: center;
+}
+
+div.my-divIcon{
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: -50px;
+}
+div.my-divIcon:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    margin-left:45px;
+    width: 0;
+    height: 0;
+    border-top: solid 12px #fff;
+    border-left: solid 12px transparent;
+    border-right: solid 12px transparent;
+}
+
+.no-border {
+    border:none;
+    background-color: transparent;
+    padding: 0;
+}
+.location_btn{
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: inherit;
+  color: #fff;
+  border-radius: 0;
+  float: left;
+  border: none;
+  
+  outline: none;
+  
+}
+.has-feedback .right-feedback .form-control {
+    padding-right:  0;
+    padding-right: 45px;
+    height: 3em;
+    line-height: 53em;
+    font-size: 1.2em;
+}
+
+.form-control[readonly]{
+    background: none;
+}
+
+.form-control-feedback {
+
+    width: 42.5px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    top: 0;
+}
+.form-control-feedback .icon{
+    vertical-align: middle;
+    text-align: center;
+}
+.icon{
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+}
+.icon-2x {
+    width: 2em;
+    height: 2em;
+}
+.icon-location{
+    background-image: url('../icon/location-dark.svg'); 
+
 }

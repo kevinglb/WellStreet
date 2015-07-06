@@ -1,25 +1,219 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="css.leaflet.css" />
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com *.ionic.io *.openstreetmap.org; style-src 'self' 'unsafe-inline'; media-src *; img-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <!-- css & font libraries  -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/leaflet-master.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 736px)" href="css/mobile.css" />
+         <!-- main css -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
 
-        <!-- js -->
-        <script type="text/javascript" src="plugins/leaflet.js"></script>
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="plugins/leaflet-master.js"></script>
+        <script type="text/javascript" src="plugins/slick.min.js"></script>
+        
         <title>WellStreet</title>
     </head>
+
     <body>
-        <div id="map" style="width:100%;height:100%;">
+        <!-- first load page showing a list of categories -->
+       <!--  <div id="category_page" data-role="page">
+
+        </div> -->
+
+        <!-- page for user logining -->
+       <!--  <div id="login_page" data-role="page">
+
+            <div data-role="header" class="ui-header" data-position="fixed">
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="text-center">
+                    <h1 style="color:white">Well Street</h1>
+                   
+                </div>
+            </div>
+
+            <div data-role="footer" class="ui-content" data-position="fixed">
+                <div class="row">
+                    <div class="below-content">
+                        <a id="register_btn" name="register_btn" class="btn btn-large btn-block">Create an Account</a>
+                        <a id="login_btn" name="login_btn" class="btn btn-large btn-block">Login In</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- page for registration -->
+        <!-- <div id="register_page" data-role="page">
+
+            <div data-role="header" class="ui-header" data-position="fixed">
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="row" style="margin-bottom:3vh">
+                    <p style="color:white; font-size:15px">Qucikly sign up with:</p>
+                    <a id="register_fb_btn" name="register_fb_btn" class="btn btn-large btn-block">Facebook</a>
+                    <a id="register_google_btn" name="register_google_btn" class="btn btn-large btn-block">Google</a>
+                    <a id="more_btn" name="more_btn" class="btn btn-large btn-block">More options...</a>
+                </div>
+
+                 <div class="row">
+                    <p style="color:white; font-size:15px">Or use your email:</p>
+                    <input type="text" id="register_email" name="username" placeholder="Email">
+                </div>
+            </div>
+
+            <div data-role="footer" class="ui-content" data-position="fixed">
+                <div class="below-content">
+                    <p style="color:white; text-align:center">By signing up, I agree to WellStreet's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</p>
+                </div>
+            </div>
+        </div>
+ -->
+        <!--  page for showing the map -->
+        <div id="map_page" data-role="page">
+                <div class="overlay" onClick=""></div>
+                <div class="search_content">
+                    <div class="input_wrap">
+                        <form id="search_form">
+                            <div class="form-group has-feedback right-feedback">
+                                <input type="search" id="search_input" class="form-control " placeholder="Search">
+                                    <span  class="form-control-feedback" id="location_btn">
+                                        <i class="icon icon-2x icon-location"></i>
+                                    </span>
+                                </input>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="timepicker_wrap">
+                        <div class="container">
+                           <div class="row">
+                                <div class="col-xs-6">
+                                    <button>Date</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button>Time</button>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- <div class="row">
+                                <button class="time_btn">Apply Time</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="arrow_wrap">
+                        <a herf="#" class="ui-btn no-border">Select Time</a>
+                    </div>
+                </div>
+                <div id="map">
+                </div>
+                <div id="detail_slider" >
+                </div>
+           
         </div>
 
-        <script type="text/javascript" src="js/mapInitial.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!-- page for showing the details of selected marker -->
+        <div id="detail_page" data-role="page">
+            <div data-role="header"  class="ui-header" position="fixed">
+                <a href="#" data-direction="reverse" data-rel="back" data-transition="slide" class="header-back-btn">Back</i></a>
+                <h1>Detail Page</h1>
+                <a href="#" class="menu_btn">Menu</a>
+            </div>
+            <div role="main" class="ui-content">
+            </div>
+        </div>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="plugins/com.phonegap.plugins.sqlite/www/SQLitePlugin.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/noClickDelay.js"></script>
+    <script type="text/javascript" src="js/customMarker.js"></script>
+    <script type="text/javascript" src="js/mapInitial.js"></script>
+    <script type="text/javascript">
+        $('#detail_slider').slick({
+            arrows: false,
+            infinite: false,
+            dots: false
+        });
+
+
+        var loop_number = 0;
+
+        function changeBackgroundImage()
+        {
+             var numberOfImages = [1, 2];
+
+             $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
+
+             loop_number ++;
+
+             if(loop_number == numberOfImages.length)
+                loop_number = 0;
+        }
+
+        $('#register_btn, #login_btn') .click(function()
+        {
+            $.mobile.changePage("#register_page", 
+                    {
+                        transition: "pop",
+                        reverse: true,
+                        changeHash: true
+                    });
+        });
+
+        $(document).ready(function()
+        {
+            console.log("document ready");          
+            var background_timer = setInterval(changeBackgroundImage, 3000); 
+            // clearInterval(background_timer); 
+
+            initialMap();
+            $(".timepicker_wrap").height($(".timepicker_wrap").height());
+            //initial the page with noClickDelay() that the inner elements wont have delay in click event
+            $('#detail_page').noClickDelay();
+            $('#map_page').noClickDelay();
+        })
+        /*the flowing two functions can be wrapped as a general one*/
+        $(".arrow_wrap a").on('click',function(){
+            var text = $(this).text();
+            $(this).toggleClass('extend');
+            $(this).text(
+                    text == "Select Time" ? "Apply Time" : "Select Time");
+            $(".timepicker_wrap").animate({
+                height: 'toggle'
+            },300);
+            $(".overlay").toggle();
+        })
+        $(".time_btn").on('click',function(){
+
+            $(".arrow_wrap a").toggle();
+            $(".timepicker_wrap").animate({
+                height: 'toggle'
+            },300);
+            $(".overlay").toggle();
+        })
+        // $("#location_btn").on('click',function(){
+        //     getUserLocation();
+        //     //alert("get location button is clicked");
+
+        // });
+        
+    </script>
+        
     </body>
 </html>

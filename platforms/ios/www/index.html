@@ -4,7 +4,8 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com *.ionic.io *.openstreetmap.org; style-src 'self' 'unsafe-inline'; media-src *; img-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
         <!-- css & font libraries  -->
         <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" /> -->
@@ -33,7 +34,7 @@
         </div> -->
 
         <!-- page for user logining -->
-        <div id="login_page" data-role="page">
+       <!--  <div id="login_page" data-role="page">
 
             <div data-role="header" class="ui-header" data-position="fixed">
             </div>
@@ -41,7 +42,7 @@
             <div data-role="main" class="ui-content">
                 <div class="text-center">
                     <h1 style="color:white">Well Street</h1>
-                    <!-- <img src="img/"/> -->
+                   
                 </div>
             </div>
 
@@ -53,10 +54,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- page for registration -->
-        <div id="register_page" data-role="page">
+        <!-- <div id="register_page" data-role="page">
 
             <div data-role="header" class="ui-header" data-position="fixed">
             </div>
@@ -81,7 +82,7 @@
                 </div>
             </div>
         </div>
-
+ -->
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
                 <div class="overlay" onClick=""></div>
@@ -89,12 +90,17 @@
                     <div class="input_wrap">
                         <form id="search_form">
                             <div class="form-group has-feedback right-feedback">
-                                <input type="search" id="search_input" class="form-control " placeholder="Search">
+                                <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
                                     <span  class="form-control-feedback" id="location_btn">
                                         <i class="icon icon-2x icon-location"></i>
                                     </span>
                                 </input>
                             </div>
+                            <ul id="search_history_list">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
                         </form>
                     </div>
                     <div class="timepicker_wrap">
@@ -108,9 +114,6 @@
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <!-- <div class="row">
-                                <button class="time_btn">Apply Time</button>
-                            </div> -->
                         </div>
                     </div>
                     <div class="arrow_wrap">
@@ -193,17 +196,10 @@
             $(this).toggleClass('extend');
             $(this).text(
                     text == "Select Time" ? "Apply Time" : "Select Time");
-            $(".timepicker_wrap").animate({
-                height: 'toggle'
-            },300);
-            $(".overlay").toggle();
-        })
-        $(".time_btn").on('click',function(){
-
-            $(".arrow_wrap a").toggle();
-            $(".timepicker_wrap").animate({
-                height: 'toggle'
-            },300);
+            $(".timepicker_wrap").slideToggle(200);
+            // $(".timepicker_wrap").animate({
+            //     height: 'toggle'
+            // },200);
             $(".overlay").toggle();
         })
         // $("#location_btn").on('click',function(){
@@ -211,7 +207,7 @@
         //     //alert("get location button is clicked");
 
         // });
-        
+            
     </script>
         
     </body>

@@ -361,13 +361,16 @@ define("cordova/android/promptbasednativeapi", function(require, exports, module
 
 module.exports = {
     exec: function(bridgeSecret, service, action, callbackId, argsJson) {
-        return prompt(argsJson, 'gap:'+JSON.stringify([bridgeSecret, service, action, callbackId]));
+        // return prompt(argsJson, 'gap:'+JSON.stringify([bridgeSecret, service, action, callbackId]));
+        return;
     },
     setNativeToJsBridgeMode: function(bridgeSecret, value) {
-        prompt(value, 'gap_bridge_mode:' + bridgeSecret);
+        //prompt(value, 'gap_bridge_mode:' + bridgeSecret);
+        return;
     },
     retrieveJsMessages: function(bridgeSecret, fromOnlineEvent) {
-        return prompt(+fromOnlineEvent, 'gap_poll:' + bridgeSecret);
+        //return prompt(+fromOnlineEvent, 'gap_poll:' + bridgeSecret);
+        return;
     }
 };
 
@@ -579,7 +582,8 @@ function include(parent, objects, clobber, merge) {
                 include(result, obj.children, clobber, merge);
             }
         } catch(e) {
-            utils.alert('Exception building Cordova JS globals: ' + e + ' for key "' + key + '"');
+            // utils.alert('Exception building Cordova JS globals: ' + e + ' for key "' + key + '"');
+            return;
         }
     });
 }
@@ -1949,9 +1953,10 @@ utils.extend = (function() {
  */
 utils.alert = function(msg) {
     if (window.alert) {
-        window.alert(msg);
-    } else if (console && console.log) {
+        // window.alert(msg);
         console.log(msg);
+    } else if (console && console.log) {
+        console.log(msg);   
     }
 };
 

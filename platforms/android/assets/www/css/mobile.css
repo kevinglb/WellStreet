@@ -1,0 +1,8 @@
+/* css only for phones (tablet not included)*/
+
+body{
+    font-size: 14px;
+}
+.row{
+	padding: 0 5px;
+}
