@@ -55,6 +55,33 @@
             </div>
         </div>
 
+        <!-- page for registration -->
+        <div id="register_page" data-role="page">
+
+            <div data-role="header" class="ui-header" data-position="fixed">
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="row" style="margin-bottom:3vh">
+                    <p style="color:white; font-size:15px">Qucikly sign up with:</p>
+                    <a id="register_fb_btn" name="register_fb_btn" class="btn btn-large btn-block">Facebook</a>
+                    <a id="register_google_btn" name="register_google_btn" class="btn btn-large btn-block">Google</a>
+                    <a id="more_btn" name="more_btn" class="btn btn-large btn-block">More options...</a>
+                </div>
+
+                 <div class="row">
+                    <p style="color:white; font-size:15px">Or use your email:</p>
+                    <input type="text" id="register_email" name="username" placeholder="Email">
+                </div>
+            </div>
+
+            <div data-role="footer" class="ui-content" data-position="fixed">
+                <div class="below-content">
+                    <p style="color:white; text-align:center">By signing up, I agree to WellStreet's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</p>
+                </div>
+            </div>
+        </div>
+
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
                 <div class="overlay" onClick=""></div>
@@ -137,6 +164,16 @@
              if(loop_number == numberOfImages.length)
                 loop_number = 0;
         }
+
+        $('#register_btn, #login_btn') .click(function()
+        {
+            $.mobile.changePage("#register_page", 
+                    {
+                        transition: "pop",
+                        reverse: true,
+                        changeHash: true
+                    });
+        });
 
         $(document).ready(function()
         {

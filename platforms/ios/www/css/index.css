@@ -48,7 +48,7 @@ body {
 
 }
 
-/* login page goes here */
+/* Login page goes here */
 .ui-header.ui-bar-inherit.ui-header-fixed.slidedown
 {
     background-color: transparent;
@@ -77,13 +77,42 @@ body {
     background-color: red;
     margin-bottom: 3vh;
 }
+
 #login_btn
 {
     color:white;
     background: green;
 }
+/* Login page end */
 
-/* login page end */
+/* Registration page goes here */
+
+#register_page
+{
+    background: url(../img/b1.png);
+    height: 100%;
+    width: 100%;
+}
+
+#register_fb_btn
+{
+    color: white;
+    background-color: blue;
+    margin-bottom: 2vh;
+}
+
+#more_btn
+{
+    color: white;
+}
+
+#register_google_btn
+{
+    color: white;
+    background-color: red;
+}
+/* Registration page end */
+
 
 /* Portrait layout (default) */
 
