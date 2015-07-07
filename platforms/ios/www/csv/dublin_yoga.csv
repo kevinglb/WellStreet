@@ -1,0 +1,684 @@
+Name,"Full Address",City,County/State,Postcode,Country,"Telephone Number",Rating,Keywords,"Opening hours",URL,Latitude,Longitude,"Data Source","Data Source Identifer","Duplicated In"
+"The Yoga Room","262 Merrion Road, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"(01) 219 6666",,establishment,,http://www.yoga.ie/,53.316924,-6.206496,"Google Places",ChIJb61bQ9UOZ0gRG0ahfw2cly0,"dublin_meditation.csv
+dublin_pilates.csv"
+"Dublin Buddhist Centre","5 James Joyce St, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"(01) 817 8933",4.8,establishment,"Monday: 12:30 – 2:00 pm, 3:00 – 6:00 pm
+Tuesday: 12:30 – 2:00 pm, 3:00 – 6:00 pm
+Wednesday: 12:30 – 2:00 pm, 3:00 – 6:00 pm
+Thursday: 12:30 – 2:00 pm, 3:00 – 6:00 pm
+Friday: 12:30 – 2:00 pm, 3:00 – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinbuddhistcentre.org/,53.351947,-6.253559,"Google Places",ChIJjw8GxogOZ0gR7SpDnDI8zKk,dublin_meditation.csv
+"Yoga Dublin Studios - Ranelagh","28A Dartmouth Rd, Ranelagh, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 412 6813",,establishment,"Monday: 9:30 am – 9:00 pm
+Tuesday: 9:30 am – 9:00 pm
+Wednesday: 9:30 am – 9:00 pm
+Thursday: 9:30 am – 9:00 pm
+Friday: 9:30 am – 8:00 pm
+Saturday: 9:30 am – 8:30 pm
+Sunday: 9:30 am – 12:30 pm",http://www.yogadublin.com/,53.329485,-6.258276,"Google Places",ChIJ8z-UWqEOZ0gRrENEb6t9lxA,"dublin_masseur.csv
+dublin_pilates.csv"
+Samadhi,"Temple Bar, Dublin, Ireland","Dublin City",Dublin,,IE,"087 135 3095",,establishment,"Monday: 6:30 am – 8:00 pm
+Tuesday: 6:30 am – 8:00 pm
+Wednesday: 6:30 am – 8:00 pm
+Thursday: 6:30 am – 8:00 pm
+Friday: 6:30 am – 8:00 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: 10:00 am – 7:30 pm",http://www.samadhi.ie/,53.344236,-6.268805,"Google Places",ChIJd-uB-icMZ0gRyts5yhII3kA,
+"Bikram Yoga","E4, Sandyford Industrial Estate, Three Rock Road, Dublin 18, Ireland","Dublin 18","Co. Dublin",,IE,"(01) 293 3972",,establishment,,http://www.yogabikram.ie,53.274846,-6.210379,"Google Places",ChIJzbRmfQgJZ0gRChu0McCKnkw,
+"Harvest Moon Centre","24 Baggot Street Lower, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 662 7556",,"health, establishment","Monday: 9:30 am – 9:00 pm
+Tuesday: 9:30 am – 9:00 pm
+Wednesday: 9:30 am – 9:00 pm
+Thursday: 9:30 am – 9:00 pm
+Friday: 9:30 am – 9:00 pm
+Saturday: 11:00 am – 8:00 pm
+Sunday: 11:00 am – 7:00 pm",http://www.harvestmoon.ie/,53.337669,-6.250849,"Google Places",ChIJdx5TnJcOZ0gR7FiAZEuFRfI,"dublin_aromatherapist.csv
+dublin_masseur.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Dublin Holistic Centre","28 South William St, Dublin 2, Ireland",,Dublin,,IE,"(01) 633 0063",,"health, establishment","Monday: 8:00 am – 10:00 pm
+Tuesday: 8:00 am – 10:00 pm
+Wednesday: 8:00 am – 10:00 pm
+Thursday: 8:00 am – 10:00 pm
+Friday: 8:00 am – 10:00 pm
+Saturday: 8:00 am – 10:00 pm
+Sunday: Closed",http://www.dublinholisticcentre.com/,53.341541,-6.263094,"Google Places",ChIJq5jig5wOZ0gRorA7PqnmV9c,"dublin_acupuncturist.csv
+dublin_allergy.csv
+dublin_aromatherapist.csv
+dublin_masseur.csv
+dublin_meditation.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Melt Natural Healing Centre","2 Temple Lane South, Dublin 2, Ireland","Dublin 2","Co. Dublin",,IE,"(01) 679 8786",,"beauty_salon, health, establishment","Monday: 9:30 am – 9:00 pm
+Tuesday: 9:30 am – 9:00 pm
+Wednesday: 9:30 am – 9:00 pm
+Thursday: 9:30 am – 9:00 pm
+Friday: 9:30 am – 9:00 pm
+Saturday: 10:00 am – 7:00 pm
+Sunday: 10:00 am – 7:00 pm",http://www.meltonline.com/,53.34453,-6.264382,"Google Places",ChIJrS-91JwOZ0gRtm7P7ZgrLCM,"dublin_acupuncturist.csv
+dublin_aromatherapist.csv
+dublin_herbalist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Init Yoga: Hot Yoga, Cool Studio","48 Ringsend Road, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"(01) 667 6008",4.6,establishment,"Monday: 6:00 – 8:00 am, 3:30 – 9:30 pm
+Tuesday: 6:00 – 8:00 am, 9:30 – 11:30 am, 5:00 – 9:00 pm
+Wednesday: 6:00 – 8:00 am, 3:30 – 9:30 pm
+Thursday: 6:00 – 8:00 am, 9:30 – 11:30 am, 5:00 – 9:00 pm
+Friday: 6:00 – 8:00 am, 3:00 – 7:30 pm
+Saturday: 8:30 am – 12:30 pm, 3:30 – 5:30 pm
+Sunday: 8:30 am – 12:30 pm, 3:30 – 5:30 pm",http://www.inityoga.ie/,53.341759,-6.231924,"Google Places",ChIJs37YAOwOZ0gRGfZJ61E0ej8,
+"Dublin City Bikram Yoga","2nd Floor, 56-58 Drury Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"085 979 5075",,establishment,,http://www.dublincitybikramyoga.com/,53.34193,-6.263322,"Google Places",ChIJLYcvTJwOZ0gReRWZGmfXt9Q,
+Anahata,"11 St. Stephen's green, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 611 1108",,"spa, health, establishment","Monday: 11:00 am – 8:00 pm
+Tuesday: 11:00 am – 8:00 pm
+Wednesday: 11:00 am – 8:00 pm
+Thursday: 11:00 am – 8:00 pm
+Friday: 11:00 am – 8:00 pm
+Saturday: 11:00 am – 6:00 pm
+Sunday: Closed",http://www.anahata.ie/,53.342121,-6.257656,"Google Places",ChIJQWFlsJsOZ0gRrurKDSExRQE,"dublin_masseur.csv
+dublin_meditation.csv
+dublin_reflexologist.csv"
+"Yoga Dublin Studios - Dundrum","4a Rockfield Central, Dundrum, Dublin 16, Ireland","Dublin 16",Dublin,,IE,"(01) 298 0300",,"health, establishment","Monday: 9:30 am – 8:30 pm
+Tuesday: 9:30 am – 8:30 pm
+Wednesday: 9:30 am – 8:30 pm
+Thursday: 9:30 am – 8:30 pm
+Friday: 9:30 am – 12:30 pm
+Saturday: 9:30 am – 12:30 pm
+Sunday: 9:30 am – 12:30 pm",http://www.yogadublin.com/,53.286156,-6.236554,"Google Places",ChIJqep23G4JZ0gRWI3SEk1w91U,"dublin_masseur.csv
+dublin_pilates.csv"
+"1escape Health Club","Block G, Smithfield Market, Smithfield, Dublin 7, Block G Smithfield Market,, Smithfield, Dublin 7, Ireland","Dublin 7","Co. Dublin",,IE,"(01) 485 0700",4.1,"gym, health, establishment","Monday: 6:30 am – 9:30 pm
+Tuesday: 6:30 am – 9:30 pm
+Wednesday: 6:30 am – 9:30 pm
+Thursday: 6:30 am – 9:30 pm
+Friday: 6:30 am – 9:30 pm
+Saturday: 10:00 am – 6:00 pm
+Sunday: 10:00 am – 6:00 pm",http://www.oneescape.ie/,53.34955,-6.278402,"Google Places",ChIJl8_Ohi4MZ0gRkrRAc0fH77E,"dublin_meditation.csv
+dublin_personal_trainer.csv
+dublin_pilates.csv"
+Yogapeople,"15 Grantham Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"087 969 0160",,establishment,,http://www.yogapeople.eu/,53.333913,-6.267891,"Google Places",ChIJA4VGhh8MZ0gR-NVSYYv9pyM,
+"Bikram Yoga Dublin","Unit 9, Greenmount Industrial Estate, Greenmount Avenue, Harold's Cross, Dublin 6, Ireland","Harold's Cross, Dublin 6",,,IE,"(01) 657 0061",,establishment,"Monday: 6:03 am – 10:00 pm
+Tuesday: 6:03 am – 10:00 pm
+Wednesday: 6:03 am – 10:00 pm
+Thursday: 6:03 am – 10:00 pm
+Friday: 6:03 am – 10:00 pm
+Saturday: 10:00 am – 6:00 pm
+Sunday: 10:00 am – 6:00 pm",http://www.bikramyoga.ie/,53.328207,-6.279544,"Google Places",ChIJa9orsxAMZ0gR0JD9TgIbBpw,
+"The elbowroom","32 Brunswick Street North, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 677 9859",4.7,"gym, health, establishment","Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: 9:00 am – 9:00 pm
+Sunday: 9:00 am – 9:00 pm",http://www.the-elbowroom.com/,53.35073,-6.280343,"Google Places",ChIJ2UddzS0MZ0gRQSbYw4AhGLU,"dublin_masseur.csv
+dublin_meditation.csv
+dublin_physiotherapist.csv
+dublin_pilates.csv"
+"iYOGA Dublin ~ Iyengar Yoga Centre of North Dublin","365 North Circular Road, Dublin 7, Ireland","Dublin 7","Baile Átha Cliath",,IE,"(01) 882 8858",,establishment,"Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 11:00 am – 9:00 pm
+Friday: 10:00 am – 1:30 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: 10:00 am – 4:00 pm",http://www.iyoga.ie/,53.360835,-6.272056,"Google Places",ChIJ-8xq_NUNZ0gRObBPDUMni98,dublin_meditation.csv
+"Icon Health Club","1-4 Camden Street Lower, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 405 3777",4.3,"gym, health, establishment","Monday: 6:00 am – 10:00 pm
+Tuesday: 6:00 am – 10:00 pm
+Wednesday: 6:00 am – 10:00 pm
+Thursday: 6:00 am – 10:00 pm
+Friday: 6:00 am – 9:00 pm
+Saturday: 10:00 am – 6:00 pm
+Sunday: Closed",http://iconhealthclub.ie/,53.336358,-6.265221,"Google Places",ChIJTwQx258OZ0gRI_HCZ-RVrk8,dublin_personal_trainer.csv
+"Eden Studios","Avondale Hall, Carysfort Avenue, Blackrock, Co Dublin., Ireland",,,,IE,,,"health, establishment",,https://plus.google.com/100737573426575489766/about?hl=en,53.300753,-6.177483,"Google Places",ChIJrTwDKsEIZ0gRS431GEWAGS4,dublin_pilates.csv
+"Inner Calm Yoga","Clontarf Parish Centre, Seafiled Road West, Clontarf, Dublin 3, Co. Dublin, Ireland","Clontarf, Dublin 3",Dublin,,IE,"087 962 2145",,establishment,,http://www.innercalmyoga.net/,53.364164,-6.202597,"Google Places",ChIJg0vtqKgPZ0gRA0uxX14Ntxk,
+"My Yoga Body - Hot Yoga Dublin","10 Marine Terrace, Dun Laoghaire, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 236 0538",,establishment,,http://www.myyogabody.ie/,53.291091,-6.128665,"Google Places",ChIJAAAAAAAAAAAR__LwqXthjqA,dublin_pilates.csv
+"Bikram Yoga Fairview","Unit 21, Charthouse Business Centre, 157-159 Richmond Rd, Fairview, Dublin 3, Co. Dublin, Ireland","Fairview, Dublin 3",Dublin,,IE,"(01) 857 3790",,establishment,,http://www.bikram.ie/,53.36577,-6.247242,"Google Places",ChIJ75DYumcOZ0gRMdG1I52QfLE,
+"Lotus Yoga","5 Little Fitzwilliam Place, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"085 145 0880",,"school, establishment",,http://www.lotusyoga.ie/,53.337531,-6.249399,"Google Places",ChIJM9wfrJcOZ0gRe4VZfoKppcw,"dublin_meditation.csv
+dublin_pilates.csv"
+"The Novara Centre","11 Fitzwilliam Terrace, Strand Road, Bray, Co. Wicklow, Ireland",Bray,Wicklow,,IE,"(01) 276 1745",,"health, establishment","Monday: 9:00 am – 9:30 pm
+Tuesday: 9:00 am – 9:30 pm
+Wednesday: 9:00 am – 9:30 pm
+Thursday: 9:00 am – 9:30 pm
+Friday: 9:00 am – 9:30 pm
+Saturday: 9:00 am – 9:30 pm
+Sunday: 9:00 am – 9:30 pm",http://www.thenovaracentre.ie/,53.203609,-6.098999,"Google Places",ChIJ_5ogdmioZ0gRuqwGkAVtEuE,"dublin_masseur.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Liffey Trust Studios","Liffey Trust Centre, 117-126 Upper Sheriff Street, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"(01) 894 4927",4.6,"school, establishment",,http://www.liffeytruststudios.com/,53.349553,-6.23027,"Google Places",ChIJaciWV_AOZ0gRWdAaYoi2etg,dublin_pilates.csv
+"Shivam Yoga Dublin","Lantern Centre, 15 Synge Street, Dublin, Ireland",Dublin,Dublin,,IE,"087 203 4762",,establishment,"Monday: 6:00 – 9:00 pm
+Tuesday: 11:30 am – 12:30 pm
+Wednesday: 6:00 – 9:00 pm
+Thursday: 11:30 am – 12:30 pm
+Friday: Closed
+Saturday: 10:00 – 11:00 am
+Sunday: Closed",http://shivamyogadublin.com/,53.333098,-6.267219,"Google Places",ChIJBzRSF_CRREgRKfQydaD7YRE,dublin_meditation.csv
+"Bikram Yoga D15","46B Coolmine Industrial estate, Coolmine, Co. Dublin, Ireland",Coolmine,Dublin,,IE,"087 226 8138",,establishment,,http://www.bikramdublin.ie/,53.383321,-6.40092,"Google Places",ChIJteTAsa9yZ0gROCOoZkoBNCc,
+"Clonlea Yoga Studio","28 Sydney Ave, Blackrock, Co. Dublin, Dun Laoghaire-Rathdown, Ireland",,,,IE,,,establishment,,http://www.clonleayogastudio.com/,53.299415,-6.185421,"Google Places",ChIJa4tIcsMIZ0gRvTKGGK5LHh8,
+"Sahaja Yoga Meditation (FreeMeditation.ie)","5 Eustace Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"086 252 0765",,"health, establishment","Monday: Closed
+Tuesday: Closed
+Wednesday: Closed
+Thursday: Closed
+Friday: 7:30 – 8:45 pm
+Saturday: Closed
+Sunday: Closed",http://www.freemeditation.ie/,53.344592,-6.264861,"Google Places",ChIJUx7VJ50OZ0gR4pY4fDMhRKg,dublin_meditation.csv
+"Purely Yoga","Idrone Terrace, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"086 821 5775",,establishment,,http://www.purely-yoga.com/,53.301504,-6.1753,"Google Places",ChIJKbAuSccIZ0gRgsOAHvzbwTY,"dublin_pilates.csv
+dublin_reflexologist.csv"
+"Sunrise Yoga","48B Patrick Street, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 284 4477",,establishment,,http://www.sunrise.ie/,53.289247,-6.138474,"Google Places",ChIJ--t_RCYGZ0gRjjcFXXvgq-k,"dublin_meditation.csv
+dublin_pilates.csv"
+"Stretch It Yoga","The Coast, Dublin, Ireland",Dublin,Dublin,,IE,"087 992 4094",,establishment,,http://www.stretchityoga.com/,53.399906,-6.147636,"Google Places",ChIJk896qU4FZ0gRgzW8GPQv16s,
+"Yoga Fitness Dublin","79 Georges Street Lower, Dun Laoghaire, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"085 763 7981",,"health, establishment",,http://www.yogafitness.ie/,53.292577,-6.136496,"Google Places",ChIJwa9--CMGZ0gRurDC8PYmgmo,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Pregnancy and Hatha yoga Classes Dublin","Clontarf Presbyterian Church, Clontarf Rd, Dublin 3, Ireland","Dublin 3",Dublin,,IE,"087 616 6524",,establishment,,http://www.yoga-in-dublin.com/,53.364308,-6.226713,"Google Places",ChIJSWzR6lQOZ0gREGOec6QRYXE,
+"Yoga Dublin Studios: Dún Laoghaire","19 George's Street Lower, Dún Laoghaire, Co. Dublin, Ireland","Dún Laoghaire",Dublin,,IE,"(01) 214 0444",,establishment,,http://www.yogadublin.com/,53.294227,-6.141046,"Google Places",ChIJJ6c4_SAGZ0gRz4NjCnqFBcw,dublin_pilates.csv
+YogaVillage,"4B Saint Patrick's Road, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"087 232 2481",,establishment,,http://www.yogavillage.ie/,53.2782,-6.10342,"Google Places",ChIJ9cBK2kwGZ0gRZWTIMPOyR0I,dublin_meditation.csv
+"21st Zentury Health","Aquarium Building, The Esplanade, Bray, Co. Wicklow, Ireland",Bray,Wicklow,,IE,"(01) 276 1840",,"health, establishment",,http://www.21zenturyhealth.com/,53.203256,-6.097894,"Google Places",ChIJC4jVbGioZ0gRx668WOFBfI0,"dublin_aromatherapist.csv
+dublin_masseur.csv
+dublin_pilates.csv"
+"Olive Tree Yoga Studio Dublin","15 Grantham Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"086 794 1624",,establishment,"Monday: 7:30 am – 10:00 pm
+Tuesday: 7:30 am – 10:00 pm
+Wednesday: 7:30 am – 10:00 pm
+Thursday: 7:30 am – 10:00 pm
+Friday: 7:30 am – 10:00 pm
+Saturday: 7:30 am – 10:00 pm
+Sunday: 7:30 am – 10:00 pm",http://www.olivetreedublin.com/,53.333969,-6.268229,"Google Places",ChIJpc6_iB8MZ0gRVGoBo1V47m0,"dublin_masseur.csv
+dublin_pilates.csv"
+"Pure Health","2-3 The Mall, Ongar, Dublin 15, Ireland",,,,IE,"(01) 440 4343",,"health, beauty_salon, establishment","Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 10:00 am – 6:00 pm
+Sunday: 9:30 am – 6:00 pm",http://www.purehealth.ie/,53.394971,-6.439222,"Google Places",ChIJf426jHttZ0gRwwqk2P-nZPs,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Yoga Practice","Rathgar, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"086 237 1077",,establishment,,http://www.yogapractice.ie/,53.308875,-6.269653,"Google Places",ChIJbWgmeAgMZ0gRn-CtiJt1Gh8,"dublin_masseur.csv
+dublin_meditation.csv"
+MyWellbeing,"1st Floor, 16 Dame Street, Dublin, Ireland",Dublin,Dublin,,IE,"089 473 4838",,establishment,"Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 10:00 am – 9:00 pm
+Sunday: Closed",http://www.mywellbeing.ie/,53.344033,-6.265111,"Google Places",ChIJcRun3SMMZ0gR8puw7K5KDv0,dublin_pilates.csv
+"Art of Living Foundation Dublin","5 Coppinger Row, Dublin, Ireland",Dublin,Dublin,,IE,"089 951 8807",,establishment,"Monday: Closed
+Tuesday: Closed
+Wednesday: 7:30 – 9:30 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.artofliving.ie/,53.341946,-6.261713,"Google Places",ChIJOYAIb5wOZ0gRXtlhW6d7AcM,dublin_meditation.csv
+"Living Yoga - Blackrock Parish Hall","Newtown Ave, Co. Dun Laoghaire, Ireland",,"Dun Laoghaire",,IE,"085 737 6076",,establishment,,http://www.living-yoga.ie,53.299889,-6.17451,"Google Places",ChIJ90ygosAIZ0gRONQnARp-mLU,
+"Sighle Yoga","The Core Studio, 71-73 Glasthule Rd, Glasthule, Co. Dublin, Ireland",Glasthule,Dublin,,IE,"085 726 5827",,establishment,"Monday: Closed
+Tuesday: 10:00 am – 12:00 pm, 7:00 – 8:30 pm
+Wednesday: 10:00 am – 12:00 pm, 7:00 – 8:30 pm
+Thursday: 10:00 am – 12:00 pm
+Friday: 10:00 am – 12:00 pm
+Saturday: 10:30 am – 12:00 pm
+Sunday: 10:30 am – 1:00 pm",http://www.sighleyoga.ie/,53.28738,-6.12388,"Google Places",ChIJibVlTksGZ0gRZCC-qvEqfcA,dublin_meditation.csv
+"Bairbre Crowley","27 Anne St S, Dublin 2 Dublin, Co. Dublin, Ireland","Dublin 2 Dublin",Dublin,,IE,"087 641 0414",,"health, establishment","Monday: 9:00 am – 4:00 pm
+Tuesday: 9:00 am – 4:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 4:00 – 9:00 pm
+Friday: 4:00 – 8:00 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: Closed",http://www.bairbrecrowley.ie/,53.341087,-6.259545,"Google Places",ChIJcZ2N8ZsOZ0gRqct6Ax1M9J4,"dublin_acupuncturist.csv
+dublin_meditation.csv"
+"Yoga Dublin - Alithea","Saint Mobhi Court, St Mobhi Boithirin, Dublin, Ireland",Dublin,Dublin,,IE,"087 176 3611",,"health, establishment","Monday: 8:30 am – 10:00 pm
+Tuesday: 8:30 am – 10:00 pm
+Wednesday: 8:30 am – 10:00 pm
+Thursday: 8:30 am – 10:00 pm
+Friday: 8:30 am – 10:00 pm
+Saturday: 8:30 am – 10:00 pm
+Sunday: 8:30 am – 10:00 pm",http://www.yogadublin.org/,53.377444,-6.266377,"Google Places",ChIJd4XtM3MOZ0gRSOUGqixDDSg,dublin_meditation.csv
+"Bairbre Crowley Iyengar Yoga","15 Grantham Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"087 641 0414",,establishment,"Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.bairbrecrowley.ie/,53.33391,-6.26793,"Google Places",ChIJcZ2N8ZsOZ0gRy-mxPEHddNE,"dublin_acupuncturist.csv
+dublin_meditation.csv"
+"Purely Yoga","Church of Parish Hall, Enniskerry Road, Stepaside, Co. Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"086 821 5775",,establishment,"Monday: 12:00 – 9:00 pm
+Tuesday: 12:00 – 7:00 pm
+Wednesday: 12:00 – 7:00 pm
+Thursday: 12:00 – 7:00 pm
+Friday: Closed
+Saturday: 10:30 am – 12:30 pm
+Sunday: Closed",http://www.purely-yoga.com/,53.243658,-6.200462,"Google Places",ChIJF1yTYsAJZ0gRxKJqbG8hWTw,dublin_reflexologist.csv
+"Balance Ireland","40 Lower Drumcondra Road, Dublin 9, Ireland","Dublin 9",Dublin,,IE,"087 229 7215",4.9,"school, establishment",,http://www.balanceireland.com/,53.363516,-6.258306,"Google Places",ChIJQ9eJ-SkQZ0gRe2Ny4N5RDF8,
+"Fitnecise Studio","11 Braemor Rd, Dublin 14, Ireland","Dublin 14",Dublin,,IE,"(01) 298 9713",,"health, establishment",,http://www.fitnecise.ie/,53.295913,-6.26005,"Google Places",ChIJy3mAm-ELZ0gRYQ9f_qB8Uug,"dublin_personal_trainer.csv
+dublin_pilates.csv"
+"Yoga with Emma","Greenmount Industrial Estate, Greenmount Avenue, Harold's Cross, Dublin 6W, Co. Ireland, Ireland","Dublin 6W",Ireland,,IE,"087 181 6605",,establishment,,http://yogawithemma.ie/,53.328442,-6.279137,"Google Places",ChIJqbusUxcMZ0gRYmv6W4bfgHU,
+"Satya Yoga Studio","Apex BuildingGreenmount Industrial Estate, Greenmount Avenue, Harold's Cross, Dublin, Ireland",Dublin,Dublin,,IE,"086 877 3085",,establishment,,https://plus.google.com/108967252162021739201/about?hl=en,53.327962,-6.279724,"Google Places",ChIJOVY0BxoMZ0gRgLweCVExKpE,
+"360 Hot Yoga","Kilmacud Road Upper, Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"087 904 7055",,establishment,"Monday: 6:00 – 7:30 pm, 7:45 – 9:00 pm
+Tuesday: 9:30 – 11:00 am, 6:00 – 7:30 pm, 7:45 – 9:00 pm
+Wednesday: 6:00 – 7:30 pm
+Thursday: 9:30 – 11:00 am, 6:00 – 7:30 pm, 7:45 – 9:00 pm
+Friday: 6:00 – 7:30 pm
+Saturday: 10:30 am – 12:00 pm
+Sunday: 10:30 am – 12:00 pm",http://www.360hotyoga.ie/,53.284406,-6.222787,"Google Places",ChIJEa4z9hIJZ0gRKedulPOfdag,
+"Feldenkrais Dublin","11 Herbert Place, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 418 0646",,"health, establishment",,http://www.feldenkraisdublin.ie/,53.335542,-6.244158,"Google Places",ChIJfVWl0AcMZ0gRavyFLon5tVs,
+"Helen Keane Yoga","Clontarf Rd, Clontarf, Co. Dublin, Ireland",Clontarf,Dublin,,IE,"(01) 853 1889",,establishment,,http://www.helenkeaneyoga.com/,53.363076,-6.220192,"Google Places",ChIJtabqZFQOZ0gRczpJfwwtyh4,
+"Living Yoga","12 Crofton Ave, Co. Dun Laoghaire-Rathdown, Ireland","Dun Laoghaire-Rathdown","Dun Laoghaire-Rathdown",,IE,"085 737 6076",,establishment,,http://www.living-yoga.ie,53.295426,-6.138414,"Google Places",ChIJl-nchCEGZ0gRPf1OM_CYgzY,
+"Allyson Yoga, Carlton Hall","Carleton Hall,, 53 Shelmartin Ave, Dublin, Ireland",,Dublin,,IE,,,establishment,,https://plus.google.com/116419468268161437651/about?hl=en,53.367206,-6.238064,"Google Places",ChIJrfXhXlsOZ0gRi5wa6xOENFE,
+"Fitness Centre","18 Baggot Lane, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 6725 9134",,"school, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.fitnesscentre.ie/,53.333265,-6.241062,"Google Places",ChIJRQtfU74OZ0gR6osJQHeFv3M,dublin_pilates.csv
+"Helen Sherlock Yoga","Gate Lodge, All Hallows Missonary College - Lodge, Grace Park Road, Dublin, Ireland",Dublin,Dublin,,IE,"087 791 1837",,"health, establishment",,http://www.yogaclass.ie/,53.369954,-6.247753,"Google Places",ChIJ-5BmYGgOZ0gRmhkHvKBCLBY,"dublin_meditation.csv
+dublin_reflexologist.csv"
+"Woodford House","Booterstown Park, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"(01) 283 5135",,"health, establishment",,http://aboutwoodford.com/,53.302165,-6.197501,"Google Places",ChIJY5lzDtkIZ0gRTZH0paTR8OY,dublin_meditation.csv
+"Dublin yoga for all","14 Marian Road, Dublin 14, Ireland","Dublin 14",Dublin,,IE,"086 303 3794",,establishment,"Monday: Closed
+Tuesday: Closed
+Wednesday: Closed
+Thursday: Closed
+Friday: 10:00 am – 1:00 pm
+Saturday: 10:30 – 11:45 am
+Sunday: Closed",http://www.dublinyogaforall.ie/,53.292191,-6.297811,"Google Places",ChIJKesyf5cLZ0gR1z6mgKOTh_Q,dublin_pilates.csv
+"Perfect Balance Yoga","10 St Aidan's Park, Dublin, Co. Dublin City, Ireland","Dublin City","Dublin City",,IE,,,establishment,,http://www.perfect-balance.ie,53.366045,-6.231928,"Google Places",ChIJu6BOiFoOZ0gRgixJ9MNxA1w,
+"Yoga Clontarf with Edie Moran","Dublin, Ireland","Dublin City",Dublin,,IE,"086 821 7862",,establishment,"Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 8:00 am – 8:00 pm
+Sunday: 8:00 am – 8:00 pm",http://www.yogaclontarf.com/,53.365082,-6.226886,"Google Places",ChIJbZ-sHlEOZ0gR9E924yyjMao,dublin_meditation.csv
+"Hot Yoga Dublin","Unit 5, Block 4, Burnell Green, Northern Cross, Malahide Rd, Dublin17, Ireland",,Dublin,,IE,"087 641 7762",,establishment,,http://www.hotyogadublin.com/,53.405505,-6.179065,"Google Places",ChIJk-qIXAIQZ0gR_tJ7-vmIM6s,
+"Om Yoga","18 Springfield, Dublin 7, Ireland","Dublin 7",Dublin,,IE,"087 207 1530",,establishment,,http://www.omyoga.ie/,53.361308,-6.307817,"Google Places",ChIJmW7AleENZ0gRA7Xm0bAv4s0,dublin_meditation.csv
+"Helen Sherlock Yoga","Grace Park Road, Dublin 9, Ireland","Dublin 9",,,IE,"087 791 1837",,establishment,,http://www.yogaclass.ie/,53.375636,-6.242398,"Google Places",ChIJE0FtzusOZ0gRb8dbLZKfJao,dublin_meditation.csv
+"The Yoga Lounge","415 Howth Rd, Dublin 5, Ireland","Dublin 5",Dublin,,IE,"087 636 2745",,establishment,"Monday: 7:00 – 9:30 pm
+Tuesday: 7:00 – 9:30 pm
+Wednesday: 7:00 – 9:30 pm
+Thursday: 10:00 – 11:30 am, 7:00 – 9:30 pm
+Friday: Closed
+Saturday: 10:30 am – 1:00 pm
+Sunday: 10:30 am – 1:00 pm",http://www.theyogalounge.ie/,53.379916,-6.176952,"Google Places",ChIJYz6De40PZ0gRgoYVNzfZxSg,
+"Saffron & Sapphire","8 Patrick Street, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"086 402 2597",,"place_of_worship, store, restaurant, food, health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: 10:00 am – 6:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 6:00 pm
+Friday: 10:00 am – 6:00 pm
+Saturday: 10:00 am – 6:00 pm
+Sunday: 1:00 – 5:00 pm",http://www.saffronandsapphire.com/,53.292023,-6.136845,"Google Places",ChIJd_l-oyYGZ0gR6SZBrs7Nc84,"dublin_aromatherapist.csv
+dublin_meditation.csv"
+"Yoga Balance Ireland","Tymonbawn Community Centre, Church Grove. Aylesbury, Tallaght, Co. Dublin, Ireland",Tallaght,Dublin,,IE,"085 741 2865",,establishment,,http://www.yogabalanceireland.com/,53.2764,-6.365392,"Google Places",ChIJV8v1W50OZ0gR19WAnaAZm74,
+"Monkstown Clinic","1A Alma Pl, Monkstown Village, Co. Dublin, Ireland","Monkstown Village",Dublin,,IE,"086 179 0303",,"hospital, health, establishment",,http://www.connectiveconnie.com/,53.293137,-6.153334,"Google Places",ChIJY24JFJkIZ0gRxEm7FprhiQc,
+"Balance Ireland Martial Arts & Yoga","40 Drumcondra Road Lower, Droim Conrach, Dublin, Ireland","Dublin City",Dublin,,IE,"087 229 7215",,"store, school, establishment","Monday: 6:30 – 10:00 pm
+Tuesday: 4:30 – 10:00 pm
+Wednesday: 6:30 – 10:00 pm
+Thursday: 4:30 – 10:00 pm
+Friday: 6:00 – 8:30 pm
+Saturday: 9:30 am – 1:30 pm
+Sunday: 9:30 am – 1:00 pm",http://www.balanceireland.com/,53.36338,-6.258392,"Google Places",ChIJ5RmA9ikQZ0gRIfCx3673b30,
+"Pregnancy Yoga Tallaght","Heatherview Lawn, Dublin 24, Ireland","Dublin 24",Dublin,,IE,"085 741 2865",,establishment,"Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.yogabalanceireland.com/,53.274841,-6.370878,"Google Places",ChIJR4f66xRfXUgRnuqH7rAA1EU,dublin_masseur.csv
+"Tadasana Thai Massage & Yoga","Grove Rd, Rathmines, Co. Dublin, Ireland",Rathmines,Dublin,,IE,"086 166 4040",,"health, establishment","Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 11:00 am – 8:00 pm
+Sunday: 11:00 am – 8:00 pm",https://plus.google.com/107740778073836052202/about?hl=en,53.329655,-6.266305,"Google Places",ChIJbcmREh4MZ0gRr5edZisUYVc,dublin_masseur.csv
+"Irish Aikido Federation","Unit 25, IDA Enterprise Centre, Macken Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 671 8454",,"health, school, establishment","Monday: 6:00 – 9:30 pm
+Tuesday: 6:00 – 9:30 pm
+Wednesday: 6:00 – 9:30 pm
+Thursday: 6:00 – 9:30 pm
+Friday: 6:00 – 8:00 pm
+Saturday: 11:00 am – 1:00 pm
+Sunday: Closed",http://www.aikido.ie/,53.341912,-6.241346,"Google Places",ChIJm9KsaZMOZ0gRE9rQBd7L4dM,dublin_meditation.csv
+"Ashtanga Yoga Shala Dublin","128 Baggot Street Lower, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 278 0559",,establishment,"Monday: 6:30 – 9:00 am
+Tuesday: 6:30 – 9:00 am
+Wednesday: 6:30 – 9:00 am
+Thursday: 6:30 – 9:00 am
+Friday: 6:30 – 9:00 am
+Saturday: Closed
+Sunday: 9:00 – 11:00 am",http://yogashala.ie/,53.337334,-6.251075,"Google Places",ChIJT0FJ9r4OZ0gRWNp9nNmUYtw,
+"Howth Yoga Centre","Studdwalls, Howth Summit, Dublin 13, Ireland","Dublin 13",Dublin,,IE,"(01) 839 0508",,"health, establishment","Monday: 10:30 am – 12:00 pm, 2:00 – 9:30 pm
+Tuesday: 10:30 am – 12:00 pm, 8:00 – 9:30 pm
+Wednesday: 10:30 am – 12:00 pm, 8:00 – 9:30 pm
+Thursday: 10:30 am – 12:00 pm, 8:00 – 9:30 pm
+Friday: 10:30 am – 12:00 pm, 2:00 – 9:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.howthyogacentre.com/,53.371971,-6.060913,"Google Places",ChIJv_ZoeIYEZ0gR594egOTFXGg,dublin_meditation.csv
+"CranioSacral Therapy & Yoga","9 River Lane Grove, Shankill, Dublin, Ireland",Dublin,Dublin,,IE,"086 363 7314",,"health, physiotherapist, establishment",,http://www.jeanmcdonald.ie/,53.241883,-6.120184,"Google Places",ChIJx3abi_oHZ0gRb31_iMVjZZ0,dublin_physical_therapist.csv
+"Ayurveda Natural Health Clinic","Glenmore House, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,,,"health, establishment","Monday: 10:00 am – 5:00 pm
+Tuesday: 10:00 am – 5:00 pm
+Wednesday: 10:00 am – 5:00 pm
+Thursday: 10:00 am – 5:00 pm
+Friday: 10:00 am – 5:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.ayurvedaireland.ie/,53.441349,-6.226726,"Google Places",ChIJTWwinVYQZ0gRYW6PBqOzaDw,dublin_meditation.csv
+"Bindu Tantra Ireland","No 3 Block A The Courtyard, Kilcarbery Business Park, Dublin 22, Ireland","Dublin 22",Dublin,,IE,"086 023 4182",,"health, establishment","Monday: 9:00 am – 11:00 pm
+Tuesday: 9:00 am – 11:00 pm
+Wednesday: 9:00 am – 11:00 pm
+Thursday: 9:00 am – 11:00 pm
+Friday: 9:00 am – 11:00 pm
+Saturday: 9:00 am – 11:00 pm
+Sunday: 9:00 am – 11:00 pm",http://www.bindutantraireland.com/,53.318081,-6.43979,"Google Places",ChIJrWFmlZtzZ0gRJ2th8i5Onas,dublin_masseur.csv
+"Yoga Loft Temple Bar","8 Cecilia Street, Temple Bar, Dublin, Ireland",Dublin,Dublin,,IE,"087 953 4043",,establishment,"Monday: 5:30 – 8:00 pm
+Tuesday: 5:40 – 8:00 pm
+Wednesday: 5:00 – 7:50 pm
+Thursday: 6:00 – 8:30 pm
+Friday: Closed
+Saturday: 10:00 am – 1:00 pm
+Sunday: Closed",http://yogaloft.ie/,53.345005,-6.264105,"Google Places",ChIJPRc5T5wOZ0gRCsJWReq6Lbc,
+"Ashtanga Yoga Mysore Classes","Cow's Lane, Dublin, Ireland",Dublin,Dublin,,IE,"085 285 3867",,establishment,,https://plus.google.com/111022289163461686542/about?hl=en,53.344244,-6.268851,"Google Places",ChIJ85A48CcMZ0gRFmfp4yxJT8E,
+"Premilla Maharaj Yoga Classes","Taney Parish Centre, 14 Taney Rd, Dublin, Ireland",Dublin,Dublin,,IE,"087 775 1886",,establishment,,https://plus.google.com/105584077217720814617/about?hl=en,53.29132,-6.238896,"Google Places",ChIJN5LzzmkJZ0gRE6KpcVdoSPg,
+"Henshin Aikido","40 Drumcondra Road Lower, Drumcondra, Dublin 9, Ireland","Dublin 9",Dublin,,IE,"087 229 7215",,"school, establishment",,http://www.henshinaikido.com/,53.363446,-6.258485,"Google Places",ChIJ53a_NHsOZ0gRzNYzqUtn5UY,
+"Anthony Kearney Yoga at Satya Yoga Studio","6 Greenmount Avenue, Dublin, Ireland","Dublin City",Dublin,,IE,"087 907 7505",,establishment,"Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.anthonykearneyyoga.com/,53.327908,-6.279669,"Google Places",ChIJD-r4sxAMZ0gROzpcfdh_fOY,
+"Yoga Croi","Ballyowen, Co. Dublin, Ireland","South Dublin",Dublin,,IE,"086 837 2862",,establishment,"Monday: Closed
+Tuesday: Closed
+Wednesday: 7:45 – 9:00 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.yogacroi.com/,53.350909,-6.424442,"Google Places",ChIJF9ROLeNyZ0gR5g8viflqtsU,dublin_meditation.csv
+"Life Balancing Yogas at Dundrum / Ballinteer / Rathfarnham","Dlr Leisure Services, Meadowbrook, Rathfarnham, Dundrum Ballinteer, Co. Dublin, Ireland","Dundrum Ballinteer",Dublin,,IE,"(01) 494 1212",,"health, establishment","Monday: 7:00 am – 8:30 pm
+Tuesday: Closed
+Wednesday: 8:00 am – 9:00 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",https://plus.google.com/104104343068004582734/about?hl=en,53.2892,-6.24367,"Google Places",ChIJMx8bTGYJZ0gRCKBZQv4VGcM,dublin_meditation.csv
+"Om In the Office","℅ Fringe Lab, Sycamore Place, Dublin 2, Dublin 2, Ireland","Dublin 2",,,IE,"087 944 3776",,establishment,,https://plus.google.com/111228284632111243958/about?hl=en,53.344818,-6.25921,"Google Places",ChIJzZYxOJsOZ0gRg0ORAyX2R6U,
+"Yoga classes with Edie Moran","25 Marino Crescent, Dublin, Co. Comhairle Cathrach Bhaile Atha Cliath, Ireland",,"Comhairle Cathrach Bhaile Atha Cliath",,IE,"086 821 7862",,establishment,,http://www.emyoga.com/,53.364865,-6.226688,"Google Places",ChIJodRYH1EOZ0gRNm86gB4h0Q0,
+"Barefoot Yoga & Fitness","Millbank Business Park, Lower Lucan Road, Lucan, Co. Dublin, Ireland",,Dublin,,IE,"083 157 9543",,establishment,"Monday: 6:30 – 10:00 pm
+Tuesday: 6:30 – 10:00 pm
+Wednesday: 6:30 – 10:00 pm
+Thursday: 10:00 am – 1:00 pm, 6:30 – 10:00 pm
+Friday: 6:30 – 10:00 pm
+Saturday: 9:30 am – 3:00 pm
+Sunday: Closed",http://www.barefootyogastudio.ie/,53.362512,-6.442623,"Google Places",ChIJ81pTtFhyZ0gRZ5_RpMqAvGQ,dublin_pilates.csv
+"Hatha Yoga, Pregnancy Yoga, Baby Massage","12 Cromwellsfort Rd, Dublin 12, Ireland","Dublin 12",Dublin,,IE,"087 911 9840",,establishment,"Monday: 7:00 – 9:00 pm
+Tuesday: 7:00 – 9:00 pm
+Wednesday: 11:00 am – 12:00 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",https://plus.google.com/104760115594365655046/about?hl=en,53.316454,-6.321709,"Google Places",ChIJ260-3oYMZ0gR05Wq0wKGaqk,dublin_masseur.csv
+yoga4all,"Yoga4all Studios, Unit C2 Airside Enterprise Centre, Airside, Swords, Co. Dublin, Ireland","Airside, Swords",Dublin,,IE,"086 845 3210",,establishment,,http://www.yoga4all.ie/,53.443637,-6.218248,"Google Places",ChIJi6ISatwQZ0gRwnh2rwWBOaY,
+TwoPalmsYoga,"52 Aughrim St, Dublin, Ireland",Dublin,Dublin,,IE,"085 814 7402",,"health, establishment","Monday: Closed
+Tuesday: 7:00 – 8:00 pm
+Wednesday: 8:00 – 9:00 pm
+Thursday: 8:00 – 9:00 pm
+Friday: 6:00 – 7:00 pm
+Saturday: Closed
+Sunday: Closed",https://plus.google.com/114384909227992293116/about?hl=en,53.354752,-6.290788,"Google Places",ChIJBz9IrcwNZ0gRXCLNkK1jgMM,"dublin_meditation.csv
+dublin_nutritionist.csv
+dublin_pilates.csv"
+"Somatic Yoga and Movement","Carrow Road, Dublin, Ireland",Dublin,Dublin,,IE,"086 359 6824",,"health, establishment",,http://www.paolacatizone.com/,53.332917,-6.320721,"Google Places",ChIJVzTLkl8MZ0gR9EEqm6ij9EQ,dublin_meditation.csv
+"Om Yoga Dublin 7","18 Springfield, Off Blackhorse Avenue, Dublin, Ireland",Dublin,Dublin,,IE,"087 207 1530",,establishment,"Monday: 6:30 – 8:30 pm
+Tuesday: 6:30 – 8:30 pm
+Wednesday: 6:30 – 8:30 pm
+Thursday: 6:30 – 8:30 pm
+Friday: 10:00 am – 11:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.omyoga.ie/,53.361633,-6.307304,"Google Places",ChIJxaexBNgNZ0gRBAXverpYBzU,
+"Power Yoga","St Thomas's Church, Fosters Avenue, Stillorgan, Co. Dublin, Ireland",Stillorgan,Dublin,,IE,"087 960 6908",,establishment,,https://plus.google.com/107581355320167937507/about?hl=en,53.289089,-6.20778,"Google Places",ChIJC9k-XBkJZ0gRqgQ0cExmY3o,
+"Pure Pilates","All Saints Church Hall, Raheny, Dublin 5, Ireland","Dublin 5",,,IE,"087 683 0547",,"health, establishment","Monday: 7:00 – 10:00 pm
+Tuesday: 7:00 – 9:00 pm
+Wednesday: 7:00 – 9:00 pm
+Thursday: 7:00 – 9:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.purepilates.ie/,53.379853,-6.178404,"Google Places",ChIJBZ-IhpIPZ0gReHZO130prD0,dublin_pilates.csv
+"Yoga for Balance | Greystones","St Patrick's Worship and Recreation Centre, Church Road, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"086 307 6772",,"health, establishment","Monday: Closed
+Tuesday: Closed
+Wednesday: 11:00 am – 12:15 pm, 7:30 – 8:45 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://yogagreystones.net/,53.14769,-6.069672,"Google Places",ChIJ9-B7nDKvZ0gR7Xz0AqnwWs8,
+"Lucan Yoga","Lucan Spa Hotel, Lucan, Co.Dublin, Co. Dublin, Ireland",Co.Dublin,Dublin,,IE,"086 846 7045",,establishment,,http://www.lucanyoga.com/,53.35568,-6.463362,"Google Places",ChIJ0Z2amkhyZ0gRKvYdRU3fPro,dublin_meditation.csv
+"Yoga Therapy Ireland","20 Auburn Drive, Glenageary, Killiney, Co. Dublin, Ireland",Killiney,Dublin,,IE,"(01) 235 2120",,establishment,,http://www.yogatherapyireland.com/,53.262304,-6.138157,"Google Places",ChIJRVJ2MnYIZ0gRMauaEJlZP2o,
+"Balance Ireland/Martial Arts & Yoga","Grattan Business Park, Clonshaugh Business & Technology Park, Dublin, Ireland",Dublin,Dublin,,IE,"087 229 7215",,establishment,,https://plus.google.com/105873953123391494136/about?hl=en,53.402894,-6.216915,"Google Places",ChIJTVO57ikQZ0gR8p-j7QZvmE0,
+"Hatha and Pregnancy Yoga Classses","Glencormac, Kilmacanogue, Co. Wicklow, Ireland",Kilmacanogue,Wicklow,,IE,"(01) 286 1677",,establishment,,http://www.lucycullenyoga.com/,53.176623,-6.142644,"Google Places",ChIJZyWktj6mZ0gRV9Yk-E8s09U,
+"Santosha Yoga","Castle Street, Dalkey, Co. Dublin, Ireland",,Dublin,,IE,,,establishment,"Monday: 9:00 am – 9:30 pm
+Tuesday: 9:00 am – 9:30 pm
+Wednesday: 9:00 am – 9:30 pm
+Thursday: 9:00 am – 9:30 pm
+Friday: 9:00 am – 9:30 pm
+Saturday: 9:00 am – 9:30 pm
+Sunday: 9:00 am – 9:30 pm",http://www.santosha.ie/,53.277389,-6.104026,"Google Places",ChIJCZPqSbMHZ0gRpTnlbWCZUk8,
+"Bharma Kumaris Raja Yoga Centre","5 Leeson Park Avenue, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 668 7480",,establishment,,https://plus.google.com/117437969674402960781/about?hl=en,53.326676,-6.247961,"Google Places",ChIJe4n45roOZ0gRWo1PI_22YtE,
+"Feldenkrais Dublin","11 Herbert Place, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 418 0646",,"health, establishment",,http://www.feldenkraisdublin.ie/,53.335477,-6.244368,"Google Places",ChIJBXapjh8MZ0gRzIgv3Jk9WyM,
+"Ashtanga Yoga Ireland","Samadhi Yoga, Wooden Building, Cows Lane, Temple Bar, Dublin 8, Dublin, Ireland",Dublin,Dublin,,IE,"087 238 4335",,establishment,"Monday: 6:30 – 9:00 am
+Tuesday: 6:30 – 9:00 am
+Wednesday: 6:30 – 9:00 am
+Thursday: 6:30 – 9:00 am
+Friday: 6:30 – 9:00 am
+Saturday: Closed
+Sunday: 10:00 – 11:30 am",http://ashtangayogaireland.ie/,53.34429,-6.26875,"Google Places",ChIJVSxn8CcMZ0gRvRTM7a6roZ0,
+"Yoga Rathmines","St Marys College, Lower Rathmines Road, Co. Dublin, Ireland","Lower Rathmines Road",Dublin,,IE,"086 880 8272",,establishment,"Monday: 5:30 – 9:00 pm
+Tuesday: 5:30 – 9:00 pm
+Wednesday: 5:30 – 9:00 pm
+Thursday: 5:30 – 9:00 pm
+Friday: Closed
+Saturday: 11:00 am – 12:30 pm
+Sunday: Closed",http://www.yogarathmines.com/,53.326978,-6.266391,"Google Places",ChIJR_KNNRwMZ0gRmVdEYWm5adk,
+"YOGA Essence","1st Floor, Roseville House, Main Street, Celbridge, Co. Kildare, Ireland",Celbridge,Kildare,,IE,"086 847 4944",,establishment,,http://www.yogaessence.ie/,53.34102,-6.537594,"Google Places",ChIJF2pBjwdxZ0gRhv23lAJ5Cs8,dublin_meditation.csv
+"Seraph Yoga & Healing Arts Centre","15 Heytesbury Street, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 453 9971",,establishment,,https://plus.google.com/115821716504598362960/about?hl=en,53.335123,-6.268957,"Google Places",ChIJFZBpMSAMZ0gRAFRrgqj_ZvE,
+"Yoga Ireland","South William Street South, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 681 1240",,"health, establishment","Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: 9:00 am – 7:00 pm
+Sunday: 9:00 am – 7:00 pm",http://yogaireland.ie/,53.341553,-6.263128,"Google Places",ChIJy0-5SJwOZ0gRiXlhoh9898o,
+"Healing Yoga Dublin","Dublin Holistic Centre, 28 William Street South, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 963 3229",,"health, establishment","Monday: 7:30 am – 7:00 pm
+Tuesday: 7:30 am – 7:00 pm
+Wednesday: 7:30 am – 7:00 pm
+Thursday: 7:30 am – 7:00 pm
+Friday: 7:30 am – 7:00 pm
+Saturday: 9:00 am – 12:00 pm
+Sunday: Closed",http://laurasarahdowdall.wix.com/healingyoga,53.341564,-6.263126,"Google Places",ChIJrZKhsAAJZ0gRYD33a6rYnss,
+"Hot Yoga Studios Dundrum","Victoria Terrace, Dundrum Road, Dundrum, Dublin 14, Ireland","Dublin 14","Co. Dublin",,IE,"085 275 7766",,establishment,,http://www.hotyogastudios.ie/,53.293853,-6.245388,"Google Places",ChIJAXLgE10JZ0gRzHWqW9e6gok,
+"Hot Yoga Studios Dundrum","Victoria Terrace, Dundrum Road, Dundrum, Dublin 14, Ireland","Dublin 14","Co. Dublin",,IE,"085 275 7766",,establishment,,http://www.hotyogastudios.ie,53.293853,-6.245388,"Google Places",ChIJ376aDl0JZ0gRtSZGfetC52k,
+MindWell,"Unit 9, Donabate Town Centre, Main Street, Donabate, Co. Dublin, Ireland",Donabate,Dublin,,IE,"(01) 442 8811",,"health, establishment","Monday: 9:00 am – 6:00 pm
+Tuesday: 9:00 am – 6:00 pm
+Wednesday: 9:00 am – 6:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.mindwell.ie/,53.486808,-6.148665,"Google Places",ChIJd9eF0yUaZ0gRtSDmHef_0ao,"dublin_masseur.csv
+dublin_meditation.csv"
+"The Yoga Site","The Guinness Enterprise Centre (GEC) Room Taylor's 8, 40 Taylor's Lane, Dublin, Ireland",Dublin,Dublin,,IE,"086 818 0890",,establishment,"Monday: 8:00 am – 10:00 pm
+Tuesday: 8:00 am – 10:00 pm
+Wednesday: 8:00 am – 10:00 pm
+Thursday: 8:00 am – 10:00 pm
+Friday: 8:00 am – 10:00 pm
+Saturday: 8:00 am – 10:00 pm
+Sunday: 8:00 am – 10:00 pm",http://www.theyogasite.com/,53.341321,-6.284401,"Google Places",ChIJueC1AzsMZ0gRYdgn_VrGS54,
+"Bikram Yoga","Unit E4, Sandyford Industrial Estate, Three Rock Road, Dublin 18, Ireland","Dublin 18","Co. Dublin",,IE,"(01) 293 3972",,establishment,,http://www.yogabikram.ie,53.304431,-6.186631,"Google Places",ChIJ74BxFMUIZ0gRLT_zrrGNkaM,
+"Ashtanga Yoga Dublin","Idrone Lane, rear, 16 Main Street, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"087 237 6383",,establishment,"Monday: 6:00 – 8:00 am, 10:00 am – 12:00 pm, 7:00 – 8:30 pm
+Tuesday: 6:00 – 8:00 am, 7:00 – 8:30 pm
+Wednesday: 6:00 am – 12:00 pm, 7:00 – 8:30 pm
+Thursday: 6:00 – 10:00 am, 7:00 – 8:30 pm
+Friday: 6:00 – 7:30 am, 10:00 am – 12:00 pm
+Saturday: 10:30 am – 12:30 pm
+Sunday: 10:00 am – 12:00 pm",http://ashtanga.ie/,53.301695,-6.177233,"Google Places",ChIJ5bS6KccIZ0gR8gpT4k1uW5w,
+"Danu Yoga Centre","105 Ballinteer Park, Dublin, Ireland",Dublin,Dublin,,IE,"086 172 3399",,establishment,,http://www.danuyogacentre.com/,53.277905,-6.249585,"Google Places",ChIJ9ZBXrH0JZ0gRGoFnrd6r4qc,
+"Yoga with Neasa","Scots Hall, Clontarf & Scots Presbyterian Church, Clontarf Road, Clontarf, Dublin 3, Ireland","Dublin 3",Dublin,,IE,"087 616 6524",,establishment,"Monday: 11:00 am – 12:00 pm
+Tuesday: 6:00 – 9:00 pm
+Wednesday: 7:00 – 9:00 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.yoga-in-dublin.com/,53.364849,-6.227954,"Google Places",ChIJ8fEJ6FAOZ0gRzu26VHG06vk,
+"Yoga Clontarf","51 Crescent House, Marino Crescent, Howth Road, Dublin, Ireland",Dublin,Dublin,,IE,"086 821 7862",,establishment,,https://plus.google.com/102868083987005223486/about?hl=en,53.365108,-6.22729,"Google Places",ChIJm2KQ4VAOZ0gRtCYNZhkKh1M,
+"Spring into Life Yoga Classes Dublin","Sandyford, Co. Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"086 824 2033",,"health, establishment",,https://plus.google.com/115845590915397553053/about?hl=en,53.268174,-6.225609,"Google Places",ChIJ56G6BJ8JZ0gRsiv04Ph0hEk,
+"Greystones Yoga Studio","Church Road, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"086 854 2741",,establishment,,http://www.greystonesyoga.ie/,53.14371,-6.060813,"Google Places",ChIJcUdAJCyvZ0gRhy6-9aCDKz4,dublin_meditation.csv
+"Make Up Artist","Pure Health, 9a Main Street, Ongar, Co. Dublin, Ireland",Ongar,Dublin,,IE,"087 657 0602",,"beauty_salon, health, establishment",,http://www.emmasmith.ie/,53.395523,-6.439222,"Google Places",ChIJ18h6eHxtZ0gRGzl-v1-0NfU,dublin_nutritionist.csv
+"Yoga Balance Ireland","20 Knockaire, Dublin 16, Ireland","Dublin 16",Dublin,,IE,,,"gym, health, establishment",,http://www.yogabalanceireland.ie/,53.284332,-6.316461,"Google Places",ChIJV8bNkgsLZ0gR3B54epyGHPg,
+"Zen Yoga","65 Cluain Shee, Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"087 293 5942",,establishment,"Monday: Closed
+Tuesday: 6:30 – 9:15 pm
+Wednesday: Closed
+Thursday: 6:30 – 9:15 pm
+Friday: Closed
+Saturday: 10:45 am – 12:00 pm
+Sunday: Closed",http://www.zenyoga.ie/,53.262888,-6.22259,"Google Places",ChIJ6ayLZZgJZ0gRzioQabWzQ0Y,
+"Yoga Passion Dublin","Long Mile Road Business Park, Long Mile Rd, Dublin 12, Ireland","Dublin 12",Dublin,,IE,"085 168 0723",,establishment,"Monday: 5:00 – 9:00 pm
+Tuesday: 5:00 – 9:00 pm
+Wednesday: 5:00 – 9:00 pm
+Thursday: 5:00 – 9:00 pm
+Friday: 9:00 am – 1:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.yogapassiondublin.com/,53.32459,-6.337023,"Google Places",ChIJJcK_b5YMZ0gRDwAOXbTJ4qw,
+"Yaz Yoga","Belarmine Community Centre, Belarmine Plaza, Dublin, Ireland",Dublin,Dublin,,IE,"085 746 9629",,establishment,"Monday: Closed
+Tuesday: 8:00 – 9:00 pm
+Wednesday: Closed
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.yazyoga.com/,53.260878,-6.220555,"Google Places",ChIJpemiVL0JZ0gRs4VZzzHP4BY,
+"Yoga Sanctuary","unit 3, Apartment 13, Bissett's Loft, Strand Street, Malahide, Co. Dublin, Ireland",,Dublin,,IE,"087 624 0096",,"gym, health, establishment",,http://www.yogasanctuary.ie/,53.452203,-6.155498,"Google Places",ChIJKYXmHWEaZ0gRuAgLH0sEIVk,
+"Life Particle Yoga Meditation","G9, Pottery Business Centre, Pottery Rd, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 284 9136",,establishment,"Monday: 10:00 am – 2:30 pm, 5:00 – 8:30 pm
+Tuesday: 10:00 am – 2:30 pm, 5:00 – 8:30 pm
+Wednesday: 10:00 am – 2:30 pm, 5:00 – 8:30 pm
+Thursday: 11:00 am – 5:30 pm
+Friday: 10:00 am – 2:30 pm, 5:00 – 8:30 pm
+Saturday: 11:00 am – 5:30 pm
+Sunday: 11:00 am – 5:30 pm",http://www.lifeparticle.ie/,53.275266,-6.158002,"Google Places",ChIJ9ZdA1IkIZ0gR6cXPcIUmjho,dublin_meditation.csv
+"Simply Living Yoga (North Dublin Yoga) (Yoga North Dublin) (Dublin Yoga)","Dublin, Ireland",Dublin,Dublin,,IE,"085 826 3366",,"health, establishment",,http://www.simplylivingyoga.net/,53.349805,-6.26031,"Google Places",ChIJawXFQIQOZ0gRXOCOpnAfMJM,dublin_meditation.csv
+"Yoga Balance Ireland","Tymonbawn Community centre, Church Grove, Tallaght, Co. Dublin, Ireland","South Dublin",Dublin,,IE,"085 741 2865",,establishment,,http://www.yogabalanceireland.com/,53.276186,-6.366014,"Google Places",ChIJ1z1HR810Z0gRUGcGQdNLj3g,
+"Yoga With Melissa","33 Tuscany Park, Dublin 13, Ireland","Dublin 13",Dublin,,IE,"086 381 8443",,"health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: 10:00 am – 6:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 6:00 pm
+Friday: 10:00 am – 6:00 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: 11:00 am – 3:00 pm",https://plus.google.com/105720300141605512466/about?hl=en,53.395025,-6.133373,"Google Places",ChIJu02j5jkFZ0gR-Db3Y3mINKk,
+"Sports Yoga Ireland","Unit 11, Rosemount Business Park, Dublin 11, Ireland","Dublin 11",Dublin,,IE,"086 379 3991",,establishment,"Monday: 10:00 am – 10:00 pm
+Tuesday: 10:00 am – 10:00 pm
+Wednesday: 10:00 am – 10:00 pm
+Thursday: 10:00 am – 10:00 pm
+Friday: 10:00 am – 10:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.sportsyogaireland.ie/,53.402284,-6.348924,"Google Places",ChIJ9djj8IQSZ0gR-PmjEAF3gPo,
+"Yoga By Caron","The Studio, Unit 3, Aubrey Court, Parnell Road, Bray, Co. Wicklow, Ireland",Bray,Wicklow,,IE,"087 348 2336",,establishment,"Monday: Closed
+Tuesday: Closed
+Wednesday: 7:15 – 8:30 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://yoga-sacredflow.com/,53.201305,-6.111939,"Google Places",ChIJGUrtm3qoZ0gRn-aVEfiY5c0,
+"West Wicklow Yoga","Blessington, Blessington, Co. Wicklow, Ireland",Blessington,Wicklow,,IE,"087 909 0895",,establishment,"Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.westwicklowyoga.ie/,53.169658,-6.534069,"Google Places",ChIJF_rguh-dZ0gRqtY0081uxpo,dublin_meditation.csv
+"Blessington Pilates","The Annex, Main Street, Blessington, Co. Wicklow, Ireland",Blessington,Wicklow,,IE,"087 932 7912",,"gym, health, establishment",,http://www.physiotherapyworks.ie/,53.169658,-6.534069,"Google Places",ChIJQWMVUR6dZ0gRvfygcY30kgE,dublin_pilates.csv
+"Open Mind Yoga Dublin","95 Pearse Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 671 0011",,"restaurant, food, establishment",,https://plus.google.com/105766209321647134770/about?hl=en,53.343249,-6.244429,"Google Places",ChIJXT9q2ZwOZ0gRRdjwU7QrFdQ,dublin_pilates.csv
+"Tara Yoga Centre","8 Pembroke Rd, Dublin, Ireland",Dublin,Dublin,,IE,,,establishment,,http://www.tarayogacentre.ie/,53.33277,-6.240392,"Google Places",ChIJjW7C9b4OZ0gRuubZkQVTkb0,
+"Open Mind Yoga - Temple Bar","1 Temple Ln S, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 671 0011",,"restaurant, food, health, establishment",,https://plus.google.com/107742534691038489580/about?hl=en,53.344357,-6.264213,"Google Places",ChIJXT9q2ZwOZ0gRNE3imjK-N6A,
+"Hush Baby Massage","Belarmine Community Centre, Stepaside, Dublin 18, Ireland","Stepaside, Dublin 18",,,IE,"086 233 5833",,"health, establishment",,http://hushbabymassage.com/,53.25846,-6.220353,"Google Places",ChIJM1Eufr0JZ0gRU7WwuSO6tJg,dublin_masseur.csv
+"About Birth and Babies - Cuidiú Irish Childbirth Trust","Slievemore Clinic, Old Dublin Road, Stillorgan, Co. Dublin, Ireland",Stillorgan,Dublin,,IE,"086 341 2571",,establishment,,http://www.aboutbirthandbabies.com/,53.292222,-6.2013,"Google Places",ChIJVw4fzx8JZ0gRr0cu1BSxk0w,
+"Mind Body Spirit Coaching - ""Bring Your Life to New Heights""","14 Daletree View, Dublin, Ireland",Dublin,Dublin,,IE,"085 818 8482",,establishment,"Monday: 8:00 am – 10:00 pm
+Tuesday: 8:00 am – 10:00 pm
+Wednesday: 8:00 am – 10:00 pm
+Thursday: 8:00 am – 10:00 pm
+Friday: 8:00 am – 10:00 pm
+Saturday: 8:00 am – 10:00 pm
+Sunday: 8:00 am – 10:00 pm",https://plus.google.com/101065985926228295036/about?hl=en,53.27259,-6.337031,"Google Places",ChIJy9qpbSILZ0gRQZsvS8NAFGA,dublin_personal_trainer.csv
+"OOYO Sports Ltd","Hills Industrial Estate, Lower Lucan Road, Lucan, Co. Dublin, Ireland",,Dublin,,IE,"087 981 3508",,"clothing_store, store, establishment","Monday: 9:00 am – 6:00 pm
+Tuesday: 9:00 am – 6:00 pm
+Wednesday: 9:00 am – 6:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 pm – 12:00 am
+Saturday: 12:00 am – 5:00 pm
+Sunday: Closed",https://www.ooyosportsshop.com/,53.360777,-6.444729,"Google Places",ChIJu01VeEtyZ0gRSCFFRmuiyck,
+"The Yoga Room, Co Meath","19 Deerpark, Ashbourne, Co. Meath, Ireland",Ashbourne,Meath,,IE,"087 418 5120",,establishment,"Monday: 7:30 – 8:50 pm
+Tuesday: 7:00 – 8:10 pm
+Wednesday: 7:00 – 9:15 pm
+Thursday: Closed
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.yoga-meath.ie/,53.504992,-6.390409,"Google Places",ChIJ614j2cEUZ0gRATT8PmEnKIM,
+YogaHub,"27 Camden Place, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"085 863 0292",,establishment,,http://www.theyogahub.ie/,53.335204,-6.264225,"Google Places",ChIJJTysf68OZ0gRdQUNZozZNMM,dublin_meditation.csv
+McSport,"Unit 5 Fern Road, Sandyford Industrial Estate, Dublin 18, Ireland","Dublin 18",Dublin,,IE,"(01) 293 0005",,"store, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.mcsport.ie/,53.273594,-6.212311,"Google Places",ChIJGTmKVNWnZ0gR8p-UqER89FA,"dublin_meditation.csv
+dublin_personal_trainer.csv
+dublin_pilates.csv"
+"Mumsandbabies - Antenatal Classes","Venue: Louis Fitzgerald Hotel, Naas Road, Clondalkin, Co. Dublin, Ireland",Clondalkin,Dublin,,IE,"085 712 9821",,"health, establishment","Monday: Closed
+Tuesday: Closed
+Wednesday: Closed
+Thursday: Closed
+Friday: Closed
+Saturday: 9:00 am – 5:00 pm
+Sunday: 9:00 am – 5:00 pm",http://www.mumsandbabies.ie/,53.315031,-6.383249,"Google Places",ChIJa19JpFFzZ0gRd5Tra6r_Uew,
+"Podium 4 Sport","Unit 19 Block 5, Port Tunnel Business Park, Clonshaugh Technology Park, Dublin 17, Ireland",,,,IE,"(01) 685 3287",,"store, establishment","Monday: 9:00 am – 5:30 pm
+Tuesday: 9:00 am – 5:30 pm
+Wednesday: 9:00 am – 5:30 pm
+Thursday: 9:00 am – 5:30 pm
+Friday: 9:00 am – 5:30 pm
+Saturday: Closed
+Sunday: Closed",http://podium4sport.com/,53.404498,-6.22288,"Google Places",ChIJSd3OHysQZ0gRzka8uVUo6yY,
+"Fitness Classes Dublin .ie","18 Mount Eagle Grove, Leopardstown Heights, Dublin 18, Ireland","Dublin 18",Dublin,,IE,"086 173 6720",,"gym, health, establishment","Monday: 7:00 am – 9:30 pm
+Tuesday: 7:00 am – 9:30 pm
+Wednesday: 7:00 am – 9:30 pm
+Thursday: 7:00 am – 9:30 pm
+Friday: 7:00 am – 7:00 pm
+Saturday: 8:00 am – 5:00 pm
+Sunday: Closed",http://www.fitnessclassesdublin.ie/,53.267328,-6.213664,"Google Places",ChIJDXthmaYJZ0gRxUgco8UnZZ4,"dublin_personal_trainer.csv
+dublin_pilates.csv"
+"Melanie Hoskin","570 Howth Rd, Raheny, Co. Dublin, Ireland",Raheny,Dublin,,IE,"086 241 9685",,establishment,,http://www.clinicofnaturalmedicine.ie/,53.380371,-6.17217,"Google Places",ChIJ7-WBjowPZ0gRVVTClJy09wc,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv
+dublin_pilates.csv"
+"Irish Health Culture Association","66 Eccles Street, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 830 4078",,establishment,,http://holisticmedicine.ie/,53.357891,-6.265504,"Google Places",ChIJn2rtbn4OZ0gRh-QKcFHrFGA,
+"The Sanctuary","7 Stanhope Street, Stoneybatter, Dublin 7, Ireland","Dublin 7",Dublin,,IE,"(01) 670 5419",,"health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 4:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.sanctuary.ie/,53.352322,-6.280385,"Google Places",ChIJ09BrrS0MZ0gRUJBt7DIZ3J0,dublin_meditation.csv
+"Oscailt Integrative Health Centre","8 Pembroke Road, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 660 3872",,"health, school, establishment","Monday: 9:30 am – 5:30 pm
+Tuesday: 9:30 am – 5:30 pm
+Wednesday: 9:30 am – 5:30 pm
+Thursday: 9:30 am – 5:30 pm
+Friday: 12:00 – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://oscailt.com/,53.332812,-6.242094,"Google Places",ChIJXynNBr8OZ0gRgpLjyNsZeHY,"dublin_meditation.csv
+dublin_pilates.csv"
+"The Peacock Salon Westmanstown","Westmanstown, Dublin 15, Ireland","Dublin 15",Dublin,,IE,"(01) 823 7709",,"health, establishment","Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 10:00 am – 7:00 pm
+Sunday: 10:00 am – 7:00 pm",http://www.crunchfitness.ie/,53.380838,-6.438803,"Google Places",ChIJpdX_dIZyZ0gRzlulRkCZDk8,dublin_pilates.csv
+"St Therasa's","Clarendon Street, Dublin, Ireland",Dublin,Dublin,,IE,"087 299 0742",,establishment,"Monday: 5:30 – 9:30 pm
+Tuesday: 5:30 – 9:30 pm
+Wednesday: 5:30 – 9:00 pm
+Thursday: 5:30 – 9:30 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.realbodiespilates.com/,53.341867,-6.261306,"Google Places",ChIJY_jFb5wOZ0gRYMv7sahM9hY,dublin_pilates.csv
+"Realbodies Pilates","Gate Lodge, All Hallows Missonary College - Lodge, Grace Park Road, Drumcondra, Co. Dublin, Ireland",Drumcondra,Dublin,,IE,"087 299 0742",,establishment,"Monday: 5:30 – 9:30 pm
+Tuesday: 5:30 – 9:30 pm
+Wednesday: 5:30 – 9:30 pm
+Thursday: 5:30 – 9:30 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.realbodiespilates.com/,53.371321,-6.245968,"Google Places",ChIJnVu_d0IOZ0gRdU9xGAo_MtI,dublin_pilates.csv

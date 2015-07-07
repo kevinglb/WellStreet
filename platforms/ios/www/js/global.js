@@ -4,8 +4,10 @@ var map;
 /*an array preserve all existing markers on the map*/
 var markers_array=[];
 var $mapslider = $("#detail_slider");
-//checks to see if the "touchend" event is supported in the browser and if not then we use the "click" event.    
-var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+var maplayer;
+//icon setting
+var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});
+
 /*clear markers and tilelayers on the map*/ 
 function clearMap(){
 
@@ -47,4 +49,10 @@ function resetMapPage(){
 		console.log("overlay is visible");
 		$('.overlay').toggle();
 	}
+}
+
+function removeAllMarkers(){
+	map.removeLayer(markers_array);
+	markers_array = [];
+
 }

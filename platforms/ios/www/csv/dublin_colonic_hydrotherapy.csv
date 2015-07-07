@@ -1,0 +1,68 @@
+Name,"Full Address",City,County/State,Postcode,Country,"Telephone Number",Rating,Keywords,"Opening hours",URL,Latitude,Longitude,"Data Source","Data Source Identifer","Duplicated In"
+"Cleanse Within Colon Hydrotherapy/ Colonic Irrigation","16 South Great George's Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"086 162 2063",,"health, establishment","Monday: 10:00 am – 7:00 pm
+Tuesday: 10:00 am – 7:00 pm
+Wednesday: Closed
+Thursday: 10:00 am – 7:00 pm
+Friday: 10:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.cleansewithin.ie/,53.343089,-6.26422,"Google Places",ChIJLy94_ZwOZ0gRNbvZW_6y6IM,dublin_hydrotherapy.csv
+"Colonic Irrigation Dublin, NOW €79 not €120","4, 48 Rushbrook, Blanchardstown, Co. Dublin, Ireland",Blanchardstown,Dublin,,IE,"(01) 820 1602",,"health, establishment","Monday: 10:00 am – 8:00 pm
+Tuesday: 10:00 am – 8:00 pm
+Wednesday: 10:00 am – 8:00 pm
+Thursday: 10:00 am – 8:00 pm
+Friday: 10:00 am – 8:00 pm
+Saturday: 10:00 am – 8:00 pm
+Sunday: Closed",http://www.colonicdublin.ie/,53.385867,-6.380484,"Google Places",ChIJywC1bVENZ0gRrQSt-nBlivQ,"dublin_allergy.csv
+dublin_hydrotherapy.csv"
+"Willows Clinic","38 Oakwood Ave, Glasnevin, Dublin 11, Ireland","Dublin 11",Dublin,,IE,"(01) 485 1100",5,"beauty_salon, physiotherapist, hair_care, health, establishment","Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: 9:00 am – 6:00 pm
+Sunday: Closed",http://www.willowsclinic.com/,53.39456,-6.287535,"Google Places",ChIJIUCIMPkNZ0gRrERBMwgYUVg,"dublin_aromatherapist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_reflexologist.csv"
+"Dublin Colonic","Unit 7, Dublin Vitality Center, 48 Rushbrook, Dublin City, Co. Dublin, Ireland","Dublin City","Co. Dublin",,IE,"087 197 3984",,establishment,,http://www.dublincolonic.ie/,53.385862,-6.380865,"Google Places",ChIJw1zhLlcNZ0gR3yFmAMArBSI,dublin_hydrotherapy.csv
+"Absolute Health Colonic Irrigation Dublin","14 Dodder Park Rd, Rathfarnham Dublin 14, Co. Dublin, Ireland","Rathfarnham Dublin 14",Dublin,,IE,"(01) 490 1569",,"health, establishment","Monday: 10:00 am – 7:00 pm
+Tuesday: 10:00 am – 7:00 pm
+Wednesday: 10:00 am – 7:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: 10:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",https://plus.google.com/105742300204175771588/about?hl=en,53.30372,-6.279235,"Google Places",ChIJ1_KW0u8LZ0gRi5ZfMmW5_gk,
+"Aria Health Care","Applewood Medical centre Applewood Village Swords Co, Dublin, Co. Fingal, Ireland",Fingal,Fingal,,IE,"(01) 895 7947",,"health, establishment",,http://www.aria-health.com,53.471803,-6.232338,"Google Places",ChIJITur9dsQZ0gRZx0sKhY4g7A,dublin_hydrotherapy.csv
+www.ColonicDublin.ie,"Blanchardstown, Dublin City, Co. Dublin, Ireland","Dublin City",Dublin,,IE,,,"health, establishment",,http://www.colonicdublin.ie/,53.387314,-6.378303,"Google Places",ChIJ_TUduFANZ0gRIzkYhyjxBII,dublin_hydrotherapy.csv
+"Essential Health","Westwood Club, Leopardstown Racecourse, Leopardstown, Co. Dublin, Ireland",Leopardstown,Dublin,,IE,"087 959 4286",,"health, establishment","Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: 10:00 am – 3:00 pm
+Sunday: 10:00 am – 3:00 pm",http://www.essentialhealth.ie/,53.266495,-6.192684,"Google Places",ChIJpRqHQFMIZ0gR9LvFtLfniKI,"dublin_hydrotherapy.csv
+dublin_reflexologist.csv"
+"Newtownpark Clinic (Ciara Murphy)","7 Rockville Road, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"(01) 210 8489",4.6,"health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: 9:00 am – 5:00 pm
+Sunday: Closed",http://www.irishherbalist.ie/,53.290643,-6.171944,"Google Places",ChIJa476VesIZ0gRDjd3Rbizq50,"dublin_herbalist.csv
+dublin_hydrotherapy.csv
+dublin_nutritionist.csv
+dublin_reflexologist.csv"
+"Wellbeing Ireland","First Floor,, 2C Main Street,, Blackrock, Dublin,, Co. Dublin, Ireland","Blackrock, Dublin,",Dublin,,IE,"(01) 288 5118",,"health, establishment","Monday: 9:00 am – 5:30 pm
+Tuesday: 9:00 am – 5:30 pm
+Wednesday: 9:00 am – 5:30 pm
+Thursday: 9:00 am – 5:30 pm
+Friday: 9:00 am – 5:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.wellbeing.ie/,53.302434,-6.178017,"Google Places",ChIJAVR84MYIZ0gR-1NrtWgefmE,"dublin_allergy.csv
+dublin_aromatherapist.csv
+dublin_chiropractor.csv
+dublin_herbalist.csv
+dublin_hydrotherapy.csv
+dublin_meditation.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"

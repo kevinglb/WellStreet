@@ -1,0 +1,966 @@
+Name,"Full Address",City,County/State,Postcode,Country,"Telephone Number",Rating,Keywords,"Opening hours",URL,Latitude,Longitude,"Data Source","Data Source Identifer","Duplicated In"
+"Temple Bar Physiotherapy - The Physio Company","Meeting House Square, Temple Bar, Dublin 2, Ireland",,,,IE,"(01) 679 9685",4.7,"physiotherapist, doctor, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: 10:00 am – 4:00 pm",http://www.thephysiocompany.com/clinic/temple-bar/,53.344849,-6.265562,"Google Places",ChIJC939MZ0OZ0gRFqeYpCtJo10,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Ranelagh Physiotherapy - The Physio Company","22 Sandford Road, Ranelagh, Co. Dublin, Ireland",Ranelagh,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/ranelagh/,53.322986,-6.248681,"Google Places",ChIJk2oXILAOZ0gR8xsXms0XSCo,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Trinity Chiropractic & Natural Health Centre","4th floor, 12-14 College Green, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 672 9399",,"health, physiotherapist, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 10:00 am – 2:30 pm
+Sunday: Closed",http://www.natbalchiro.com/,53.344159,-6.262175,"Google Places",ChIJpzSkvZwOZ0gR6-6FCbLNf0A,"dublin_chiropractor.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"The Balance Centre","73 Lower Leeson St, Dublin, Co. Dublin City, Ireland","Dublin City","Dublin City",,IE,"(01) 662 5977",,"physiotherapist, health, establishment",,http://balancecentre.goldenpages.ie/,53.334135,-6.254723,"Google Places",ChIJV0X68aIOZ0gRLtUlNe66J8s,dublin_physical_therapist.csv
+"Active Physiotherapy and Acupuncture Clinic","112c Lower Baggot Street, Dublin 2, Dublin, Ireland",Dublin,,,IE,"(01) 678 7965",,"physiotherapist, health, establishment","Monday: 8:30 am – 6:00 pm
+Tuesday: 8:30 am – 7:00 pm
+Wednesday: 8:30 am – 6:00 pm
+Thursday: 8:30 am – 7:30 pm
+Friday: 8:30 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinphysio.com/,53.336471,-6.248588,"Google Places",ChIJ0WaUypcOZ0gRmDRSDLXg3ek,dublin_physical_therapist.csv
+"PhysioCare Butterfield","1A Butterfield Ave, Dublin 14, Ireland","Dublin 14",Dublin,,IE,"(01) 531 0004",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physio.ie/,53.293977,-6.308512,"Google Places",ChIJ3dcLg54LZ0gR0dH3hpw1M0I,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Mount Merrion Physiotherapy","105 Trees Road Upper, Mount Merrion, Co. Dublin, Ireland","Mount Merrion",Dublin,,IE,"(01) 283 4303",,"health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.mmphysiotherapy.com,53.291932,-6.215539,"Google Places",ChIJX6ulvBcJZ0gR2Pun1k1CTRE,"dublin_acupuncturist.csv
+dublin_pilates.csv"
+"Navan Road Physiotherapy - The Physio Company","Primary Care Centre The Deaf Village, Navan Road, Navan Road, Dublin 7, Ireland","Dublin 7",Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/dublin-navan-road/,53.363236,-6.302343,"Google Places",ChIJ-c5e6qQNZ0gRHj7fYQzoraw,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"back2balance - physiotherapy, acupuncture and massage clinc","La Fitness, 31 Palmerston Gardens, Dartry, Dublin 6, Co. Dublin, Ireland","Dartry, Dublin 6",Dublin,,IE,"086 242 5567",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.back2balance.ie/,53.31364,-6.261154,"Google Places",ChIJZ5c1HQAMZ0gR37vzQG85NNs,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Dublin Physiotherapy Clinic","11 The Business Centre, Stadium Business Park,, Ballycoolin Road, Dublin 11, Ireland","Dublin 11",Dublin,,IE,"(01) 882 9174",,"physiotherapist, health, establishment","Monday: 9:00 am – 6:00 pm
+Tuesday: 9:00 am – 6:00 pm
+Wednesday: 9:00 am – 6:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: 9:00 am – 6:00 pm
+Sunday: Closed",http://www.dublinphysio.ie/,53.400581,-6.340863,"Google Places",ChIJZ4CLVYcSZ0gRrWwK8ddqFcU,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Sutton Cross Physiotherapy","1 Sutton Cross, Dublin 13, Ireland","Dublin 13",Dublin,,IE,"(01) 806 3030",,"physiotherapist, health, establishment","Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 8:00 pm
+Thursday: 9:00 am – 8:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.suttoncrossphysio.ie/,53.389586,-6.110426,"Google Places",ChIJXciimSAFZ0gRP-3vhEeyVWA,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Archview Physiotherapy Pain and Sports Injury clinic","49 Ranelagh Rd, Ranelagh, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 491 3228",,"physiotherapist, health, establishment","Monday: 8:30 am – 8:30 pm
+Tuesday: 8:30 am – 8:30 pm
+Wednesday: 8:30 am – 8:30 pm
+Thursday: 8:30 am – 8:30 pm
+Friday: 8:30 am – 8:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.archviewclinic.ie/,53.32701,-6.257159,"Google Places",ChIJ5ybhu6YOZ0gRxKC2yfWhPjA,"dublin_hydrotherapy.csv
+dublin_personal_trainer.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Bodyworks Physiotherapy & Sports Medicine Clinic","93, Baggot Street Lower,, Dublin 2,, Co. Dublin, Ireland","Dublin 2,",Dublin,,IE,"(01) 678 8947",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:30 pm
+Tuesday: 8:00 am – 8:30 pm
+Wednesday: 8:00 am – 8:30 pm
+Thursday: 8:00 am – 8:30 pm
+Friday: 8:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.bodyworksphysio.ie/,53.33542,-6.247299,"Google Places",ChIJ4S5tJ5YOZ0gRPbbJiuSddSE,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Castleknock Physiotherapy & Acupuncture Clinic","1 Auburn Green, Dublin 15, Ireland","Dublin 15",Dublin,,IE,"(01) 820 1668",,"physiotherapist, health, establishment",,http://www.castleknockphysio.com/,53.379326,-6.357261,"Google Places",ChIJv01onmkNZ0gRbnszkA0KRBs,dublin_physical_therapist.csv
+"The Meridian Clinic Clarehall","Clarehall Shopping Centre, Malahide Rd, Dublin 17, Ireland","Dublin 17",Dublin,,IE,"(01) 877 0818",,"doctor, physiotherapist, dentist, health, establishment","Monday: 10:00 am – 1:00 pm, 2:00 – 6:30 pm
+Tuesday: 10:00 am – 1:00 pm, 2:00 – 6:30 pm
+Wednesday: 10:00 am – 1:00 pm, 2:00 – 6:30 pm
+Thursday: 10:00 am – 1:00 pm, 2:00 – 6:30 pm
+Friday: 10:00 am – 1:00 pm, 2:00 – 6:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.meridianclinic.ie/,53.401204,-6.180002,"Google Places",ChIJjahPHf0PZ0gRxAA3Diu5KD4,dublin_physical_therapist.csv
+"The elbowroom","32 Brunswick Street North, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 677 9859",4.7,"gym, health, establishment","Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: 9:00 am – 9:00 pm
+Sunday: 9:00 am – 9:00 pm",http://www.the-elbowroom.com/,53.35073,-6.280343,"Google Places",ChIJ2UddzS0MZ0gRQSbYw4AhGLU,"dublin_masseur.csv
+dublin_meditation.csv
+dublin_pilates.csv
+dublin_yoga.csv"
+"Ranelagh Physiotherapy Clinic","15A Dunville Avenue, Ranelagh, Co. Dublin, Ireland",Ranelagh,Dublin,,IE,"(01) 496 5820",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 7:00 am – 6:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.ranelaghphysio.ie/,53.321051,-6.255964,"Google Places",ChIJDbfpK6kOZ0gRh03SkggprpM,dublin_physical_therapist.csv
+"Slievemore Clinic","Old Dublin Road, Co. Dublin, Co. Dublin, Ireland","Co. Dublin",Dublin,,IE,"(01) 200 0575",,"dentist, physiotherapist, doctor, health, establishment",,http://www.slievemore-clinic.com/,53.292286,-6.201364,"Google Places",ChIJazNszx8JZ0gRW8ftJqIxjc0,"dublin_allergy.csv
+dublin_nutritionist.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Clondalkin Physiotherapy - The Physio Company","Newlands Cross Medical Centre, Newlands Cross, Clondalkin, Co. Dublin, Ireland",Clondalkin,Dublin,,IE,"(01) 679 9685",,"physiotherapist, doctor, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/newlands-cross-clondalkin/,53.313031,-6.392154,"Google Places",ChIJvQ5quVtzZ0gRmDj8hWGa950,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Booterstown Physiotherapist Dublin","120 Rock Road, Booterstown, Co. Dublin, Ireland",Booterstown,Dublin,,IE,"(01) 283 4577",,"physiotherapist, doctor, health, establishment","Monday: 7:30 am – 7:30 pm
+Tuesday: 7:30 am – 7:30 pm
+Wednesday: 7:30 am – 7:30 pm
+Thursday: 7:30 am – 7:30 pm
+Friday: 7:30 am – 7:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.booterstownphysiotherapy.net/,53.308997,-6.196937,"Google Places",ChIJFQ3EzNYIZ0gRvwy1IS3j4kU,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"The Physio Company","Columba House, Airside Retail Park, Lakeshore Drive, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/dublin-swords-vhi-swiftcare/,53.445145,-6.224819,"Google Places",ChIJtc4poPgQZ0gRJq7FODvJi-8,dublin_physical_therapist.csv
+"Esker Physiotherapy Clinic","3 Dodsborough Road, Lucan, Co. Dublin, Ireland",Lucan,Dublin,,IE,"(01) 621 8700",4.8,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.eskerphysio.ie/,53.352604,-6.461117,"Google Places",ChIJIxaoMElyZ0gRMKR2mVDGh-0,"dublin_acupuncturist.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"The Meridian Clinic Ongar","1 The Avenue, Ongar Village, Clonee, Co. Dublin, Ireland",Clonee,Dublin,,IE,"(01) 861 4040",,establishment,,http://www.meridianclinic.ie/,53.39575,-6.438761,"Google Places",ChIJwe0CgXttZ0gRDxdqZSv8nv0,
+"Kirwan Physical Therapy","Fitnecise Studio, 11 Braemor Road, Churchtown, Dublin 14, Co. Dublin, Ireland","Churchtown, Dublin 14",Dublin,,IE,"085 736 6973",,"physiotherapist, health, establishment","Monday: 9:30 am – 8:00 pm
+Tuesday: 10:30 am – 1:30 pm, 3:30 – 8:00 pm
+Wednesday: 10:30 am – 1:30 pm, 3:30 – 8:00 pm
+Thursday: 10:30 am – 1:30 pm, 3:30 – 8:00 pm
+Friday: 10:30 am – 1:30 pm, 3:30 – 8:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.physicaltherapytreatment.ie/,53.29574,-6.260232,"Google Places",ChIJt_x_nuELZ0gR1PZ6u1Td-CA,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Enniskerry Physiotherapy Clinic","Medical Centre, Main street, Enniskerry, Co. Wicklow, Ireland",Enniskerry,Wicklow,,IE,"(01) 272 3749",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.ephysio.ie/,53.193504,-6.17073,"Google Places",ChIJB5DrA6ynZ0gR4RrG4yuCBR4,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Physio Evolution","3 Beaumont Avenue, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 298 7888",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",https://plus.google.com/112254074907658275759/about?hl=en,53.287948,-6.256579,"Google Places",ChIJQV7Kbd8LZ0gRFtj8S4xtA2I,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Dene Hickey Therapist","50 George's Street Upper, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"087 133 2405",,"physiotherapist, health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 9:00 am – 1:30 pm
+Wednesday: 9:00 am – 8:00 pm
+Thursday: 9:00 am – 1:30 pm
+Friday: 9:00 am – 8:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.denehickey.com/,53.28999,-6.131072,"Google Places",ChIJT16m3yQGZ0gRW9nlSkDNyxE,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Portmarnock Physiotherapy Clinic","Naomh Mearnog GAA Club, Torcaill, Portmarnock, Co. Dublin, Ireland",Portmarnock,Dublin,,IE,"087 696 5275",,establishment,,https://plus.google.com/107296003730156139743/about?hl=en,53.43715,-6.142387,"Google Places",ChIJq4KH6O0aZ0gRT-UMJwx4DpM,dublin_physical_therapist.csv
+"AcuPhysio. Physiotherapy, acupuncture & sport injury clinic.","Raven Hall, Upper Dargle Road, Bray, Co. Wicklow, Ireland",,Wicklow,,IE,"(01) 276 0001",,"physiotherapist, health, establishment","Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.acuphysio.ie/,53.207513,-6.114597,"Google Places",ChIJD93E0nOoZ0gRYu2l7zIMcMM,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Clonee Physiotherapy and Sports Injury Clinic","Main Street, Clonee, Co. Meath, Ireland",Clonee,Meath,,IE,"(01) 825 2623",,"physiotherapist, health, establishment",,http://www.cloneephysio.ie/,53.410335,-6.437154,"Google Places",ChIJAw0VaW1tZ0gRQc3W8LaHYrE,dublin_physical_therapist.csv
+"Leixlip Physiotherapy Clinic","Riverforest S.C., Leixlip, Co. Kildare, Ireland",Leixlip,Kildare,,IE,"(01) 615 6716",,"physiotherapist, health, establishment","Monday: 3:30 – 9:00 pm
+Tuesday: 9:00 am – 4:30 pm
+Wednesday: Closed
+Thursday: 9:00 am – 12:30 pm, 3:30 – 9:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.leixlipphysio.com/,53.371391,-6.487405,"Google Places",ChIJxbq8HxpyZ0gRdrV4JD-NKYw,dublin_physical_therapist.csv
+Osteopathdublin.ie,"2, Mornington Park, Malahide Rd, Dublin, Ireland",Dublin,Dublin,,IE,"086 156 0605",,"physiotherapist, health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 8:00 am – 12:00 pm
+Sunday: Closed",http://www.osteopathdublin.ie/,53.382301,-6.207651,"Google Places",ChIJ6QxnbMgPZ0gR5TeX9m9ssXc,"dublin_chiropractor.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"The Acupuncture Zone@ Tallaght Physio Clinic","50 Bancroft Road, Dublin 24, Ireland","Dublin 24",Dublin,,IE,"085 732 2200",,"physiotherapist, health, establishment","Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.theacuzone.com/,53.291128,-6.351194,"Google Places",ChIJLzxvY0YLZ0gR4VtuLHHdmB0,dublin_physical_therapist.csv
+"Smiling Spiders Web Development","86, The Academy Building, Park West, Dublin 12, Ireland","Dublin 12",Dublin,,IE,"086 824 7236",,establishment,"Monday: 9:00 am – 9:00 pm
+Tuesday: 9:00 am – 9:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 9:00 pm
+Friday: 9:00 am – 9:00 pm
+Saturday: 9:00 am – 9:00 pm
+Sunday: Closed",http://www.smilingspiders.com/,53.332763,-6.379453,"Google Places",ChIJLxtWe0YLZ0gRMvcx63twb1s,
+"Tyrrell Physiotherapy","Boroimhe Medical Centre, Forrest Road, Swords, Co. Dublin, Ireland",Swords,"Co. Dublin",,IE,"087 917 5756",,"hospital, establishment","Monday: 4:30 – 9:00 pm, 9:30 pm – 12:00 am
+Tuesday: 12:00 am – 1:00 pm, 4:30 – 9:00 pm, 9:30 pm – 12:00 am
+Wednesday: 12:00 am – 1:00 pm, 9:30 pm – 12:00 am
+Thursday: 12:00 am – 1:00 pm, 4:30 – 9:00 pm, 9:30 pm – 12:00 am
+Friday: 12:00 am – 1:00 pm, 2:00 – 5:00 pm, 9:30 pm – 12:00 am
+Saturday: 12:00 am – 1:00 pm
+Sunday: Closed",http://www.tyrrellphysio.ie/,53.446481,-6.237702,"Google Places",ChIJl3M6TgARZ0gR413bl7mZlzM,
+"First Physio Plus","Clondalkin Sports And Leisure Centre, Nangor Road, Clondalkin, Dublin 22, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 457 2897",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.firstphysioplus.ie/,53.32185,-6.399106,"Google Places",ChIJme0I2ENzZ0gRRHVrOy-QJtA,dublin_physical_therapist.csv
+"Massage Therapy at Home","Lower Rathmines Road, Rathmines, Dublin, Ireland",Dublin,Dublin,,IE,"086 868 3829",,establishment,"Monday: 5:00 – 10:30 pm
+Tuesday: 5:00 – 11:00 pm
+Wednesday: 5:00 – 11:00 pm
+Thursday: 5:00 – 11:00 pm
+Friday: 6:00 – 10:30 pm
+Saturday: 7:30 am – 10:30 pm
+Sunday: 7:30 am – 10:00 pm",https://plus.google.com/118297289520568405674/about?hl=en,53.328463,-6.264578,"Google Places",ChIJC7ZE-B0MZ0gRnFV9ytTfavo,
+"Glasnevin Physical Therapy","113 Botanic Road, Glasnevin, Dublin 9, Ireland","Dublin 9",,,IE,"(01) 811 7777",,"physiotherapist, health, establishment","Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.glasnevinphysicaltherapy.com/,53.369894,-6.26874,"Google Places",ChIJf5Jx53YOZ0gR6To4YOY21aI,dublin_physical_therapist.csv
+"Physio Clinic: South Dublin. Ross Allen: Chartered Physiotherapist, Chiropractor & Sports Therapist","4A Saint Patrick's Road, Dalkey, Co. Dublin, Ireland",,Dublin,,IE,"083 196 0344",,"physiotherapist, health, establishment","Monday: 9:00 am – 7:30 pm
+Tuesday: 9:00 am – 7:30 pm
+Wednesday: 9:00 am – 7:30 pm
+Thursday: 9:00 am – 7:30 pm
+Friday: 9:00 am – 7:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.physioclinic.ie/,53.277804,-6.103791,"Google Places",ChIJ_WbzN7MHZ0gRMyAfE45PfVc,"dublin_chiropractor.csv
+dublin_physical_therapist.csv"
+"Maeve O'Carroll Physiotherapist","67 Churchtown Road Upper, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 553 6026",,establishment,,https://plus.google.com/108448829543345926468/about?hl=en,53.296055,-6.262037,"Google Places",ChIJ9UA0ZuELZ0gRS5-xiAw5TyM,
+"Declan Mahon, Physiotherapist","Aontacht, Streamstown Lane, Malahide, Co. Dublin, Ireland",,Dublin,,IE,"087 279 6626",,"physiotherapist, health, establishment","Monday: 10:00 am – 8:00 pm
+Tuesday: 10:00 am – 8:00 pm
+Wednesday: 10:00 am – 8:00 pm
+Thursday: 10:00 am – 8:00 pm
+Friday: 10:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",https://plus.google.com/109359153077044343902/about?hl=en,53.439932,-6.182028,"Google Places",ChIJnTJAEXkQZ0gRGvJszH5h1qE,dublin_physical_therapist.csv
+"Irish Society Of Chartered Physiotherapists Ltd","Saint Stephen's Green, Dublin, Ireland",,Dublin,,IE,"(01) 402 2148",,"physiotherapist, health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.iscp.ie/,53.338713,-6.261764,"Google Places",ChIJq9Sh7J4OZ0gRBu4bDoVJ-iI,dublin_physical_therapist.csv
+"Eamonn Pegley, Chartered Physiotherapist","338 Castletown, Leixlip, Co. Kildare, Ireland",,Kildare,,IE,"089 224 0585",,"gym, health, establishment",,https://plus.google.com/113718033030740028736/about?hl=en,53.364524,-6.508479,"Google Places",ChIJ6bdi1IxxZ0gRBF5VIAex3mo,
+PhysioNow,"Rathgar Rd, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 491 2064",,"health, establishment",,http://www.physionow.ie/,53.317429,-6.269855,"Google Places",ChIJkXYKqwcMZ0gR2tMQOSlWjPk,"dublin_acupuncturist.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Rathmines Physiotherapy & Sports Injury Clinic","188 Rathgar Road, Rathmines, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 200 0555",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 2:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physioextra.ie/,53.320774,-6.267911,"Google Places",ChIJGZycoAMMZ0gR2Ref-_fVjFc,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Pearse Street Physiotherapy Clinic","79 Pearse St, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 633 4035",,"health, establishment","Monday: 6:00 am – 10:00 pm
+Tuesday: 6:00 am – 10:00 pm
+Wednesday: 6:00 am – 10:00 pm
+Thursday: 6:00 am – 10:00 pm
+Friday: 6:00 am – 10:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.pearsestreetphysio.com/,53.343339,-6.244997,"Google Places",ChIJx2yPtZMOZ0gR0GtKvOUQEtE,dublin_pilates.csv
+"Grafton St Physiotherapy Clinic","34 Grafton Street, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 671 2122",,"physiotherapist, health, establishment","Monday: 9:00 am – 12:30 pm
+Tuesday: Closed
+Wednesday: 9:00 am – 4:30 pm
+Thursday: Closed
+Friday: 9:00 am – 4:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.graftonstphysio.com/,53.341087,-6.260467,"Google Places",ChIJdf0oCpwOZ0gRzbu7pwxP9c0,dublin_physical_therapist.csv
+"Functional Training Ireland - Physiotherapy Dublin","29 Fitzwilliam Street Upper, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 662 9231",,"physiotherapist, health, establishment","Monday: 7:00 am – 9:00 pm
+Tuesday: 7:00 am – 9:00 pm
+Wednesday: 7:00 am – 9:00 pm
+Thursday: 7:00 am – 9:00 pm
+Friday: 7:00 am – 9:00 pm
+Saturday: 9:00 am – 4:00 pm
+Sunday: 10:00 am – 4:00 pm",http://functionaltraining.ie/,53.33583,-6.249738,"Google Places",ChIJMXAzw5cOZ0gRehbYp7HHj4M,"dublin_masseur.csv
+dublin_personal_trainer.csv
+dublin_physical_therapist.csv"
+"Portobello Physio Clinic","36B Lennox Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"(01) 476 3330",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:30 pm
+Tuesday: 7:30 am – 8:30 pm
+Wednesday: 7:30 am – 8:30 pm
+Thursday: 7:30 am – 8:30 pm
+Friday: 7:30 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.portobellophysio.ie/,53.331312,-6.267556,"Google Places",ChIJPaHZTR4MZ0gRZlPFdm8NZGI,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Physiotherapy - The Court Clinic, Dublin","8, Cornelscourt Cottages, Bray Rd, Dublin 18, Ireland","Dublin 18",Dublin,,IE,"(01) 289 7321",,"health, establishment",,http://www.courtclinic.ie/?Dublin,53.268164,-6.165819,"Google Places",ChIJA2iYXGcIZ0gRiJ_5VBLKqWM,
+"Dublin City Physiotherapy Clinic","Suite 3, Coach House, 44 Westland Row, Dublin 2, Ireland",,,,IE,"(01) 676 0076",,"physiotherapist, health, establishment",,http://www.dublincityphysio.ie/,53.342913,-6.249904,"Google Places",ChIJG5A1ApEOZ0gRubRFR8LdGmA,"dublin_chiropodist.csv
+dublin_physical_therapist.csv"
+"Dublin Spine & Sports Physiotherapy Clinic","The Meath Primary Care Centre, Heytesbury Street, Dublin 8, Ireland","Dublin 8","Co. Dublin",,IE,"(01) 454 3335",,"health, establishment",,http://www.physiotherapyclinic.ie/,53.335973,-6.269098,"Google Places",ChIJ3z79oR8MZ0gRyLf7x2ujwHE,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Stillorgan Physiotherapy, Acupuncture & Sports Injuries, SLIEVEMORE CLINIC","Slievemore Clinic, Old Dublin Road, Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"(01) 200 0555",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 6:00 pm
+Saturday: 10:00 am – 1:00 pm
+Sunday: Closed",http://www.physioextra.ie/,53.292286,-6.201364,"Google Places",ChIJ87LMyB8JZ0gRUl8Hdj_4Fw0,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Milltown Physiotherapy Clinic","98 Churchtown Road Lower, 14, Co. Dublin, Ireland",14,Dublin,,IE,"(01) 296 0603",,establishment,"Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 5:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://milltownphysiotherapy.com/,53.298181,-6.253924,"Google Places",ChIJlUK9IFkJZ0gRcZyMuT1Gs4E,"dublin_acupuncturist.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Baggot Street Physiotherapy - The Physio Company","112C Baggot Street Lower, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/baggot-st/,53.336462,-6.248779,"Google Places",ChIJYRuLtpcOZ0gRR9dqTXjY3ls,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Physiotherapy Dublin - Laurel Lodge","Laurel Lodge Shopping Centre, Laurel Lodge Rd, Dublin 15, Ireland","Dublin 15",Dublin,,IE,"(01) 824 9585",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 10:00 am – 2:00 pm
+Sunday: Closed",http://www.physiodublin.ie/,53.37744,-6.378121,"Google Places",ChIJ86w-1E4NZ0gRaGiAfbabfjE,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Sandymount Physiotherapy Clinic","87A Sandymount Road, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"(01) 668 6819",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.sandymountphysiotherapy.com/,53.332946,-6.216367,"Google Places",ChIJc53cn94OZ0gR7ODAQqZz-Qs,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Collins Avenue Physiotherapy,","138A Collins Avenue, dublin, Ireland",dublin,Dublin,,IE,"(01) 832 9625",,"health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 1:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 1:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinphysiotherapy.com/,53.377725,-6.224595,"Google Places",ChIJbxUINkoOZ0gRFoV8_1qBprk,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Ballsbridge Physiotherapy Clinic","26 Wellington Rd, Ballsbridge, Dublin 4, Ireland","Ballsbridge, Dublin 4",,,IE,"(01) 660 6582",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 6:00 pm
+Saturday: 8:30 am – 1:00 pm
+Sunday: Closed",http://www.ballsbridgephysio.ie/,53.330027,-6.241005,"Google Places",ChIJiURfzb4OZ0gRQKEBdgvnoos,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Santry Physiotherapy - The Physio Company","Euromedic Northwood Business Park, Swift Square, Co. Dublin 11, Ireland","Swift Square","Dublin 11",,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/santry/,53.403238,-6.257915,"Google Places",ChIJXSYXEOERZ0gRcFWvZyfqZa0,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Barrow Street Physiotherapy - The Physio Company","Barrow Street Medical, Barrow Street, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/barrow-street/,53.339227,-6.236473,"Google Places",ChIJFWafGesOZ0gR5PO7fX5gNbE,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Body Elements - Physiofit Clinic","Suite 2, Cubes 3, Beacon South Quarter, Sandyford, Co. Dublin, Ireland",Sandyford,Dublin,,IE,"(01) 293 2969",,"health, establishment","Monday: Closed
+Tuesday: 10:00 am – 8:00 pm
+Wednesday: 12:00 – 8:00 pm
+Thursday: 12:00 – 8:00 pm
+Friday: 12:00 – 5:00 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: Closed",http://www.bodyelements.ie/,53.276582,-6.217446,"Google Places",ChIJdRFtWAkJZ0gRO6U0nKuQg8s,"dublin_masseur.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Dynamic Physiotherapy","5 Lazer Lane, Dublin 2, Ireland","Dublin 2",,,IE,"086 602 8088",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 4:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dynamicphysiotherapy.ie/,53.345324,-6.238989,"Google Places",ChIJxeQnb-0OZ0gR3tWgtWKF0j0,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"IFSC Physiotherapy - The Physio Company","Gandon House, Amiens Street, IFSC, Co. Dublin, Ireland",IFSC,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:30 pm
+Tuesday: 8:00 am – 8:30 pm
+Wednesday: 8:00 am – 8:30 pm
+Thursday: 8:00 am – 8:30 pm
+Friday: 8:00 am – 8:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/ifsc/,53.349417,-6.244676,"Google Places",ChIJPdUbVowOZ0gRKN2Af01sJdc,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"PhysioCare Blackrock","87A Booterstown Avenue, Blackrock, Co. Dublin, Ireland",,Dublin,,IE,"(01) 531 0004",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 10:00 am – 3:00 pm
+Sunday: Closed",http://www.physio.ie/,53.3043,-6.198936,"Google Places",ChIJS_PZyNkIZ0gRAuGTaLDaqJw,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Sampson Physiotherapy","3, Main Street, Blanchardstown Village, Dublin 15, Ireland","Dublin 15","Co. Dublin",,IE,"(01) 838 8055",,"health, establishment",,http://www.orlaghsampson.com/,53.386684,-6.376723,"Google Places",ChIJxU8jI9QNZ0gR9XhUT_4_9qc,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Raheny Physiotherapy - The Physio Company","Raheny Shopping Centre, Howth Rd, Raheny, Co. Dublin, Ireland",Raheny,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/raheny/,53.380102,-6.177846,"Google Places",ChIJx8-AgpIPZ0gRaU0SFqG_uf0,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Occupational Physiotherapy Solutions Ltd","96 Lower Kilmacud Rd, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 288 5855",,"physiotherapist, health, establishment",,http://www.oops.ie/,53.288752,-6.214376,"Google Places",ChIJ8RTBTxcJZ0gR3H2WjvXhlTI,dublin_physical_therapist.csv
+"The Beacon- Sandyford Physiotherapy","2nd Floor, Suite 16, The Mall, Dublin 18, Ireland","Dublin 18",Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/beacon/,53.275511,-6.218843,"Google Places",ChIJ6ePQmgsJZ0gROTXKSnS6vb4,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Sandyford Physiotherapy - The Physio Company","Clonard Medical Centre, Sandyford Road, Sandyford, Co. Dublin, Ireland",Sandyford,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/sandyford/,53.277512,-6.230921,"Google Places",ChIJ16ec5XMJZ0gRkLgMUiPEhzQ,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Lucan Physiotherapy - The Physio Company","Ballyowen Castle Shopping Centre, Castle Road, Lucan, Co. Dublin, Ireland",Lucan,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.thephysiocompany.com/clinic/lucan/,53.347554,-6.422538,"Google Places",ChIJyT7xEuNyZ0gRx398k-r_Qmw,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Pilates @ Collins Avenue Physiotherapy","138B Collins Ave, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 832 9625",,"health, establishment","Monday: 7:30 am – 9:00 pm
+Tuesday: 7:30 am – 9:00 pm
+Wednesday: 7:30 am – 9:00 pm
+Thursday: 7:30 am – 9:00 pm
+Friday: 7:30 am – 3:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinphysiotherapy.com/,53.37752,-6.224659,"Google Places",ChIJbxUINkoOZ0gRUNKHzvgwcIg,dublin_pilates.csv
+"Drumcondra Physiotherapy - The Physio Company","130 Lower Drumcondra Road, (corner Hollybank Road), Drumcondra, Co. Dublin, Ireland",Drumcondra,Dublin,,IE,"(01) 679 9685",,"physiotherapist, health, establishment","Monday: 7:30 am – 8:00 pm
+Tuesday: 7:30 am – 8:00 pm
+Wednesday: 7:30 am – 8:00 pm
+Thursday: 7:30 am – 8:00 pm
+Friday: 7:30 am – 8:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.thephysiocompany.com/clinic/drumcondra-physio/,53.366887,-6.255715,"Google Places",ChIJ9ZUWeGUOZ0gRHu7-dHs_TyQ,"dublin_chiropodist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Dunlaoghaire Physiotherapy Clinic","55 Mulgrave Street, Dublin, Ireland","Dun Laoghaire-Rathdown",Dublin,,IE,"(01) 280 3741",,"physiotherapist, health, establishment","Monday: 9:00 am – 6:30 pm
+Tuesday: 2:00 – 6:30 pm
+Wednesday: Closed
+Thursday: 9:00 am – 6:30 pm
+Friday: 2:00 – 6:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.dunlaoghairephysio.com/,53.290952,-6.136555,"Google Places",ChIJG3MDICQGZ0gRtdA291tX8FE,dublin_physical_therapist.csv
+"Sexton Physiotherapy and Acupuncture Clinic","6 Manor Street, Stoneybatter, Dublin 7, Ireland","Dublin 7",Dublin,,IE,"(01) 671 0222",,"physiotherapist, health, establishment","Monday: 8:00 am – 6:30 pm
+Tuesday: 8:00 am – 12:30 pm
+Wednesday: 8:00 am – 4:00 pm
+Thursday: 8:00 am – 6:30 pm
+Friday: 8:00 am – 12:30 pm
+Saturday: Closed
+Sunday: Closed",https://twitter.com/SextonPhysio,53.351601,-6.282939,"Google Places",ChIJfcbYjy0MZ0gRCItP6fxAAFc,"dublin_acupuncturist.csv
+dublin_physical_therapist.csv"
+"Swords Physiotherapy","16 Chapel Lane, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,"(01) 840 4280",,"physiotherapist, health, establishment","Monday: 8:30 am – 8:00 pm
+Tuesday: 8:30 am – 8:00 pm
+Wednesday: 8:30 am – 8:00 pm
+Thursday: 8:30 am – 8:00 pm
+Friday: 8:30 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.swordsphysio.ie/,53.458309,-6.217408,"Google Places",ChIJhZzceu4QZ0gRTiFpKHLjurg,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"North East Physiotherapy","Grange Clinic, Grange Road, Donagmede, Dublin 13, Ireland","Dublin 13",Dublin,,IE,"087 323 8633",,"physiotherapist, health, establishment",,http://www.northeastphysio.com/,53.394618,-6.164277,"Google Places",ChIJc-0_mlcFZ0gR1DJim6ie4Zs,dublin_physical_therapist.csv
+"Rathdown Physiotherapy Ltd","26 Templeogue Road, Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 492 4426",,"physiotherapist, health, establishment",,http://www.whatclinic.com/physiotherapy/ireland/county-dublin/dublin/terenure,53.308659,-6.286075,"Google Places",ChIJ9aH2KyM1RUgR8_wEz2YhF48,"dublin_acupuncturist.csv
+dublin_aromatherapist.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Southsidephysiotharapy Clinic","43 Wesley Lawns, Co. Dun Laoghaire, Ireland",,"Dun Laoghaire",,IE,"(028) 97171",,"physiotherapist, health, establishment",,http://www.southsidephysio.com,53.278379,-6.240093,"Google Places",ChIJEbnUZXoJZ0gR678-lmM_h8U,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"The Grove Physiotherapy and Rehabilitaiton Clinic","Unit 13, Celbridge, Co. Kildare, Ireland",Celbridge,Kildare,,IE,"086 168 4028",,"health, establishment",,http://www.grovephysio.ie/,53.358146,-6.548398,"Google Places",ChIJNTr9a7RxZ0gR5Lxd457LJRk,dublin_physical_therapist.csv
+"Physio Needs Ltd.","10 Bath Street, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"(01) 660 2808",,"physiotherapist, store, health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physioneeds.biz/,53.339608,-6.22297,"Google Places",ChIJPSUSSuYOZ0gROHAP7mVz1t4,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Sports Massage Therapy","89 Waterloo Road, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"089 445 9747",,"health, establishment",,https://plus.google.com/101871331621305367959/about?hl=en,53.32907,-6.245416,"Google Places",ChIJX9eltzMJZ0gR47zexPeij58,
+"Physio Fusion Dublin","16 Warners Lane, Dartmouth Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 607 7104",,"physiotherapist, health, establishment",,http://www.physiofusion.ie/,53.330635,-6.252969,"Google Places",ChIJRV_ea6MOZ0gRPnLPseODf6Q,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"OPM Ltd","Unit 21 Cookstown Enterprise Park, Cookstown, Dublin 24, Ireland","Dublin 24",Dublin,,IE,"(01) 463 0090",,establishment,,http://www.opm.ie/,53.291925,-6.374838,"Google Places",ChIJ2akO57N0Z0gR_yyu_6wu_7s,
+"CCM Recruitment International Ltd","64 Lower Gardiner St, Dublin1, Ireland",Dublin1,Dublin,,IE,"(01) 836 6092",,establishment,,http://www.ccmrecruitment.com/,53.350344,-6.253957,"Google Places",ChIJLbfeRo8OZ0gRwP1vjk2gvJ4,
+"Melt Natural Healing Centre","2 Temple Lane South, Dublin 2, Ireland","Dublin 2","Co. Dublin",,IE,"(01) 679 8786",,"beauty_salon, health, establishment","Monday: 9:30 am – 9:00 pm
+Tuesday: 9:30 am – 9:00 pm
+Wednesday: 9:30 am – 9:00 pm
+Thursday: 9:30 am – 9:00 pm
+Friday: 9:30 am – 9:00 pm
+Saturday: 10:00 am – 7:00 pm
+Sunday: 10:00 am – 7:00 pm",http://www.meltonline.com/,53.34453,-6.264382,"Google Places",ChIJrS-91JwOZ0gRtm7P7ZgrLCM,"dublin_acupuncturist.csv
+dublin_aromatherapist.csv
+dublin_herbalist.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv
+dublin_reflexologist.csv
+dublin_yoga.csv"
+"Mount Merrion Pilates","105 Trees Road Upper, Mount Merrion, Co. Dublin, Ireland",,Dublin,,IE,"(01) 283 4303",,establishment,,http://mmphysiopilates.com/,53.291932,-6.215539,"Google Places",ChIJ19ljlhcJZ0gRf9GYaw_j9hA,dublin_pilates.csv
+"Physiofit Woman","Suite 2, Cubes 3, Beacon South Quarter, Sandyford, Dublin 18, Ireland","Dublin 18",,,IE,"(01) 293 2969",,"physiotherapist, health, establishment","Monday: Closed
+Tuesday: 12:00 – 8:00 pm
+Wednesday: 12:00 – 8:00 pm
+Thursday: 12:00 – 8:00 pm
+Friday: 12:00 – 8:00 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: Closed",http://www.physiofitwoman.ie/,53.2768,-6.217037,"Google Places",ChIJjVbBUAkJZ0gRXXkI1NObNmw,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Lisa Kernan & Associates,","16 Kincora Avenue, Dublin 3, Ireland","Dublin 3",Dublin,,IE,"(01) 833 7809",,"physiotherapist, health, establishment",,http://www.lisakernan.ie/,53.363636,-6.209772,"Google Places",ChIJRV635KsPZ0gR1rh_G8AGFpM,"dublin_hydrotherapy.csv
+dublin_physical_therapist.csv"
+"PhysioCare Blanchardstown","32 Clonsilla Road, Blanchardstown, Co. Dublin, Ireland",Blanchardstown,Dublin,,IE,"(01) 531 0001",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: 10:00 am – 3:00 pm
+Sunday: Closed",http://www.physio.ie/,53.387596,-6.382899,"Google Places",ChIJ68k6I1ENZ0gRviQt0oytLco,dublin_physical_therapist.csv
+"PhysioCare Head Office","47 Rushbrook, Blanchardstown Village, Co. Dublin, Ireland","Blanchardstown Village",Dublin,,IE,"(01) 531 0018",,"physiotherapist, health, establishment","Monday: 9:00 am – 4:00 pm
+Tuesday: 9:00 am – 4:00 pm
+Wednesday: 9:00 am – 4:00 pm
+Thursday: 9:00 am – 4:00 pm
+Friday: 9:00 am – 4:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physio.ie/,53.385948,-6.380666,"Google Places",ChIJ80qnU1ENZ0gRS9FRGgqpvTE,"dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"The Dalkey Clinic","5 Ulverton Rd, Dalkey, Co. Dublin, Ireland","Dublin City",Dublin,,IE,"(01) 236 9758",,"dentist, health, establishment","Monday: 8:00 am – 6:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 8:00 am – 5:00 pm
+Sunday: Closed",http://www.dalkeyclinic.com/,53.278329,-6.106896,"Google Places",ChIJE4mJT0sGZ0gR5l7BGhBNVNM,
+"Straight Blast Gym Ireland - HQ","Unit 1a, Concorde Industrial Estate, Naas Road, Dublin 12, Ireland","Dublin 12",Dublin,,IE,"(01) 460 4845",4.9,"school, establishment","Monday: 6:30 am – 10:00 pm
+Tuesday: 6:30 am – 10:00 pm
+Wednesday: 6:30 am – 10:00 pm
+Thursday: 6:30 am – 10:00 pm
+Friday: 6:30 am – 9:00 pm
+Saturday: 10:00 am – 2:00 pm
+Sunday: Closed",http://www.sbgireland.com/,53.327416,-6.338124,"Google Places",ChIJa46jOJEMZ0gRLbjQ-4Crexg,
+"Priory Clinic Stillorgan","18 Priory Hall, Stillorgan, Co. Dublin, Ireland",Stillorgan,Dublin,,IE,"1800 254 642",,"health, establishment","Monday: 7:00 am – 9:00 pm
+Tuesday: 7:00 am – 9:00 pm
+Wednesday: 7:00 am – 9:00 pm
+Thursday: 7:00 am – 9:00 pm
+Friday: 7:00 am – 9:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.prioryclinic.com/,53.294169,-6.201953,"Google Places",ChIJ881E9B8JZ0gRFAT3coSyID8,"dublin_masseur.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"Priory Clinic Dublin","4 Shelton Drive, Kimmage, Dublin, Ireland",Dublin,Dublin,,IE,"1800 254 642",,"physiotherapist, health, establishment","Monday: 7:00 am – 9:00 pm
+Tuesday: 7:00 am – 9:00 pm
+Wednesday: 7:00 am – 9:00 pm
+Thursday: 7:00 am – 9:00 pm
+Friday: 7:00 am – 9:00 pm
+Saturday: 7:00 am – 5:00 pm
+Sunday: Closed",http://www.prioryclinic.com/,53.312922,-6.309772,"Google Places",ChIJQbJZ1HgMZ0gRylVo6nTw1wk,"dublin_masseur.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"Exwell Medical","9 Collins Avenue, Dublin 9, Ireland","Dublin 9",Dublin,,IE,"(01) 700 6270",,"health, establishment",,http://www.exwellmedical.ie,53.385511,-6.254386,"Google Places",ChIJ8cKGawwOZ0gR-Z8H8Lp9VZY,dublin_nutritionist.csv
+"Louise O' Rourke","Naas Road, Kingswood, Dublin 22, Ireland","Dublin 22","Co. Dublin",,IE,"087 937 6858",,"physiotherapist, health, establishment","Monday: 9:00 am – 4:00 pm
+Tuesday: 9:00 am – 10:00 pm
+Wednesday: 9:00 am – 10:00 pm
+Thursday: 9:00 am – 10:00 pm
+Friday: Closed
+Saturday: 9:00 am – 2:30 pm
+Sunday: Closed",http://www.louiseorourkephysiotherapy.ie/,53.299898,-6.420715,"Google Places",ChIJ_yvyLVxzZ0gRs6sVvZNPjxM,"dublin_physical_therapist.csv
+dublin_pilates.csv"
+"St. Doolagh's Park Care & Rehabilitation Centre","Malahide Road, Balgriffin, Dublin 17, Ireland","Dublin 17",,,IE,"(01) 847 7950",,"lodging, establishment",,http://www.trinitycare.ie/St__Doolagh_s_Park/97,53.413692,-6.175323,"Google Places",ChIJozvRRQIQZ0gRJWppkxV5x54,dublin_chiropodist.csv
+"ArtMedica Clinic","John Street North, Smithfield, Dublin 7, Ireland","Dublin 7",Dublin,,IE,"087 955 5623",,"dentist, physiotherapist, health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: 10:00 am – 6:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 6:00 pm
+Friday: 10:00 am – 6:00 pm
+Saturday: 10:00 am – 2:00 pm
+Sunday: Closed",http://www.artmedica.ie/,53.347155,-6.281638,"Google Places",ChIJ59wuMy4MZ0gR5kSbJi-XOjo,dublin_physical_therapist.csv
+"Medfit Wellness & Rehabilitation","Blackrock Business Park, Carysfort Ave, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"(01) 278 4423",,"gym, physiotherapist, health, establishment","Monday: 6:30 am – 8:30 pm
+Tuesday: 6:30 am – 8:30 pm
+Wednesday: 6:30 am – 8:30 pm
+Thursday: 6:30 am – 8:30 pm
+Friday: 6:30 am – 8:30 pm
+Saturday: 10:00 am – 4:00 pm
+Sunday: Closed",http://www.medfit.ie/,53.298534,-6.178764,"Google Places",ChIJB1C6gsEIZ0gRUN73ERuzhUE,dublin_physical_therapist.csv
+"KeepRite Physio","126 Terenure Rd N, Terenure, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 492 8280",,establishment,"Monday: 9:30 am – 9:00 pm
+Tuesday: 9:30 am – 9:00 pm
+Wednesday: 9:30 am – 5:00 pm
+Thursday: 9:30 am – 7:00 pm
+Friday: 9:30 am – 5:00 pm
+Saturday: 9:30 am – 1:00 pm
+Sunday: Closed",http://www.keepritephysio.com/,53.310397,-6.283375,"Google Places",ChIJLfAuvvULZ0gRwaM7aK7J9mQ,"dublin_acupuncturist.csv
+dublin_physical_therapist.csv"
+"Medfit Proactive Healthcare","Blackrock Business Park, Carysfort Avenue, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"(01) 278 4423",,"health, physiotherapist, gym, establishment","Monday: 6:30 am – 8:30 pm
+Tuesday: 6:30 am – 8:30 pm
+Wednesday: 6:30 am – 8:30 pm
+Thursday: 6:30 am – 8:30 pm
+Friday: 6:30 am – 8:30 pm
+Saturday: 8:00 am – 4:00 pm
+Sunday: Closed",http://www.medfit.ie/,53.298222,-6.178764,"Google Places",ChIJJXnHn8EIZ0gRpVZvpGN90aQ,"dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Irish Institute Of Nlp","84 Sundrive Road, Crumlin, Dublin 12, Ireland","Dublin 12",Dublin,,IE,"(01) 490 2923",,establishment,,http://www.nlp.ie/,53.321974,-6.294357,"Google Places",ChIJv_izb3gMZ0gR_G30poQXUiA,dublin_personal_trainer.csv
+"Myoreflex · Hagen Stroh","The Cova, Trafalgar Road, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"(01) 255 7846",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.myoreflex.ie/,53.148442,-6.064493,"Google Places",ChIJ_1iTlCyvZ0gR8dWexnFX-vw,dublin_physical_therapist.csv
+"Live & Breathe Pilates","20 Camden Row, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"(01) 554 9710",,"gym, health, establishment","Monday: 8:00 am – 9:00 pm
+Tuesday: 8:00 am – 9:00 pm
+Wednesday: 8:00 am – 9:00 pm
+Thursday: 8:00 am – 9:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 10:00 am – 3:00 pm
+Sunday: Closed",http://www.liveandbreathepilates.com/,53.336292,-6.268679,"Google Places",ChIJoU3Rjh8MZ0gRqIvTb1ogFQk,"dublin_personal_trainer.csv
+dublin_pilates.csv"
+"Charter Medical","The Forge, Smithfield Market, Dublin 7, Ireland",,Dublin,,IE,"(01) 657 9000",,"physiotherapist, hospital, health, establishment","Monday: 9:00 am – 6:00 pm
+Tuesday: 9:00 am – 6:00 pm
+Wednesday: 9:00 am – 6:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.chartermedical.ie/,53.349602,-6.278268,"Google Places",ChIJz8z1W50OZ0gRCby7CXqPCnQ,dublin_physical_therapist.csv
+"Mespil Swimming Pool","Mespil Apartments, Sussex Road, Dublin 4, Ireland","Dublin 4",Dublin,,IE,"086 856 7603",,establishment,,http://www.mespilpool.com/,53.330941,-6.250341,"Google Places",ChIJwYTsrbwOZ0gRAc0xxDumt7Y,
+"The Mulberry Bush - Childcare & Preschool","4 St Gall Gardens S, Co. Dun Laoghaire-Rathdown, Ireland","Dun Laoghaire-Rathdown","Dun Laoghaire-Rathdown",,IE,"(01) 298 7866",,"school, establishment","Monday: 7:30 am – 6:30 pm
+Tuesday: 7:30 am – 6:30 pm
+Wednesday: 7:30 am – 6:30 pm
+Thursday: 7:30 am – 6:30 pm
+Friday: 7:30 am – 6:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.themulberrybush.info/,53.304188,-6.249338,"Google Places",ChIJqTsV7VAJZ0gRGJH4izCfmwQ,
+"Westpark Fitness","Greenhills Road, Tallaght, Co. Dublin, Ireland",Tallaght,Dublin,,IE,"(01) 462 6911",,"gym, health, establishment","Monday: 6:00 am – 10:00 pm
+Tuesday: 6:00 am – 10:00 pm
+Wednesday: 6:00 am – 10:00 pm
+Thursday: 6:00 am – 10:00 pm
+Friday: 6:00 am – 10:00 pm
+Saturday: 8:00 am – 6:00 pm
+Sunday: 8:00 am – 6:00 pm",http://www.westpark.ie/,53.291407,-6.356859,"Google Places",ChIJIZ-OzUgLZ0gRUKhyDg9pze4,dublin_personal_trainer.csv
+"Patricia Loughlin","67 Camden Street Lower, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 620 9892",,"health, establishment",,http://www.reikiinireland.com/,53.334806,-6.265492,"Google Places",ChIJFcsK_J8OZ0gRDMCIam78OXU,"dublin_meditation.csv
+dublin_personal_trainer.csv"
+"New Leaf Acupuncture, Portobello, Dublin","15 Grantham Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"087 263 2732",,"health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.newleafacupuncture.ie/,53.333922,-6.267893,"Google Places",ChIJLyJViR8MZ0gRAEztlk80l7o,
+"Patricia Loughlin","28 William Street South, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"087 620 9892",,"health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 9:00 am – 8:00 pm
+Wednesday: 9:00 am – 9:00 pm
+Thursday: 9:00 am – 8:00 pm
+Friday: 9:00 am – 8:00 pm
+Saturday: 9:00 am – 6:30 pm
+Sunday: 9:00 am – 6:30 pm",http://www.reikiinireland.com/,53.341576,-6.263119,"Google Places",ChIJy0-5SJwOZ0gReKxekteZy5o,"dublin_meditation.csv
+dublin_personal_trainer.csv"
+"New Leaf Acupuncture Clinic, Dublin","212 Kimmage Road Lower, Dublin 6W, Ireland","Dublin 6W",,,IE,"087 263 2732",,"health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.newleafacupuncture.ie/,53.318307,-6.291663,"Google Places",ChIJgyPkPnMMZ0gRdbD9abwspPc,
+"New Leaf Acupuncture, Rathfarnham","50 Marian Road, Dublin, Ireland",Dublin,Dublin,,IE,"087 263 2732",,"health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 9:00 am – 8:00 pm
+Wednesday: 9:00 am – 8:00 pm
+Thursday: 9:00 am – 8:00 pm
+Friday: 9:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.newleafacupuncture.ie/,53.292746,-6.297655,"Google Places",ChIJKbfBZJcLZ0gR4UaBppzuZ7I,
+"Massage for Babies","Dundrum Methodist Church, Ballinteer Rd, Dundrum, Co. Dublin, Ireland",Dundrum,Dublin,,IE,"086 107 9176",,"health, establishment",,http://www.massageforbabies.weebly.com/,53.276487,-6.243641,"Google Places",ChIJicmI5nsJZ0gRNxaXbD9gwHk,"dublin_masseur.csv
+dublin_pilates.csv"
+Happythreads,"Unit 20B, KCR Industrial Estate, Kimmage, Dublin 12, Ireland","Dublin 12","Co. Dublin",,IE,"(01) 868 4323",,"clothing_store, store, establishment","Monday: 9:00 am – 5:30 pm
+Tuesday: 9:00 am – 5:30 pm
+Wednesday: 9:00 am – 5:30 pm
+Thursday: 9:00 am – 5:30 pm
+Friday: 9:00 am – 5:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.happythreads.com/,53.315484,-6.299205,"Google Places",ChIJeYySGHcMZ0gRiir8rBqMcTw,
+"Annesley Medical","http://www.annesleymedical.com/index.html, 83 Annesley Bridge, North Strand Road, North Strand, Dublin 3, Ireland","Dublin 3","Co. Dublin",,IE,"(01) 836 3126",,"health, establishment",,http://www.annesleymedical.com/index.html,53.360351,-6.239589,"Google Places",ChIJ2Sgh_F4OZ0gROcDRXH9KOwI,
+"Reiki in Ireland","42 Beech Rd., Foxrock, Dublin 18, Dublin, Ireland",Dublin,Dublin,,IE,"087 620 9892",,"health, establishment","Monday: 10:00 am – 8:00 pm
+Tuesday: 10:00 am – 8:00 pm
+Wednesday: 10:00 am – 8:00 pm
+Thursday: 10:00 am – 8:00 pm
+Friday: 10:00 am – 8:00 pm
+Saturday: 10:00 am – 8:00 pm
+Sunday: 10:00 am – 8:00 pm",http://www.reikiinireland.com/,53.272616,-6.168061,"Google Places",ChIJ3VQu2l8IZ0gRbwev0qR_aqg,"dublin_meditation.csv
+dublin_personal_trainer.csv"
+"Tos (Limerick) Limited","1 High Street, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"(061) 313 646",,establishment,,http://limerick.yalwa.ie/,53.343282,-6.27246,"Google Places",ChIJfVa0Z_FQXEgRddQeY1NTmRU,
+"Fiona Byrne","172 Alderbrook Vale, Ashbourne, Co. Meath, Ireland",Ashbourne,Meath,,IE,"087 972 6887",,"health, establishment",,http://www.reflexology.ie/,53.505523,-6.393442,"Google Places",ChIJrbOjnsEUZ0gRo4ke5H9PuLI,dublin_reflexologist.csv
+"Boroimhe Medical Centre","Forest Rd, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,"(01) 840 6423",,"health, doctor, establishment",,http://www.boroimhemedicalcentre.ie/,53.446583,-6.237702,"Google Places",ChIJbYYMTgARZ0gRoNBCNEM5sSU,dublin_chiropodist.csv
+"Cualann Clinic","Southern Cross Road, Bray, Co. Wicklow, Ireland",Wicklow,Wicklow,,IE,"(01) 276 5013",,"physiotherapist, health, establishment","Monday: 7:00 am – 5:30 pm
+Tuesday: 7:00 am – 9:00 pm
+Wednesday: 7:00 am – 5:30 pm
+Thursday: 7:00 am – 9:00 pm
+Friday: 7:00 am – 5:30 pm
+Saturday: 9:00 am – 5:00 pm
+Sunday: Closed",http://www.cualannclinic.com/,53.183558,-6.123684,"Google Places",ChIJ-XO_nymmZ0gRjkFWdk5bK9Q,dublin_physical_therapist.csv
+"IFSC Physiotherapy & Sports Injury Clinic @ Cusom House Square Medical Centre","Custom House Square, Mayor Street Lower, International Financial Services Centre, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"087 125 1975",,"health, establishment","Monday: 8:00 am – 7:30 pm
+Tuesday: 8:00 am – 7:30 pm
+Wednesday: 8:00 am – 7:30 pm
+Thursday: 8:00 am – 7:30 pm
+Friday: 10:00 am – 2:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.ifscphysio.com/,53.349373,-6.244682,"Google Places",ChIJjYvyCIUOZ0gRTiPt6KXWlEQ,
+"Riverview Physiotherapy & Sports Injury Clinic","Beech Hill, Clonskeagh, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 218 9623",,establishment,,https://plus.google.com/115445814000772483205/about?hl=en,53.315861,-6.234342,"Google Places",ChIJkffVZ7UOZ0gRmWjfp1K8PRU,
+"The Physiotherapy Clinic","4, Garville Terrace, Rathgar Rd, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 491 2064",,establishment,,https://plus.google.com/106994425707503439463/about?hl=en,53.315026,-6.272472,"Google Places",ChIJSTzPrAcMZ0gRYW-T_dImA2o,
+"Sundrive Physiotherapy & Sports Injury Clinic","34 Sundrive Road, Crumlin, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 490 7067",,establishment,,http://www.sundrivephysio.com/,53.320469,-6.292626,"Google Places",ChIJIfkv6nIMZ0gRMJuiemcNv3s,
+"KCR Physiotherapy Clinic","132 Terenure Rd W, Terenure, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 490 8371",,establishment,,https://plus.google.com/104681877998599548319/about?hl=en,53.311618,-6.298727,"Google Places",ChIJWVkELnYMZ0gRXKf-3SjO7jg,
+"Beacon Hospital Physiotherapy Department","Beacon Hospital, Sandyford, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 293 6692",,establishment,,https://plus.google.com/117798346336121925644/about?hl=en,53.276534,-6.220442,"Google Places",ChIJ217m458JZ0gRlVUOi1d3GTE,
+"Advanced Physiotherapy","202 Kimmage Road West, Kimmage, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 455 4444",,establishment,,http://www.advanced-physiotherapy.ie/,53.316482,-6.316622,"Google Places",ChIJb_wE7H0MZ0gRz5Lw_nriJ54,
+"North Dublin Physiotherapy","16 Kincora Avenue, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 833 7809",,establishment,,https://plus.google.com/101996452728843339514/about?hl=en,53.363719,-6.209721,"Google Places",ChIJjalT-6sPZ0gR0GXNzAmXaP4,
+"Drumcondra Physiotherapy & Sports Injury Clinic","128 Lower Drumcondra Rd, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 830 2860",,establishment,,https://plus.google.com/101652661602067983310/about?hl=en,53.366735,-6.255724,"Google Places",ChIJNR8feGUOZ0gRW9TlfOseNyg,
+"Crumlin Physiotherapy & Sports Injury Clinic","1 Errigal Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 455 3688",,establishment,,https://plus.google.com/108811044617365351276/about?hl=en,53.325288,-6.321629,"Google Places",ChIJT5Na7YkMZ0gRblMjuTokkWk,
+"Tallaght Physiotherapy Clinic","50 Bancroft Rd, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 462 4999",,establishment,,https://plus.google.com/100047867613463052949/about?hl=en,53.291462,-6.351034,"Google Places",ChIJP_lZfEYLZ0gRg0vs-vnGBF4,
+"Sandycove Physiotherapy & Sports Injury Clinic","31 Glasthule Rd, Sandycove, Co. Dublin, Ireland",Sandycove,Dublin,,IE,"(01) 214 0575",,establishment,,http://sandycovephysio.com/,53.286211,-6.120516,"Google Places",ChIJFTEPOTcGZ0gRT_hVpBcBjSA,
+"Kiltipper Woods Physiotherapy and Hydrotherapy Clinic Dublin","24 Whitestown Way, Dublin 24, Ireland","Dublin 24",Dublin,,IE,"(01) 462 5277",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.kwphysio.ie/,53.267015,-6.365743,"Google Places",ChIJkbyE_tR0Z0gRDv-xZmWppuU,"dublin_hydrotherapy.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv"
+"Malahide Physiotherapy Clinic","2, Castle Terrace, Main Street, Malahide, Co. Dublin, Ireland",Malahide,Dublin,,IE,"(01) 845 1222",,"physiotherapist, health, establishment","Monday: 8:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 8:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 8:00 am – 8:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.malahidephysiotherapy.com/,53.450185,-6.15623,"Google Places",ChIJKWj7u2EaZ0gRJBnZ5oXPXtQ,dublin_physical_therapist.csv
+"Bray Physiotherapy & Sports Injury Clinic","8, Duncairn Terrace, Quinsborough Rd, Bray, Co. Wicklow, Ireland",Bray,Wicklow,,IE,"(01) 286 0410",,establishment,,https://plus.google.com/111933988022066625755/about?hl=en,53.205203,-6.104101,"Google Places",ChIJ_R4_0W6oZ0gRQ0_25dcxvtk,
+"Dunboyne Physiotherapy & Sports Injury Clinic","Main Street, Dunboyne, Co. Meath, Ireland",Dunboyne,Meath,,IE,"(01) 825 1121",,establishment,,https://plus.google.com/100001235189839873639/about?hl=en,53.418983,-6.476644,"Google Places",ChIJj3LnjbltZ0gROpXfPsB9AsE,
+"Liffey View Physiotherapy","Riverview House, Celbridge, Co. Kildare, Ireland",Celbridge,Kildare,,IE,"(01) 627 3939",,establishment,,http://www.liffeyviewphysio.ie/liffeyviewphysiothearpy.html,53.380633,-6.518159,"Google Places",ChIJWVrwYONxZ0gRHkWWungFMw0,
+"Applewood Physiotherapy","Roches Clinic, Blacklion, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"(01) 287 3232",,establishment,,http://www.physiogreystones.com/,53.150116,-6.081383,"Google Places",ChIJbRS428qoZ0gRF1mX32fu4PQ,
+"Greystones Physiotherapy & Sports Injury Clinic","Trafalgar House, Trafalgar Rd, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"(01) 287 7224",,establishment,,https://plus.google.com/110758866437026052547/about?hl=en,53.149065,-6.065144,"Google Places",ChIJn4MpxyyvZ0gRancDhtz47pk,
+"The O'Reilly Centre","142 Stillorgan Road, Dublin, Ireland",Dublin,Dublin,,IE,"087 744 8782",,"physiotherapist, health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 8:00 am – 12:00 pm
+Sunday: Closed",http://www.theoreillycentre.ie/,53.31245,-6.220917,"Google Places",ChIJ1yP9oR8MZ0gRRyfYSpqLTjE,dublin_physical_therapist.csv
+"The Physio Company","10 Temple Bar, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 679 9685",,establishment,,http://www.thephysiocompany.com/,53.345314,-6.265544,"Google Places",ChIJv2nr0oIOZ0gRF0dQWyHl2YU,
+"DBC Institute For Sport & Health University College of Dublin","Belfield, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 716 3240",,establishment,,https://plus.google.com/110974604555780311211/about?hl=en,53.304666,-6.22156,"Google Places",ChIJtZawmzAJZ0gRWGBXGpZinH4,
+"Phoenix Centre","165 New Cabra Rd, Cabra - Glasnevin, Dublin 7, Ireland","Dublin 7","Co. Dublin",,IE,"(01) 838 1621",,"health, establishment",,http://www.phoenixcentre.ie/,53.361547,-6.289877,"Google Places",ChIJL-OlBNQNZ0gRmLAMDPpjC5A,
+Physicaltherapistdublin,"Patrick Street, Glenageary, Co. Dublin, Ireland",Glenageary,Dublin,,IE,"(01) 236 6648",,"physiotherapist, health, establishment",,http://www.physicaltherapistdublin.ie/,53.290254,-6.138208,"Google Places",ChIJf1hfjSYGZ0gRa1-cdGCbLW8,dublin_physical_therapist.csv
+"Physio Dynamics","Level 4 Dundrum Town Centre, Sandyford Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 216 6960",,establishment,,https://plus.google.com/107660654735221304182/about?hl=en,53.27726,-6.23047,"Google Places",ChIJ70mV8XMJZ0gRvo41SSkxzfY,
+"Phibsborough Acupuncture Clinic","7 Dalymount, Phibsborough, Dublin, Ireland",Dublin,Dublin,,IE,"086 330 3835",,establishment,,https://plus.google.com/109245998125160626202/about?hl=en,53.361002,-6.275808,"Google Places",ChIJAenygdYNZ0gRJllJnFVJhzw,
+"Fit For Life","2/3, Sandyford Village, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 453 0824",,establishment,,http://fitforlife.ie/,53.270056,-6.224521,"Google Places",ChIJTU74lJ8JZ0gRE95R7QvhthU,
+"Art Therapy Clinic","36 Rowanbyrn, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"086 243 2930",,establishment,,https://plus.google.com/109798882119691744284/about?hl=en,53.288062,-6.17066,"Google Places",ChIJb44sKpMIZ0gRAImQyfPnCBA,
+"Pro-Active Health & Fitness","20 Rosemount Avenue, Dublin, Ireland",Dublin,Dublin,,IE,"087 791 0057",,establishment,,https://plus.google.com/108344969721893165420/about?hl=en,53.378738,-6.195839,"Google Places",ChIJPdPqAr8PZ0gRA9NWvLKbZKY,
+"Donaghmede - Grange Clinic Chiropodist and Podiatrist","The Grange Clinic, Grange Rd, Dublin, Ireland",Dublin,Dublin,,IE,"086 723 4570",,"doctor, health, establishment","Monday: Closed
+Tuesday: 10:00 am – 7:00 pm
+Wednesday: Closed
+Thursday: 10:00 am – 7:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.podiatryservicesnow.com/,53.394628,-6.164201,"Google Places",ChIJdTnimlcFZ0gRJk_Pf1PzEHQ,
+"Sheehan Medical Practice","21 Summerhill Rd, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 280 6908",,"doctor, health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.sheehanmedicalpractice.com/,53.288082,-6.125566,"Google Places",ChIJZxZKgToGZ0gR3Zp7EiRRlDo,
+"Harbour Clinic","28 Patrick Street, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 236 6648",,"health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: 10:00 am – 6:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 6:00 pm
+Friday: 10:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physicaltherapistdublin.ie/,53.290918,-6.138067,"Google Places",ChIJzb8KlSYGZ0gRt_l9c2cKTIo,"dublin_chiropractor.csv
+dublin_masseur.csv
+dublin_physical_therapist.csv"
+"Primacare / Dundrum Medical and Dental Centre","Garden Level, Leeson Street Upper, Dublin 16, Ireland","Dublin 16",Dublin,,IE,,,"doctor, health, establishment",,http://www.whatclinic.com/doctors/ireland/county-dublin/dublin/dundrum,53.286512,-6.24063,"Google Places",ChIJQWtbVm8JZ0gRROKFrKCzcq0,dublin_chiropodist.csv
+"Ballyboden St Endas GAA","Firhouse Rd, Dublin 16, Ireland","Dublin 16",,,IE,"(01) 494 7950",,establishment,,http://www.bodengaa.ie/,53.28326,-6.302504,"Google Places",ChIJawrLv3QLZ0gRBWaM51sLcc4,
+"Dublin Osteopath","Pembroke Osteopathic Clinic Basement, 13 Pembroke Street Lower, Dublin 2, Ireland","Dublin 2","Co. Dublin",,IE,"(01) 233 4103",,"health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 4:30 pm
+Thursday: Closed
+Friday: 8:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinosteopath.ie/,53.336683,-6.252456,"Google Places",ChIJFTCylLsOZ0gRG4Wkrn4DBGA,"dublin_chiropractor.csv
+dublin_osteopath.csv"
+"www.massage.ie, Camden Court Hotel Leisure Centre","Upper Camden Street, Dublin, Ireland",Dublin,Dublin,,IE,"087 238 0321",,"health, establishment",,http://www.massage.ie/,53.333502,-6.264958,"Google Places",ChIJb4fsDqAOZ0gRXUYp7uGQ9fI,"dublin_aromatherapist.csv
+dublin_masseur.csv
+dublin_reflexologist.csv"
+"Dublin Osteopath Myles Cottrell","89 Waterloo Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 668 7444",,"physiotherapist, health, establishment",,http://www.dublinosteopath.ie/,53.328957,-6.245257,"Google Places",ChIJFTCylLsOZ0gRRBdycjxZtKE,"dublin_chiropractor.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"Westmoreland College","Dollard House,, 2 Wellington Quay, Dublin, Co. Dublin City, Ireland","Dublin City","Dublin City",,IE,"(01) 679 5324",,establishment,"Monday: 8:30 am – 8:00 pm
+Tuesday: 8:30 am – 8:00 pm
+Wednesday: 8:30 am – 8:00 pm
+Thursday: 8:30 am – 8:00 pm
+Friday: 8:30 am – 5:30 pm
+Saturday: 9:30 am – 1:30 pm
+Sunday: Closed",http://www.westmorelandcollege.ie,53.345365,-6.266959,"Google Places",ChIJ8_sLtIIOZ0gRpX_BOM1mOFc,
+"Partner Health","Adelaide Court, Adelaide Rd, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 298 7787",,"doctor, health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.partnerhealth.ie/,53.333592,-6.260516,"Google Places",ChIJMTgbwaEOZ0gRKeoBJAd4_Yw,
+"Marian Sopoliga & Lenka Sopoligova - Reiki Therapists","Castleforbes Square, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"(01) 442 2702",,"health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 9:00 am – 8:00 pm
+Wednesday: 9:00 am – 8:00 pm
+Thursday: 9:00 am – 8:00 pm
+Friday: 9:00 am – 8:00 pm
+Saturday: 9:00 am – 8:00 pm
+Sunday: 9:00 am – 2:00 pm",http://www.complementary-therapists.com/irish-therapists/dublin/marian-lenka.htm,53.349629,-6.232219,"Google Places",ChIJCWR6dvEOZ0gRi4--U5REvMQ,"dublin_allergy.csv
+dublin_masseur.csv
+dublin_meditation.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+Shimmer,"DCU Innovation Campus, Glasnevin Hill, Dublin 9, Ireland","Dublin 9",Dublin,,IE,"(01) 687 5760",,establishment,"Monday: 8:00 am – 4:30 pm
+Tuesday: 8:00 am – 4:30 pm
+Wednesday: 8:00 am – 4:30 pm
+Thursday: 8:00 am – 4:30 pm
+Friday: 8:00 am – 4:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.shimmersensing.com/,53.376346,-6.270495,"Google Places",ChIJV2-iUtURZ0gRv8Y8dF6hgSM,
+"Osteopath Dublin - Castlewood Clinic","19 Castlewood Terrace, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 496 5999",,"health, establishment","Monday: 10:00 am – 5:00 pm
+Tuesday: Closed
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.castlewoodclinic.ie/,53.323702,-6.262571,"Google Places",ChIJaxVWSh0MZ0gRahVyXSQ2c1E,"dublin_acupuncturist.csv
+dublin_chiropractor.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"Osteopath Dublin - Castlewood Clinic","19 Castlewood Terrace, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 496 5999",,"health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: Closed
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.castlewoodclinic.ie/,53.32358,-6.262604,"Google Places",ChIJrU6lB6gOZ0gRzVtdrZeImk8,"dublin_acupuncturist.csv
+dublin_chiropractor.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv"
+"Occupational Health Consultants Ltd","79 Fitzwilliam Lane, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 676 7943",,establishment,"Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.ohconsultants.net/,53.338632,-6.251549,"Google Places",ChIJrSNcbpcOZ0gRpVnY4xI1-yQ,
+"SIGNU SIGNS AND GRAPHICS","2 Waterloo Avenue, North Strand, Dublin 3., Co. Dublin, Ireland","Dublin 3.",Dublin,,IE,"086 848 5243",,"store, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.signu.ie/,53.358374,-6.242048,"Google Places",ChIJLyra6F8OZ0gR4yE57reRQ40,
+"Pelko Ltd","8 Castleforbes Road, North Wall, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"(01) 836 5839",,establishment,"Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 1:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.pelkofurniture.ie/,53.349099,-6.232051,"Google Places",ChIJTf7MoOGZXUgR5ZyYryvotBQ,dublin_chiropractor.csv
+"Melanie Hoskin","570 Howth Rd, Raheny, Co. Dublin, Ireland",Raheny,Dublin,,IE,"086 241 9685",,establishment,,http://www.clinicofnaturalmedicine.ie/,53.380371,-6.17217,"Google Places",ChIJ7-WBjowPZ0gRVVTClJy09wc,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_pilates.csv
+dublin_yoga.csv"
+"Bushido Martial Arts & Poise Pilates","BMA Academy of Health & Fitness, Watery Lane, Clondalkin, Co. Dublin, Ireland",Clondalkin,Dublin,,IE,"(01) 464 3657",,"health, school, establishment","Monday: 9:00 am – 9:30 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 9:30 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 9:30 pm
+Saturday: 9:30 am – 12:30 pm
+Sunday: Closed",http://www.poisepilates.ie/,53.32203,-6.392111,"Google Places",ChIJ7_HP2UVzZ0gRdaBHcsPVrpU,"dublin_chiropractor.csv
+dublin_pilates.csv"
+"DX2 Training Solutions","Columba House, Lakeshore Dr, Airside Retail Park, Swords, Co. Dublin, Ireland",,Dublin,,IE,"(01) 442 7650",,establishment,"Monday: 9:30 am – 5:00 pm
+Tuesday: 9:30 am – 5:00 pm
+Wednesday: 9:30 am – 5:00 pm
+Thursday: 9:30 am – 5:00 pm
+Friday: 9:30 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dx2training.ie/,53.445446,-6.224989,"Google Places",ChIJje8HhfgQZ0gRhpLk0R2c8rs,
+"Lynch Design","16 Brookdale Park, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,"(01) 807 9748",,establishment,"Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.lynchdesign.ie/,53.452756,-6.24852,"Google Places",ChIJM_mpFgURZ0gRzp_FX0w1jDA,
+"Shiatsu College Dublin","Ralph Square, Leixlip, Co. Kildare, Ireland",Leixlip,Kildare,,IE,"087 261 3355",,"health, establishment","Monday: 9:00 am – 6:00 pm
+Tuesday: 9:00 am – 6:00 pm
+Wednesday: 9:00 am – 6:00 pm
+Thursday: 9:00 am – 6:00 pm
+Friday: 9:00 am – 6:00 pm
+Saturday: 9:00 am – 6:00 pm
+Sunday: 9:00 am – 6:00 pm",http://www.shiatsu.ie/,53.364051,-6.487855,"Google Places",ChIJBQnCWCJyZ0gRLFLypAp8ZrU,dublin_masseur.csv
+"Safety First Training","Ireland, 15 Adelaide Road, Dún Laoghaire, Co. Dublin, Ireland",,Dublin,,IE,"086 805 9088",,"health, establishment",,http://www.safetyfirsttraining.ie/,53.291802,-6.131052,"Google Places",ChIJJV4QqecHZ0gR42Qk49qKX5k,

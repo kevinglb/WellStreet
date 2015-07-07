@@ -1,0 +1,287 @@
+Name,"Full Address",City,County/State,Postcode,Country,"Telephone Number",Rating,Keywords,"Opening hours",URL,Latitude,Longitude,"Data Source","Data Source Identifer","Duplicated In"
+"Abbey Chiropractic and Wellness Center","46 Parnell Square West, Dublin 1, Ireland",,,,IE,"(01) 873 4363",,"health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 8:00 am – 8:00 pm
+Wednesday: 9:00 am – 8:00 pm
+Thursday: 8:00 am – 8:00 pm
+Friday: 9:00 am – 8:00 pm
+Saturday: 10:00 am – 2:00 pm
+Sunday: Closed",http://www.abbeychiro.ie/,53.352512,-6.264265,"Google Places",ChIJ2_aoO4EOZ0gRJfYxdjY_AYQ,"dublin_masseur.csv
+dublin_pilates.csv"
+"Trinity Chiropractic & Natural Health Centre","4th floor, 12-14 College Green, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 672 9399",,"health, physiotherapist, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 10:00 am – 2:30 pm
+Sunday: Closed",http://www.natbalchiro.com/,53.344159,-6.262175,"Google Places",ChIJpzSkvZwOZ0gR6-6FCbLNf0A,"dublin_physical_therapist.csv
+dublin_physiotherapist.csv
+dublin_pilates.csv"
+"Navan Road Chiropractic","198 Navan Rd, Dublin, Co. Dublin City, Ireland","Dublin City","Dublin City",,IE,"(01) 868 1622",,"health, establishment","Monday: 8:30 am – 1:00 pm, 3:30 – 7:00 pm
+Tuesday: 3:00 – 7:00 pm
+Wednesday: 9:00 am – 1:00 pm
+Thursday: 3:00 – 7:00 pm
+Friday: 8:30 am – 1:00 pm
+Saturday: 9:00 am – 12:00 am
+Sunday: Closed",http://www.navanroadchiropractic.com/,53.366736,-6.313755,"Google Places",ChIJfeHd3boNZ0gRgV4CkI_-Vp8,
+"Fitzwilliam Health Clinic","19 Fitzwilliam Square South, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 661 8949",,"physiotherapist, health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 9:00 am – 2:00 pm
+Sunday: Closed",http://www.fitzwilliamhealth.ie/,53.3346,-6.251794,"Google Places",ChIJGTk1U70OZ0gRGoxPLnJB6xg,dublin_physical_therapist.csv
+"The Spinery Chiropractic","6 Fitzwilliam Place, Dublin 2, Ireland","Dublin 2","Co. Dublin",,IE,"(01) 642 5911",,"health, establishment","Monday: 9:30 am – 7:30 pm
+Tuesday: 9:30 am – 7:30 pm
+Wednesday: 9:30 am – 7:30 pm
+Thursday: 9:30 am – 7:30 pm
+Friday: 9:30 am – 7:30 pm
+Saturday: 9:30 am – 7:30 pm
+Sunday: Closed",http://www.thespinery.com/,53.334036,-6.251476,"Google Places",ChIJm_J2THeb9YgRuZFUuL7uMiw,
+"Life and Balance Centre","F8, Nutgrove Office Park, Nutgrove Avenue, Rathfarnham, Dublin 14, Ireland","Dublin 14","Co. Dublin",,IE,"(01) 207 9881",,"health, establishment",,http://www.lifeandbalance.ie/,53.292082,-6.262135,"Google Places",ChIJ7w9uS-cLZ0gR8Y2xR94G9MQ,
+"Advanced Chiropractic","21 Fitzwilliam Pl, Dublin 2, Ireland","Dublin 2",,,IE,"(01) 678 7979",,"health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: 9:00 am – 5:00 pm
+Sunday: Closed",http://www.advchiro.net/,53.333108,-6.252572,"Google Places",ChIJo8_lxKIOZ0gRuPjKYeKxQco,
+"True Massage","89 Parnell Street, Dublin 1, Dublin, Ireland",Dublin,Dublin,,IE,"087 761 2887",,"health, establishment","Monday: 10:00 am – 8:00 pm
+Tuesday: 10:00 am – 8:00 pm
+Wednesday: 10:00 am – 8:00 pm
+Thursday: 10:00 am – 8:00 pm
+Friday: 10:00 am – 8:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.truemassage.ie/,53.352992,-6.259903,"Google Places",ChIJsQazUaEOZ0gR5kgVHIJBmyw,dublin_masseur.csv
+"Back to Health","Old Bawn Shopping Centre, Old Bawn Rd, Tallaght, Co. Dublin, Ireland",Tallaght,Dublin,,IE,"087 054 4851",,"health, establishment",,http://www.back-2-health.com/,53.275581,-6.353348,"Google Places",ChIJGzzf1y8LZ0gRMKbWM9GZ7ts,
+"Chiropractors Dublin","13 Baggot Street Upper, Dublin 2, Ireland","Dublin 2",Dublin,,IE,,,"health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.chiropractorsdublin.net/,53.333634,-6.244794,"Google Places",ChIJ1eST2L0OZ0gRGB8W0no82vI,dublin_masseur.csv
+"Dun Laoghaire Clinic","21 Mellifont Avenue, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"087 231 9113",,"health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dunlaoghaireclinic.com/,53.290757,-6.130595,"Google Places",ChIJiUWq3CQGZ0gR1ha2X0FQ_q0,dublin_osteopath.csv
+Chiropractic,"36 Braemor Rd, Rathfarnham, Co. Dublin, Ireland",Rathfarnham,Dublin,,IE,"087 054 4851",,"health, establishment",,http://www.back-2-health.com/,53.297228,-6.259578,"Google Places",ChIJdWhqJOILZ0gROYk4L7tDnhE,
+"Finley Chiropractic Centre","Newtownpark Ave, Blackrock, Co. Dublin, Ireland",Blackrock,Dublin,,IE,"(01) 288 2801",,"health, establishment","Monday: 10:30 am – 1:30 pm, 4:30 – 7:30 pm
+Tuesday: 10:30 am – 1:30 pm, 4:30 – 7:30 pm
+Wednesday: Closed
+Thursday: 10:30 am – 1:30 pm, 4:30 – 7:30 pm
+Friday: 10:30 am – 1:30 pm, 4:30 – 7:30 pm
+Saturday: Closed
+Sunday: Closed",http://finleychiropracticcentre.goldenpages.ie/,53.284522,-6.177698,"Google Places",ChIJ3Y2I-_EIZ0gR2JU__mWrCU4,
+"Chiropractor Dublin │Clontarf Chiropractic","126 Clontarf Rd, Dublin 3, Ireland","Dublin 3",Dublin,,IE,"(01) 833 4026",4.9,"health, establishment","Monday: 8:00 am – 1:00 pm, 3:30 – 7:00 pm
+Tuesday: 8:00 am – 1:00 pm, 3:30 – 7:00 pm
+Wednesday: 8:00 am – 1:00 pm, 3:30 – 7:00 pm
+Thursday: 8:00 am – 1:00 pm, 3:30 – 7:00 pm
+Friday: 8:00 am – 1:00 pm, 3:30 – 7:00 pm
+Saturday: 8:00 am – 1:00 pm
+Sunday: Closed",http://www.clontarfchiropractic.ie/,53.36056,-6.204445,"Google Places",ChIJnSD6NqgPZ0gReWTlrl4PJxo,"dublin_herbalist.csv
+dublin_physical_therapist.csv"
+"Stillorgan Chiropractic","Stillorgan Shopping Centre, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 205 5550",,"health, establishment",,http://www.southsidechiropractic.ie/,53.288842,-6.200616,"Google Places",ChIJ92eN7x0JZ0gRPb1AczGrZws,
+"Sutton Chiropractic Centre Dr. Accardi","34A Baldoyle Rd, Sutton, Co. Dublin, Ireland",Sutton,Dublin,,IE,"(01) 832 3344",,"health, establishment","Monday: 10:00 am – 1:00 pm, 4:00 – 6:00 pm
+Tuesday: Closed
+Wednesday: 10:00 am – 1:00 pm, 4:00 – 6:00 pm
+Thursday: Closed
+Friday: 10:00 am – 1:00 pm, 4:00 – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.chirodublin.ie/,53.389476,-6.123751,"Google Places",ChIJafiZtDwFZ0gReNQdRYZ77l8,
+"Drake Chiropractic","Ballawey Lodge, Sandyford Road, Sandyford, Co. Dublin, Ireland",Sandyford,Dublin,,IE,"(01) 293 7803",,"health, establishment",,http://www.drakechiropractic.ie/,53.278026,-6.231486,"Google Places",ChIJ0R48p3YJZ0gRvMZ_VDr0ZEM,
+"Roughan Chiropractic","24 Monkstown Crescent, Dublin, Ireland",Dublin,Dublin,,IE,"086 356 4089",,"health, establishment","Monday: 9:00 am – 12:00 pm
+Tuesday: 2:00 – 7:00 pm
+Wednesday: Closed
+Thursday: 2:00 – 7:00 pm
+Friday: 9:00 am – 3:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.roughanchiropractic.ie/,53.293974,-6.149997,"Google Places",ChIJt3faNYUIZ0gRU2JsPnppBZg,
+"Premier Chiropractic","1 Applewood Village Green, Swords, Co. Dublin, Ireland",Fingal,Dublin,,IE,"085 724 4706",4.8,"doctor, health, establishment","Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.premierchiropractic.ie/,53.470447,-6.229248,"Google Places",ChIJ59d3bNwQZ0gRJRWUgaxHWOI,dublin_physical_therapist.csv
+Osteopathdublin.ie,"2, Mornington Park, Malahide Rd, Dublin, Ireland",Dublin,Dublin,,IE,"086 156 0605",,"physiotherapist, health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 8:00 am – 12:00 pm
+Sunday: Closed",http://www.osteopathdublin.ie/,53.382301,-6.207651,"Google Places",ChIJ6QxnbMgPZ0gR5TeX9m9ssXc,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+"Greystones Chiropractic Clinic","1A Lower Kindelstown Road, Greystones, Co. Wicklow, Ireland",Greystones,Wicklow,,IE,"(01) 287 5944",,"health, establishment","Monday: 8:30 am – 6:30 pm
+Tuesday: 8:30 am – 6:30 pm
+Wednesday: 8:30 am – 6:30 pm
+Thursday: 8:30 am – 6:30 pm
+Friday: 8:30 am – 6:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.greystoneschiropractic.ie/,53.145775,-6.078409,"Google Places",ChIJvbzVnTavZ0gRink8B5WP8VU,
+"The Joint Chiropractor Dublin","Claddagh House, Athgoe, Dublin, Ireland",Dublin,"Co. Dublin",,IE,"(01) 412 4754",,"health, establishment","Monday: 9:30 am – 7:00 pm
+Tuesday: 2:00 – 7:00 pm
+Wednesday: 9:30 am – 7:00 pm
+Thursday: 9:30 am – 2:00 pm
+Friday: 9:30 am – 7:00 pm
+Saturday: 9:30 am – 2:00 pm
+Sunday: Closed",http://www.thejoint.ie/,53.292965,-6.511258,"Google Places",ChIJublMQ2t0Z0gRsuOUk6RvVKY,
+MIGUN-IRELAND,"218 Cherrywood Lawn, Dublin 22, Ireland","Dublin 22",Dublin,,IE,"086 170 6924",,"store, health, establishment",,http://www.migun.ie/catalogue.php?id=1,53.316566,-6.414858,"Google Places",ChIJeYqC629zZ0gRZHt-vq3x_gQ,dublin_reflexologist.csv
+"Physio Clinic: South Dublin. Ross Allen: Chartered Physiotherapist, Chiropractor & Sports Therapist","4A Saint Patrick's Road, Dalkey, Co. Dublin, Ireland",,Dublin,,IE,"083 196 0344",,"physiotherapist, health, establishment","Monday: 9:00 am – 7:30 pm
+Tuesday: 9:00 am – 7:30 pm
+Wednesday: 9:00 am – 7:30 pm
+Thursday: 9:00 am – 7:30 pm
+Friday: 9:00 am – 7:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.physioclinic.ie/,53.277804,-6.103791,"Google Places",ChIJ_WbzN7MHZ0gRMyAfE45PfVc,"dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+"Centaurus Equestrian Rehabilitiation","Celbridge, Co. Kildare, Ireland",Celbridge,Kildare,,IE,"087 146 7679",,"health, establishment",,http://www.centaurusosteo.com/,53.267003,-6.053944,"Google Places",ChIJLUJC3gZxZ0gRT0vtJ-GwPhs,dublin_osteopath.csv
+"Homefarm Family Chiropractor","Ireland, 43 Home Farm Road, Dublin 9, Ireland","Dublin 9",,,IE,"(01) 561 3000",,"health, establishment",,https://plus.google.com/108622333645821432992/about?hl=en,53.37427,-6.255331,"Google Places",ChIJBfUia2wOZ0gR7Rem9ZDT44I,
+"Back To Basics Chiropractic","1 Pottery Road, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 235 4975",,establishment,,http://www.backtobasicschiro.org/,53.278945,-6.157296,"Google Places",ChIJob536YgIZ0gRYTf7zVeL04U,
+"Chiropractic Clinic","570 Howth Rd, Dublin 5, Ireland","Dublin 5",Dublin,,IE,"(01) 853 5557",,establishment,,https://plus.google.com/114046464095903457759/about?hl=en,53.380397,-6.17202,"Google Places",ChIJuwtYjowPZ0gRDeLa6p58X8Q,
+"CHIROPRACTIC FIRST","55 Terenure Rd N, Terenure, Dublin 6W, Co. Dublin, Ireland","Dublin 6W",Dublin,,IE,"(01) 490 5287",,establishment,"Monday: 9:00 am – 7:00 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 7:00 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 7:00 pm
+Saturday: 9:00 am – 1:00 pm
+Sunday: Closed",http://www.chiropracticfirst.ie/,53.312211,-6.282321,"Google Places",ChIJHwoYBAoMZ0gRjysdwetim10,
+"Dublin City Chiropractic","34 Fitzwilliam Street Upper, Dublin 2, Ireland","Dublin 2",,,IE,"(01) 644 4555",5,"health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 7:00 pm
+Thursday: 8:00 am – 7:00 pm
+Friday: 8:00 am – 7:00 pm
+Saturday: 1:00 – 3:00 pm
+Sunday: Closed",https://plus.google.com/106587033184892838498/about?hl=en,53.336365,-6.249453,"Google Places",ChIJ710v4ZcOZ0gRUpSqOoInhJI,dublin_physical_therapist.csv
+"The Joint Treatment Centre","The Louis Fitzgerald Hotel, Newlands Cross, Naas Road, Dublin 22, Ireland","Dublin 22",,,IE,"(01) 412 4761",,establishment,,http://thejoint.ie/,53.31536,-6.382665,"Google Places",ChIJ2ZqYgaN0Z0gRXc3305fjzto,
+"Leixlip Chiropractic Clinic","7 Captain's Hill, Leixlip, Co. Kildare, Ireland",Leixlip,Kildare,,IE,"(01) 624 5243",,"health, establishment",,https://plus.google.com/109205503102904481817/about?hl=en,53.364649,-6.488469,"Google Places",ChIJV0ZaZiJyZ0gR8676psYcacs,
+"Dublin 2 Chiropractic","79 Merrion Square South, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 676 7017",5,"health, establishment","Monday: 10:30 am – 6:30 pm
+Tuesday: 10:30 am – 6:30 pm
+Wednesday: 10:30 am – 6:30 pm
+Thursday: 10:30 am – 6:30 pm
+Friday: 10:30 am – 2:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublin2chiropractic.com/,53.339238,-6.25098,"Google Places",ChIJhYJXFZcOZ0gRSsaBA5ZQ9lY,
+"Wellbeing Ireland","First Floor,, 2C Main Street,, Blackrock, Dublin,, Co. Dublin, Ireland","Blackrock, Dublin,",Dublin,,IE,"(01) 288 5118",,"health, establishment","Monday: 9:00 am – 5:30 pm
+Tuesday: 9:00 am – 5:30 pm
+Wednesday: 9:00 am – 5:30 pm
+Thursday: 9:00 am – 5:30 pm
+Friday: 9:00 am – 5:30 pm
+Saturday: Closed
+Sunday: Closed",http://www.wellbeing.ie/,53.302434,-6.178017,"Google Places",ChIJAVR84MYIZ0gR-1NrtWgefmE,"dublin_allergy.csv
+dublin_aromatherapist.csv
+dublin_colonic_hydrotherapy.csv
+dublin_herbalist.csv
+dublin_hydrotherapy.csv
+dublin_meditation.csv
+dublin_pilates.csv
+dublin_reflexologist.csv"
+"Traffichemy Internet Marketing","Pembroke Square, Grand Canal Street Upper, Dublin, Ireland",Dublin,Dublin,,IE,"086 239 8550",,establishment,"Monday: 10:00 am – 7:00 pm
+Tuesday: 10:00 am – 7:00 pm
+Wednesday: 10:00 am – 7:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: 10:00 am – 1:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.smallbizmarketing.ie/,53.338349,-6.237154,"Google Places",ChIJX3Xp3uoOZ0gRCthathW_PEQ,dublin_masseur.csv
+"Bushido Martial Arts & Poise Pilates","BMA Academy of Health & Fitness, Watery Lane, Clondalkin, Co. Dublin, Ireland",Clondalkin,Dublin,,IE,"(01) 464 3657",,"health, school, establishment","Monday: 9:00 am – 9:30 pm
+Tuesday: 9:00 am – 7:00 pm
+Wednesday: 9:00 am – 9:30 pm
+Thursday: 9:00 am – 7:00 pm
+Friday: 9:00 am – 9:30 pm
+Saturday: 9:30 am – 12:30 pm
+Sunday: Closed",http://www.poisepilates.ie/,53.32203,-6.392111,"Google Places",ChIJ7_HP2UVzZ0gRdaBHcsPVrpU,"dublin_physiotherapist.csv
+dublin_pilates.csv"
+"Malahide Rugby Club","Estuary Road, Malahide, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 840 0050",,establishment,,http://malahiderfc.ie/,53.458215,-6.187122,"Google Places",ChIJUSU_kJwQZ0gRjDUU4Kk3Vas,
+"Harbour Clinic","28 Patrick Street, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 236 6648",,"health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: 10:00 am – 6:00 pm
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 6:00 pm
+Friday: 10:00 am – 6:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.physicaltherapistdublin.ie/,53.290918,-6.138067,"Google Places",ChIJzb8KlSYGZ0gRt_l9c2cKTIo,"dublin_masseur.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+"FLTC Health Clinic","Fitzwilliam Lawn Tennis Club, Appian Way, Dublin, Ireland",Dublin,Dublin,,IE,"086 334 5445",,establishment,,https://plus.google.com/114695254435316392201/about?hl=en,53.338188,-6.25069,"Google Places",ChIJ8U5jC5cOZ0gRrlk9YfBjXkA,
+"Life & Balance Centre","Unit F8 Nutgrove Office Park, Nutgrove Avenue, Rathfarnham, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 207 9881",,establishment,,https://plus.google.com/104167169263174321234/about?hl=en,53.329298,-6.274033,"Google Places",ChIJFyIMbxkMZ0gRfX447zNvAZ4,
+"Back in Balance Chiropractic Clinic","Merrion Shopping Centre, Merrion Road, Dublin, Ireland",Dublin,Dublin,,IE,"085 155 3175",,establishment,,https://plus.google.com/115320596752406613449/about?hl=en,53.313808,-6.202557,"Google Places",ChIJ5-_4DtUIZ0gR371AsBTFwTw,
+"Dundrum Chiropractic Clinic","6, Stokes Court, Dundrum, Co. Dublin, Ireland",Dundrum,"Co. Dublin",,IE,"(01) 296 4438",,"health, establishment",,https://plus.google.com/113623345264269150479/about?hl=en,53.291287,-6.244864,"Google Places",ChIJZQb7k2YJZ0gRMQ-qDeHT9ZI,
+"Chiropractic First","8 Blessington Street, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 830 6188",,establishment,,http://www.chiropracticfirstdublin.ie/,53.356442,-6.266123,"Google Places",ChIJsaVqJH4OZ0gRdzmgN0GK-H4,
+"Harkness Chiropractic","Cuan Door House, 266 Sandyford Road, Sandyford, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 294 4985",,establishment,,https://plus.google.com/112554627700871606680/about?hl=en,53.27322,-6.22876,"Google Places",ChIJQ3qpuXUJZ0gRym0uTqMgdxc,
+Myhealthpages,"main streeet., Lucan, Co. Dublin, Ireland",Lucan,Dublin,,IE,"085 712 2327",,"health, establishment",,https://plus.google.com/115976744281177495055/about?hl=en,53.357474,-6.449829,"Google Places",ChIJt84OreMMZ0gRb4UyDOcxD4I,
+"Get Back Health Chiropractic and Wellness Clinic","9 Herbert Street, Dublin 2, Ireland","Dublin 2",Dublin,,IE,"(01) 663 3003",,"doctor, health, establishment","Monday: 9:00 am – 8:00 pm
+Tuesday: 9:00 am – 3:00 pm
+Wednesday: 2:00 – 7:00 pm
+Thursday: 9:00 am – 8:00 pm
+Friday: 1:00 – 5:00 pm
+Saturday: 10:00 am – 1:00 pm
+Sunday: Closed",http://www.getbackhealth.ie/,53.336302,-6.244257,"Google Places",ChIJbV20kcYOZ0gRbHbIDkb5anY,
+"Dun Laoghaire Chiropractic","14 Mellifont Avenue, Dun Laoghaire, Co. Dublin, Ireland","Dun Laoghaire",Dublin,,IE,"(01) 280 0488",,establishment,,https://plus.google.com/107464570704012581171/about?hl=en,53.291207,-6.129971,"Google Places",ChIJjUz_yiQGZ0gRosXorlEteCM,
+"Castleknock Chiropractic","Main Street, Castleknock Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 821 9995",,establishment,,https://plus.google.com/109944012680277204205/about?hl=en,53.373562,-6.362797,"Google Places",ChIJ9TEBYkANZ0gRdNhmJOsTnBI,
+"Swords Chiropractic Clinic","58 Main Street, Swords, Co. Dublin, Ireland",Swords,Dublin,,IE,"(01) 840 3305",,establishment,,http://www.naas-swordschiropractic.ie/swords-clinic/,53.457106,-6.22148,"Google Places",ChIJwYuqwe8QZ0gR-U27WUboHCU,
+"Associated Chiropractic Clinics","5 James's Terrace, Malahide, Co. Dublin, Ireland",Malahide,Dublin,,IE,"(01) 845 5054",,establishment,,https://plus.google.com/118160865812479442967/about?hl=en,53.451365,-6.151894,"Google Places",ChIJQYzRf2AaZ0gRnlMG_nqeUeE,
+"Holistic Health & Beauty Clinic","352 S Circular Rd, Dublin 8, Ireland","Dublin 8",Dublin,,IE,"(01) 707 8333",,"beauty_salon, health, hair_care, establishment","Monday: 10:00 am – 9:00 pm
+Tuesday: 10:00 am – 9:00 pm
+Wednesday: 10:00 am – 9:00 pm
+Thursday: 10:00 am – 9:00 pm
+Friday: 10:00 am – 9:00 pm
+Saturday: 10:00 am – 5:00 pm
+Sunday: Closed",http://www.holistichealthandbeauty.net/,53.332577,-6.289501,"Google Places",ChIJu_WEhBUMZ0gRHnmHjAs7NBI,
+"CITYWEST CHIROPRACTIC","N7, Lucan, Co. South Dublin, Ireland","South Dublin","South Dublin",,IE,,,"health, establishment",,http://www.joint.ie,53.311186,-6.394043,"Google Places",ChIJQxrNql5zZ0gRKqIqk62bmp8,
+"Dublin Osteopath Myles Cottrell","89 Waterloo Road, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 668 7444",,"physiotherapist, health, establishment",,http://www.dublinosteopath.ie/,53.328957,-6.245257,"Google Places",ChIJFTCylLsOZ0gRRBdycjxZtKE,"dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+"CITYWEST SPINAL DECOMPRESSION CTR","Cheeverstown Rd, Lucan, Co. South Dublin, Ireland","South Dublin","South Dublin",,IE,"(01) 412 4761",,establishment,,https://plus.google.com/118264619238170971446/about?hl=en,53.298056,-6.391296,"Google Places",ChIJ2ZqYgaN0Z0gRBKiXxbvowqM,
+"Llorrac Marketing & Design Ltd","27 Forest Park Kingswood Dublin 24, Ireland",,,,IE,"(01) 403 1928",,establishment,,http://www.irishweddingsonline.com/,53.307209,-6.363022,"Google Places",ChIJr-GwIVYLZ0gRzlErotfpShQ,"dublin_aromatherapist.csv
+dublin_dietician.csv
+dublin_herbalist.csv
+dublin_meditation.csv
+dublin_osteopath.csv
+dublin_reflexologist.csv"
+"Dublin Osteopath","Pembroke Osteopathic Clinic Basement, 13 Pembroke Street Lower, Dublin 2, Ireland","Dublin 2","Co. Dublin",,IE,"(01) 233 4103",,"health, establishment","Monday: 8:00 am – 7:00 pm
+Tuesday: 8:00 am – 7:00 pm
+Wednesday: 8:00 am – 4:30 pm
+Thursday: Closed
+Friday: 8:00 am – 7:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.dublinosteopath.ie/,53.336683,-6.252456,"Google Places",ChIJFTCylLsOZ0gRG4Wkrn4DBGA,"dublin_osteopath.csv
+dublin_physiotherapist.csv"
+"Osteopath Dublin - Castlewood Clinic","19 Castlewood Terrace, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 496 5999",,"health, establishment","Monday: 10:00 am – 5:00 pm
+Tuesday: Closed
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.castlewoodclinic.ie/,53.323702,-6.262571,"Google Places",ChIJaxVWSh0MZ0gRahVyXSQ2c1E,"dublin_acupuncturist.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+Medpages.ie,"6 Suffolk St, Dublin, Ireland",Dublin,Dublin,,IE,"(01) 675 5137",,"doctor, dentist, health, establishment","Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 5:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.medpages.ie/,53.343708,-6.260212,"Google Places",ChIJlT6MY5sOZ0gR6K_xcCJmhbo,"dublin_allergy.csv
+dublin_aromatherapist.csv
+dublin_dermatologist.csv
+dublin_meditation.csv"
+"Osteopath Dublin - Castlewood Clinic","19 Castlewood Terrace, Dublin 6, Ireland","Dublin 6",Dublin,,IE,"(01) 496 5999",,"health, establishment","Monday: 10:00 am – 6:00 pm
+Tuesday: Closed
+Wednesday: 10:00 am – 6:00 pm
+Thursday: 10:00 am – 7:00 pm
+Friday: Closed
+Saturday: Closed
+Sunday: Closed",http://www.castlewoodclinic.ie/,53.32358,-6.262604,"Google Places",ChIJrU6lB6gOZ0gRzVtdrZeImk8,"dublin_acupuncturist.csv
+dublin_osteopath.csv
+dublin_physical_therapist.csv
+dublin_physiotherapist.csv"
+"Pelko Ltd","8 Castleforbes Road, North Wall, Dublin 1, Ireland","Dublin 1",Dublin,,IE,"(01) 836 5839",,establishment,"Monday: 9:00 am – 5:00 pm
+Tuesday: 9:00 am – 5:00 pm
+Wednesday: 9:00 am – 5:00 pm
+Thursday: 9:00 am – 5:00 pm
+Friday: 9:00 am – 1:00 pm
+Saturday: Closed
+Sunday: Closed",http://www.pelkofurniture.ie/,53.349099,-6.232051,"Google Places",ChIJTf7MoOGZXUgR5ZyYryvotBQ,dublin_physiotherapist.csv
