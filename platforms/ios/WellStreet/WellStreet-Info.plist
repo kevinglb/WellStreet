@@ -168,11 +168,13 @@
         <key>UILaunchImageSize</key>
         <string>{768, 1024}</string>
       </dict>
-      <key>Plugins</key>
-        <dict>
+      <string>Plugins</string>
+      <dict>
         <key>Geolocation</key>
         <string>CDVLocation</string>
       </dict>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string></string>
   </dict>
 </plist>

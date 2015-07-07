@@ -155,6 +155,7 @@
              var numberOfImages = [1, 2];
 
              $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
+             $("#register_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
 
              loop_number ++;
 
@@ -183,6 +184,8 @@
                 infinite: false,
                 dots: false
             });
+            
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
             initialMap();
            
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
@@ -206,6 +209,19 @@
             console.log('search submitted');
             return false;
         })
+
+        // Get user current gps data
+        function onSuccess(position)
+        {
+            getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
+        }
+
+        function onError(error) 
+        {
+            alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+        }
+
     </script>
         
     </body>
