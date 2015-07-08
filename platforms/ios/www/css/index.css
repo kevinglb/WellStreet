@@ -48,6 +48,58 @@ body {
 
 }
 
+.ui-content {
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #F2F2F2; 
+    color: #495559;  
+}
+
+a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-right.ui-btn.ui-shadow.ui-corner-all
+{
+    border: none;
+    background-color: transparent;
+}
+
+/*icons setting*/
+
+.icon
+{
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+}
+
+.icon-2x 
+{
+    width: 2em;
+    height: 2em;
+}
+.icon-location
+{
+    background-image: url('../icon/location-dark.svg'); 
+}
+
+.icon-arrow-left
+{
+    background-image: url("../icon/icon-arrow-left.png");
+}
+.icon-arrow-left-g
+{
+    background-image: url("../icon/icon-arrow-left-g.png");
+}
+
+.icon-bars
+{
+    background-image: url("../icon/icon-bars-w.png");
+}
+.icon-bars-g
+{
+    background-image: url("../icon/icon-bars-g.png");
+}
+
+
 /* Login page goes here */
 .ui-header.ui-bar-inherit.ui-header-fixed.slidedown
 {
@@ -112,6 +164,66 @@ body {
     background-color: red;
 }
 /* Registration page end */
+
+/* Categories page goes here */
+
+.main_content
+{
+    height:100%;
+    padding: 10px 0;
+}
+
+.main_content .row a:first-child{
+    color:  #035b67;
+}
+.main_content .row a:nth-child(2){
+    color: #A21814;
+}
+.main_content .row a:nth-child(3){
+    color: #3A8F7A;
+}
+.main_content .row a:nth-child(4){
+    color: #A76A00;
+}
+.main_content .row a:last-child{
+    color: #6d810c
+}
+.main_content a .list_item{
+    height: 14vh;
+    margin: 1vh 0;
+    padding: 0;
+    border: none;
+    background-color: #FFFFFF;
+}
+.main_content a:first-child .list_item{
+    margin-top: 0.5vh;
+}
+.main_content a:first-child .list_item:last-child{
+    margin-bottom: 0;
+}
+.main_page_logo{
+    height: auto;
+    width: 50%;
+    max-width: 10vh;
+}
+
+.vertical-middle
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);  /* Safari*/
+}
+
+.main_content .list_item p
+{
+    padding: 0;
+    margin: 0;
+    line-height: 3.6vh;
+    font-size: 3vh
+}
+
+/* Categories page end*/
 
 
 /* Portrait layout (default) */
@@ -363,16 +475,4 @@ div.my-divIcon:after {
     vertical-align: middle;
     text-align: center;
 }
-.icon{
-    display: inline-block;
-    background-position: center center;
-    background-size: cover;
-}
-.icon-2x {
-    width: 2em;
-    height: 2em;
-}
-.icon-location{
-    background-image: url('../icon/location-dark.svg'); 
 
-}

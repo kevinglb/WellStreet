@@ -30,14 +30,117 @@
 
     <body>
         <!-- first load page showing a list of categories -->
-       <!--  <div id="category_page" data-role="page">
+        <div id="category_page" data-role="page">
+            <!-- left menu -->
+              <div id="main_left_menu" class="right_menu" data-role="panel" data-position="left" data-display="push">
+                <h1>Left Menu</h1>
+            </div>
 
-        </div> -->
+            <!-- right menu -->
+            <div id="main_right_menu" class="right_menu" data-role="panel" data-position="right" data-display="overlay">
+                <h3>Right Menu</h3>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#">Edit profile</a>
+                    </li>
+                   
+                    <li>
+                        <a href="#" style="position:fixed; bottom:0px;">Log out</a>
+                    </li>
+                </ul>
+            </div> 
+
+            <!-- header -->
+            <div data-role="header"  class="ui-header" position="fixed">
+                <a href="#main_left_menu" data-rel="back" data-transition="slide" data-direction="reverse">
+                    <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+               
+                <a href="#main_right_menu">
+                    <i class="icon icon-2x icon-bars"></i>
+                </a>
+            </div>
+
+            <!-- content -->
+            <div data-role="main" class="ui-content">
+                <div id="main_content" class="main_content">
+                    <div class="row">
+                        <a href="#" id="acupuncturist" data-transition="slide" onClick="">
+                            <div class="row list_item">
+                                <div class="col-xs-3 vertical-middle text-center">
+                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                </div>
+                                <div class="col-xs-9 vertical-middle">
+                                    <p>Acupuncturist</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+
+                        <a href="#" id="allergy" data-transition="slide" onClick="">
+                            <div class="row list_item">
+                                <div class="col-xs-3 vertical-middle text-center">
+                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                </div>
+                                <div class="col-xs-9 vertical-middle">
+                                    <p>Allergy</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+
+                        <a href="#" id="aromatherapist" data-transition="slide" onClick="">
+                            <div class="row list_item">
+                                <div class="col-xs-3 vertical-middle text-center">
+                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                </div>
+                                <div class="col-xs-9 vertical-middle">
+                                    <p>Aromatherapist</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+
+                        <a href="#" id="chiropodist" data-transition="slide" onClick="">
+                            <div class="row list_item">
+                                <div class="col-xs-3 vertical-middle text-center">
+                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                </div>
+                                <div class="col-xs-9 vertical-middle">
+                                    <p>Ciropodist</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+
+                        <a href="#" id="chiropractor" data-transition="slide" onClick="">
+                            <div class="row list_item">
+                                <div class="col-xs-3 vertical-middle text-center">
+                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                </div>
+                                <div class="col-xs-9 vertical-middle">
+                                    <p>Chiropractor</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- page for user logining -->
-       <!--  <div id="login_page" data-role="page">
+        <!-- <div id="login_page" data-role="page">
 
             <div data-role="header" class="ui-header" data-position="fixed">
+                <a href="#">
+                    <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+               
+                <a href="#">
+                    <i class="icon icon-2x icon-bars"></i>
+                </a>
             </div>
 
             <div data-role="main" class="ui-content">
@@ -58,9 +161,16 @@
         </div> -->
 
         <!-- page for registration -->
-        <!-- <div id="register_page" data-role="page">
+       <!--  <div id="register_page" data-role="page">
 
             <div data-role="header" class="ui-header" data-position="fixed">
+                <a href="#login_page">
+                    <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+               
+                <a href="#">
+                    <i class="icon icon-2x icon-bars"></i>
+                </a>
             </div>
 
             <div data-role="main" class="ui-content">
@@ -82,8 +192,8 @@
                     <p style="color:white; text-align:center">By signing up, I agree to WellStreet's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</p>
                 </div>
             </div>
-        </div>
- -->
+        </div> -->
+
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
                 <div class="loading_wrap"></div>
