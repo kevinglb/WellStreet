@@ -31,100 +31,80 @@
     <body>
         <!-- first load page showing a list of categories -->
         <div id="category_page" data-role="page">
-            <!-- left menu -->
-              <div id="main_left_menu" class="right_menu" data-role="panel" data-position="left" data-display="push">
-                <h1>Left Menu</h1>
-            </div>
-
-            <!-- right menu -->
-            <div id="main_right_menu" class="right_menu" data-role="panel" data-position="right" data-display="overlay">
-                <h3>Right Menu</h3>
-                <ul data-role="listview">
-                    <li>
-                        <a href="#">Edit profile</a>
-                    </li>
-                   
-                    <li>
-                        <a href="#" style="position:fixed; bottom:0px;">Log out</a>
-                    </li>
-                </ul>
-            </div> 
 
             <!-- header -->
             <div data-role="header"  class="ui-header" position="fixed">
-                <a href="#main_left_menu" data-rel="back" data-transition="slide" data-direction="reverse">
+               <!--  <a href="#main_left_menu" data-rel="back" data-transition="slide" data-direction="reverse">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                
                 <a href="#main_right_menu">
                     <i class="icon icon-2x icon-bars"></i>
-                </a>
+                </a> -->
             </div>
 
             <!-- content -->
             <div data-role="main" class="ui-content">
                 <div id="main_content" class="main_content">
                     <div class="row">
-                        <a href="#" id="acupuncturist" data-transition="slide" onClick="">
+                        <a href="#" id="acupuncturist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
                                 </div>
                                 <div class="col-xs-9 vertical-middle">
                                     <p>Acupuncturist</p>
                                 </div>
                             </div>
-                            <div class="clear"></div>
+                            
                         </a>
 
-                        <a href="#" id="allergy" data-transition="slide" onClick="">
+                        <a href="#" id="allergy" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
                                 </div>
                                 <div class="col-xs-9 vertical-middle">
                                     <p>Allergy</p>
                                 </div>
                             </div>
-                            <div class="clear"></div>
+                            
                         </a>
 
-                        <a href="#" id="aromatherapist" data-transition="slide" onClick="">
+                        <a href="#" id="aromatherapist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
                                 </div>
                                 <div class="col-xs-9 vertical-middle">
                                     <p>Aromatherapist</p>
                                 </div>
                             </div>
-                            <div class="clear"></div>
+                            
                         </a>
 
-                        <a href="#" id="chiropodist" data-transition="slide" onClick="">
+                        <a href="#" id="chiropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
                                 </div>
                                 <div class="col-xs-9 vertical-middle">
                                     <p>Ciropodist</p>
                                 </div>
                             </div>
-                            <div class="clear"></div>
+                          
                         </a>
 
-                        <a href="#" id="chiropractor" data-transition="slide" onClick="">
+                        <a href="#" id="chiropractor" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png">
+                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
                                 </div>
                                 <div class="col-xs-9 vertical-middle">
                                     <p>Chiropractor</p>
                                 </div>
                             </div>
-                            <div class="clear"></div>
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -239,14 +219,21 @@
            
         </div>
 
-        <!-- page for showing the details of selected marker -->
-        <div id="detail_page" data-role="page">
+        <!-- page for showing the profile of selected therapy -->
+        <div id="profile_page" data-role="page">
             <div data-role="header"  class="ui-header" position="fixed">
                 <a href="#" data-direction="reverse" data-rel="back" data-transition="slide" class="header-back-btn">Back</i></a>
-                <h1>Detail Page</h1>
+                <h1>
+                    <label class="therapy_county"></label>
+                    <label class="therapy_city"></label>
+                </h1>
                 <a href="#" class="menu_btn">Menu</a>
             </div>
             <div role="main" class="ui-content">
+                <div class="therapy_details">
+                    <h2 class="therapy_name"></h2>
+                    <label class="therapy_address"></label> 
+                </div>
             </div>
         </div>
     
@@ -262,11 +249,9 @@
     <script type="text/javascript">
         
         var loop_number = 0;
-
         function changeBackgroundImage()
         {
              var numberOfImages = [1, 2];
-
              $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
              $("#register_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
 
@@ -275,7 +260,6 @@
              if(loop_number == numberOfImages.length)
                 loop_number = 0;
         }
-
         $('#register_btn, #login_btn') .click(function()
         {
             $.mobile.changePage("#register_page", 
@@ -285,30 +269,28 @@
                         changeHash: true
                     });
         });
-
         $(document).ready(function()
-        {
-            
-            //console.log("document ready");          
+        {    
             var background_timer = setInterval(changeBackgroundImage, 3000); 
             // clearInterval(background_timer); 
-             $mapslider.slick({
+            $mapslider.slick({
                 arrows: false,
                 infinite: false,
                 dots: false
-            });
+            }); 
+            //navigator.geolocation.getCurrentPosition(onSuccess, onError);
             
-            
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
-            
-            initialMap();
+            //initialMap();
            
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
-            $('#detail_page').noClickDelay();
-            $('#map_page').noClickDelay();
-            setTimeout(function(){
-                startLoading('acupuncturist', addLayer);
-            },500);
+            
+            $("#category_page").noClickDelay();
+            $("#map_page").noClickDelay();
+            $("#profile_page").noClickDelay();
+            
+            // setTimeout(function(){
+            //     startLoadMapPage('acupuncturist', addLayer);
+            // },500);
         })
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").on('click',function(){
@@ -322,7 +304,7 @@
         })
     
         $("#search_form").on('submit', function(){
-            resetMapPage();
+            resetMapSearch();
             console.log('search submitted');
             return false;
         })

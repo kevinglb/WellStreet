@@ -1432,7 +1432,7 @@ div.ui-mobile-viewport {
 	text-align: center;
 	display: block;
 	margin: 0 30%;
-	padding: .7em 0;
+	/*padding: .7em 0;*/
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;

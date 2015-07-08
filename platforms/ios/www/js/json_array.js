@@ -2448,9 +2448,6 @@ var allergy_array = [
         "Data Source": "Google Places",
         "Data Source Identifer": "ChIJG4IIIycMZ0gRXL8_2scvvPY",
         "Duplicated In": "dublin_acupuncturist.csv\ndublin_masseur.csv\ndublin_physical_therapist.csv"
-    },
-    {
-        "Name": ""
     }
 ];
 var aromatherapist_array = [
@@ -6963,8 +6960,5 @@ var chiropractor_array = [
         "Data Source": "Google Places",
         "Data Source Identifer": "ChIJTf7MoOGZXUgR5ZyYryvotBQ",
         "Duplicated In": "dublin_physiotherapist.csv"
-    },
-    {
-        "Name": ""
     }
 ];

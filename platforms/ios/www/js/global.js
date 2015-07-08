@@ -2,7 +2,9 @@
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
 var map;
 /*an array preserve all existing markers on the map*/
+var maplayer;
 var markers_array=[];
+var therapy_array = [];
 var $mapslider = $("#detail_slider");
 var maplayer;
 //icon setting
@@ -14,7 +16,7 @@ function clearMap(){
 }
 
 function searchFocused(){
-	resetMapPage();
+	resetMapSearch();
 	//detect whether the history list is visible in case that user focus(click) on the search input when searching
 	if($("#search_history_list").is(":visible")){
 		return;
@@ -26,12 +28,12 @@ function searchFocused(){
 	}
     $('#search_history_list').unbind('click').on('click','li', function(){
      	/*get the histroy record and load corresponding info here*/
-     	resetMapPage();
+     	resetMapSearch();
     })
 }
 
 
-function resetMapPage(){
+function resetMapSearch(){
 	/* hide search history list and blur the input*/
 	if($("#search_history_list").is(":visible")){
 		$("#search_history_list").slideToggle(200);
@@ -51,8 +53,19 @@ function resetMapPage(){
 	}
 }
 
+function resetMapPage(){
+	$mapslider.empty();
+ 	$mapslider.slick({
+        arrows: false,
+        infinite: false,
+        dots: false
+    }); 
+    //$mapslider.slideToggle();
+	removeAllMarkers();
+}
 function removeAllMarkers(){
-	map.removeLayer(markers_array);
+ 	
+	map.removeLayer(maplayer);
 	markers_array = [];
-
+	therapy_array = [];
 }
