@@ -35,13 +35,13 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         var myOptions = { enableHighAccuracy: true };
-        // navigator.geolocation.getCurrentPosition(onSuccess, onError,myOptions);
-        // function onSuccess(){
-        //     console.log('geolocation success');
-        // }
-        // function onError(){
-        //     console.log('geolocation failed');
-        // }
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        function onSuccess(){
+            getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
+        }
+        function onError(){
+            console.log('geolocation failed');
+        }
 
     },
     // Update DOM on a Received Event

@@ -22,6 +22,7 @@
         <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="plugins/leaflet-master.js"></script>
+        <script type="text/javascript" src="plugins/leaflef-omnivore.min.js"></script>
         <script type="text/javascript" src="plugins/slick.min.js"></script>
         
         <title>WellStreet</title>
@@ -85,6 +86,7 @@
  -->
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
+                <div class="loading_wrap"></div>
                 <div class="overlay" onClick=""></div>
                 <div class="search_content">
                     <div class="input_wrap">
@@ -143,6 +145,7 @@
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/json_array.min.js"></script>
     <script type="text/javascript" src="js/noClickDelay.js"></script>
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
@@ -193,7 +196,9 @@
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $('#detail_page').noClickDelay();
             $('#map_page').noClickDelay();
-
+            setTimeout(function(){
+                startLoading('acupuncturist', addLayer);
+            },500);
         })
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").on('click',function(){
@@ -213,16 +218,16 @@
         })
 
         // Get user current gps data
-        function onSuccess(position)
-        {
-            getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
-        }
+        // function onSuccess(position)
+        // {
+        //     getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
+        // }
 
-        function onError(error) 
-        {
-            alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-        }
+        // function onError(error) 
+        // {
+        //     alert('code: '    + error.code    + '\n' +
+        //       'message: ' + error.message + '\n');
+        // }
 
     </script>
         

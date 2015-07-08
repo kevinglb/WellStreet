@@ -7,59 +7,42 @@ function initialMap(){
     			iconSize: [30, 30],
 
 			});
-
-	// var myIcon = L.divIcon({className: 'my-divIcon', html:"1 hour 30 min",iconSize:[100,20] });
-	// var center = L.latLng(53.3478, -6.2579);
-	var marker_1 = L.latLng(53.3468, -6.257);
-	console.log("before initial tileLayer");
-	L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+	
+	 L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 		{
       		maxZoom: 18,
       		minZoom: 10
     	}).addTo(map);
-	console.log('after initial tileLayer');
-	map.setView([53.3478, -6.2579], 14);
+	 map.setView([53.3478, -6.2579], 12);
+}	
 
-	var store_array = [
-		{
-			latlng: [53.3478, -6.2579],
-			title: 'marker-1'
-		},
-		{
-			latlng: [53.3468, -6.2589],
-			title: 'marker-2'
-		},
-		{
-			latlng: [53.3448, -6.2599],
-			title: 'marker-3'
-		},
-		{
-			latlng: [53.3472, -6.2579],
-			title: 'marker-4'
-		},
-		{
-			latlng: [53.3390, -6.2577],
-			title: 'marker-5'
-		},
-		{
-			latlng: [53.3468, -6.2575],
-			title: 'marker-6'
-		},
-		];
-	console.log('before marker');
+
+function addLayer(type){
+	if(markers_array.length >=1){
+		removeAllMarkers();
+	}
+	/* add markers to layer and then add layer to markers*/
+	if(type == 'acupuncturist' ){
+		var store_array = acupuncturist_array;
+	}
+	//console.log('before marker');
 	for(var i = 0; i< store_array.length;i++){
-
+		var position = [store_array[i].Latitude,store_array[i].Longitude];
+		//console.log(position);
 		var div='';
-		//console.log(markers_array[i].latlng);
-		var marker =   L.marker(store_array[i].latlng,{icon:myIcon}).bindPopup(store_array[i].title).on('click',clickOnMarker);
+		var marker = L.marker(position,{icon:myIcon}).bindPopup(store_array[i].Name).on('click',clickOnMarker);
 		marker.sliderIndex = i;
-		marker.addTo(map);
+		//marker.addTo(maplayer);
 		markers_array.push(marker);
-		console.log('before add into slick');
-		div += '<div><a href="#detail_page" data-transition="slide"><div class="detail_content"><div class="col-xs-4"><img class="img-circle"></img></div><div class="col-xs-8"><label>'+store_array[i].latlng+'</label><label>'+store_array[i].title+'</label></div></div></a></div>';
+		div += '<div><a href="#detail_page" data-transition="slide"><div class="detail_content"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+store_array[i].Name+'</label><label>'+store_array[i]['Full Address']+'</label></div></div></a></div>';
 		$mapslider.slick('slickAdd',div);
 	}
-	$mapslider.slideToggle(200);
+	
+
+	var maplayer = L.layerGroup(markers_array).addTo(map);
+	$mapslider.slideToggle(200, endLoading);
+	
+	//callback(endLoading);
 	function onLocationFound(e) {
     	// create a marker at the users "latlng" and add it to the map
    	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
@@ -67,13 +50,13 @@ function initialMap(){
 
 	function clickOnMarker(e){
 		
-		if(map.getZoom() <= 15){
-			map.panTo(e.target.getLatLng());
+		if(map.getZoom() < 14){
+			map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
 			// zoom the map to a suitable number
-			setTimeout(function(){map.setZoom(16);},200);
+			setTimeout(function(){map.setZoom(14);},350);
 		}
 		else{
-			map.panTo(e.target.getLatLng());
+			map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
 		}
 		detectSlider();
 		$mapslider.slick('slickGoTo',e.target.sliderIndex);
@@ -89,22 +72,27 @@ function initialMap(){
 		}
 	}
 
+	function loadProfilePage(therapy){
+		
+	}
 	/*find marker by swipe on the slider and the popup is then open*/
 	$mapslider.on('swipe', function(e){
 		var currentindex =$mapslider.slick('slickCurrentSlide');
-		//console.log("current index: "+currentindex);
-		/*openPopup() should ahead of panTo() and the latter function takes a delay in animation*/
-		markers_array[currentindex].openPopup();
-		map.panTo(markers_array[currentindex].getLatLng());
+		
+		map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
+		setTimeout(function(){markers_array[currentindex].openPopup();},300);
+		
 		
 	});
 }
 
-function getUserCurrentLocation(latitude, longitude)
+function getUserCurrentLocation(lat,long)
 {
 	var user_location = [latitude, longitude];
+	//var user_location = getUserCurrentCoordinate();
+	//console.log(user_location);
 
-	var myIcon = L.icon
+		var myIcon = L.icon
 			({
     			iconUrl: 'icon/location-dark.svg',
     			iconRetinaUrl: 'icon/location-dark.svg',
@@ -112,7 +100,13 @@ function getUserCurrentLocation(latitude, longitude)
 
 			});
 
-	L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+		
+		map.panTo(user_location);
+		L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+
+		alert("Sorry, cannot find your location now.")
+	
+	
 
 }
 
@@ -139,51 +133,44 @@ function getUserLocation(){
     	map.panTo(e.latlng);
 	}
 
-
-	
-	// var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
-	// navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
-	
-	// function onSuccess(position){
-	// 	console.log(JSON.stringify(position));
-	// }
-	// function onError(error){
-	// 	console.log(error);
-	// }
-    
-     console.log('after locate');
-	// navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
-	// function geolocationSuccess(position){
-	// 	 console.log('Latitude: '          + position.coords.latitude          + '\n' +
- //          'Longitude: '         + position.coords.longitude         + '\n' +
- //          'Altitude: '          + position.coords.altitude          + '\n' +
- //          'Accuracy: '          + position.coords.accuracy          + '\n' +
- //          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
- //          'Heading: '           + position.coords.heading           + '\n' +
- //          'Speed: '             + position.coords.speed             + '\n' +
- //          'Timestamp: '         + position.timestamp                + '\n');
-	// };
-
-	// function geolocationError(error){
-	// 	console.log('code: '+ error.code+ '\n' +'message: ' + error.message + '\n');
-	// }
 }
 
+function getUserCurrentCoordinate(){
+	console.log('before get coordinate');
+	var options = { enableHighAccuracy: true };
+	
+	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-
-function alertDismissed() {
-            // do something
-        }
-
-    // Show a custom alertDismissed
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
+	function onSuccess(position){
+        //getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
+        //var coordinate = [position.coords.latitude, position.coords.longitude];
+        getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
+        console.log(position.coords.latitude+' '+ position.coords.longitude);
+        //console.log(coordinate);
+        //return coordinate;
     }
+
+    function onError(error) {
+         alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+}	
+
+function startLoading(type, callback){
+	$.mobile.loading( 'show', {
+		text: 'loading',
+		textVisible: true,
+		theme: 'd',
+		html: ""
+	});
+	$(".loading_wrap").fadeIn(200);
+	callback(type);
+}
+
+function endLoading(){
+	$.mobile.loading('hide');
+	$(".loading_wrap").fadeOut();
+
+}
 
 
