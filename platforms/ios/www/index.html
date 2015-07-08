@@ -47,7 +47,7 @@
             <div data-role="main" class="ui-content">
                 <div id="main_content" class="main_content">
                     <div class="row">
-                        <a href="#" id="acupuncturist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
+                        <a href="#" id="acupuncturist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -59,7 +59,7 @@
                             
                         </a>
 
-                        <a href="#" id="allergy" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
+                        <a href="#" id="allergy" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -71,7 +71,7 @@
                             
                         </a>
 
-                        <a href="#" id="aromatherapist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
+                        <a href="#" id="aromatherapist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -83,7 +83,7 @@
                             
                         </a>
 
-                        <a href="#" id="chiropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
+                        <a href="#" id="chiropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -95,7 +95,7 @@
                           
                         </a>
 
-                        <a href="#" id="chiropractor" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)">
+                        <a href="#" id="chiropractor" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -176,6 +176,12 @@
 
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
+            <div class="ui-header" data-role="header" position="fixed">
+                <a href="#main_left_menu" data-rel="back" data-transition="slide" data-direction="reverse">
+                    <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+            </div>
+            <div data-role="main" class="ui-content">
                 <div class="loading_wrap"></div>
                 <div class="overlay" onClick=""></div>
                 <div class="search_content">
@@ -216,7 +222,7 @@
                 </div>
                 <div id="detail_slider" >
                 </div>
-           
+           </div>
         </div>
 
         <!-- page for showing the profile of selected therapy -->

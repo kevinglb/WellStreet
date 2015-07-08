@@ -1417,8 +1417,9 @@ div.ui-mobile-viewport {
 	font-size: 1em;
 	display: inline-block;
 }
-.ui-header,
-.ui-footer {
+.ui-header,.ui-footer
+{
+	/*position: relative;*/
 	position: relative;
 }
 .ui-header:empty,
@@ -1680,19 +1681,19 @@ button.ui-btn-icon-notext,
 }
 .in {
 	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-duration: 350ms;
+	-webkit-animation-duration: 200ms;
 	-moz-animation-timing-function: ease-out;
-	-moz-animation-duration: 350ms;
+	-moz-animation-duration: 200ms;
 	animation-timing-function: ease-out;
-	animation-duration: 350ms;
+	animation-duration: 200ms;
 }
 .out {
 	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 225ms;
+	-webkit-animation-duration: 200ms;
 	-moz-animation-timing-function: ease-in;
-	-moz-animation-duration: 225ms;
+	-moz-animation-duration: 200ms;
 	animation-timing-function: ease-in;
-	animation-duration: 225ms;
+	animation-duration: 200ms;
 }
 @-webkit-keyframes fadein {
     from { opacity: 0; }

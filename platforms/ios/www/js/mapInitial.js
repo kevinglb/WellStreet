@@ -1,6 +1,6 @@
 function initialMap(){
 	//var map = L.map('map').setView([53.3478, -6.2579], 14);
-	map = L.map('map', {zoomControl: false, attributionControl: false});
+	$map = L.map('map', {zoomControl: false, attributionControl: false});
 	// var myIcon = L.icon({
  //    			iconUrl: 'icon/location-dark.svg',
  //    			iconRetinaUrl: 'icon/location-dark.svg',
@@ -12,8 +12,8 @@ function initialMap(){
 		{
       		maxZoom: 18,
       		minZoom: 10
-    	}).addTo(map);
-	 map.setView([53.3478, -6.2579], 12);
+    	}).addTo($map);
+	 $map.setView([53.3478, -6.2579], 12);
 }	
 
 
@@ -38,10 +38,8 @@ function addLayer(DataArray){
 		div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';
 		$mapslider.slick('slickAdd',div);
 	}
-	
-
-	maplayer = L.layerGroup(markers_array).addTo(map);
-	$mapslider.slideToggle(300, endLoading);
+	maplayer = L.layerGroup(markers_array).addTo($map);
+	$mapslider.slideToggle(200, endLoading);
 
 
 	
@@ -53,13 +51,13 @@ function addLayer(DataArray){
 
 	function clickOnMarker(e){
 		
-		if(map.getZoom() < 14){
-			map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+		if($map.getZoom() < 14){
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
 			// zoom the map to a suitable number
-			setTimeout(function(){map.setZoom(14);},350);
+			setTimeout(function(){$map.setZoom(14);},350);
 		}
 		else{
-			map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
 		}
 		detectSlider();
 		$mapslider.slick('slickGoTo',e.target.sliderIndex);
@@ -79,7 +77,7 @@ function addLayer(DataArray){
 	$mapslider.on('swipe', function(e){
 		var currentindex = $mapslider.slick('slickCurrentSlide');
 		
-		map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
+		$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
 		setTimeout(function(){markers_array[currentindex].openPopup();},300);
 	});
 
@@ -99,8 +97,8 @@ function getUserCurrentLocation()
 			});
 
 		
-		map.panTo(user_location);
-		L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+		$map.panTo(user_location);
+		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
     }, function() {
         alert("Sorry, cannot get your location now.");                                     
     }, { maximumAge: 10000, timeout: 1000, enableHighAccuracy: true });
@@ -127,9 +125,9 @@ function getUserLocation(){
     			iconSize: [30, 30],
 
 			});
-	map.locate({setView: true, maxZoom: 16});
-	map.on('locationfound', onLocationFound);
-	map.on('locationerror', onLocationError);
+	$map.locate({setView: true, maxZoom: 16});
+	$map.on('locationfound', onLocationFound);
+	$map.on('locationerror', onLocationError);
 
 	function onLocationError(e) {
     	alert(e.message);
@@ -138,8 +136,8 @@ function getUserLocation(){
 
 	function onLocationFound(e) {
 		console.log('lcation found');
-    	L.marker(e.latlng,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
-    	map.panTo(e.latlng);
+    	L.marker(e.latlng,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
+    	$map.panTo(e.latlng);
 	}
 
 }
@@ -173,28 +171,39 @@ function startLoadMapPage(type, callback){
         transition: "slide",
         changeHash: true
     });
-    initialMap();
-	$(".loading_wrap").fadeIn(200);
-	$.mobile.loading( 'show', {
-		text: 'loading',
-		textVisible: true,
-		theme: 'd',
-		html: ""
-	});
-	if(type){
-		console.log('before call back');
-		callback(getDataAray(type));	
-	}
-	else{
-		endLoading();
-		alert("failed in loading data");	
-	}
-	
+	/*detecet whether map is initialized and will not initial in the future*/
+    if(typeof($map) == "undefined"){
+    	initialMap();
+    	console.log("map initialed");
+    }
+    else{
+    	resetMapPage();
+    	console.log("map reseted");
+    }
+    $(".loading_wrap").fadeIn(200);
+    $.mobile.loading( 'show', {
+			text: 'loading',
+			textVisible: true,
+			theme: 'd',
+			html: ""
+		});
+    $("#map_page").one('pageshow', function(){
+		if(type){
+			console.log('before call back');
+			callback(getDataAray(type));	
+		}
+		else{
+			endLoading();
+			alert("failed in loading data");	
+		}
+    });
+   // return false;
+
 }
 
 function endLoading(){
 	$.mobile.loading('hide');
-	$(".loading_wrap").fadeOut();
+	$(".loading_wrap").fadeOut(200);
 }
 
 /*return array based on the type*/
@@ -235,7 +244,7 @@ function getTherapy(callback){
         changeHash: true
     });
 	console.log(JSON.stringify(therapy));
-	return false;
+	//return false;
 }
 
 /*load info of the selected therapy*/

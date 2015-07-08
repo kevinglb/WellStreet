@@ -1,6 +1,6 @@
 /* global variables and general functions */
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
-var map;
+var $map;
 /*an array preserve all existing markers on the map*/
 var maplayer;
 var markers_array=[];
@@ -54,18 +54,24 @@ function resetMapSearch(){
 }
 
 function resetMapPage(){
+	
 	$mapslider.empty();
+	$mapslider.removeClass("slick-initialized slick-slider");
+	if($mapslider.is(":hidden")){
+		$mapslider.slideToggle(200);
+	}
  	$mapslider.slick({
         arrows: false,
         infinite: false,
         dots: false
     }); 
+    $map.setView([53.3478, -6.2579], 12);
     //$mapslider.slideToggle();
 	removeAllMarkers();
 }
 function removeAllMarkers(){
  	
-	map.removeLayer(maplayer);
+	$map.removeLayer(maplayer);
 	markers_array = [];
 	therapy_array = [];
 }
