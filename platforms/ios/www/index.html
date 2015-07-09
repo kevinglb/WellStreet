@@ -180,6 +180,10 @@
                 <a href="#main_left_menu" data-rel="back" data-transition="slide" data-direction="reverse">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
+
+                <a href="#" onClick="getUserCurrentLocation()">
+                    <i>My location</i>
+                </a>
             </div>
             <div data-role="main" class="ui-content">
                 <div class="loading_wrap"></div>
@@ -275,6 +279,7 @@
                         changeHash: true
                     });
         });
+
         $(document).ready(function()
         {    
             var background_timer = setInterval(changeBackgroundImage, 3000); 
@@ -284,10 +289,9 @@
                 infinite: false,
                 dots: false
             }); 
-            //navigator.geolocation.getCurrentPosition(onSuccess, onError);
             
             //initialMap();
-           
+             navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             
             $("#category_page").noClickDelay();
@@ -315,17 +319,17 @@
             return false;
         })
 
-        // Get user current gps data
-        // function onSuccess(position)
-        // {
-        //     getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
-        // }
+        function GPSonSuccess(position)
+        {
+            // latutude and longitude are declared in Global.js
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+        }
 
-        // function onError(error) 
-        // {
-        //     alert('code: '    + error.code    + '\n' +
-        //       'message: ' + error.message + '\n');
-        // }
+        function GPSonError(e)
+        {
+            alert("Sorry, cannot get your location now.");            
+        }
 
     </script>
         
