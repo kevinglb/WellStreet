@@ -7,7 +7,6 @@ var maplayer;/*layer stores all markers*/
 var markers_array=[];/*array stores all markers*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
-
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});//icon setting
 var CurrentLocation = [];/*array stores geographical info: latitude and longitude*/
 var CurrentLocation_array = [];
@@ -28,7 +27,6 @@ function searchFocused(){
     	$(".arrow_wrap a").toggle();
 	}
     $('#search_history_list').unbind('click').on('click','li', function(){
-     	/*get the histroy record and load corresponding info here*/
      	resetMapSearch();
     })
 }
@@ -70,8 +68,8 @@ function resetMapPage(){
     //$mapslider.slideToggle();
 	removeAllMarkers();
 }
+
 function removeAllMarkers(){
- 	
 	$map.removeLayer(maplayer);
 	markers_array = [];
 	therapy_array = [];

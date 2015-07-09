@@ -179,6 +179,8 @@ function loadProfile(therapy){
 
 	$("#profile_page .therapy_details .therapy_name").text(therapy.Name);
 	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
+	$("#profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
+
 }
 
 

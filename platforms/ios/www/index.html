@@ -240,10 +240,12 @@
                 <a href="#" class="menu_btn">Menu</a>
             </div>
             <div role="main" class="ui-content">
-                <div class="therapy_details">
-                    <h2 class="therapy_name"></h2>
+                <div class="therapy_details text-center">
+                    <h3 class="therapy_name"></h3>
                     <label class="therapy_address"></label> 
+                    <label class="therapy_tel"></label>
                 </div>
+
             </div>
         </div>
     
@@ -292,14 +294,14 @@
             
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
-            $("#category_page").noClickDelay();
-            $("#map_page").noClickDelay();
-            $("#profile_page").noClickDelay();
+             $("#category_page").noClickDelay();
+             $("#map_page").noClickDelay();
+             $("#profile_page").noClickDelay();
             
           
         })
         /*the flowing two functions can be wrapped as a general one*/
-        $(".arrow_wrap a").on('click',function(){
+        $(".arrow_wrap a").tap(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
             $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
@@ -327,8 +329,6 @@
         {
             alert("Sorry, cannot get your location now.");            
         }
-
     </script>
-        
     </body>
 </html>
