@@ -1,12 +1,5 @@
 function initialMap(){
-	//var map = L.map('map').setView([53.3478, -6.2579], 14);
 	$map = L.map('map', {zoomControl: false, attributionControl: false});
-	// var myIcon = L.icon({
- //    			iconUrl: 'icon/location-dark.svg',
- //    			iconRetinaUrl: 'icon/location-dark.svg',
- //    			iconSize: [30, 30],
-
-	// 		});
 	 L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 		{
       		maxZoom: 18,
@@ -14,6 +7,7 @@ function initialMap(){
     	}).addTo($map);
 	 $map.setView(CurrentLocation, 15);
 }	
+
 
 function addLayer(DataArray){
 	/*clear markers before adding*/
@@ -38,14 +32,7 @@ function addLayer(DataArray){
 	}
 	maplayer = L.layerGroup(markers_array).addTo($map);
 	$mapslider.slideToggle(200, endLoading);
-	// getUserCurrentLocation();
-
-	
-	//callback(endLoading);
-	function onLocationFound(e) {
-    	// create a marker at the users "latlng" and add it to the map
-   	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
-	}
+	// getUserCurrentLoca	tion();
 
 	function clickOnMarker(e){
 		
@@ -86,25 +73,18 @@ function getUserCurrentLocation()
 {
 	if(CurrentLocation.length !=0)
 	{
-		//var user_location = [latitude, longitude];
-    	var myIcon = L.icon
-		({
-    		iconUrl: 'icon/location-dark.svg',
-    		iconRetinaUrl: 'icon/location-dark.svg',
-    		iconSize: [30, 30],
-
-		});
-		//$map.setZoom(16);
-		// while($map.getCenter() != CurrentLocation){
-		$map.panTo(CurrentLocation, {animate: true, duration: 0.6});
-
+		/*detect whether currentlocation marker exists before adding if exists panto the marker, if not adding and panto*/
+		if(CurrentLocation_array.length == 0){
+			var CurrentLocationMarker = L.marker(CurrentLocation,{icon:myIcon}).bindPopup("You are here");
+			CurrentLocation_array.push(CurrentLocationMarker);
+			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
+		}
+		else{
+			console.log('CurrentLocation marker exists');
+		}
+		$map.panTo(CurrentLocation_array[0].getLatLng(), {animate: true, duration: 0.5});
+		setTimeout(function(){CurrentLocation_array[0].openPopup();},300);
 		
-		
-		//$map.panTo($map.getBounds().getCenter(),{animate: true, duration: 0.5});
-		setTimeout(function(){$map.setZoom(16,{animate:true});},400);
-		//$map.panTo(user_location, {animate: true, duration: 0.2});
-		//PanTo(user_location, 0.8, 16, ZoomTo);
-		L.marker(CurrentLocation,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
     }	
     else{
     	alert("Sorry, can't get your location now.");
@@ -170,7 +150,7 @@ function getDataAray(type){
         case "aromatherapist": 
         	DataArray = aromatherapist_array;
         	break;
-        case "chiropodist" :
+        case "ciropodist" :
         	DataArray = chiropodist_array;
         	break;
         case "chiropractor" :
@@ -190,8 +170,6 @@ function getTherapy(callback){
         transition: "slide",
         changeHash: true
     });
-	console.log(JSON.stringify(therapy));
-	//return false;
 }
 
 /*load info of the selected therapy*/
@@ -203,13 +181,5 @@ function loadProfile(therapy){
 	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
 }
 
-// function PanTo(latlan,duration, zoom, callback){
 
-// 	$map.panTo(latlan, {animate: true, duration: duration});
-// 	setTimeout(function(){callback(zoom);}, duration);
-// }
-
-// function ZoomTo(zoom){
-// 	$map.setZoom(zoom);
-// }
 
