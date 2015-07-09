@@ -86,82 +86,93 @@ function addLayer(DataArray){
 
 function getUserCurrentLocation()
 {
-	navigator.geolocation.getCurrentPosition(function(position) {
-        var user_location = [latitude, longitude];
-        var myIcon = L.icon
+	if(latitude != null && longitude != null)
+	{
+		var user_location = [latitude, longitude];
+    
+    	var myIcon = L.icon
 		({
-    			iconUrl: 'icon/location-dark.svg',
-    			iconRetinaUrl: 'icon/location-dark.svg',
-    			iconSize: [30, 30],
+    		iconUrl: 'icon/location-dark.svg',
+    		iconRetinaUrl: 'icon/location-dark.svg',
+    		iconSize: [30, 30],
 
-			});
+		});
 
 		
 		$map.panTo(user_location);
 		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-    }, function() {
-        alert("Sorry, cannot get your location now.");                                     
-    }, { maximumAge: 10000, timeout: 1000, enableHighAccuracy: true });
-	// var myIcon = L.icon
-	// 	({
- //    			iconUrl: 'icon/location-dark.svg',
- //    			iconRetinaUrl: 'icon/location-dark.svg',
- //    			iconSize: [30, 30],
+	}
+	else
+	{
+		alert("Please check your network and try again :(");         
+	}
 
-	// 		});
+}
+
+// function getUserCurrentLocation()
+// {
+// 	navigator.geolocation.getCurrentPosition(function(position) {
+//         var user_location = [position.coords.latitude, position.coords.longitude];
+//         var myIcon = L.icon
+// 		({
+//     		iconUrl: 'icon/location-dark.svg',
+//     		iconRetinaUrl: 'icon/location-dark.svg',
+//     		iconSize: [30, 30],
+
+// 		});
 
 		
-	// 	map.panTo(user_location);
-	// 	L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
+// 		$map.panTo(user_location);
+// 		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
+//     }, function(e) 
+//     {
+//     	alert(e.code + " " + e.message);
+//         alert("Sorry, cannot get your location now.");                                     
+//     }, { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true });
+// }
 
-		// alert("Sorry, cannot find your location now.")
-}
+// function getUserLocation(){
+// 	console.log('before locate');
+// 	var myIcon = L.icon({
+//     			iconUrl: 'icon/location-dark.svg',
+//     			iconRetinaUrl: 'icon/location-dark.svg',
+//     			iconSize: [30, 30],
 
-function getUserLocation(){
-	console.log('before locate');
-	var myIcon = L.icon({
-    			iconUrl: 'icon/location-dark.svg',
-    			iconRetinaUrl: 'icon/location-dark.svg',
-    			iconSize: [30, 30],
+// 			});
+// 	$map.locate({setView: true, maxZoom: 16});
+// 	$map.on('locationfound', onLocationFound);
+// 	$map.on('locationerror', onLocationError);
 
-			});
-	$map.locate({setView: true, maxZoom: 16});
-	$map.on('locationfound', onLocationFound);
-	$map.on('locationerror', onLocationError);
+// 	function onLocationError(e) {
+//     	alert(e.message);
+//     	console.log('location error');
+// 	}
 
-	function onLocationError(e) {
-    	alert(e.message);
-    	console.log('location error');
-	}
+// 	function onLocationFound(e) {
+// 		console.log('lcation found');
+//     	L.marker(e.latlng,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
+//     	$map.panTo(e.latlng);
+// 	}
 
-	function onLocationFound(e) {
-		console.log('lcation found');
-    	L.marker(e.latlng,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-    	$map.panTo(e.latlng);
-	}
+// }
 
-}
-
-function getUserCurrentCoordinate(){
-	console.log('before get coordinate');
-	var options = { enableHighAccuracy: true };
+// function getUserCurrentCoordinate(){
+// 	console.log('before get coordinate');
+// 	var options = { enableHighAccuracy: true };
 	
-	navigator.geolocation.getCurrentPosition(onSuccess, onError);
+// 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-	function onSuccess(position){
-        //getUserCurrentLocation(position.coords.latitude , position.coords.longitude);
-        //var coordinate = [position.coords.latitude, position.coords.longitude];
-        getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
-        console.log(position.coords.latitude+' '+ position.coords.longitude);
-        //console.log(coordinate);
-        //return coordinate;
-    }
+// 	function onSuccess(position){
+//         getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
+//         console.log(position.coords.latitude+' '+ position.coords.longitude);
+      
+//     }
 
-    function onError(error) {
-         alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-}	
+//     function onError(error) {
+//          console.log('code: '    + error.code    + '\n' +
+//               'message: ' + error.message + '\n');
+//     }
+// }	
 
 function startLoadMapPage(type, callback){
 	//console.log(type);

@@ -10,6 +10,9 @@ var maplayer;
 //icon setting
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});
 
+var latitude;
+var longitude;
+
 /*clear markers and tilelayers on the map*/ 
 function clearMap(){
 
