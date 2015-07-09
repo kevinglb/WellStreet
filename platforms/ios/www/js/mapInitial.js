@@ -12,7 +12,7 @@ function initialMap(){
       		maxZoom: 18,
       		minZoom: 10
     	}).addTo($map);
-	 $map.setView([53.3478, -6.2579], 12);
+	 $map.setView(CurrentLocation, 15);
 }	
 
 function addLayer(DataArray){
@@ -38,7 +38,7 @@ function addLayer(DataArray){
 	}
 	maplayer = L.layerGroup(markers_array).addTo($map);
 	$mapslider.slideToggle(200, endLoading);
-
+	// getUserCurrentLocation();
 
 	
 	//callback(endLoading);
@@ -49,13 +49,13 @@ function addLayer(DataArray){
 
 	function clickOnMarker(e){
 		
-		if($map.getZoom() < 14){
-			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+		if($map.getZoom() < 15){
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
 			// zoom the map to a suitable number
-			setTimeout(function(){$map.setZoom(14);},350);
+			setTimeout(function(){$map.setZoom(15);},350);
 		}
 		else{
-			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
 		}
 		detectSlider();
 		$mapslider.slick('slickGoTo',e.target.sliderIndex);
@@ -84,10 +84,9 @@ function addLayer(DataArray){
 
 function getUserCurrentLocation()
 {
-	if(latitude != null && longitude != null)
+	if(CurrentLocation.length !=0)
 	{
-		var user_location = [latitude, longitude];
-    
+		//var user_location = [latitude, longitude];
     	var myIcon = L.icon
 		({
     		iconUrl: 'icon/location-dark.svg',
@@ -95,93 +94,23 @@ function getUserCurrentLocation()
     		iconSize: [30, 30],
 
 		});
+		//$map.setZoom(16);
+		// while($map.getCenter() != CurrentLocation){
+		$map.panTo(CurrentLocation, {animate: true, duration: 0.6});
 
 		
-		$map.panTo(user_location);
-		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-
+		
+		//$map.panTo($map.getBounds().getCenter(),{animate: true, duration: 0.5});
+		setTimeout(function(){$map.setZoom(16,{animate:true});},400);
+		//$map.panTo(user_location, {animate: true, duration: 0.2});
+		//PanTo(user_location, 0.8, 16, ZoomTo);
+		L.marker(CurrentLocation,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
     }	
+    else{
+    	alert("Sorry, can't get your location now.");
+    }
 }
 
-function getUserLocation(){
-	console.log('before locate');
-	var myIcon = L.icon({
-    			iconUrl: 'icon/location-dark.svg',
-    			iconRetinaUrl: 'icon/location-dark.svg',
-    			iconSize: [30, 30],
-
-			});
-	$map.locate({setView: true, maxZoom: 16});
-	$map.on('locationfound', onLocationFound);
-	$map.on('locationerror', onLocationError);
-
-
-}
-
-// function getUserCurrentLocation()
-// {
-// 	navigator.geolocation.getCurrentPosition(function(position) {
-//         var user_location = [position.coords.latitude, position.coords.longitude];
-//         var myIcon = L.icon
-// 		({
-//     		iconUrl: 'icon/location-dark.svg',
-//     		iconRetinaUrl: 'icon/location-dark.svg',
-//     		iconSize: [30, 30],
-
-// 		});
-
-		
-// 		$map.panTo(user_location);
-// 		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-//     }, function(e) 
-//     {
-//     	alert(e.code + " " + e.message);
-//         alert("Sorry, cannot get your location now.");                                     
-//     }, { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true });
-// }
-
-// function getUserLocation(){
-// 	console.log('before locate');
-// 	var myIcon = L.icon({
-//     			iconUrl: 'icon/location-dark.svg',
-//     			iconRetinaUrl: 'icon/location-dark.svg',
-//     			iconSize: [30, 30],
-
-// 			});
-// 	$map.locate({setView: true, maxZoom: 16});
-// 	$map.on('locationfound', onLocationFound);
-// 	$map.on('locationerror', onLocationError);
-
-// 	function onLocationError(e) {
-//     	alert(e.message);
-//     	console.log('location error');
-// 	}
-
-// 	function onLocationFound(e) {
-// 		console.log('lcation found');
-//     	L.marker(e.latlng,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-//     	$map.panTo(e.latlng);
-// 	}
-
-// }
-
-// function getUserCurrentCoordinate(){
-// 	console.log('before get coordinate');
-// 	var options = { enableHighAccuracy: true };
-	
-// 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-// 	function onSuccess(position){
-//         getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
-//         console.log(position.coords.latitude+' '+ position.coords.longitude);
-      
-//     }
-
-//     function onError(error) {
-//          console.log('code: '    + error.code    + '\n' +
-//               'message: ' + error.message + '\n');
-//     }
-// }	
 
 function startLoadMapPage(type, callback){
 	//console.log(type);
@@ -271,7 +200,16 @@ function loadProfile(therapy){
 	$("#profile_page .ui-header .therapy_city").text(therapy.City);
 
 	$("#profile_page .therapy_details .therapy_name").text(therapy.Name);
-	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);
-	
+	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
 }
+
+// function PanTo(latlan,duration, zoom, callback){
+
+// 	$map.panTo(latlan, {animate: true, duration: duration});
+// 	setTimeout(function(){callback(zoom);}, duration);
+// }
+
+// function ZoomTo(zoom){
+// 	$map.setZoom(zoom);
+// }
 

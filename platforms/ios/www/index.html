@@ -83,7 +83,7 @@
                             
                         </a>
 
-                        <a href="#" id="chiropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)；return false;">
+                        <a href="#" id="ciropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer)；return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -181,8 +181,8 @@
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
 
-                <a href="#" onClick="getUserCurrentLocation()">
-                    <i>My location</i>
+                <a href="#" onClick="getUserCurrentLocation(); return false;">
+                    <i class="icon icon-2x icon-location"></i>
                 </a>
             </div>
             <div data-role="main" class="ui-content">
@@ -193,9 +193,9 @@
                         <form id="search_form">
                             <div class="form-group has-feedback right-feedback">
                                 <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
-                                    <span  class="form-control-feedback" id="location_btn">
+                                   <!--  <span  class="form-control-feedback" id="location_btn">
                                         <i class="icon icon-2x icon-location"></i>
-                                    </span>
+                                    </span> -->
                                 </input>
                             </div>
                             <ul id="search_history_list">
@@ -322,8 +322,9 @@
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
-            latitude = position.coords.latitude;
-            longitude = position.coords.longitude;
+            CurrentLocation[0] = position.coords.latitude.toFixed(12);
+            CurrentLocation[1] = position.coords.longitude.toFixed(12);
+            //alert(position.coords);
         }
 
         function GPSonError(e)
