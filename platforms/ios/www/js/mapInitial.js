@@ -1,19 +1,11 @@
 function initialMap(){
-	//var map = L.map('map').setView([53.3478, -6.2579], 14);
 	$map = L.map('map', {zoomControl: false, attributionControl: false});
-	// var myIcon = L.icon({
- //    			iconUrl: 'icon/location-dark.svg',
- //    			iconRetinaUrl: 'icon/location-dark.svg',
- //    			iconSize: [30, 30],
-
-	// 		});
-	
 	 L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 		{
       		maxZoom: 18,
       		minZoom: 10
     	}).addTo($map);
-	 $map.setView([53.3478, -6.2579], 12);
+	 $map.setView(CurrentLocation, 15);
 }	
 
 
@@ -40,24 +32,17 @@ function addLayer(DataArray){
 	}
 	maplayer = L.layerGroup(markers_array).addTo($map);
 	$mapslider.slideToggle(200, endLoading);
-
-
-	
-	//callback(endLoading);
-	function onLocationFound(e) {
-    	// create a marker at the users "latlng" and add it to the map
-   	 	L.marker(e.latlng,{icon:myIcon}).bindPopup('my current location').addTo(map);
-	}
+	// getUserCurrentLoca	tion();
 
 	function clickOnMarker(e){
 		
-		if($map.getZoom() < 14){
-			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+		if($map.getZoom() < 15){
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
 			// zoom the map to a suitable number
-			setTimeout(function(){$map.setZoom(14);},350);
+			setTimeout(function(){$map.setZoom(15);},350);
 		}
 		else{
-			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.5});
+			$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
 		}
 		detectSlider();
 		$mapslider.slick('slickGoTo',e.target.sliderIndex);
@@ -86,93 +71,26 @@ function addLayer(DataArray){
 
 function getUserCurrentLocation()
 {
-	if(latitude != null && longitude != null)
+	if(CurrentLocation.length !=0)
 	{
-		var user_location = [latitude, longitude];
-    
-    	var myIcon = L.icon
-		({
-    		iconUrl: 'icon/location-dark.svg',
-    		iconRetinaUrl: 'icon/location-dark.svg',
-    		iconSize: [30, 30],
-
-		});
-
+		/*detect whether currentlocation marker exists before adding if exists panto the marker, if not adding and panto*/
+		if(CurrentLocation_array.length == 0){
+			var CurrentLocationMarker = L.marker(CurrentLocation,{icon:myIcon}).bindPopup("You are here");
+			CurrentLocation_array.push(CurrentLocationMarker);
+			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
+		}
+		else{
+			console.log('CurrentLocation marker exists');
+		}
+		$map.panTo(CurrentLocation_array[0].getLatLng(), {animate: true, duration: 0.5});
+		setTimeout(function(){CurrentLocation_array[0].openPopup();},300);
 		
-		$map.panTo(user_location);
-		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-	}
-	else
-	{
-		alert("Please check your network and try again :(");         
-	}
-
+    }	
+    else{
+    	alert("Sorry, can't get your location now.");
+    }
 }
 
-// function getUserCurrentLocation()
-// {
-// 	navigator.geolocation.getCurrentPosition(function(position) {
-//         var user_location = [position.coords.latitude, position.coords.longitude];
-//         var myIcon = L.icon
-// 		({
-//     		iconUrl: 'icon/location-dark.svg',
-//     		iconRetinaUrl: 'icon/location-dark.svg',
-//     		iconSize: [30, 30],
-
-// 		});
-
-		
-// 		$map.panTo(user_location);
-// 		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-//     }, function(e) 
-//     {
-//     	alert(e.code + " " + e.message);
-//         alert("Sorry, cannot get your location now.");                                     
-//     }, { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true });
-// }
-
-// function getUserLocation(){
-// 	console.log('before locate');
-// 	var myIcon = L.icon({
-//     			iconUrl: 'icon/location-dark.svg',
-//     			iconRetinaUrl: 'icon/location-dark.svg',
-//     			iconSize: [30, 30],
-
-// 			});
-// 	$map.locate({setView: true, maxZoom: 16});
-// 	$map.on('locationfound', onLocationFound);
-// 	$map.on('locationerror', onLocationError);
-
-// 	function onLocationError(e) {
-//     	alert(e.message);
-//     	console.log('location error');
-// 	}
-
-// 	function onLocationFound(e) {
-// 		console.log('lcation found');
-//     	L.marker(e.latlng,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-//     	$map.panTo(e.latlng);
-// 	}
-
-// }
-
-// function getUserCurrentCoordinate(){
-// 	console.log('before get coordinate');
-// 	var options = { enableHighAccuracy: true };
-	
-// 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-// 	function onSuccess(position){
-//         getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
-//         console.log(position.coords.latitude+' '+ position.coords.longitude);
-      
-//     }
-
-//     function onError(error) {
-//          console.log('code: '    + error.code    + '\n' +
-//               'message: ' + error.message + '\n');
-//     }
-// }	
 
 function startLoadMapPage(type, callback){
 	//console.log(type);
@@ -209,7 +127,6 @@ function startLoadMapPage(type, callback){
 		}
     });
    // return false;
-
 }
 
 function endLoading(){
@@ -233,14 +150,13 @@ function getDataAray(type){
         case "aromatherapist": 
         	DataArray = aromatherapist_array;
         	break;
-        case "chiropodist" :
+        case "ciropodist" :
         	DataArray = chiropodist_array;
         	break;
         case "chiropractor" :
         	DataArray = chiropractor_array;
         	break;
     }   
-
     return DataArray;
 }
 
@@ -254,8 +170,6 @@ function getTherapy(callback){
         transition: "slide",
         changeHash: true
     });
-	console.log(JSON.stringify(therapy));
-	//return false;
 }
 
 /*load info of the selected therapy*/
@@ -264,7 +178,10 @@ function loadProfile(therapy){
 	$("#profile_page .ui-header .therapy_city").text(therapy.City);
 
 	$("#profile_page .therapy_details .therapy_name").text(therapy.Name);
-	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);
-	
+	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
+	$("#profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
+
 }
+
+
 

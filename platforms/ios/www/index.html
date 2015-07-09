@@ -83,7 +83,7 @@
                             
                         </a>
 
-                        <a href="#" id="chiropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                        <a href="#" id="ciropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -181,8 +181,8 @@
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
 
-                <a href="#" onClick="getUserCurrentLocation()">
-                    <i>My location</i>
+                <a href="#" onClick="getUserCurrentLocation(); return false;">
+                    <i class="icon icon-2x icon-location"></i>
                 </a>
             </div>
             <div data-role="main" class="ui-content">
@@ -193,9 +193,9 @@
                         <form id="search_form">
                             <div class="form-group has-feedback right-feedback">
                                 <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
-                                    <span  class="form-control-feedback" id="location_btn">
+                                   <!--  <span  class="form-control-feedback" id="location_btn">
                                         <i class="icon icon-2x icon-location"></i>
-                                    </span>
+                                    </span> -->
                                 </input>
                             </div>
                             <ul id="search_history_list">
@@ -240,10 +240,12 @@
                 <a href="#" class="menu_btn">Menu</a>
             </div>
             <div role="main" class="ui-content">
-                <div class="therapy_details">
-                    <h2 class="therapy_name"></h2>
+                <div class="therapy_details text-center">
+                    <h3 class="therapy_name"></h3>
                     <label class="therapy_address"></label> 
+                    <label class="therapy_tel"></label>
                 </div>
+
             </div>
         </div>
     
@@ -290,20 +292,16 @@
                 dots: false
             }); 
             
-            //initialMap();
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
+             $("#category_page").noClickDelay();
+             $("#map_page").noClickDelay();
+             $("#profile_page").noClickDelay();
             
-            $("#category_page").noClickDelay();
-            $("#map_page").noClickDelay();
-            $("#profile_page").noClickDelay();
-            
-            // setTimeout(function(){
-            //     startLoadMapPage('acupuncturist', addLayer);
-            // },500);
+          
         })
         /*the flowing two functions can be wrapped as a general one*/
-        $(".arrow_wrap a").on('click',function(){
+        $(".arrow_wrap a").tap(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
             $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
@@ -311,27 +309,25 @@
             $(".timepicker_wrap").slideToggle(200);
             $(".overlay").toggle();
 
-        })
+        });
     
         $("#search_form").on('submit', function(){
             resetMapSearch();
             console.log('search submitted');
             return false;
-        })
+        });
 
         function GPSonSuccess(position)
         {
-            // latutude and longitude are declared in Global.json_array
-            latitude = position.coords.latitude;
-            longitude = position.coords.longitude;
+            // latutude and longitude are declared in Global.js
+            CurrentLocation[0] = position.coords.latitude.toFixed(6);
+            CurrentLocation[1] = position.coords.longitude.toFixed(6);
         }
 
         function GPSonError(e)
         {
             alert("Sorry, cannot get your location now.");            
         }
-
     </script>
-        
     </body>
 </html>

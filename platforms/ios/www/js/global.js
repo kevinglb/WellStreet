@@ -1,22 +1,19 @@
 /* global variables and general functions */
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
 var $map;
-/*an array preserve all existing markers on the map*/
-var maplayer;
-var markers_array=[];
-var therapy_array = [];
 var $mapslider = $("#detail_slider");
-var maplayer;
-//icon setting
-var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});
 
-var latitude;
-var longitude;
+var maplayer;/*layer stores all markers*/
+var markers_array=[];/*array stores all markers*/
+var therapy_array = [];/*array stores all therapies under selected categery*/
+
+var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});//icon setting
+var CurrentLocation = [];/*array stores geographical info: latitude and longitude*/
+var CurrentLocation_array = [];
+var CurrentLocationLayer;/*layer stores current location marker*/
 
 /*clear markers and tilelayers on the map*/ 
-function clearMap(){
 
-}
 
 function searchFocused(){
 	resetMapSearch();
@@ -30,7 +27,6 @@ function searchFocused(){
     	$(".arrow_wrap a").toggle();
 	}
     $('#search_history_list').unbind('click').on('click','li', function(){
-     	/*get the histroy record and load corresponding info here*/
      	resetMapSearch();
     })
 }
@@ -72,8 +68,8 @@ function resetMapPage(){
     //$mapslider.slideToggle();
 	removeAllMarkers();
 }
+
 function removeAllMarkers(){
- 	
 	$map.removeLayer(maplayer);
 	markers_array = [];
 	therapy_array = [];
