@@ -1597,7 +1597,7 @@ div.ui-mobile-viewport {
 .ui-header .ui-btn-right,
 .ui-btn-left > [class*="ui-"],
 .ui-btn-right > [class*="ui-"] {
-	margin: 25px 0 0 0;
+	margin: 22.5px 0 0 0;
 }
 .ui-btn-left,
 .ui-btn-right {
@@ -1681,19 +1681,19 @@ button.ui-btn-icon-notext,
 }
 .in {
 	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-duration: 200ms;
+	-webkit-animation-duration: 150ms;
 	-moz-animation-timing-function: ease-out;
-	-moz-animation-duration: 200ms;
+	-moz-animation-duration: 150ms;
 	animation-timing-function: ease-out;
-	animation-duration: 200ms;
+	animation-duration: 150ms;
 }
 .out {
 	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 200ms;
+	-webkit-animation-duration: 150ms;
 	-moz-animation-timing-function: ease-in;
-	-moz-animation-duration: 200ms;
+	-moz-animation-duration: 150ms;
 	animation-timing-function: ease-in;
-	animation-duration: 200ms;
+	animation-duration: 150ms;
 }
 @-webkit-keyframes fadein {
     from { opacity: 0; }
@@ -1888,11 +1888,11 @@ button.ui-btn-icon-notext,
 }
 .slide.out, .slide.in {
 	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-duration: 350ms;
+	-webkit-animation-duration: 200ms;
 	-moz-animation-timing-function: ease-out;
-	-moz-animation-duration: 350ms;
+	-moz-animation-duration: 200ms;
 	animation-timing-function: ease-out;
-	animation-duration: 350ms;
+	animation-duration: 200ms;
 }
 .slide.out {
 	-webkit-transform: translate3d(-100%,0,0);
@@ -1929,13 +1929,13 @@ button.ui-btn-icon-notext,
 .slidefade.out {
 	-webkit-transform: translateX(-100%);
 	-webkit-animation-name: slideouttoleft;
-	-webkit-animation-duration: 225ms;
+	-webkit-animation-duration: 200ms;
 	-moz-transform: translateX(-100%);
 	-moz-animation-name: slideouttoleft;
-	-moz-animation-duration: 225ms;
+	-moz-animation-duration: 200ms;
 	transform: translateX(-100%);
 	animation-name: slideouttoleft;
-	animation-duration: 225ms;
+	animation-duration: 200ms;
 }
 .slidefade.in {
 	-webkit-transform: translateX(0);
@@ -1982,13 +1982,13 @@ button.ui-btn-icon-notext,
 .slidedown.in {
 	-webkit-transform: translateY(0);
 	-webkit-animation-name: slideinfromtop;
-	-webkit-animation-duration: 250ms;
+	-webkit-animation-duration: 200ms;
 	-moz-transform: translateY(0);
 	-moz-animation-name: slideinfromtop;
-	-moz-animation-duration: 250ms;
+	-moz-animation-duration: 200ms;
 	transform: translateY(0);
 	animation-name: slideinfromtop;
-	animation-duration: 250ms;
+	animation-duration: 200ms;
 }
 .slidedown.in.reverse {
 	-webkit-animation-name: fadein;
@@ -2045,13 +2045,13 @@ button.ui-btn-icon-notext,
 .slideup.in {
 	-webkit-transform: translateY(0);
 	-webkit-animation-name: slideinfrombottom;
-	-webkit-animation-duration: 250ms;
+	-webkit-animation-duration: 200ms;
 	-moz-transform: translateY(0);
 	-moz-animation-name: slideinfrombottom;
-	-moz-animation-duration: 250ms;
+	-moz-animation-duration: 200ms;
 	transform: translateY(0);
 	animation-name: slideinfrombottom;
-	animation-duration: 250ms;
+	animation-duration: 200ms;
 }
 .slideup.in.reverse {
 	-webkit-animation-name: fadein;
