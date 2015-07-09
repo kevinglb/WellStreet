@@ -15,7 +15,6 @@ function initialMap(){
 	 $map.setView([53.3478, -6.2579], 12);
 }	
 
-
 function addLayer(DataArray){
 	/*clear markers before adding*/
 	console.log('in addLayer');
@@ -100,24 +99,8 @@ function getUserCurrentLocation()
 		
 		$map.panTo(user_location);
 		L.marker(user_location,{icon:myIcon}).addTo($map).bindPopup("You are here").openPopup();
-<<<<<<< HEAD
-    }, function() {
-        alert("Sorry, cannot get your location now.");                                     
-    }, { maximumAge: 10000, timeout: 1000, enableHighAccuracy: true });
-	// var myIcon = L.icon
-	// 	({
- //    			iconUrl: 'icon/location-dark.svg',
- //    			iconRetinaUrl: 'icon/location-dark.svg',
- //    			iconSize: [30, 30],
 
-	// 		});
-
-		
-	// 	map.panTo(user_location);
-	// 	L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
-
-		// alert("Sorry, cannot find your location now.")
-		
+    }	
 }
 
 function getUserLocation(){
@@ -132,15 +115,6 @@ function getUserLocation(){
 	$map.on('locationfound', onLocationFound);
 	$map.on('locationerror', onLocationError);
 
-	function onLocationError(e) {
-    	alert(e.message);
-    	console.log('location error');
-
-	}
-	else
-	{
-		alert("Please check your network and try again :(");         
-	}
 
 }
 
@@ -244,7 +218,6 @@ function startLoadMapPage(type, callback){
 		}
     });
    // return false;
-
 }
 
 function endLoading(){
@@ -275,7 +248,6 @@ function getDataAray(type){
         	DataArray = chiropractor_array;
         	break;
     }   
-
     return DataArray;
 }
 
@@ -303,27 +275,3 @@ function loadProfile(therapy){
 	
 }
 
-function showLocation(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            alert("Latitude : " + latitude + " Longitude: " + longitude);
-}
-function errorHandler(err) {
-            if(err.code == 1) {
-               alert("Error: Access is denied!");
-            }else if( err.code == 2) {
-               alert("Error: Position is unavailable!");
-            }
-         }
-			
-function getLocation(){
-	console.log("in get location");
-            if(navigator.geolocation){
-               // timeout at 60000 milliseconds (60 seconds)
-               console.log('in');
-               var options = { maximumAge: 10000, timeout: 30000, enableHighAccuracy: true }
-               navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
-            }else{
-               alert("Sorry, browser does not support geolocation!");
-            }
-}
