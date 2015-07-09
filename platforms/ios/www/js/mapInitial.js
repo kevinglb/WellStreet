@@ -7,7 +7,6 @@ function initialMap(){
  //    			iconSize: [30, 30],
 
 	// 		});
-	
 	 L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 		{
       		maxZoom: 18,
@@ -115,6 +114,7 @@ function getUserCurrentLocation()
 	// 	L.marker(user_location,{icon:myIcon}).addTo(map).bindPopup("You are here").openPopup();
 
 		// alert("Sorry, cannot find your location now.")
+		
 }
 
 function getUserLocation(){
@@ -257,3 +257,27 @@ function loadProfile(therapy){
 	
 }
 
+function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Latitude : " + latitude + " Longitude: " + longitude);
+}
+function errorHandler(err) {
+            if(err.code == 1) {
+               alert("Error: Access is denied!");
+            }else if( err.code == 2) {
+               alert("Error: Position is unavailable!");
+            }
+         }
+			
+function getLocation(){
+	console.log("in get location");
+            if(navigator.geolocation){
+               // timeout at 60000 milliseconds (60 seconds)
+               console.log('in');
+               var options = { maximumAge: 10000, timeout: 30000, enableHighAccuracy: true }
+               navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+            }else{
+               alert("Sorry, browser does not support geolocation!");
+            }
+}
