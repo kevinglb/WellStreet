@@ -5,9 +5,15 @@ function initialMap(){
       		maxZoom: 18,
       		minZoom: 10
     	}).addTo($map);
-	 $map.setView(CurrentLocation, 15);
+	 if(CurrentLocation){
+	 	$map.setView(CurrentLocation, 15);
+	 }
+	 
 }	
 
+function reinitialMap(){
+	$map.setView(CurrentLocation, 15);
+}
 
 function addLayer(DataArray){
 	/*clear markers before adding*/
@@ -106,7 +112,7 @@ function startLoadMapPage(type, callback){
     	console.log("map initialed");
     }
     else{
-    	resetMapPage();
+    	//resetMapPage();
     	console.log("map reseted");
     }
     $(".loading_wrap").fadeIn(200);
@@ -174,12 +180,23 @@ function getTherapy(callback){
 
 /*load info of the selected therapy*/
 function loadProfile(therapy){
+	var innerhtml  = "";
 	$("#profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
 	$("#profile_page .ui-header .therapy_city").text(therapy.City);
 
 	$("#profile_page .therapy_details .therapy_name").text(therapy.Name);
 	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
 	$("#profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
+	if(therapy['Rating']){
+		$("#profile_page .therapy_details .therapy_rating").text("Rating: "+therapy['Rating']);	
+	}
+	if(therapy['Opening hours']){
+		var openhour_array = therapy['Opening hours'].split(/\n/);
+		for(i in openhour_array){
+			innerhtml += openhour_array[i] + "<br />";	
+		}
+		$("#profile_page .therapy_details .therapy_openhour").html(innerhtml);
+	}
 
 }
 

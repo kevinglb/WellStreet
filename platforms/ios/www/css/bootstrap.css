@@ -1081,7 +1081,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+
   color: #333;
   background-color: #fff;
 }
@@ -3482,7 +3482,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
-  line-height: 1.5;
+
   border-radius: 3px;
 }
 .btn-block {
@@ -3587,7 +3587,6 @@ tbody.collapse.in {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857143;
   color: #333;
   white-space: nowrap;
 }
@@ -3636,7 +3635,6 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   font-size: 12px;
-  line-height: 1.42857143;
   color: #777;
   white-space: nowrap;
 }
@@ -3867,7 +3865,6 @@ tbody.collapse.in {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
   border-radius: 6px;
 }
 select.input-group-lg > .form-control,
@@ -4875,7 +4872,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: .2em .6em .3em;
   font-size: 75%;
   font-weight: bold;
-  line-height: 1;
+
   color: #fff;
   text-align: center;
   white-space: nowrap;

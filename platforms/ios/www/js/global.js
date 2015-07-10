@@ -7,7 +7,7 @@ var maplayer;/*layer stores all markers*/
 var markers_array=[];/*array stores all markers*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
-var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],});//icon setting
+var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],draggable:true});//icon setting
 var CurrentLocation = [];/*array stores geographical info: latitude and longitude*/
 var CurrentLocation_array = [];
 var CurrentLocationLayer;/*layer stores current location marker*/
@@ -25,14 +25,17 @@ function searchFocused(){
 		$("#search_history_list").slideToggle(200);
     	$(".overlay").toggle();
     	$(".arrow_wrap a").toggle();
+    	//$(".search_wrap").addClass('appear');
 	}
     $('#search_history_list').unbind('click').on('click','li', function(){
      	resetMapSearch();
+     	// $(".search_wrap").removeClass('appear');
     })
 }
 
 
 function resetMapSearch(){
+	//$(".search_wrap").removeClass('appear');
 	/* hide search history list and blur the input*/
 	if($("#search_history_list").is(":visible")){
 		$("#search_history_list").slideToggle(200);
@@ -53,7 +56,7 @@ function resetMapSearch(){
 }
 
 function resetMapPage(){
-	
+	/*clear mapslide and re-initial*/
 	$mapslider.empty();
 	$mapslider.removeClass("slick-initialized slick-slider");
 	if($mapslider.is(":hidden")){
@@ -64,8 +67,10 @@ function resetMapPage(){
         infinite: false,
         dots: false
     }); 
-    $map.setView([53.3478, -6.2579], 12);
-    //$mapslider.slideToggle();
+ 	if(CurrentLocation){
+	    $map.setView(CurrentLocation, 15);
+	}
+    /*remove all markers on the map*/
 	removeAllMarkers();
 }
 
@@ -73,4 +78,17 @@ function removeAllMarkers(){
 	$map.removeLayer(maplayer);
 	markers_array = [];
 	therapy_array = [];
+}
+
+function slideBack(target_page,callback){
+	$.mobile.changePage("#"+target_page, 
+    {
+        transition: "slide",
+        reverse: true,
+        changeHash: true
+    });
+    if(typeof(callback) == "function"){
+    	callback();
+    }
+    
 }

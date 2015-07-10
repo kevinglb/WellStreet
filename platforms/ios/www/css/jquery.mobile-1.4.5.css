@@ -1597,7 +1597,7 @@ div.ui-mobile-viewport {
 .ui-header .ui-btn-right,
 .ui-btn-left > [class*="ui-"],
 .ui-btn-right > [class*="ui-"] {
-	margin: 22.5px 0 0 0;
+	margin: 17.5px 0 0 0;
 }
 .ui-btn-left,
 .ui-btn-right {
@@ -1605,10 +1605,10 @@ div.ui-mobile-viewport {
 	top: .24em;
 }
 .ui-btn-left {
-	left: .4em;
+	left: 0；
 }
 .ui-btn-right {
-	right: .4em;
+	right: 0;
 }
 .ui-btn-icon-notext.ui-btn-left {
 	top: .3125em;
@@ -1648,7 +1648,7 @@ button.ui-btn-icon-notext,
 .ui-mobile label,
 .ui-controlgroup-label {
 	display: block;
-	margin: 0 0 .4em;
+	margin: 0;
 }
 /* Accessible content hiding */
 /* ui-hide-label deprecated in 1.4. TODO: Remove in 1.5 */
