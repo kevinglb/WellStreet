@@ -2,8 +2,10 @@
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
 var $map;
 var $mapslider = $("#detail_slider");
+var $cateslider = $("#category_slider");
 
 var maplayer;/*layer stores all markers*/
+var maplayer_array = [] /*array sotres all layers for quick reload*/
 var markers_array=[];/*array stores all markers*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
@@ -14,7 +16,14 @@ var CurrentLocationLayer;/*layer stores current location marker*/
 
 /*clear markers and tilelayers on the map*/ 
 
-
+function emailRegisterOnFocus(e){
+	//e.preventdefault()
+	//$(".social_login_wrap").slideToggle(300);
+	$("#register_password").fadeIn(100);
+	$("#register_sub").fadeIn(100);
+	
+	return	false;
+}
 function searchFocused(){
 	resetMapSearch();
 	//detect whether the history list is visible in case that user focus(click) on the search input when searching
