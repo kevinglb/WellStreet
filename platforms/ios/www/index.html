@@ -245,11 +245,11 @@
                 <div id="map"></div>
                 <div id="detail_slider"></div>
                 <div id="category_slider">
-                    <div class="detail_content" data-type="acupuncturist">Acupuncturist</div>
-                    <div class="detail_content" data-type="allergy">allergy</div>
-                    <div class="detail_content" data-type="aromatherapist">Aromatherapist</div>
-                    <div class="detail_content" data-type="ciropodist">Ciropodist</div>
-                    <div class="detail_content" data-type="chiropractor">Chiropractor</div>
+                    <div class="detail_content text-center" data-type="acupuncturist">Acupuncturist</div>
+                    <div class="detail_content text-center" data-type="allergy">allergy</div>
+                    <div class="detail_content text-center" data-type="aromatherapist">Aromatherapist</div>
+                    <div class="detail_content text-center" data-type="ciropodist">Ciropodist</div>
+                    <div class="detail_content text-center" data-type="chiropractor">Chiropractor</div>
                 </div>
            </div>
         </div>
@@ -318,16 +318,16 @@
                 dots: false
             }); 
             
-            $cateslider.slick({
-                arrows: false,
-                infinite: true,
-                dots: false,
-                responsive: true,
-                speed: 200
-                // customOnChange: function(e){
-                //         switchCategory(addLayer);
-                //     }   
-            });
+            // $cateslider.slick({
+            //     arrows: false,
+            //     infinite: true,
+            //     dots: false,
+            //     responsive: true,
+            //     speed: 200
+            //     // customOnChange: function(e){
+            //     //         switchCategory(addLayer);
+            //     //     }   
+            // });
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
              $("#category_page").noClickDelay();

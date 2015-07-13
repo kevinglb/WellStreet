@@ -149,7 +149,18 @@ function startLoadMapPage(type, callback){
 		});
     $("#map_page").one('pageshow', function(){
 		if(type){
-			console.log('before call back');
+			//console.log('before call back');
+			$cateslider.slick({
+                arrows: false,
+                infinite: true,
+                dots: false,
+                responsive: true,
+                speed: 200
+                // customOnChange: function(e){
+                //         switchCategory(addLayer);
+                //     }   
+            });
+            
 			callback(type, getDataAray(type));	
 		}
 		else{
