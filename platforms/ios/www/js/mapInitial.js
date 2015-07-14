@@ -188,11 +188,11 @@ function startLoadMapPage(type, callback){
             var	index;
             $cateslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
             	if($(this).attr("data-type") == type){
-            		index = parseInt($(this).attr('data-slick-index'));
+            		index = $(this).attr('data-index');
             		console.log(index);
             	}
             })
-            //$cateslider.slick("slickGoTo",index);
+            $cateslider.slick('slickGoTo',index);
 			callback(type, endLoading);	
 		}
 		else{

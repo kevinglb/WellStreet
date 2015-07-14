@@ -40,6 +40,7 @@ body {
     -moz-transition: all .1s ease-in-out;
    -webkit-transition: all .1s ease-in-out;
    transition: all .1s ease-in-out;
+   overflow: hidden;
 
 }
 
@@ -118,22 +119,22 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
     font-size: 1.3em;
     line-height: 1.5em;
 }
-#login_page .ui-header, #login_page .ui-footer{
+#login_page .ui-header{
     background-color: transparent;
 }
-.below-content
-{
-    margin-bottom: 8vh;
-}
 
+#login_page .btn-wrap{
+    position: absolute;
+    left: 0;
+    bottom: 8vh;
+    width: 100%;
+}
 #register_btn
 {
     background-color: #F9564F;
 }
-
 #login_btn
 {
-
     background-color: #00CFC1;
 }
 #register_page
@@ -143,7 +144,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
     height: 100%;
     width: 100%;
     background-color: transparent;
-
 }
 #register_page .ui-header{
     position:absolute;
@@ -153,11 +153,9 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
     z-index: 20;
     background-color: transparent;
 }
-#register_page .ui-footer{
-    background-color: transparent;
-}
+
 #register_page .ui-content{
-    margin-top: 65px;
+    padding-top: 65px;
     color: #ffffff;
 }
 #register_fb_btn
