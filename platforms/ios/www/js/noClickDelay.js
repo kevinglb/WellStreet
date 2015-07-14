@@ -20,7 +20,7 @@
 			startPoint = { x: touch.screenX, y: touch.screenY };
 			//$target.addClass('pressed');
 			$wrapper.bind('touchmove mousemove',function(e) {
-				 touch = e.originalEvent.touches[0];
+				touch = e.originalEvent.touches[0];
 				moveDistance = Math.sqrt(Math.pow(touch.screenX - startPoint.x, 2) +
                                    Math.pow(touch.screenY - startPoint.y, 2));
 				if (moveDistance > distance) {

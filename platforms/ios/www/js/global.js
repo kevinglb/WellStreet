@@ -66,11 +66,12 @@ function resetMapSearch(){
 
 function resetMapPage(){
 	/*clear mapslide and re-initial*/
+	console.time("resetMapPage");
 	$mapslider.empty();
 	$mapslider.removeClass("slick-initialized slick-slider");
-	if($mapslider.is(":hidden")){
-		$mapslider.slideToggle(200);
-	}
+	// if($mapslider.is(":hidden")){
+	// 	$mapslider.slideToggle(200);
+	// }
  	$mapslider.slick({
         arrows: false,
         infinite: false,
@@ -81,6 +82,7 @@ function resetMapPage(){
 	}
     /*remove all markers on the map*/
 	removeAllMarkers();
+	console.timeEnd("resetMapPage");
 }
 
 function removeAllMarkers(){
@@ -89,6 +91,7 @@ function removeAllMarkers(){
 	therapy_array = [];
 }
 
+/*for back button*/
 function slideBack(target_page,callback){
 	$.mobile.changePage("#"+target_page, 
     {
@@ -99,5 +102,17 @@ function slideBack(target_page,callback){
     if(typeof(callback) == "function"){
     	callback();
     }
-    
+    return false;
+}
+
+/*for buttons that jumps to another page besides back button*/
+function changePage(target_page, transition,callback){
+	$.mobile.changePage("#"+target_page, 
+    {
+        transition: transition,
+    });
+	if(typeof(callback) == "function"){
+    	callback();
+    }
+
 }

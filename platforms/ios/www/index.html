@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="below-content">
                         <a id="register_btn" name="register_btn" class="btn btn-large btn-block">Create an Account</a>
-                        <a id="login_btn" name="login_btn" class="btn btn-large btn-block" href="#category_page">Login In</a>
+                        <a id="login_btn" name="login_btn" class="btn btn-large btn-block" href="#" onclick="changePage('category_page','slideup');return false;">Login In</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
 
             <!-- header -->
             <div data-role="header"  class="ui-header" position="fixed">
-                <a href="#login_page" data-transition="slide" data-direction="reverse">
+                <a href="#" onclick="slideBack('login_page')">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                
@@ -184,7 +184,7 @@
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
             <div class="ui-header" data-role="header" position="fixed">
-                <a href="#" onclick="slideBack('category_page',resetMapPage);return false;">
+                <a href="#" onclick="slideBack('category_page',resetMapPage)">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <!-- <h1 onclick="showSearchWrap();return false;">Search</h1> -->
@@ -330,13 +330,15 @@
             // });
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
-             $("#category_page").noClickDelay();
-             $("#map_page").noClickDelay();
-             $("#profile_page").noClickDelay();
+            $("#login_page").noClickDelay();  
+            $("#register_page").noClickDelay();
+            $("#category_page").noClickDelay();
+            $("#map_page").noClickDelay();
+            $("#profile_page").noClickDelay();
         })
-        $cateslider.on('afterChange',function(){
-            switchCategory(addLayer);
-        });
+        // $cateslider.on('afterChange',function(){
+        //     switchCategory(addLayer);
+        // });
         /*the flowing two functions can be wrapped as a general one*/
         $(".arrow_wrap a").tap(function(){
             var text = $(this).text();
@@ -354,8 +356,8 @@
             return false;
         });
 
-        $cateslider.on('change',function(e){
-            switchCategory('acupuncturist',addLayer);
+        $cateslider.on('afterChange',function(e){
+            switchCategory(addLayer);
         });
         function GPSonSuccess(position)
         {

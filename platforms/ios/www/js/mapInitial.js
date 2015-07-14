@@ -22,43 +22,39 @@ function reinitialMap(){
 	 }
 }
 
-function addLayer(type){
+/*function for adding new layer on the map*/
+function addLayer(type,callback){
 	/*clear markers before adding*/
-	console.log('in addLayer');
+	
 	if(markers_array.length >=1){
 		removeAllMarkers();
 	}
 
-	/*detect whehter the layer has been loaded and added in maplayer_array*/
-	// if(maplayer_array.length > 0 && maplayer_array.indexOf(type) > -1){
-	// 	console.log(type+"in maplayer_array");
-	// 	maplayer = L.layerGroup(maplayer_array[type]);
-	// 	maplayer.addTo($map);
-	// }
-	// else {
-		console.log(type+" not in maplayer_array");
-		therapy_array = getDataAray(type);
-		//addMarker(therapy_array);
-		//console.log('before marker');
-		for(var i = 0; i< therapy_array.length;i++){
-			var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
-			//console.log(position);
-			var div='';
-			var marker = L.marker(position,{icon:myIcon}).bindPopup(therapy_array[i].Name).on('click',clickOnMarker);
-			marker.sliderIndex = i;
-			//marker.addTo(maplayer);
-			
-			markers_array.push(marker);
-			div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';
-			$mapslider.slick('slickAdd',div);
-		}
-		//var layerObj = {type:[{'type':type, 'array':therapy_array}]};
-		//maplayer_array.push(layerObj);
-		maplayer = L.layerGroup(markers_array);
-		maplayer.type=type;
+
+	therapy_array = getDataAray(type);
 		
-		maplayer.addTo($map);
-	//}
+		
+	console.time('addlayer loop');
+	for(var i = 0,len=therapy_array.length; i< len;i++){
+		var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
+			
+		var div='';
+		var marker = L.marker(position,{icon:myIcon}).bindPopup(therapy_array[i].Name).on('click',clickOnMarker);
+		marker.sliderIndex = i;
+		//marker.addTo(maplayer);	
+		markers_array.push(marker);
+		//callback(therapy_array[i]);
+		// div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';
+			
+		// $mapslider.slick('slickAdd',div);
+	}
+	console.timeEnd('addlayer loop');
+	maplayer = L.layerGroup(markers_array);
+	maplayer.type=type;
+	maplayer_array.push(maplayer);
+	maplayer.addTo($map);
+	endLoading();
+	
 	
 	//$mapslider.slick('refresh');
 	//$cateslider.slick('refresh');
@@ -68,27 +64,6 @@ function addLayer(type){
 	else{
 		endLoading();
 	}
-	
-	// getUserCurrentLoca	tion();
-
-	function clickOnMarker(e){
-		
-		
-		$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
-		//detectSlider();
-		//$mapslider.slick('slickGoTo',e.target.sliderIndex);
-	}
-	
-	/*detect whether the slider is visible when click on any marker on the map*/
-	function detectSlider(){
-		if($mapslider.is(":visible")){
-			return;
-		}
-		else{
-			$mapslider.slideToggle(300);
-		}
-	}
-
 	/*find marker by swipe on the slider and the popup is then open*/
 	$mapslider.on('swipe', function(e){
 		var currentindex = $mapslider.slick('slickCurrentSlide');
@@ -99,6 +74,34 @@ function addLayer(type){
 
 	
 }
+/*replace the current layer with the one found in maplayer_array based on the type*/
+function replaceLayer(type,callback){
+	
+}
+
+function addMapSlider(obj){
+	var div = '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+obj.Name+'</label><label>'+obj['Full Address']+'</label></div></div>';
+	$mapslider.slick('slickAdd',div);
+}
+
+function clickOnMarker(e){	
+	console.log(e.target);
+	$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
+	//detectSlider();
+	//$mapslider.slick('slickGoTo',e.target.sliderIndex);
+
+}
+
+/*detect whether the slider is visible when click on any marker on the map*/
+function detectSlider(){
+	if($mapslider.is(":visible")){
+			return;
+	}
+	else{
+		$mapslider.slideToggle(300);
+	}
+}
+
 
 function getUserCurrentLocation()
 {
@@ -155,13 +158,13 @@ function startLoadMapPage(type, callback){
                 infinite: true,
                 dots: false,
                 responsive: true,
-                speed: 200
+                speed: 150,
                 // customOnChange: function(e){
-                //         switchCategory(addLayer);
-                //     }   
+                //          switchCategory(addLayer);
+                //      }   
             });
             
-			callback(type, getDataAray(type));	
+			callback(type, endLoading);	
 		}
 		else{
 			endLoading();
@@ -238,26 +241,25 @@ function loadProfile(therapy){
 
 
 function switchCategory(callback){
+
 	//var currentSlide = $cateslider.slick('slickCurrentSlide');
 	var nextType = $cateslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-type');
-	$(".loading_wrap").fadeIn(10);
-    $.mobile.loading( 'show', {
-        	text: 'loading',
-        	textVisible: true,
-        	theme: 'd',
-        	html: ""
-   	});
-	resetMapPage();
-	if(maplayer_array.length > 0 && maplayer_array.indexOf(nextType) > -1){
-		maplayer = L.layerGroup(maplayer_array[nextType].array);
-		maplayer.addTo($map);
-		maplayer.type = nextType;
+	//determine whether the category has been changed
+	if(nextType == maplayer.type){
+		console.log('true');
 	}
 	else{
-		setTimeout(function(){callback(nextType)},50);	
+		console.log('false');
+		//$(".loading_wrap").fadeIn(10);
+    	// $.mobile.loading( 'show', {
+     //    	text: 'loading',
+     //    	textVisible: true,
+     //    	theme: 'd',
+     //    	html: ""
+   		// });  
+		resetMapPage();
+		callback(nextType,endLoading)
+		//callback(nextType);	
 	}
-    
-    
 }
-
 
