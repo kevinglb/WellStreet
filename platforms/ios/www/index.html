@@ -257,7 +257,7 @@
         <!-- page for showing the profile of selected therapy -->
         <div id="profile_page" data-role="page">
             <div data-role="header"  class="ui-header" position="fixed">
-                <a href="#" class="header-back-btn" onclick="slideBack('map_page'); return false;">Back</i></a>
+                <a href="#" class="header-back-btn" onclick="slideBack('map_page'); $mapslider.slick('refresh');">Back</i></a>
                 <h1>
                     <label class="therapy_county"></label>
                     <label class="therapy_city"></label>
@@ -282,6 +282,7 @@
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/json_array.min.js"></script>
     <script type="text/javascript" src="js/noClickDelay.js"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">

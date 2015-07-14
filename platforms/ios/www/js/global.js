@@ -72,14 +72,14 @@ function resetMapPage(){
 	// if($mapslider.is(":hidden")){
 	// 	$mapslider.slideToggle(200);
 	// }
+	if($cateslider.is(":hidden")){
+		$cateslider.slideToggle(200);
+	}
  	$mapslider.slick({
         arrows: false,
         infinite: false,
         dots: false
     }); 
- 	if(CurrentLocation){
-	    $map.setView(CurrentLocation, 15);
-	}
     /*remove all markers on the map*/
 	removeAllMarkers();
 	console.timeEnd("resetMapPage");
