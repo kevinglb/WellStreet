@@ -1,4 +1,9 @@
+
+
 /*
+ 
+ 
+ 
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
@@ -24,12 +29,19 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+
+
+
 #import <UIKit/UIKit.h>
 
 int main(int argc, char* argv[])
 {
     @autoreleasepool {
+
+       
         int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
         return retVal;
     }
 }
+
+
