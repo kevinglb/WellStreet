@@ -31,7 +31,7 @@ function addLayer(type,callback){
 	}
 
 	therapy_array = getDataAray(type);
-
+	callback(therapy_array);
 	for(var i = 0,len=therapy_array.length; i< len;i++){
 		var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
 			
@@ -43,8 +43,7 @@ function addLayer(type,callback){
 		//marker.addTo(maplayer);	
 		markers_array.push(marker);
 		//callback(therapy_array[i]);
-		// div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';
-			
+		// div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';	
 		// $mapslider.slick('slickAdd',div);
 	}
 
@@ -56,6 +55,7 @@ function addLayer(type,callback){
 	maplayer.addTo($map);
 	endLoading();
 	
+
 	
 	//$mapslider.slick('refresh');
 	//$cateslider.slick('refresh');
@@ -104,7 +104,7 @@ function clickOnMarker(e){
 	//should detect whether the selected on is already in $mapslider 
 	toggleSliders();
 	$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
-	var div = '<div class="detail_content" onclick="getTherapy(loadProfile)" data-index="'+e.target.sliderIndex+'""><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+e.target.name+'</label><label>'+e.target.address+'</label></div></div>';
+	var div = '<div class="detail_content" onclick="getTherapy(this,loadProfile)" data-index="'+e.target.sliderIndex+'""><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+e.target.name+'</label><label>'+e.target.address+'</label></div></div>';
 	$mapslider.slick('slickAdd',div);
 	var index = $mapslider.children('.slick-list').children('.slick-track').children('.slick-slide:last-child').attr('data-slick-index');
 	console.log(index);
@@ -189,7 +189,7 @@ function startLoadMapPage(type, callback){
             });
             $cateslider.slick('slickGoTo',index);
 
-			callback(type, endLoading);	
+			callback(type, addList);	
 			console.timeEnd('cateslider');
 		}
 		else{
@@ -231,13 +231,17 @@ function getDataAray(type){
     return DataArray;
 }
 
-//get the therapy based on the index of the slider and pass it as paramter to callback
-function getTherapy(callback){
+//get the index of the therapy in the array and then load profile(now it is a common function)
+function getTherapy(element, callback){
 	// var index = $mapslider.slick('slickCurrentSlide');
-	var currentindex = parseInt($mapslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
+
+	var currentindex = $(element).attr('data-index');
+	console.log(currentindex);
+		//var currentindex = parseInt($mapslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
 	var therapy = therapy_array[currentindex];
 	callback(therapy);
 	changePage("profile_page", "slide");
+	
 }
 
 //load info of the selected therapy
@@ -264,7 +268,6 @@ function loadProfile(therapy){
 
 //change the layer on the marker when category has been changed on the $cateslider
 function switchCategory(callback){
-
 	//var currentSlide = $cateslider.slick('slickCurrentSlide');
 	var nextType = $cateslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-type');
 	//determine whether the category has been changed
@@ -274,7 +277,14 @@ function switchCategory(callback){
 	else{
 		console.log('false');
 		resetMapPage();
-		callback(nextType,endLoading)
+		callback(nextType,addList);
 	}
 }
 
+function addList(DataArray){
+	var div='';
+	for(var i = 0,len=DataArray.length; i< len;i++){
+		div += '<div class="therapy_list_item" onclick="getTherapy(this,loadProfile)" data-index="'+i+'"><label class="text-center">'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div>';
+	}
+	$("#therapy_list").append(div);
+}

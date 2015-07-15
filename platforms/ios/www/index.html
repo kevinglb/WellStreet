@@ -36,12 +36,31 @@
 
             <div data-role="main" class="ui-content">
                 <div class="bg-wrap"></div>
+                <div class="register-wrap">
+                    <div class="bg-wrap"></div>
+                    <div class="row social_login_wrap">
+                        <p>Qucikly sign up with:</p>
+                        <a id="register_fb_btn" name="register_fb_btn" class="btn btn-large btn-block">Facebook</a>
+                        <a id="register_google_btn" name="register_google_btn" class="btn btn-large btn-block">Google</a>
+                    </div>
+                    <div class="row email-login_wrap">
+                        <p>Or use your email:</p>
+                        <form>
+                            <input type="email" id="register_email" placeholder="Email">
+                            <input type="password" id="register_password" placeholder="Password" style="display:none">
+                            <button type="button" id="register_sub" style="display:none">Log In</button>
+                        </form>
+                    </div>
+                    <!-- <div class="text-center">
+                        <p>By signing up, I agree to WellStreet's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</p>
+                    </div> -->
+                </div>
                 <div class="logo-wrap text-center">
                     <img src="img/wellstreet-logo.png"></img>
                 </div>
                 <div class="btn-wrap">
                     <a id="register_btn" name="register_btn" class="btn btn-large btn-block" href="#" onclick="changePage('register_page','slideup');return false;">Create an Account</a>
-                    <a id="login_btn" name="login_btn" class="btn btn-large btn-block" href="#" onclick="changePage('category_page','slideup');return false;">Login In</a>
+                    <a id="login_btn" name="login_btn" data-transition="slideup" class="btn btn-large btn-block" href="#" onclick="changePage('category_page','slideup');return false;">Login In</a>
                 </div>
             </div>
         </div>
@@ -49,7 +68,7 @@
         <!-- page for registration -->
         <div id="register_page" data-role="page">
             <div data-role="header" class="ui-header" position="fixed">
-                <a href="#login_page">
+                <a href="#" onclick="slideBack('login_page');return false;">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <h1>Log In</h1>
@@ -74,9 +93,9 @@
                         <button type="button" id="register_sub" style="display:none">Log In</button>
                     </form>
                 </div>
-                <div class="text-center">
+               <!--  <div class="text-center">
                     <p>By signing up, I agree to WellStreet's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- first load page showing a list of categories -->
@@ -158,9 +177,7 @@
                 </div>
             </div>
         </div>
-
        
-
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
             <div class="ui-header" data-role="header" position="fixed">
@@ -168,13 +185,13 @@
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <!-- <h1 onclick="showSearchWrap();return false;">Search</h1> -->
-                <a href="#" onClick="getUserCurrentLocation(); return false;">
+                <a href="#" onClick="toggleContent();return false;">
                     <i class="icon icon-2x icon-location"></i>
                 </a>
             </div>
             <div data-role="main" class="ui-content">
                 <div class="loading_wrap"></div>
-                <div class="overlay" onClick=""></div>
+               
                 <div class="search_wrap">
                         <div class="row search_input_wrap">
                             <div class="col-xs-10">
@@ -188,49 +205,60 @@
 
                         </div>
                 </div>
-                <div class="search_content">
-                    <div class="input_wrap">
-                        <form id="search_form">
-                            <div class="form-group has-feedback right-feedback">
-                                <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
+               <!--  <div class="twowraps-container"> -->
+                <div class="map-wrap">
+                    <div class="overlay" onClick=""></div>
+                    <div class="search_content">
+                        <div class="input_wrap">
+                            <form id="search_form">
+                                <div class="form-group has-feedback right-feedback">
+                                    <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
                                    <!--  <span  class="form-control-feedback" id="location_btn">
                                         <i class="icon icon-2x icon-location"></i>
                                     </span> -->
-                                </input>
-                            </div>
-                            <ul id="search_history_list">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        </form>
-                    </div>
-                    <div class="timepicker_wrap">
-                        <div class="container">
-                           <div class="row">
-                                <div class="col-xs-6">
-                                    <button>Date</button>
+                                    </input>
                                 </div>
-                                <div class="col-xs-6">
+                                <ul id="search_history_list">
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="timepicker_wrap">
+                            <div class="container">
+                            <div class="row">
+                                    <div class="col-xs-6">
+                                        <button>Date</button>
+                                    </div>
+                                    <div class="col-xs-6">
                                     <button>Time</button>
+                                    </div>
+                                    <div class="clear"></div>
                                 </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
+                        <div class="arrow_wrap">
+                            <a herf="#" class="ui-btn no-border">Select Time</a>
+                        </div>
                     </div>
-                    <div class="arrow_wrap">
-                        <a herf="#" class="ui-btn no-border">Select Time</a>
+                
+                    <div id="map"></div>
+                    <div id="detail_slider"></div>
+                    <div id="category_slider">
+                        <div class="detail_content text-center" data-index='0' data-type="acupuncturist">Acupuncturist</div>
+                        <div class="detail_content text-center" data-index='1' data-type="allergy">allergy</div>
+                        <div class="detail_content text-center" data-index='2' data-type="aromatherapist">Aromatherapist</div>
+                        <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
+                        <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
                     </div>
                 </div>
-                <div id="map"></div>
-                <div id="detail_slider"></div>
-                <div id="category_slider">
-                    <div class="detail_content text-center" data-index='0' data-type="acupuncturist">Acupuncturist</div>
-                    <div class="detail_content text-center" data-index='1' data-type="allergy">allergy</div>
-                    <div class="detail_content text-center" data-index='2' data-type="aromatherapist">Aromatherapist</div>
-                    <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
-                    <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
+
+                <div class="list-wrap">
+                    <div id="therapy_list">
+                    </div>
                 </div>
+           <!--  </div> -->
            </div>
         </div>
 
@@ -267,6 +295,8 @@
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
         
+
+       
         var loop_number = 0;
         // function changeBackgroundImage()
         // {
@@ -281,24 +311,16 @@
         // }
         $(document).ready(function()
         {    
+         
             //var background_timer = setInterval(changeBackgroundImage, 3000); 
             // clearInterval(background_timer); 
             $mapslider.slick({
                 arrows: false,
                 infinite: false,
-                dots: false
+                dots: false,
+                speed: 150
             }); 
             
-            // $cateslider.slick({
-            //     arrows: false,
-            //     infinite: true,
-            //     dots: false,
-            //     responsive: true,
-            //     speed: 200
-            //     // customOnChange: function(e){
-            //     //         switchCategory(addLayer);
-            //     //     }   
-            // });
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $("#login_page").noClickDelay();  
@@ -335,6 +357,16 @@
                 
                 switchCategory(addLayer);
             }
+        });
+
+        $('#register_email').on('focus',function(e){
+
+            $(".social_login_wrap").slideToggle(300);
+            $("#register_password").fadeIn(100);
+            $("#register_sub").fadeIn(100);
+    
+            return  false;
+
         });
         function GPSonSuccess(position)
         {

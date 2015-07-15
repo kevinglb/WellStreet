@@ -14,10 +14,25 @@ var CurrentLocation = [];/*array stores geographical info: latitude and longitud
 var CurrentLocation_array = [];
 var CurrentLocationLayer;/*layer stores current location marker*/
 
+//api_key
+var api_key = "";
+var categery_url = "https://wellstreet.co/api/list/categories";
+//Returns a json array of categories. Each category has two elements:
+// id: The system id for the category
+// name: The user-friendly string name of the category
+var searcharound_url = "https://wellstreet.co/api/search/map"; 
+//Finds the services within a given distance from a latitude,longitude point.
+// parameters:
+// key    -    The API token for the user (required)
+// lat    -    The latitude of the user's coordinates (required)
+// lng    -    The longitude of the user's coordinates (required)
+// distance -    The distance in kilometers to search within (default is 2)
+// category - The category id of the service category to search for.
+
 /*clear markers and tilelayers on the map*/ 
 
-function emailRegisterOnFocus(e){
-	//e.preventdefault()
+function emailRegisterOnFocus(){
+	//$(this).preventDefault()
 	//$(".social_login_wrap").slideToggle(300);
 	$("#register_password").fadeIn(100);
 	$("#register_sub").fadeIn(100);
@@ -67,6 +82,13 @@ function resetMapSearch(){
 function resetMapPage(){
 	/*clear mapslide and re-initial*/
 	console.time("resetMapPage");
+	//
+	if($(".map-wrap").hasClass("hide")){
+		toggleContent();
+	}
+	//empty the list
+	$("#therapy_list").empty();
+	console.log("therapy_list is emptyed");
 	$mapslider.empty();
 	$mapslider.removeClass("slick-initialized slick-slider");
 	// if($mapslider.is(":hidden")){
@@ -83,6 +105,8 @@ function resetMapPage(){
     /*remove all markers on the map*/
 	removeAllMarkers();
 	console.timeEnd("resetMapPage");
+
+
 }
 
 function removeAllMarkers(){
@@ -114,5 +138,9 @@ function changePage(target_page, transition,callback){
 	if(typeof(callback) == "function"){
     	callback();
     }
+}
 
+function toggleContent(){
+	$(".map-wrap").toggleClass('hide');
+	$(".list-wrap").toggleClass('show');
 }

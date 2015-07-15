@@ -2036,41 +2036,41 @@ button.ui-btn-icon-notext,
 /* slide up */
 .slideup.out {
 	-webkit-animation-name: fadeout;
-	-webkit-animation-duration: 100ms;
+	-webkit-animation-duration: 1ms;
 	-moz-animation-name: fadeout;
-	-moz-animation-duration: 100ms;
+	-moz-animation-duration: 1ms;
 	animation-name: fadeout;
-	animation-duration: 100ms;
+	animation-duration: 1ms;
 }
 .slideup.in {
 	-webkit-transform: translateY(0);
 	-webkit-animation-name: slideinfrombottom;
-	-webkit-animation-duration: 100ms;
+	-webkit-animation-duration: 200ms;
 	-moz-transform: translateY(0);
 	-moz-animation-name: slideinfrombottom;
-	-moz-animation-duration: 100ms;
+	-moz-animation-duration: 200ms;
 	transform: translateY(0);
 	animation-name: slideinfrombottom;
-	animation-duration: 100ms;
+	animation-duration: 200ms;
 }
 .slideup.in.reverse {
 	-webkit-animation-name: fadein;
-	-webkit-animation-duration: 100ms;
+	-webkit-animation-duration: 1ms;
 	-moz-animation-name: fadein;
-	-moz-animation-duration: 100ms;
+	-moz-animation-duration: 1ms;
 	animation-name: fadein;
-	animation-duration: 100ms;
+	animation-duration: 1ms;
 }
 .slideup.out.reverse {
 	-webkit-transform: translateY(100%);
 	-webkit-animation-name: slideouttobottom;
-	-webkit-animation-duration: 100ms;
+	-webkit-animation-duration: 200ms;
 	-moz-transform: translateY(100%);
 	-moz-animation-name: slideouttobottom;
-	-moz-animation-duration: 100ms;
+	-moz-animation-duration: 200ms;
 	transform: translateY(100%);
 	animation-name: slideouttobottom;
-	animation-duration: 100ms;
+	animation-duration: 200ms;
 }
 @-webkit-keyframes slideinfrombottom {
     from { -webkit-transform: translateY(100%); }

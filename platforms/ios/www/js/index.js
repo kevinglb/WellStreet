@@ -42,6 +42,7 @@ var app = {
         function onError(){
             console.log('geolocation failed');
         }
+        cordova.plugins.Keyboard.disableScroll(true);
 
     },
     // Update DOM on a Received Event
