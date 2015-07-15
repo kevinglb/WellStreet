@@ -5,29 +5,23 @@
         touchStartEvent = supportTouch ? "touchstart" : "mousedown",
         touchStopEvent = supportTouch ? "touchend" : "mouseup",
         touchMoveEvent = supportTouch ? "touchmove" : "mousemove";
- 
     // handles swipe up and swipe down
     $.event.special.swipeupdown = {
         setup: function () {
             var thisObject = this;
             var $this = $(thisObject);
- 
             $this.bind(touchStartEvent, function (event) {
-                var data = event.originalEvent.touches ?
-                        event.originalEvent.touches[ 0 ] :
-                        event,
+                var data = event.originalEvent.touches ? event.originalEvent.touches[ 0 ] : event,
                     start = {
                         time: (new Date).getTime(),
                         coords: [ data.pageX, data.pageY ],
                         origin: $(event.target)
                     },
                     stop;
- 
                 function moveHandler(event) {
                     if (!start) {
                         return;
                     }
- 
                     var data = event.originalEvent.touches ?
                         event.originalEvent.touches[ 0 ] :
                         event;
@@ -35,13 +29,11 @@
                         time: (new Date).getTime(),
                         coords: [ data.pageX, data.pageY ]
                     };
- 
                     // prevent scrolling
                     if (Math.abs(start.coords[1] - stop.coords[1]) > 10) {
                         event.preventDefault();
                     }
                 }
- 
                 $this
                     .bind(touchMoveEvent, moveHandler)
                     .one(touchStopEvent, function (event) {
@@ -60,7 +52,6 @@
             });
         }
     };
- 
 //Adds the events to the jQuery events special collection
     $.each({
         swipedown: "swipeupdown",
@@ -72,5 +63,4 @@
             }
         };
     });
- 
 })();

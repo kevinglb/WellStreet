@@ -26,7 +26,6 @@ function reinitialMap(){
 
 /*function for adding new layer on the map*/
 function addLayer(type,callback){
-	
 	if(markers_array.length >=1){
 		removeAllMarkers();
 	}
@@ -98,21 +97,18 @@ function addLayer(type,callback){
 function replaceLayer(type,callback){
 	
 }
-
-function addMapSlider(obj){
-	var div = '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+obj.Name+'</label><label>'+obj['Full Address']+'</label></div></div>';
-	$mapslider.slick('slickAdd',div);
-}
-
+//add brief info of selected marker into $mapslider
 function clickOnMarker(e){	
 	//console.log(e.target);
+	
+	//should detect whether the selected on is already in $mapslider 
 	toggleSliders();
 	$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
 	var div = '<div class="detail_content" onclick="getTherapy(loadProfile)" data-index="'+e.target.sliderIndex+'""><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+e.target.name+'</label><label>'+e.target.address+'</label></div></div>';
 	$mapslider.slick('slickAdd',div);
-	$mapslider.slick('slickNext');
-	//$mapslider.slick('slickGoTo',e.target.sliderIndex);
-
+	var index = $mapslider.children('.slick-list').children('.slick-track').children('.slick-slide:last-child').attr('data-slick-index');
+	console.log(index);
+	$mapslider.slick('slickGoTo',parseInt(index));
 }
 
 /*detect whether the slider is visible when click on any marker on the map*/
@@ -121,21 +117,21 @@ function toggleSliders(){
 		$cateslider.slideToggle(200);
 		$mapslider.slideToggle(200);
 	}
-	
 		//$mapslider.slideToggle(300);
 	else{
 		return;
 	}
 }
 
-
 function getUserCurrentLocation()
 {
 	if(CurrentLocation.length !=0)
 	{
+		//var currentIcon = L.divIcon({className: 'my-divIcon', html:"You are here",iconSize:[100,0] });
+		//var currentIcon =new  L.WSDivIcon({html: 'You are here'});
 		/*detect whether currentlocation marker exists before adding if exists panto the marker, if not adding and panto*/
 		if(CurrentLocation_array.length == 0){
-			var CurrentLocationMarker = L.marker(CurrentLocation,{icon:myIcon}).bindPopup("You are here");
+			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: myIcon}).bindPopup('You Are Here');
 			CurrentLocation_array.push(CurrentLocationMarker);
 			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
 		}
@@ -144,7 +140,6 @@ function getUserCurrentLocation()
 		}
 		$map.panTo(CurrentLocation_array[0].getLatLng(), {animate: true, duration: 0.5});
 		setTimeout(function(){CurrentLocation_array[0].openPopup();},300);
-		
     }	
     else{
     	alert("Sorry, can't get your location now.");
@@ -166,7 +161,7 @@ function startLoadMapPage(type, callback){
     	reinitialMap();
     	console.log("map reseted");
     }
-    $(".loading_wrap").fadeIn(200);
+    $(".loading_wrap").fadeIn(100);
     $.mobile.loading( 'show', {
 			text: 'loading',
 			textVisible: true,
@@ -236,7 +231,7 @@ function getDataAray(type){
     return DataArray;
 }
 
-/*get the therapy based on the index of the slider and pass it as paramter to callback*/
+//get the therapy based on the index of the slider and pass it as paramter to callback
 function getTherapy(callback){
 	// var index = $mapslider.slick('slickCurrentSlide');
 	var currentindex = parseInt($mapslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
@@ -245,7 +240,7 @@ function getTherapy(callback){
 	changePage("profile_page", "slide");
 }
 
-/*load info of the selected therapy*/
+//load info of the selected therapy
 function loadProfile(therapy){
 	var innerhtml  = "";
 	$("#profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
@@ -267,7 +262,7 @@ function loadProfile(therapy){
 
 }
 
-
+//change the layer on the marker when category has been changed on the $cateslider
 function switchCategory(callback){
 
 	//var currentSlide = $cateslider.slick('slickCurrentSlide');

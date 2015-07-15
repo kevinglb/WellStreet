@@ -37,13 +37,12 @@ L.WSDivIcon = L.DivIcon.extend({
 		html: ''
 
 	},
-
 	createIcon: function () {
         var div = L.DivIcon.prototype.createIcon.call(this),
             options = this.options;
 
         if (options.html) {
-            div.innerHTML = this._createInner();
+                div.innerHTML = this._createInner();
             }
             return div;
         },
