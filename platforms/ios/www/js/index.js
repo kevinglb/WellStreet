@@ -34,16 +34,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        var myOptions = { enableHighAccuracy: true };
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        function onSuccess(){
-            getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
-        }
-        function onError(){
-            console.log('geolocation failed');
-        }
-        cordova.plugins.Keyboard.disableScroll(true);
-
+        // var myOptions = { enableHighAccuracy: true };
+        // navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        // function onSuccess(){
+        //     getUserCurrentLocation(position.coords.latitude, position.coords.longitude);
+        // }
+        // function onError(){
+        //     console.log('geolocation failed');
+        // }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

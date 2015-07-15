@@ -284,7 +284,7 @@ function switchCategory(callback){
 function addList(DataArray){
 	var div='';
 	for(var i = 0,len=DataArray.length; i< len;i++){
-		div += '<div class="therapy_list_item" onclick="getTherapy(this,loadProfile)" data-index="'+i+'"><label class="text-center">'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div>';
+		div += '<div class="therapy_list_item" onclick="getTherapy(this,loadProfile)" data-index="'+i+'"><label class="text-center">'+DataArray[i].Name+'</label><label class="text-center">'+DataArray[i]['Full Address']+'</label></div>';
 	}
 	$("#therapy_list").append(div);
 }
