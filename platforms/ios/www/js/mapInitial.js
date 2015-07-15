@@ -175,25 +175,27 @@ function startLoadMapPage(type, callback){
 		});
     $("#map_page").one('pageshow', function(){
 		if(type){
-			$cateslider.slick({
-                arrows: false,
-                infinite:false,
-                dots: false,
-                speed: 150,
-                // customOnChange: function(e){
-                //          switchCategory(addLayer);
-                //      }   
-            });
-          
-            var	index;
+			//detect whether the $cateslider has initialized already
+			//if is not initialized it, otherwise goto the selected slide of type
+			console.time('cateslider');
+			if(!$cateslider.hasClass('slick-initialized')){
+           		$cateslider.slick({
+                	arrows: false,
+                	infinite:false,
+                	dots: false,
+                	speed: 150
+            	});
+			}
+          	var	index;
             $cateslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
             	if($(this).attr("data-type") == type){
             		index = $(this).attr('data-index');
-            		console.log(index);
             	}
-            })
+            });
             $cateslider.slick('slickGoTo',index);
+
 			callback(type, endLoading);	
+			console.timeEnd('cateslider');
 		}
 		else{
 			endLoading();
