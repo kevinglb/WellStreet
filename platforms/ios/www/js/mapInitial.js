@@ -5,13 +5,14 @@ function initialMap(){
       		maxZoom: 18,
       		minZoom: 10
     	}).addTo($map);
-
 	 if(CurrentLocation){
 	 	$map.setView(CurrentLocation, 14);
 	 }
 	 else{
 	 	$map.setView([53.34778,-6.25972], 14);
 	 }
+	
+	 $map.on('moveend',updateMapSlider);
 }	
 
 /*reinitialMap after resetMap()*/
@@ -36,7 +37,10 @@ function addLayer(type,callback){
 		var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
 			
 		var div='';
-		var marker = L.marker(position,{icon:myIcon}).bindPopup(therapy_array[i].Name).on('click',clickOnMarker);
+		var marker = L.marker(position,{icon:myIcon}).bindPopup(therapy_array[i].Name,{autoPan:false}).on('click',clickOnMarker);
+		marker.options.name = therapy_array[i].Name;
+		marker.options.address = therapy_array[i]['Full Address'];
+		marker.options.index = i;
 		marker.sliderIndex = i;
 		marker.name = therapy_array[i].Name;
 		marker.address = therapy_array[i]['Full Address'];
@@ -47,16 +51,15 @@ function addLayer(type,callback){
 		// $mapslider.slick('slickAdd',div);
 	}
 
-
 	console.timeEnd('addlayer loop');
 	maplayer = L.layerGroup(markers_array);
 	maplayer.type=type;
 	maplayer_array.push(maplayer);
 	maplayer.addTo($map);
+	//$mapcontrol = new L.Control.ListMarkers({layer: maplayer});
+	//$mapcontrol.addTo($map);
 	endLoading();
-	
-
-	
+		
 	//$mapslider.slick('refresh');
 	//$cateslider.slick('refresh');
 	if($mapslider.is(':visible')){
@@ -65,12 +68,13 @@ function addLayer(type,callback){
 	else{
 		endLoading();
 	}
+	//updateMapSlider();
 	/*find marker by swipe on the slider and the popup is then open*/
 	$mapslider.on('swipe', function(e){
 		//var currentindex = $mapslider.slick('slickCurrentSlide');
 		var currentindex = parseInt($mapslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
 		//console.log(currentindex);
-		$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
+		//$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
 		setTimeout(function(){markers_array[currentindex].openPopup();},300);
 	});
 
@@ -91,6 +95,7 @@ function addLayer(type,callback){
 			return;
 		}
 	})
+
 	
 }
 /*replace the current layer with the one found in maplayer_array based on the type*/
@@ -103,19 +108,27 @@ function clickOnMarker(e){
 	
 	//should detect whether the selected on is already in $mapslider 
 	toggleSliders();
-	$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
-	var div = '<div class="detail_content" onclick="getTherapy(this,loadProfile)" data-index="'+e.target.sliderIndex+'""><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+e.target.name+'</label><label>'+e.target.address+'</label></div></div>';
-	$mapslider.slick('slickAdd',div);
-	var index = $mapslider.children('.slick-list').children('.slick-track').children('.slick-slide:last-child').attr('data-slick-index');
-	console.log(index);
-	$mapslider.slick('slickGoTo',parseInt(index));
+	//$map.panTo(e.target.getLatLng(), {animate: true, duration: 0.6});
+	//var div = '<div class="detail_content" onclick="getTherapy(this,loadProfile)" data-index="'+e.target.sliderIndex+'""><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+e.target.name+'</label><label>'+e.target.address+'</label></div></div>';
+	//$mapslider.slick('slickAdd',div);
+	//var index = $mapslider.children('.slick-list').children('.slick-track').children('.slick-slide:last-child').attr('data-slick-index');
+	//$mapslider.slick('slickGoTo',parseInt(index));
+	$mapslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
+		console.log($(this).attr('data-index'));
+		if($(this).attr('data-index') == e.target.sliderIndex){
+			var index = $(this).attr("data-slick-index");
+			$mapslider.slick('slickGoTo',parseInt(index));
+		}
+	});
 }
 
 /*detect whether the slider is visible when click on any marker on the map*/
 function toggleSliders(){
 	if($cateslider.is(":visible") && $mapslider.is(":hidden") ){
+
 		$cateslider.slideToggle(200);
 		$mapslider.slideToggle(200);
+		updateMapSlider();
 	}
 		//$mapslider.slideToggle(300);
 	else{
@@ -131,7 +144,7 @@ function getUserCurrentLocation()
 		//var currentIcon =new  L.WSDivIcon({html: 'You are here'});
 		/*detect whether currentlocation marker exists before adding if exists panto the marker, if not adding and panto*/
 		if(CurrentLocation_array.length == 0){
-			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: myIcon}).bindPopup('You Are Here');
+			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: myIcon}).bindPopup('You Are Here',{autoPan:false});
 			CurrentLocation_array.push(CurrentLocationMarker);
 			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
 		}
@@ -155,11 +168,9 @@ function startLoadMapPage(type, callback){
 	/*detecet whether map is initialized and will not initial in the future*/
     if(typeof($map) == "undefined"){
     	initialMap();
-    	console.log("map initialed");
     }
     else{
     	reinitialMap();
-    	console.log("map reseted");
     }
     $(".loading_wrap").fadeIn(100);
     $.mobile.loading( 'show', {
@@ -197,19 +208,17 @@ function startLoadMapPage(type, callback){
 			alert("failed in loading data");	
 		}
     });
-   // return false;
+   //return false;
 }
 
 function endLoading(){
 	$.mobile.loading('hide');
-	$(".loading_wrap").fadeOut(200);
+	$(".loading_wrap").fadeOut(150);
 }
 
 /*return array based on the type*/
 function getDataAray(type){
 	var DataArray;
-	console.log("before switch");
-	console.log(type);
 	switch (type) 
     {
         case "acupuncturist": 
@@ -234,9 +243,8 @@ function getDataAray(type){
 //get the index of the therapy in the array and then load profile(now it is a common function)
 function getTherapy(element, callback){
 	// var index = $mapslider.slick('slickCurrentSlide');
-
 	var currentindex = $(element).attr('data-index');
-	console.log(currentindex);
+	//console.log(currentindex);
 		//var currentindex = parseInt($mapslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
 	var therapy = therapy_array[currentindex];
 	callback(therapy);
@@ -268,14 +276,12 @@ function loadProfile(therapy){
 
 //change the layer on the marker when category has been changed on the $cateslider
 function switchCategory(callback){
-	//var currentSlide = $cateslider.slick('slickCurrentSlide');
 	var nextType = $cateslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-type');
 	//determine whether the category has been changed
 	if(nextType == maplayer.type){
-		console.log('true');
+		return;
 	}
 	else{
-		console.log('false');
 		resetMapPage();
 		callback(nextType,addList);
 	}
@@ -287,4 +293,25 @@ function addList(DataArray){
 		div += '<div class="therapy_list_item" onclick="getTherapy(this,loadProfile)" data-index="'+i+'"><label class="text-center">'+DataArray[i].Name+'</label><label class="text-center">'+DataArray[i]['Full Address']+'</label></div>';
 	}
 	$("#therapy_list").append(div);
+}
+
+function updateMapSlider(){
+	//console.log('map moved');
+	$mapslider.children(".slick-list").children(".slick-track").empty();
+
+	maplayer.eachLayer(function(layer){
+		if(layer instanceof L.Marker){
+			if($map.getBounds().contains(layer.getLatLng())){
+				var div = createItem(layer);	
+				$mapslider.slick('slickAdd',div);	
+			}
+		}
+	});
+	$mapslider.slick('refresh');
+}
+
+function createItem(layer){
+	var div='<div data-index="'+layer.options['index']+'"><label>'+ layer.options['name']+'</label><label>'+ layer.options['address']+'</label></div>';
+	console.log(div);
+	return div;
 }

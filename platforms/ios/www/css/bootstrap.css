@@ -2606,9 +2606,9 @@ input[type="search"] {
     line-height: 46px;
   }
 }
-.form-group {
+/*.form-group {
   margin-bottom: 15px;
-}
+}*/
 .radio,
 .checkbox {
   position: relative;

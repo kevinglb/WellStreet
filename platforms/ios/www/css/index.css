@@ -92,6 +92,9 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 {
     background-image: url("../icon/icon-bars-g.png");
 }
+.icon-delete{
+    background-image: url("../icon/icon-delete.svg");
+}
 
 
 /* Login page goes here */
@@ -324,7 +327,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
 }
 .map-wrap{
      transform: translate3d(0,0,0);
@@ -361,7 +363,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 300ms;
     transition-duration: 300ms;
 }*/
-.map-wrap.hide{
+.map-wrap.toggle{
      transform: translate3d(-100%,0,0);
     -webkit-transform: translate3d(-100%,0,0);
     -webkit-transition-duration: 300ms;
@@ -369,7 +371,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 300ms;
     transition-duration: 300ms;
 }
-.list-wrap.show{
+.list-wrap.toggle{
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
     -webkit-transition-duration: 300ms;
@@ -381,7 +383,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 #therapy_list{
     width: 100%;
     height: 100%;
-    padding-top: 65px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch; 
 }
@@ -440,7 +441,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 .search_content{
     position: absolute;
     width: 95%;
-    margin: 70px 2.5% 0 2.5%;
+    margin: 0px 2.5%;
     top: 0;
     left: 0;
     z-index: 10;
@@ -479,8 +480,8 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border-radius: 0.325em;
 }
 #map {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     z-index: 1;
     display: block;
 }
@@ -512,7 +513,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 8%;
+    height: 10%;
     background-color: #fff;
     z-index: 3;
 }

@@ -1,6 +1,7 @@
 /* global variables and general functions */
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
 var $map;
+var $mapcontrol;
 var $mapslider = $("#detail_slider");
 var $cateslider = $("#category_slider");
 
@@ -40,7 +41,7 @@ function emailRegisterOnFocus(){
 	return	false;
 }
 function searchFocused(){
-	resetMapSearch();
+	//resetMapSearch();
 	//detect whether the history list is visible in case that user focus(click) on the search input when searching
 	if($("#search_history_list").is(":visible")){
 		return;
@@ -48,7 +49,7 @@ function searchFocused(){
 	else{
 		$("#search_history_list").slideToggle(200);
     	$(".overlay").toggle();
-    	$(".arrow_wrap a").toggle();
+    	// $(".arrow_wrap a").toggle();
     	//$(".search_wrap").addClass('appear');
 	}
     $('#search_history_list').unbind('click').on('click','li', function(){
@@ -66,12 +67,12 @@ function resetMapSearch(){
         $("#search_input").blur();
 	}
 	// hide timepicker_wrap and show button
-	if($("#timepicker_wrap").is(":visible")){
-		$("#timepicker_wrap").slideToggle(200);
-	}
-	if($(".arrow_wrap a").is(':hidden')){
-		$(".arrow_wrap a").toggle();
-	}
+	// if($("#timepicker_wrap").is(":visible")){
+	// 	$("#timepicker_wrap").slideToggle(200);
+	// }
+	// if($(".arrow_wrap a").is(':hidden')){
+	// 	$(".arrow_wrap a").toggle();
+	// }
 	// hide the overlay
 	if($('.overlay').is(":visible")){
 		console.log("overlay is visible");
@@ -83,9 +84,10 @@ function resetMapPage(){
 	/*clear mapslide and re-initial*/
 	console.time("resetMapPage");
 	//
-	if($(".map-wrap").hasClass("hide")){
+	if($(".map-wrap").hasClass("toggle") || $(".list-wrap").hasClass("toggle")){
 		toggleContent();
 	}
+	
 	//empty the list
 	$("#therapy_list").empty();
 	console.log("therapy_list is emptyed");
@@ -117,6 +119,7 @@ function removeAllMarkers(){
 
 /*for back button*/
 function slideBack(target_page,callback){
+	//console.time('slideback');
 	$.mobile.changePage("#"+target_page, 
     {
         transition: "slide",
@@ -126,11 +129,14 @@ function slideBack(target_page,callback){
     if(typeof(callback) == "function"){
     	callback();
     }
+    //console.timeEnd('slideback');
     return false;
 }
 
+
 /*for buttons that jumps to another page besides back button*/
 function changePage(target_page, transition,callback){
+	//console.time('changePage');
 	$.mobile.changePage("#"+target_page, 
     {
         transition: transition,
@@ -138,9 +144,40 @@ function changePage(target_page, transition,callback){
 	if(typeof(callback) == "function"){
     	callback();
     }
+
+    return false;
+    //console.timeEnd('changePage');
 }
 
 function toggleContent(){
-	$(".map-wrap").toggleClass('hide');
-	$(".list-wrap").toggleClass('show');
+	$(".map-wrap").toggleClass('toggle');
+	$(".list-wrap").toggleClass('toggle');
+}
+
+function getCategory(){
+	$.ajax(
+    {
+        url : categery_url,
+        username:  "123@123.com",
+        password: 123,
+        type: "POST",
+        data : {key: api_key},
+        dataType: 'json',
+        success: function(response)
+        {
+          if(response.status == "1")
+          {
+            console.log(JSON.stringify(response.results));
+          }
+          else
+          {
+           	console.log("failed");
+          }
+        },
+        error: function (error)
+        {
+          //alert("Sorry, failed to load patient triage history. Please check your network and try again later");
+         console.log(error);
+        }
+    });
 }
