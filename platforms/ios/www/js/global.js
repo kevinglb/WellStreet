@@ -7,6 +7,7 @@ var $cateslider = $("#category_slider");
 var maplayer;/*layer stores all markers*/
 //var maplayer_array = [] /*array sotres all layers for quick reload*/
 var markers_array=[];/*array stores all markers*/
+var markersinview_array=[];
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],draggable:true});//icon setting

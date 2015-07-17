@@ -11,7 +11,7 @@ function initialMap(){
 	else{
 	 	$map.setView([53.34778,-6.25972], 14);
 	}
-	$map.on('moveend',updateDetailSlider);
+	$map.on('moveend',updateLayer);
 }	
 
 /*reinitialMap after resetMap()*/
@@ -34,8 +34,6 @@ function addLayer(type,callback){
 	callback(therapy_array);
 	for(var i = 0,len=therapy_array.length; i< len;i++){
 		var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
-			
-		var div='';
 		var marker = new WSMarker(position,
 			{
 				icon:myIcon,
@@ -55,7 +53,6 @@ function addLayer(type,callback){
 		// div += '<div class="detail_content" onclick="getTherapy(loadProfile)"><div class="col-xs-3"><img class="img-circle"></img></div><div class="col-xs-9"><label>'+therapy_array[i].Name+'</label><label>'+therapy_array[i]['Full Address']+'</label></div></div>';	
 		// $detailslider.slick('slickAdd',div);
 	}
-
 	console.timeEnd('addlayer loop');
 	maplayer = L.layerGroup(markers_array);
 	maplayer.type=type;
@@ -107,7 +104,6 @@ function replaceLayer(type,callback){
 }
 //add brief info of selected marker into $detailslider
 function clickOnMarker(e){	
-	//console.log(e.target);
 	
 	//should detect whether the selected on is already in $detailslider 
 	toggleSliders();
@@ -128,10 +124,9 @@ function clickOnMarker(e){
 /*detect whether the slider is visible when click on any marker on the map*/
 function toggleSliders(){
 	if($cateslider.is(":visible") && $detailslider.is(":hidden") ){
-
 		$cateslider.slideToggle(200);
 		$detailslider.slideToggle(200);
-		updateDetailSlider();
+		//updateDetailSlider();
 	}
 		//$detailslider.slideToggle(300);
 	else{
@@ -285,6 +280,7 @@ function switchCategory(callback){
 		resetMapPage();
 		callback(nextType,addList);
 	}
+	reinitialMap();
 }
 
 function addList(DataArray){
@@ -306,7 +302,16 @@ function updateDetailSlider(){
 			}
 		}
 	});
+	$detailslider.on('swipe', function(e){
+		//var currentindex = $detailslider.slick('slickCurrentSlide');
+		var currentindex = parseInt($detailslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-slick-index'));
+		//console.log(currentindex);
+		//console.log(currentindex);
+		//$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
+		markersinview_array[currentindex].openPopup();
+	});
 	$detailslider.slick('refresh');
+	
 }
 
 function createItem(layer){
@@ -326,23 +331,17 @@ function initialDetailSlider(){
 	$detailslider.on('swipe', function(e){
 		//var currentindex = $detailslider.slick('slickCurrentSlide');
 		var currentindex = parseInt($detailslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));
+		console.log(currentindex);
 		//console.log(currentindex);
 		//$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
-		setTimeout(function(){markers_array[currentindex].openPopup();},300);
+		markers_array[currentindex].openPopup();
 	});
 
 	$detailslider.on('swipedown', function(){
 		if($cateslider.is(":hidden") && $detailslider.is(":visible") ){
 			$cateslider.slideToggle(200);
 			$detailslider.slideToggle(150);
-			$detailslider.empty();
-			$detailslider.removeClass("slick-initialized slick-slider");
-	
- 			$detailslider.slick({
-        		arrows: false,
-        		infinite: false,
-        		dots: false
-    		}); 
+
 		}
 		else{
 			return;
@@ -367,3 +366,42 @@ function initialCateSlider(){
     });
 }
 
+function updateLayer(){
+	console.log("start update layer");
+	//console.time('updatelayer loop');
+	var currentType= maplayer.type;
+	$map.removeLayer(maplayer);
+	markersinview_array = [];
+	//therapy_array = getDataAray(type);
+	//callback(therapy_array);
+	for(var i = 0,len=therapy_array.length; i< len;i++){
+		//var position = [therapy_array[i].Latitude,therapy_array[i].Longitude];
+		var latlng = L.latLng(therapy_array[i].Latitude, therapy_array[i].Longitude);
+		if($map.getBounds().pad(-0.1).contains(latlng)){
+			var marker = new WSMarker(latlng,
+			{
+				icon:myIcon,
+				index: i, 
+				name:therapy_array[i].Name,
+				address:therapy_array[i]['Full Address']
+			}).bindPopup(therapy_array[i].Name,{autoPan:false})
+			  .on('click',clickOnMarker);
+			marker.sliderIndex = i;
+			markersinview_array.push(marker);
+		}
+	}
+	//console.timeEnd('updatelayer loop');
+	maplayer = L.layerGroup(markersinview_array);
+	maplayer.type=currentType;
+	maplayer.addTo($map);
+	updateDetailSlider();
+	endLoading();
+	// if($detailslider.is(':visible')){
+	// 	$detailslider.slideToggle(200, endLoading);
+	// }
+	// else{
+	// 	endLoading();
+	// }
+	
+
+}
