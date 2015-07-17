@@ -47,7 +47,7 @@ function addLayer(type,callback){
 		marker.sliderIndex = i;
 		markers_array.push(marker);
 	}
-	console.timeEnd('addlayer loop');
+	//console.timeEnd('addlayer loop');
 	maplayer = L.layerGroup(markers_array);
 	maplayer.type=type;
 	maplayer.addTo($map);
@@ -132,7 +132,10 @@ function startLoadMapPage(type, callback){
 			theme: 'd',
 			html: ""
 		});
-    initialDetailSlider();
+    if(!$detailslider.hasClass('slick-initialized')){
+    	    initialDetailSlider();
+    }
+
     $("#map_page").one('pageshow', function(){
 		if(type){
 			//detect whether the $cateslider has initialized already
@@ -242,7 +245,7 @@ function addList(DataArray){
 }
 
 function updateDetailSlider(){
-	//console.log('map moved');
+	console.log('detailslider updeted');
 	$detailslider.children(".slick-list").children(".slick-track").empty();
 	maplayer.eachLayer(function(layer){
 		if(layer instanceof L.Marker){
@@ -273,7 +276,6 @@ function initialDetailSlider(){
         dots: false,
         speed: 150
     });
-
 	$detailslider.on('swipe', function(e){
 		//var currentindex = $detailslider.slick('slickCurrentSlide');
 		var currentindex = parseInt($detailslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-index'));

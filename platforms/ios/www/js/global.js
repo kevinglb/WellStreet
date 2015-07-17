@@ -82,7 +82,6 @@ function resetMapSearch(){
 function resetMapPage(){
 	/*clear mapslide and re-initial*/
 	console.time("resetMapPage");
-	//
 	if($(".map-wrap").hasClass("toggle") || $(".list-wrap").hasClass("toggle")){
 		toggleContent();
 	}
@@ -90,11 +89,12 @@ function resetMapPage(){
 	//empty the list
 	$("#therapy_list").empty();
 	console.log("therapy_list is emptyed");
-	$detailslider.children(".slick-list").children(".slick-track").empty();
+	//$detailslider.children(".slick-list").children(".slick-track").empty();
 	
 	// if($detailslider.is(":hidden")){
 	// 	$detailslider.slideToggle(200);
 	// }
+	
 	if($cateslider.is(":hidden")){
 		$cateslider.slideToggle(200);
 	}
