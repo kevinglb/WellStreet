@@ -1,12 +1,11 @@
 /* global variables and general functions */
 /* clarify DOM targets through ID or class name to aovid using ID or Class name in other functions as much as we can */
 var $map;
-var $mapcontrol;
-var $mapslider = $("#detail_slider");
+var $detailslider = $("#detail_slider");
 var $cateslider = $("#category_slider");
 
 var maplayer;/*layer stores all markers*/
-var maplayer_array = [] /*array sotres all layers for quick reload*/
+//var maplayer_array = [] /*array sotres all layers for quick reload*/
 var markers_array=[];/*array stores all markers*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
@@ -91,10 +90,10 @@ function resetMapPage(){
 	//empty the list
 	$("#therapy_list").empty();
 	console.log("therapy_list is emptyed");
-	$mapslider.children(".slick-list").children(".slick-track").empty();
+	$detailslider.children(".slick-list").children(".slick-track").empty();
 	
-	// if($mapslider.is(":hidden")){
-	// 	$mapslider.slideToggle(200);
+	// if($detailslider.is(":hidden")){
+	// 	$detailslider.slideToggle(200);
 	// }
 	if($cateslider.is(":hidden")){
 		$cateslider.slideToggle(200);

@@ -169,7 +169,6 @@
             </div>
             <div data-role="main" class="ui-content">
                 <div class="loading_wrap"></div>
-               
                 <div class="search_wrap">
                         <div class="row search_input_wrap">
                             <div class="col-xs-10">
@@ -220,7 +219,6 @@
                             <a herf="#" class="ui-btn no-border">Select Time</a>
                         </div> -->
                     </div>
-                
                     <div id="map"></div>
                     <div id="detail_slider"></div>
                     <div id="category_slider">
@@ -230,8 +228,8 @@
                         <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
                         <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
                     </div>
+                    <div class="filter-wrap"></div>
                 </div>
-
                 <div class="list-wrap">
                     <div id="therapy_list">
                     </div>
@@ -292,12 +290,12 @@
          
             //var background_timer = setInterval(changeBackgroundImage, 3000); 
             // clearInterval(background_timer); 
-            $mapslider.slick({
-                arrows: false,
-                infinite: false,
-                dots: false,
-                speed: 150
-            }); 
+            // $detailslider.slick({
+            //     arrows: false,
+            //     infinite: false,
+            //     dots: false,
+            //     speed: 150
+            // }); 
             
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
@@ -307,10 +305,7 @@
             $("#map_page").noClickDelay();
             $("#profile_page").noClickDelay();
         })
-        // $cateslider.on('afterChange',function(){
-        //     switchCategory(addLayer);
-        // });
-        /*the flowing two functions can be wrapped as a general one*/
+
         $(".arrow_wrap a").tap(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
@@ -327,15 +322,7 @@
             return false;
         });
 
-        $cateslider.on('afterChange',function(e){
-            if(typeof(maplayer) == 'undefined'){
-                return;
-            }
-            else{
-                
-                switchCategory(addLayer);
-            }
-        });
+        
 
         $('#register_email').on('focus',function(e){
             if($(".login-inner-wrap").is(":visible")){
@@ -359,7 +346,6 @@
                 return;
             }
         }
-
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
@@ -371,7 +357,6 @@
         {
             alert("Sorry, cannot get your location now.");            
         }
-
         function showSearchWrap(){
             $(".search_wrap").addClass('appear');
            
