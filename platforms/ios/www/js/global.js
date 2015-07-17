@@ -141,6 +141,9 @@ function changePage(target_page, transition,callback){
 }
 
 function toggleContent(){
+	if($(".filter-wrap").hasClass("toggle")){
+		$(".filter-wrap").toggleClass('toggle');
+	}
 	$(".map-wrap").toggleClass('toggle');
 	$(".list-wrap").toggleClass('toggle');
 }

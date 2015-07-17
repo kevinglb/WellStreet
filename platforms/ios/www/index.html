@@ -228,7 +228,9 @@
                         <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
                         <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
                     </div>
-                    <div class="filter-wrap"></div>
+                    <div class="filter-wrap">
+                        <button class="btn btn-large btn-block" onclick="toggleFilter()">Done</button>
+                    </div>
                 </div>
                 <div class="list-wrap">
                     <div id="therapy_list">
@@ -324,7 +326,10 @@
                 $(".ui-header .delete-btn").fadeIn(200);
             }
         });
+        function toggleFilter(){
+            $(".filter-wrap").toggleClass('toggle');
 
+        }
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
                 $('#register_email').blur();

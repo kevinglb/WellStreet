@@ -310,6 +310,9 @@ function initialCateSlider(){
             switchCategory(addLayer);
         }
     });
+ 	$cateslider.on('click',function(e){
+ 		$(".filter-wrap").toggleClass('toggle');
+ 	});
 }
 
 function updateLayer(){
