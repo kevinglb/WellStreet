@@ -5,7 +5,6 @@ var $detailslider = $("#detail_slider");
 var $cateslider = $("#category_slider");
 
 var maplayer;/*layer stores all markers*/
-//var maplayer_array = [] /*array sotres all layers for quick reload*/
 var markers_array=[];/*array stores all markers*/
 var markersinview_array=[];
 var therapy_array = [];/*array stores all therapies under selected categery*/
@@ -102,8 +101,6 @@ function resetMapPage(){
     /*remove all markers on the map*/
 	removeAllMarkers();
 	console.timeEnd("resetMapPage");
-
-
 }
 
 function removeAllMarkers(){
@@ -139,7 +136,6 @@ function changePage(target_page, transition,callback){
 	if(typeof(callback) == "function"){
     	callback();
     }
-
     return false;
     //console.timeEnd('changePage');
 }

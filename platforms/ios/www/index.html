@@ -287,16 +287,6 @@
         // }
         $(document).ready(function()
         {    
-         
-            //var background_timer = setInterval(changeBackgroundImage, 3000); 
-            // clearInterval(background_timer); 
-            // $detailslider.slick({
-            //     arrows: false,
-            //     infinite: false,
-            //     dots: false,
-            //     speed: 150
-            // }); 
-            
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $("#login_page").noClickDelay();  
@@ -362,7 +352,6 @@
            
             setTimeout(function(){$(".search_wrap form input").focus();},300);
         
-            
             $(".search_wrap form").on('submit', function(e){
                 e.preventDefault();
                 hideSearchWrap();
