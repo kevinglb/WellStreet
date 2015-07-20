@@ -5,8 +5,7 @@ var $detailslider = $("#detail_slider");
 var $cateslider = $("#category_slider");
 
 var maplayer;/*layer stores all markers*/
-var markers_array=[];/*array stores all markers*/
-var markersinview_array=[];
+var markersInView_array=[]; /*stores all current visible markers on the map*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],draggable:true});//icon setting
@@ -81,6 +80,7 @@ function resetMapSearch(){
 
 function resetMapPage(){
 	/*clear mapslide and re-initial*/
+	removeAllMarkers();
 	console.time("resetMapPage");
 	if($(".map-wrap").hasClass("toggle") || $(".list-wrap").hasClass("toggle")){
 		toggleContent();
@@ -98,15 +98,15 @@ function resetMapPage(){
 	if($cateslider.is(":hidden")){
 		$cateslider.slideToggle(200);
 	}
-    /*remove all markers on the map*/
-	removeAllMarkers();
+    
+	
 	console.timeEnd("resetMapPage");
 }
 
 function removeAllMarkers(){
 	$map.removeLayer(maplayer);
-	markers_array = [];
 	therapy_array = [];
+	markersInView_array = [];
 }
 
 /*for back button*/
