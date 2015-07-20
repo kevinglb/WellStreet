@@ -118,10 +118,19 @@ function slideBack(target_page,callback){
         reverse: true,
         changeHash: true
     });
+    
+	//toggle two wraps
+    if(target_page == "category_page"){
+    	if($(".filter-wrap").hasClass('toggle')){
+    		$(".filter-wrap").toggleClass('toggle');
+    	}
+    	if($(".detail-wrap").hasClass('toggle')){
+    		$(".detail-wrap").toggleClass('toggle');
+    	}
+    }
     if(typeof(callback) == "function"){
     	callback();
     }
-    //console.timeEnd('slideback');
     return false;
 }
 

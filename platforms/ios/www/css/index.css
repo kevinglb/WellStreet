@@ -32,7 +32,6 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
     width:100%;
     height:100%;
     margin:0px;
@@ -404,7 +403,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 250ms;
     transition-duration: 250ms;
 }
-.filter-wrap button, .detail-wrap button{
+.filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
     position: absolute;
     font-size: 1.2em;
     bottom: 30px;
@@ -414,13 +413,13 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border: 2px solid #d6d6d6;
 
 }
-.filter-wrap .filter-type-wrap, .filter-wrap .filter-peference-wrap{
-    height: 80%;
+.filter-wrap .filter-type-wrap, .filter-wrap .filter-perference-wrap{
+    height: 75%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 10%;
+    margin-top: 4em;
 }
 .filter-wrap .filter-type-wrap{
      transform: translate3d(0,0,0);
@@ -438,7 +437,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 200ms;
     transition-duration: 200ms;
 }
-.filter-wrap .filter-peference-wrap{
+.filter-wrap .filter-perference-wrap{
      transform: translate3d(100%,0,0);
     -webkit-transform: translate3d(100%,0,0);
     -webkit-transition-duration: 200ms;
@@ -446,7 +445,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 200ms;
     transition-duration: 200ms;
 }
-.filter-wrap .filter-peference-wrap.toggle{
+.filter-wrap .filter-perference-wrap.toggle{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
     -webkit-transition-duration: 200ms;
@@ -454,10 +453,34 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 200ms;
     transition-duration: 200ms;
 }
+
+.filter-button-wrap{
+    width: 90%;
+    margin: 0.5em 5% 0 5%;
+    border: 1px solid  #d6d6d6;
+    border-radius: 4.375px;
+}
+.filter-button-wrap::after{
+    clear: both;
+}
+.filter-button-wrap .filter-switch-button{
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: 0;
+    opacity: 0.75;
+}
+.filter-button-wrap .filter-switch-button.active{
+    background-color: rgba(33,33,33,0.6);
+    color:#FFFFFF;
+    opacity: 1;
+}
 #therapy_list{
+    position: relative;
+    display: block;
     width: 100%;
     height: 100%;
-    overflow:scroll;
+    overflow-y:scroll;
     -webkit-overflow-scrolling: touch; 
 }
 

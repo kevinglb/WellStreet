@@ -151,6 +151,7 @@
                                 </div>
                             </div>
                         </a>
+
                     </div>
                 </div>
             </div>
@@ -223,7 +224,7 @@
                     <div id="detail_slider"></div>
                     <!-- a wrp showing timetable ? -->
                     <div class="detail-wrap">
-                         <button class="btn btn-large btn-block" onclick="toggleBottomWrap(this);return false;">OK</button>
+                         <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">OK</button>
                     </div>
                     <div id="category_slider">
                         <div class="detail_content text-center" data-index='0' data-type="acupuncturist">Acupuncturist</div>
@@ -234,15 +235,23 @@
                     </div>
                     <!-- a wrap showing the peference filter -->
                     <div class="filter-wrap">
+                        <div class="filter-button-wrap">
+                            <button class="btn btn-large btn-block filter-switch-button active" onclick="switchFilterContent(this);return false;">Type</button>
+                            <button class="btn btn-large btn-block filter-switch-button" onclick="switchFilterContent(this);return false;">Perference</button>
+                            <div class="clear"></div>
+                        </div>
 
-                        <a href="#" class="btn"  onclick="switchFilterContent();return false;">switch</a>
+                       <!--  <a href="#" class="btn"  onclick="switchFilterContent();return false;">switch</a> -->
                         <div class="filter-type-wrap">
                             filter type wrap
                         </div>
-                        <div class="filter-peference-wrap">
-                            filter peference wrap
+                        <div class="filter-perference-wrap">
+                            <div>
+                                <label>Distance within</label>
+                                <input type="range" min="1" max="10"></input>
+                            </div>
                         </div>
-                        <button class="btn btn-large btn-block" onclick="toggleBottomWrap(this);return false;">Done</button>
+                        <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">Done</button>
                     </div>
                 </div>
                 <div class="list-wrap">
@@ -335,9 +344,11 @@
                 return;
             }
             else{
-                $(".social-login-wrap").slideToggle(400);
-                $(".login-inner-wrap").slideToggle(400);
-                $(".ui-header .delete-btn").fadeIn(200);
+                e.preventDefault();
+                $(".social-login-wrap").slideToggle(300);
+                $(".login-inner-wrap").slideToggle(300);
+                $(".ui-header .delete-btn").fadeIn(300);
+                $('#register_email').focus();
             }
         });
         function toggleBottomWrap(element){
@@ -347,14 +358,15 @@
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
                 $('#register_email').blur();
-                $(".social-login-wrap").slideToggle(400);
-                $(".login-inner-wrap").slideToggle(400);
+                $(".social-login-wrap").slideToggle(300);
+                $(".login-inner-wrap").slideToggle(300);
                 $(".ui-header .delete-btn").fadeOut(200);
             }
             else{
                 return;
             }
         }
+        
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
@@ -381,9 +393,16 @@
             $(".search_wrap").removeClass('appear');
         }
 
-        function switchFilterContent(){
-            $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
-            $(".filter-wrap .filter-peference-wrap").toggleClass('toggle');
+        function switchFilterContent(element){
+            var currentContent = $(element);
+            if(currentContent.hasClass("active")){
+                return;
+            }
+            else{
+                $(".filter-wrap .filter-button-wrap .filter-switch-button").toggleClass('active');
+                $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
+                $(".filter-wrap .filter-perference-wrap").toggleClass('toggle');
+            }
         }
     </script>
     </body>
