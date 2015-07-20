@@ -221,6 +221,10 @@
                     </div>
                     <div id="map"></div>
                     <div id="detail_slider"></div>
+                    <!-- a wrp showing timetable ? -->
+                    <div class="detail-wrap">
+                         <button class="btn btn-large btn-block" onclick="toggleBottomWrap(this);return false;">OK</button>
+                    </div>
                     <div id="category_slider">
                         <div class="detail_content text-center" data-index='0' data-type="acupuncturist">Acupuncturist</div>
                         <div class="detail_content text-center" data-index='1' data-type="allergy">allergy</div>
@@ -228,8 +232,17 @@
                         <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
                         <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
                     </div>
+                    <!-- a wrap showing the peference filter -->
                     <div class="filter-wrap">
-                        <button class="btn btn-large btn-block" onclick="toggleFilter()">Done</button>
+
+                        <a href="#" class="btn"  onclick="switchFilterContent();return false;">switch</a>
+                        <div class="filter-type-wrap">
+                            filter type wrap
+                        </div>
+                        <div class="filter-peference-wrap">
+                            filter peference wrap
+                        </div>
+                        <button class="btn btn-large btn-block" onclick="toggleBottomWrap(this);return false;">Done</button>
                     </div>
                 </div>
                 <div class="list-wrap">
@@ -269,6 +282,7 @@
     <script type="text/javascript" src="js/json_array.min.js"></script>
     <script type="text/javascript" src="js/noClickDelay.js"></script>
     <script type="text/javascript" src="js/swipe.js"></script>
+    <!-- <script type="text/javascript" src="js/swipeevent.js"></script> -->
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
@@ -298,7 +312,7 @@
             $("#profile_page").noClickDelay();
         })
 
-        $(".arrow_wrap a").tap(function(){
+        $(".arrow_wrap a").click(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
             $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
@@ -326,9 +340,9 @@
                 $(".ui-header .delete-btn").fadeIn(200);
             }
         });
-        function toggleFilter(){
-            $(".filter-wrap").toggleClass('toggle');
-
+        function toggleBottomWrap(element){
+            var target = $(element).parent('div');
+            target.toggleClass('toggle');
         }
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
@@ -365,6 +379,11 @@
         function hideSearchWrap(){
              $(".search_wrap form input").blur();
             $(".search_wrap").removeClass('appear');
+        }
+
+        function switchFilterContent(){
+            $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
+            $(".filter-wrap .filter-peference-wrap").toggleClass('toggle');
         }
     </script>
     </body>

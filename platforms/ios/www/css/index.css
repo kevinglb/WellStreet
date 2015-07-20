@@ -38,8 +38,12 @@ body {
     margin:0px;
     padding:0px;
     -moz-transition: all .1s ease-in-out;
-   -webkit-transition: all .1s ease-in-out;
-   transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .ui-content {
@@ -322,7 +326,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     line-height: 1.5em;
 }
 
-.map-wrap, .list-wrap,.filter-wrap{
+.map-wrap, .list-wrap,.filter-wrap,.detail-wrap{
     position: absolute;
     top: 0;
     left: 0;
@@ -358,6 +362,16 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 250ms;
     transition-duration: 250ms;
 }
+.detail-wrap{
+    z-index: 20;
+    background-color: rgba(240,240,240,0.95);
+    transform: translate3d(0,100%,0);
+    -webkit-transform: translate3d(0,100%,0);
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
 .map-wrap.toggle{
      transform: translate3d(-100%,0,0);
     -webkit-transform: translate3d(-100%,0,0);
@@ -382,8 +396,15 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -o-transition-duration: 250ms;
     transition-duration: 250ms;
 }
-
-.filter-wrap button{
+.detail-wrap.toggle{
+     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+.filter-wrap button, .detail-wrap button{
     position: absolute;
     font-size: 1.2em;
     bottom: 30px;
@@ -393,12 +414,53 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border: 2px solid #d6d6d6;
 
 }
+.filter-wrap .filter-type-wrap, .filter-wrap .filter-peference-wrap{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10%;
+}
+.filter-wrap .filter-type-wrap{
+     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+.filter-wrap .filter-type-wrap.toggle{
+     transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-100%,0,0);
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+.filter-wrap .filter-peference-wrap{
+     transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+.filter-wrap .filter-peference-wrap.toggle{
+     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
 #therapy_list{
     width: 100%;
     height: 100%;
     overflow:scroll;
     -webkit-overflow-scrolling: touch; 
 }
+
 .therapy_list_item{
     padding: 15px 10px;
     border-bottom: 1px solid #d6d6d6;
