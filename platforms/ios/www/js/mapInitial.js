@@ -352,3 +352,12 @@ function initialCateSlider(){
  	});
 }
 
+function addDivIcon(){
+	var currentIcon =new WSDivIcon({html: '40 min'});
+	var marker = L.marker(CurrentLocation,{icon: currentIcon}).addTo($map);
+
+	marker.on('click', function(e){
+		$(e.target._icon).toggleClass('active');
+		//$(e.target._icon).html('the content is changed');
+	})
+}

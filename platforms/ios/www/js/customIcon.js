@@ -30,20 +30,42 @@
 // 	}
 // });
 
-L.WSDivIcon = L.DivIcon.extend({
-	options: {
-		className: 'my-divIcon',
-		iconSize: [100,20],
-		html: ''
+// L.WSDivIcon = L.DivIcon.extend({
+// 	options: {
+// 		className: 'my-divIcon',
+// 		iconSize: [100,20],
+// 		html: ''
 
-	},
-	createIcon: function () {
-        var div = L.DivIcon.prototype.createIcon.call(this),
-            options = this.options;
+// 	},
+// 	createIcon: function () {
+//         var div = L.DivIcon.prototype.createIcon.call(this),
+//             options = this.options;
 
+//         if (options.html) {
+//                 div.innerHTML = this._createInner();
+//             }
+//             return div;
+//         },
+// });
+
+WSDivIcon = L.DivIcon.extend({
+    options:{
+        className: 'my-divIcon',
+        iconSize: [60,30],
+        html: '',
+
+    },
+    createIcon: function() {
+    var div = L.DivIcon.prototype.createIcon.call(this),
+        options = this.options;
         if (options.html) {
-                div.innerHTML = this._createInner();
-            }
-            return div;
-        },
+            div.innerHTML = options.html;
+        }
+        return div;
+    },
+    // setContent: function(html){
+    //     this.options.html = html;
+    //     this.html(html);
+    // }
 });
+

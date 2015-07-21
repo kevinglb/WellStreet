@@ -49,7 +49,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     height: 100%;
-     overflow-y:scroll;
+    overflow-y:scroll;
     -webkit-overflow-scrolling: touch;     
     color: #495559;  
 }
@@ -61,7 +61,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 }
 
 /*icons setting*/
-
 .icon
 {
     display: inline-block;
@@ -77,7 +76,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 {
     background-image: url('../icon/location-dark.svg'); 
 }
-
 .icon-arrow-left
 {
     background-image: url("../icon/icon-arrow-left.png");
@@ -98,8 +96,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 .icon-delete{
     background-image: url("../icon/icon-delete.svg");
 }
-
-
 /* Login page goes here */
 .bg-wrap{
     background: url(../img/b1.png);
@@ -127,7 +123,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 #login_page .ui-content{
     padding-top: 65px;
 }
-
 #login_page .btn-wrap{
     position: absolute;
     left: 0;
@@ -235,9 +230,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 
 /* Categories page end*/
 
-
-/* Portrait layout (default) */
-
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -247,7 +239,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
                                       /* offset horizontal: half of image width and text area width */
     }
 }
-
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -332,76 +323,49 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     width: 100%;
     height: 100%;
 }
+.animated{
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
 .map-wrap{
-     transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
 }
 .list-wrap{
      background-color: #fff;
     -webkit-overflow-scrolling: touch; 
-   
     transform: translate3d(100%,0,0);
     -webkit-transform: translate3d(100%,0,0);
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
 }
 .filter-wrap{
     z-index: 20;
     background-color: rgba(240,240,240,0.95);
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
-    -webkit-transition-duration: 250ms;
-    -moz-transition-duration: 250ms;
-    -o-transition-duration: 250ms;
-    transition-duration: 250ms;
 }
 .detail-wrap{
     z-index: 20;
     background-color: rgba(240,240,240,0.95);
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
-    -webkit-transition-duration: 250ms;
-    -moz-transition-duration: 250ms;
-    -o-transition-duration: 250ms;
-    transition-duration: 250ms;
 }
 .map-wrap.toggle{
      transform: translate3d(-100%,0,0);
     -webkit-transform: translate3d(-100%,0,0);
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
 }
 .list-wrap.toggle{
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
 }
 .filter-wrap.toggle{
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 250ms;
-    -moz-transition-duration: 250ms;
-    -o-transition-duration: 250ms;
-    transition-duration: 250ms;
 }
 .detail-wrap.toggle{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 250ms;
-    -moz-transition-duration: 250ms;
-    -o-transition-duration: 250ms;
-    transition-duration: 250ms;
 }
 .filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
     position: absolute;
@@ -424,34 +388,18 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 .filter-wrap .filter-type-wrap{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
 }
 .filter-wrap .filter-type-wrap.toggle{
      transform: translate3d(-100%,0,0);
     -webkit-transform: translate3d(-100%,0,0);
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
 }
 .filter-wrap .filter-perference-wrap{
      transform: translate3d(100%,0,0);
     -webkit-transform: translate3d(100%,0,0);
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
 }
 .filter-wrap .filter-perference-wrap.toggle{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
 }
 
 .filter-button-wrap{
@@ -647,24 +595,34 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 
 div.my-divIcon{
     text-align: center;
-    padding: 5px;
-    border-radius: 8px;
-    background-color: #fff;
+    padding: 5px 0px;
+    border-radius: 6px;
     margin-left: -50px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    background-color: #00CFC1;
+}
+div.my-divIcon.active{
+    color: #FFF;
+    background-color: #F9564F;
 }
 div.my-divIcon:after {
     content:'';
     position: absolute;
     top: 100%;
     left: 0%;
-    margin-left:45px;
+    margin-left:20px;
     width: 0;
     height: 0;
-    border-top: solid 12px #fff;
-    border-left: solid 12px transparent;
-    border-right: solid 12px transparent;
+    border-top: solid 8px #00CFC1;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
 }
-
+div.my-divIcon.active:after{
+    border-top: solid 8px #F9564F;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
 .no-border {
     border:none;
     background-color: transparent;
