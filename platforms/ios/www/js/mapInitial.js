@@ -87,17 +87,20 @@ function addLayer(type,callback){
 	//add content to the list
 	addList(therapy_array);
 	var currentBounds = $map.getBounds().pad(-0.1);
+
+
+	
 	for(var i = 0,len=therapy_array.length; i< len;i++){
+		var DivIcon =new WSDivIcon({html: i});
 		var latlng = L.latLng(therapy_array[i].Latitude, therapy_array[i].Longitude);
 		if(currentBounds.contains(latlng)){
 			var marker = new WSMarker(latlng,
 			{
-				icon:myIcon,
+				icon:DivIcon,
 				index: i, 
 				name:therapy_array[i].Name,
 				address:therapy_array[i]['Full Address']
-			}).bindPopup(therapy_array[i].Name,{autoPan:false})
-			  .on('click',clickOnMarker);
+			}).on('click',clickOnMarker);
 			
 			markersInView_array.push(marker);
 		}
@@ -125,16 +128,16 @@ function updateLayer(callback){
 
 	var currentBounds = $map.getBounds().pad(-0.1);
 	for(var i = 0,len=therapy_array.length; i< len;i++){
+		var DivIcon =new WSDivIcon({html: i});
 		var latlng = L.latLng(therapy_array[i].Latitude, therapy_array[i].Longitude);
 		if(currentBounds.contains(latlng)){
 			var marker = new WSMarker(latlng,
 			{
-				icon:myIcon,
+				icon:DivIcon,
 				index: i, 
 				name:therapy_array[i].Name,
 				address:therapy_array[i]['Full Address']
-			}).bindPopup(therapy_array[i].Name,{autoPan:false})
-			  .on('click',clickOnMarker);
+			}).on('click',clickOnMarker);
 			markersInView_array.push(marker);
 		}
 	}
@@ -153,6 +156,7 @@ function updateLayer(callback){
 //add brief info of selected marker into $detailslider
 function clickOnMarker(e){	
 	toggleSliders();
+	$(e.target._icon).toggleClass('active');
 	$detailslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
 		if($(this).attr('data-index') == e.target.options.index){
 			var index = $(this).attr("data-slick-index");
@@ -290,7 +294,8 @@ function updateDetailSlider(DataArray){
 	}
 	$detailslider.on('swipe', function(e){
 		var currentindex = parseInt($detailslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-slick-index'));
-		markersInView_array[currentindex].openPopup();
+		//markersInView_array[currentindex].openPopup();
+		$(markersInView_array[currentindex]._icon).addClass('active');
 	});
 	$detailslider.slick('refresh');	
 }

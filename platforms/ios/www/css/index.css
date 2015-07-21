@@ -600,11 +600,11 @@ div.my-divIcon{
     margin-left: -50px;
     font-size: 1.2em;
     line-height: 1.4em;
-    background-color: #00CFC1;
+    background-color: rgba(0, 207, 193, 0.8);
 }
 div.my-divIcon.active{
     color: #FFF;
-    background-color: #F9564F;
+    background-color: rgba(249, 86, 79, 0.8);
 }
 div.my-divIcon:after {
     content:'';
@@ -614,12 +614,12 @@ div.my-divIcon:after {
     margin-left:20px;
     width: 0;
     height: 0;
-    border-top: solid 8px #00CFC1;
+    border-top: solid 8px rgba(0, 207, 193, 0.8);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }
 div.my-divIcon.active:after{
-    border-top: solid 8px #F9564F;
+    border-top: solid 8px rgba(249, 86, 79, 0.8);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }
