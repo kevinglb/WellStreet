@@ -164,6 +164,7 @@ function clickOnMarker(e){
 		}
 	}
 	$(e.target._icon).toggleClass('active');
+
 	$detailslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
 		if($(this).attr('data-index') == e.target.options.index){
 			var index = $(this).attr("data-slick-index");
@@ -359,6 +360,9 @@ function initialCateSlider(){
     });
  	$cateslider.on('swipeup',function(e){
  		$(".filter-wrap").toggleClass('toggle');
+ 		$(".ui-header .back-btn").hide();
+ 		$(".ui-header .list-btn").hide();
+ 		$(".ui-header .cancel-btn").show();
  	});
 }
 

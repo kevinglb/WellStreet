@@ -40,11 +40,9 @@ body {
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
 }
-
 ::-webkit-scrollbar { 
     display: none; 
 }
-
 .ui-content {
     padding: 0;
     overflow-x: hidden;
@@ -53,13 +51,11 @@ body {
     -webkit-overflow-scrolling: touch;     
     color: #495559;  
 }
-
 a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-right.ui-btn.ui-shadow.ui-corner-all
 {
     border: none;
     background-color: transparent;
 }
-
 /*icons setting*/
 .icon
 {
@@ -249,7 +245,7 @@ h1 {
 }
 
 a{
-    color:#000;
+    color:#fff;
     text-decoration: none;
 }
 .event {
@@ -573,18 +569,24 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 
 /* ui-header*/
 .ui-page .ui-header{
-    
     padding-top: 22.5px;
     height: 65px;
     color: #FFFFFF;
     background-color: rgba(143, 205, 190, 0.9);
 }
-
+.ui-page .ui-header .ui-btn-left, .ui-page .ui-header .ui-btn-right{
+    margin: 3.5vh 0 0 0;
+    height: 6vh;
+}
+.ui-page .ui-header .ui-btn-left .ui-btn, .ui-page .ui-header .ui-btn-right .ui-btn {
+    height: 100%;
+    color: #fff;
+}
+/*DivIcon*/
 .leaflet-div-icon {
     background: transparent;
     border: none;
 }
- 
 .leaflet-marker-icon .number{
     position: relative;
     top: -37px;
@@ -624,19 +626,19 @@ div.my-divIcon.active:after{
 }
 div.current-location-icon{
     border: 2px solid #d7d7d7;
-    background-color: rgba(0, 207, 193, 0.8);
+    background-color: rgba(249, 86, 79, 0.9);
     border-radius: 50%;
     z-index: 350;
 }
 div.current-location-icon:after{
     content: '';
     position: absolute;
-     top: 100%;
+     top: 25px;
     left: 0%;
-    margin-left:10px;
+    margin-left:4px;
     width: 0;
     height: 0;
-    border-top: solid 8px rgba(0, 207, 193, 0.8);
+    border-top: solid 18px rgba(249, 86, 79, 0.9);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }
@@ -646,7 +648,7 @@ div.current-location-icon:after{
     padding: 0;
 }
 .location_btn{
-    -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
@@ -658,9 +660,7 @@ div.current-location-icon:after{
   border-radius: 0;
   float: left;
   border: none;
-  
   outline: none;
-  
 }
 .has-feedback .right-feedback .form-control {
     padding-right:  0;
@@ -669,13 +669,10 @@ div.current-location-icon:after{
     line-height: 53em;
     font-size: 1.2em;
 }
-
 .form-control[readonly]{
     background: none;
 }
-
 .form-control-feedback {
-
     width: 42.5px;
     height: 36px;
     background-repeat: no-repeat;
@@ -687,7 +684,6 @@ div.current-location-icon:after{
     vertical-align: middle;
     text-align: center;
 }
-
 .register-wrap{
     position: absolute;
     width: 100%;

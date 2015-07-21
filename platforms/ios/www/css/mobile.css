@@ -11,12 +11,12 @@ div[class^="col-xs-"]{
 	padding-right: 5px;
 }
 .ui-page .ui-header{
-	padding-top: 3.6vh;
-    height: 9.6vh;
+	padding-top: 3.5vh;
+    height: 9.5vh;
 }
 .map-wrap, .list-wrap{
-    margin-top: 9.6vh;
+    margin-top: 9.5vh;
 }
 .map-wrap, .list-wrap{
-	height: 90.4%;
+	height: 90.5%;
 }
