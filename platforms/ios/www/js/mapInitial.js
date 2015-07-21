@@ -117,6 +117,7 @@ function addLayer(type,callback){
 	else{
 		endLoading();
 	}
+	getUserCurrentLocation();
 	callback(markersInView_array);
 }
 
@@ -156,6 +157,12 @@ function updateLayer(callback){
 //add brief info of selected marker into $detailslider
 function clickOnMarker(e){	
 	toggleSliders();
+
+	for(var i=0, len = markersInView_array.length;i < len;i++){
+		if($(markersInView_array[i]._icon).hasClass('active')){
+			$(markersInView_array[i]._icon).removeClass('active')
+		}
+	}
 	$(e.target._icon).toggleClass('active');
 	$detailslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
 		if($(this).attr('data-index') == e.target.options.index){
@@ -182,10 +189,10 @@ function getUserCurrentLocation()
 	if(CurrentLocation.length !=0)
 	{
 		//var currentIcon = L.divIcon({className: 'my-divIcon', html:"You are here",iconSize:[100,0] });
-		//var currentIcon =new  L.WSDivIcon({html: 'You are here'});
+		var currentIcon =new  WSDivIcon({className: 'current-location-icon',iconSize:[32,32],html: ''});
 		/*detect whether currentlocation marker exists before adding if exists panto the marker, if not adding and panto*/
 		if(CurrentLocation_array.length == 0){
-			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: myIcon}).bindPopup('You Are Here',{autoPan:false});
+			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: currentIcon});//.bindPopup('You Are Here',{autoPan:false});
 			CurrentLocation_array.push(CurrentLocationMarker);
 			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
 		}
@@ -193,7 +200,7 @@ function getUserCurrentLocation()
 			console.log('CurrentLocation marker exists');
 		}
 		$map.panTo(CurrentLocation_array[0].getLatLng(), {animate: true, duration: 0.5});
-		setTimeout(function(){CurrentLocation_array[0].openPopup();},300);
+		//setTimeout(function(){CurrentLocation_array[0].openPopup();},300);
     }	
     else{
     	alert("Sorry, can't get your location now.");
@@ -278,23 +285,21 @@ function addList(DataArray){
 }
 //update the detailslider content based on the markersInView_array
 function updateDetailSlider(DataArray){
-	//console.log('detailslider updeted');
+	//empty the detail slider first
 	$detailslider.children(".slick-list").children(".slick-track").empty();
-	// maplayer.eachLayer(function(layer){
-	// 	if(layer instanceof L.Marker){
-	// 		if($map.getBounds().contains(layer.getLatLng())){
-	// 			var div = createItem(layer);	
-	// 			$detailslider.slick('slickAdd',div);	
-	// 		}
-	// 	}
-	// });
+
 	for(var i = 0, len = DataArray.length; i < len;i ++){
 		var div = createItem(DataArray[i]);	
 		$detailslider.slick('slickAdd',div);	
 	}
 	$detailslider.on('swipe', function(e){
+
 		var currentindex = parseInt($detailslider.children('.slick-list').children('.slick-track').children('.slick-current').attr('data-slick-index'));
-		//markersInView_array[currentindex].openPopup();
+		for(var i=0, len = markersInView_array.length;i < len;i++){
+			if($(markersInView_array[i]._icon).hasClass('active')){
+				$(markersInView_array[i]._icon).removeClass('active')
+			}
+		}
 		$(markersInView_array[currentindex]._icon).addClass('active');
 	});
 	$detailslider.slick('refresh');	
