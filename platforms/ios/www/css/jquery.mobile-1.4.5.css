@@ -1467,9 +1467,8 @@ div.ui-mobile-viewport {
 }
 /* Buttons and icons */
 .ui-btn {
-	font-size: 16px;
 	margin: .5em 0;
-	padding: .7em 1em;
+	padding: .7em;
 	display: block;
 	position: relative;
 	text-align: center;
@@ -1500,7 +1499,6 @@ div.ui-mobile-viewport {
 /* Make buttons in toolbars default to mini and inline. */
 .ui-header .ui-btn,
 .ui-footer .ui-btn {
-	font-size: 12.5px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -1888,11 +1886,11 @@ button.ui-btn-icon-notext,
 }
 .slide.out, .slide.in {
 	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-duration: 200ms;
+	-webkit-animation-duration: 150ms;
 	-moz-animation-timing-function: ease-out;
-	-moz-animation-duration: 200ms;
+	-moz-animation-duration: 150ms;
 	animation-timing-function: ease-out;
-	animation-duration: 200ms;
+	animation-duration: 150ms;
 }
 .slide.out {
 	-webkit-transform: translate3d(-100%,0,0);

@@ -67,6 +67,19 @@
                 </div>
             </div>
         </div>
+
+        <div id="profile_setting_page" data-role="page">
+            <div data-role="header" class="ui-header" position="fixed">
+                <a href="#" onclick="return false;">
+                   <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+                <h1>Profile</h1>
+                <a href="#">Save</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+            </div>
+        </div>
         <!-- first load page showing a list of categories -->
         <div id="category_page" data-role="page">
             <!-- header -->
@@ -157,7 +170,7 @@
                 </div>
                 <!-- <h1 onclick="showSearchWrap();return false;">Search</h1> -->
                 <div class="ui-btn-right" >
-                    <a href="#" class="btn list-btn" onClick="toggleContent();return false;">
+                    <a href="#" class="ui-btn list-btn" onClick="toggleContent();return false;">
                         <i class="icon icon-2x icon-location"></i>
                     </a>
                 </div>
@@ -256,9 +269,9 @@
         </div>
 
         <!-- page for showing the profile of selected therapy -->
-        <div id="profile_page" data-role="page">
+        <div id="therapy_profile_page" data-role="page">
             <div data-role="header"  class="ui-header" position="fixed">
-                <a href="#" class="header-back-btn" onclick="slideBack('map_page'); $detailslider.slick('refresh');">Back</i></a>
+                <a href="#" class="header-back-btn" onclick="slideBack('map_page')">Back</a>
                 <h1>
                     <label class="therapy_county"></label>
                     <label class="therapy_city"></label>
@@ -320,9 +333,8 @@
             $("#register_page").noClickDelay();
             $("#category_page").noClickDelay();
             $("#map_page").noClickDelay();
-            $("#profile_page").noClickDelay();
+            $("#therapy_profile_page").noClickDelay();
         })
-
         $(".arrow_wrap a").click(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
@@ -332,13 +344,11 @@
             $(".overlay").toggle();
 
         });
-    
         $("#search_form").on('submit', function(){
             resetMapSearch();
             console.log('search submitted');
             return false;
         });
-
         $('#register_email').on('focus',function(e){
             if($(".login-inner-wrap").is(":visible")){
                 return;
@@ -351,7 +361,6 @@
                 $('#register_email').focus();
             }
         });
-
         function toggleBottomWrap(element){
             if(element){
                 var target = $(element).parent('div');
@@ -369,10 +378,8 @@
                 $(".ui-header .cancel-btn").hide();
                 $(".ui-header .list-btn").show();
                 $(".ui-header .back-btn").show();
-            };
-            
+            };   
         }
-
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
                 $('#register_email').blur();
@@ -384,14 +391,12 @@
                 return;
             }
         }
-
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
             CurrentLocation[0] = position.coords.latitude.toFixed(6);
             CurrentLocation[1] = position.coords.longitude.toFixed(6);
         }
-
         function GPSonError(e)
         {
             alert("Sorry, cannot get your location now.");            
@@ -410,7 +415,6 @@
              $(".search_wrap form input").blur();
             $(".search_wrap").removeClass('appear');
         }
-
         function switchFilterContent(element){
             var currentContent = $(element);
             if(currentContent.hasClass("active")){

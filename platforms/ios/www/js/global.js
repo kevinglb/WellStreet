@@ -111,7 +111,7 @@ function removeAllMarkers(){
 
 /*for back button*/
 function slideBack(target_page,callback){
-	//console.time('slideback');
+	console.time('slideback');
 	$.mobile.changePage("#"+target_page, 
     {
         transition: "slide",
@@ -120,24 +120,28 @@ function slideBack(target_page,callback){
     });
     
 	//toggle two wraps
-    if(target_page == "category_page"){
-    	if($(".filter-wrap").hasClass('toggle')){
-    		$(".filter-wrap").toggleClass('toggle');
-    	}
-    	if($(".detail-wrap").hasClass('toggle')){
-    		$(".detail-wrap").toggleClass('toggle');
-    	}
-    }
+    // if(target_page == "category_page"){
+    // 	if($(".filter-wrap").hasClass('toggle')){
+    // 		$(".filter-wrap").toggleClass('toggle');
+    // 	}
+    // 	if($(".detail-wrap").hasClass('toggle')){
+    // 		$(".detail-wrap").toggleClass('toggle');
+    // 	}
+    // }
+  //   if(target_page == "map_page"){
+  //      $detailslider.slick('refresh');
+ 	// }
     if(typeof(callback) == "function"){
     	callback();
     }
-    return false;
+    console.timeEnd('slideback');
+    // return false;
 }
 
 
 /*for buttons that jumps to another page besides back button*/
 function changePage(target_page, transition,callback){
-	//console.time('changePage');
+	console.time('changePage');
 	$.mobile.changePage("#"+target_page, 
     {
         transition: transition,
@@ -145,8 +149,9 @@ function changePage(target_page, transition,callback){
 	if(typeof(callback) == "function"){
     	callback();
     }
-    return false;
-    //console.timeEnd('changePage');
+    console.timeEnd('changePage');
+    // return false;
+    
 }
 
 function toggleContent(){

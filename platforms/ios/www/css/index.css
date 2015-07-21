@@ -566,7 +566,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     line-height: 1.6em;
     font-weight: bold;
 }
-
 /* ui-header*/
 .ui-page .ui-header{
     padding-top: 22.5px;
@@ -577,6 +576,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 .ui-page .ui-header .ui-btn-left, .ui-page .ui-header .ui-btn-right{
     margin: 3.5vh 0 0 0;
     height: 6vh;
+    color: #fff;
 }
 .ui-page .ui-header .ui-btn-left .ui-btn, .ui-page .ui-header .ui-btn-right .ui-btn {
     height: 100%;
@@ -601,11 +601,11 @@ div.my-divIcon{
     margin-left: -50px;
     font-size: 1.2em;
     line-height: 1.4em;
-    background-color: rgba(0, 207, 193, 0.8);
+    background-color: rgba(0, 207, 193, 0.9);
 }
 div.my-divIcon.active{
     color: #FFF;
-    background-color: rgba(249, 86, 79, 0.8);
+    background-color: rgba(249, 86, 79, 0.9);
 }
 div.my-divIcon:after {
     content:'';
@@ -615,12 +615,12 @@ div.my-divIcon:after {
     margin-left:20px;
     width: 0;
     height: 0;
-    border-top: solid 8px rgba(0, 207, 193, 0.8);
+    border-top: solid 8px rgba(0, 207, 193, 0.9);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }
 div.my-divIcon.active:after{
-    border-top: solid 8px rgba(249, 86, 79, 0.8);
+    border-top: solid 8px rgba(249, 86, 79, 0.9);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }

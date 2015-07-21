@@ -238,27 +238,27 @@ function getTherapy(element, callback){
 	var currentindex = $(element).attr('data-index');
 	var therapy = therapy_array[currentindex];
 	callback(therapy);
-	changePage("profile_page", "slide");	
+	changePage("therapy_profile_page", "slide");	
 }
 
 //load info of the selected therapy
 function loadProfile(therapy){
 	var innerhtml  = "";
-	$("#profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
-	$("#profile_page .ui-header .therapy_city").text(therapy.City);
+	$("#therapy_profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
+	$("#therapy_profile_page .ui-header .therapy_city").text(therapy.City);
 
-	$("#profile_page .therapy_details .therapy_name").text(therapy.Name);
-	$("#profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
-	$("#profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
+	$("#therapy_profile_page .therapy_details .therapy_name").text(therapy.Name);
+	$("#therapy_profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
+	$("#therapy_profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
 	if(therapy['Rating']){
-		$("#profile_page .therapy_details .therapy_rating").text("Rating: "+therapy['Rating']);	
+		$("#therapy_profile_page .therapy_details .therapy_rating").text("Rating: "+therapy['Rating']);	
 	}
 	if(therapy['Opening hours']){
 		var openhour_array = therapy['Opening hours'].split(/\n/);
 		for(i in openhour_array){
 			innerhtml += openhour_array[i] + "<br />";	
 		}
-		$("#profile_page .therapy_details .therapy_openhour").html(innerhtml);
+		$("#therapy_profile_page .therapy_details .therapy_openhour").html(innerhtml);
 	}
 
 }
