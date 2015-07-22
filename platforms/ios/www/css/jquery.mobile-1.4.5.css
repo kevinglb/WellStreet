@@ -1419,7 +1419,6 @@ div.ui-mobile-viewport {
 }
 .ui-header,.ui-footer
 {
-	/*position: relative;*/
 	position: relative;
 }
 .ui-header:empty,
@@ -2638,7 +2637,7 @@ li.ui-block-e {
 	padding: 0;
 }
 .ui-fixed-hidden {
-	position: absolute;
+	/*position: absolute;*/
 }
 /* Tap toggle: hide external fixed footer. See issue #6604 */
 .ui-footer-fixed.ui-fixed-hidden {

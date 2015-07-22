@@ -311,13 +311,19 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     font-size:1.1em;
     line-height: 1.5em;
 }
-
-.map-wrap, .list-wrap,.filter-wrap,.detail-wrap{
+.map-wrap, .list-wrap{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+.filter-wrap, .detail-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
 }
 .animated{
     -webkit-transition-duration: 250ms;
@@ -336,16 +342,24 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -webkit-transform: translate3d(100%,0,0);
 }
 .filter-wrap{
-    z-index: 20;
+    z-index: 10;
     background-color: rgba(240,240,240,0.95);
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
 }
 .detail-wrap{
-    z-index: 20;
+    z-index: 10;
     background-color: rgba(240,240,240,0.95);
-    transform: translate3d(0,100%,0);
+     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
+}
+.filter-wrap.slider-appear{
+    transform: translate3d(0,72%,0);
+    -webkit-transform: translate3d(0,72%,0);
+}
+.detail-wrap.slider-appear{
+    transform: translate3d(0,72%,0);
+    -webkit-transform: translate3d(0,72%,0);
 }
 .map-wrap.toggle{
      transform: translate3d(-100%,0,0);
@@ -356,31 +370,15 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -webkit-transform: translate3d(0,0,0);
 }
 .filter-wrap.toggle{
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,-16%,0);
+    -webkit-transform: translate3d(0,-16%,0);
 }
 .detail-wrap.toggle{
-     transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+     transform: translate3d(0,-16%,0);
+    -webkit-transform: translate3d(0,-16%,0);
 }
-.filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
-    position: absolute;
-    font-size: 1.2em;
-    bottom: 30px;
-    left: 0;
-    width: 90%;
-    margin: 0 5%;
-    border: 2px solid #d6d6d6;
 
-}
-.filter-wrap .filter-type-wrap, .filter-wrap .filter-perference-wrap{
-    height: 75%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 4em;
-}
+
 .filter-wrap .filter-type-wrap{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -397,7 +395,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 }
-
 .filter-button-wrap{
     width: 90%;
     margin: 0.5em 5% 0 5%;
@@ -418,6 +415,55 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     background-color: rgba(33,33,33,0.6);
     color:#FFFFFF;
     opacity: 1;
+}
+.filter-wrap .filter-container{
+    position: relative;
+    height: 82%;
+    margin-top: 10%;
+}
+.filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
+    position: absolute;
+    font-size: 1.2em;
+    bottom: 30px;
+    left: 0;
+    width: 90%;
+    margin: 0 5%;
+    border: 2px solid #d6d6d6;
+
+}
+.filter-wrap .filter-type-wrap, .filter-wrap .filter-perference-wrap{
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   margin-top: 4em;
+}
+/*trigger button for bottom wraps*/
+.wrap-trigger-btn{
+    position:absolute;
+    left: 20%;
+    top: -30px;
+    height: 50px;
+    width: 50px !important;
+    margin:0 auto;
+    z-index: 30;
+    border-radius: 8px !important;
+}
+.detail-wrap-trigger{
+    background-color: #FFC145;
+    border:2px solid #FFC145;
+}
+.filter-wrap-trigger{
+    background-color: #3185FC !important;
+    border:2px solid #3185FC;
+}
+.slick-slide span{
+    position: absolute;
+    top: 25px;
+    width:96%;
+    margin:0 auto;
+    text-align: center;
 }
 #therapy_list{
     position: relative;
@@ -530,28 +576,20 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 
 #detail_slider{
    /* display: none;*/
-
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 0;
     left: 0;
     width: 100%;
     height: 12%;
-    background-color: #fff;
     z-index: 3;
 }
 /* bottom slider*/
-#detail_slider .detail_content{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
 #detail_slider::after{
     clear: both;
 }
 
 #category_slider{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -582,6 +620,8 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     height: 100%;
     color: #fff;
 }
+/*ui-footer*/
+
 /*DivIcon*/
 .leaflet-div-icon {
     background: transparent;
@@ -742,3 +782,4 @@ div.current-location-icon:after{
     padding: 0;
     text-align: right;
 }
+

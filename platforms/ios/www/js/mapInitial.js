@@ -112,7 +112,7 @@ function addLayer(type,callback){
 	endLoading();
 		
 	if($detailslider.is(':visible')){
-		$detailslider.slideToggle(200, endLoading);
+		//$detailslider.slideToggle(200, endLoading);
 	}
 	else{
 		endLoading();
@@ -175,9 +175,10 @@ function clickOnMarker(e){
 
 /*detect whether the slider is visible when click on any marker on the map*/
 function toggleSliders(){
-	if($cateslider.is(":visible") && $detailslider.is(":hidden") ){
-		$cateslider.slideToggle(200);
-		$detailslider.slideToggle(200);
+	if($cateslider.is(":visible") ){
+		$(".filter-wrap").removeClass('toggle slider-appear');
+		$(".detail-wrap").removeClass('toggle').addClass('slider-appear');
+		//$detailslider.slideToggle(200);
 		//updateDetailSlider();
 	}
 	else{
@@ -307,7 +308,8 @@ function updateDetailSlider(DataArray){
 }
 //return a div including the brief info of the marker
 function createItem(layer){
-	var div='<div data-index="'+layer.options['index']+'" onclick="getTherapy(this,loadProfile)"><label>'+ layer.options['name']+'</label><label>'+ layer.options['address']+'</label></div>';
+	//" onclick="getTherapy(this,loadProfile)"
+	var div='<div data-index="'+layer.options['index']+'"><div class="col-xs-9"><label>'+ layer.options['name']+'</label><label>'+ layer.options['address']+'</label></div><div class="col-xs-3"><button class="wrap-trigger-btn detail-wrap-trigger" onclick="triggerBottomWrap(this);"></button><span>See More</span></div></div>';
 	return div;
 }
 //initial the detailslider
@@ -327,18 +329,21 @@ function initialDetailSlider(){
 	// });
 
 	$detailslider.on('swipedown', function(){
-		if($cateslider.is(":hidden") && $detailslider.is(":visible") ){
-			$cateslider.slideToggle(200);
-			$detailslider.slideToggle(150);
+		if($('.detail-wrap').hasClass("slider-appear")){
+			//$cateslider.slideToggle(200);
+			// $detailslider.slideToggle(150);
+			$('.detail-wrap').removeClass('slider-appear');
+			$('.filter-wrap').addClass('slider-appear');
+			
 		}
 		else{
 			return;
 		}
 	});
 
-	$detailslider.on('swipeup',function(){
-		$(".detail-wrap").toggleClass('toggle');
-	});
+	// $detailslider.on('swipeup',function(){
+	// 	$(".detail-wrap").removeClass('slider-appear').toggleClass('toggle');
+	// });
 }
 
 //initial the cateslider

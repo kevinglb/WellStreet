@@ -141,7 +141,7 @@
         <!-- first load page showing a list of categories -->
         <div id="category_page" data-role="page">
             <!-- header -->
-            <div data-role="header"  class="ui-header" position="fixed">
+            <div data-role="header"  class="ui-header" data-position="fixed">
                 <a href="#" onclick="slideBack('login_page')">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
@@ -215,6 +215,16 @@
                     </div>
                 </div>
             </div>
+            <div data-role="footer">        
+                <div data-role="navbar" data-theme='b'>
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
         </div>
        
         <!--  page for showing the map -->
@@ -286,36 +296,76 @@
                         </div> -->
                     </div>
                     <div id="map"></div>
-                    <div id="detail_slider"></div>
+                    <!-- <div id="detail_slider"></div> -->
                     <!-- a wrp showing timetable ? -->
                     <div class="detail-wrap animated">
+                        <!--  <button id="detail-wrap-trigger" class="wrap-trigger-btn" onclick="triggerBottomWrap(this);"></button> -->
+                         <div id="detail_slider"></div>
                          <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">OK</button>
                     </div>
-                    <div id="category_slider">
-                        <div class="detail_content text-center" data-index='0' data-type="acupuncturist">Acupuncturist</div>
-                        <div class="detail_content text-center" data-index='1' data-type="allergy">allergy</div>
-                        <div class="detail_content text-center" data-index='2' data-type="aromatherapist">Aromatherapist</div>
-                        <div class="detail_content text-center" data-index='3' data-type="ciropodist">Ciropodist</div>
-                        <div class="detail_content text-center" data-index='4' data-type="chiropractor">Chiropractor</div>
-                    </div>
+                   
                     <!-- a wrap showing the peference filter -->
-                    <div class="filter-wrap animated">
-                        <div class="filter-button-wrap">
-                            <button class="btn btn-large btn-block filter-switch-button active" onclick="switchFilterContent(this);return false;">Type</button>
-                            <button class="btn btn-large btn-block filter-switch-button" onclick="switchFilterContent(this);return false;">Perference</button>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="filter-type-wrap animated">
-                            filter type wrap
-                        </div>
-                        <div class="filter-perference-wrap animated">
-                            <div>
-                                <label>Distance within</label>
-                                <input type="range" min="1" max="10"></input>
+                    <div class="filter-wrap animated slider-appear">
+                        <div id="category_slider">
+                            <div class="detail_content text-center" data-index='0' data-type="acupuncturist">
+                                <div class="col-xs-9">
+                                    <label>Acupuncturist</label>
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
+                                </div>
+                            </div>
+                            <div class="detail_content text-center" data-index='1' data-type="allergy">
+                                <div class="col-xs-9">
+                                    <label>allergy</label>
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
+                                </div>
+                            </div>
+                            <div class="detail_content text-center" data-index='2' data-type="aromatherapist">
+                                <div class="col-xs-9">
+                                    <label>Aromatherapist</label>
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
+                                </div>
+                            </div>
+                            <div class="detail_content text-center" data-index='3' data-type="ciropodist">
+                                <div class="col-xs-9">
+                                    <label>Ciropodist</label>
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
+                                </div>
+                            </div>
+                            <div class="detail_content text-center" data-index='4' data-type="chiropractor">
+                                <div class="col-xs-9">
+                                    <label>Chiropractor</label>
+                                </div>
+                                <div class="col-xs-3">
+                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
+                                </div>
                             </div>
                         </div>
-                        <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">Done</button>
+                        <div class="filter-container">
+                            <div class="filter-button-wrap">
+                                <button class="btn btn-large btn-block filter-switch-button active" onclick="switchFilterContent(this);return false;">Type</button>
+                                <button class="btn btn-large btn-block filter-switch-button" onclick="switchFilterContent(this);return false;">Perference</button>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="filter-type-wrap animated">
+                                filter type wrap
+                            </div>
+                            <div class="filter-perference-wrap animated">
+                                <div>
+                                    <label>Distance within</label>
+                                    <input type="range" min="1" max="10"></input>
+                                </div>
+                            </div>
+                            <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">Done</button>
+                        </div>
                     </div>
                 </div>
                 <div class="list-wrap animated">
@@ -426,22 +476,43 @@
         });
         function toggleBottomWrap(element){
             if(element){
-                var target = $(element).parent('div');
-                target.toggleClass('toggle');
+                var target = $(element).parent('.animated');
+                if(target.hasClass('detail-wrap')){
+                    target.toggleClass('toggle').addClass('slider-appear');
+                }
+                else{
+                    $(".filter-wrap").toggleClass('toggle').addClass('slider-appear');   
+                }
             }
             else{
                 if($(".filter-wrap").hasClass('toggle')){
-                    $(".filter-wrap").toggleClass('toggle');
+                    $(".filter-wrap").removeClass('toggle').addClass('slider-appear');
                 }
                 if($(".detail-wrap").hasClass('toggle')){
-                    $(".detail-wrap").toggleClass('toggle');
+                    $(".detail-wrap").removeClass('toggle').addClass('slider-appear');
                 }   
             }
-            if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":visible") ){
+            if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){
                 $(".ui-header .cancel-btn").hide();
                 $(".ui-header .list-btn").show();
                 $(".ui-header .back-btn").show();
-            };   
+            }
+
+        }
+
+        function triggerBottomWrap(element){
+            if($(element).hasClass('filter-wrap-trigger')){
+                $('.filter-wrap').removeClass('slider-appear').addClass('toggle');
+            }
+            else if($(element).hasClass('detail-wrap-trigger')){
+                $('.detail-wrap').removeClass('slider-appear').addClass('toggle');
+            }
+
+            if ($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
+                $(".ui-header .cancel-btn").show();
+                $(".ui-header .list-btn").hide();
+                $(".ui-header .back-btn").hide();
+            }
         }
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
