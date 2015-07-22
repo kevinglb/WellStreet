@@ -56,7 +56,7 @@
                         <input type="email" id="register_email" placeholder="Email">
                         <div class="login-inner-wrap" style="display:none;">
                             <input type="password" id="register_password" placeholder="Password">
-                            <button type="button" id="register_sub" >Log In</button>
+                            <button type="button" id="register_sub" onclick="changePage('profile_setting_page','slide')">Log In</button>
                         </div>
                     </form>
                 </div>
@@ -70,7 +70,7 @@
 
         <div id="profile_setting_page" data-role="page">
             <div data-role="header" class="ui-header" position="fixed">
-                <a href="#" onclick="return false;">
+                <a href="#" onclick="slideBack('register_page')">
                    <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <h1>Profile</h1>
@@ -78,6 +78,64 @@
             </div>
 
             <div data-role="main" class="ui-content">
+                <div class="group-form">
+                    <label class="text-center">Name</label>
+                    <div class="profile-setting-block">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label onclick="focusOnInput(this)">First Name</label>
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label onclick="focusOnInput(this)">Last Name</label>
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-form">
+                    <label class="text-center">Private Details</label>
+                    <div class="profile-setting-block">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button type="button" value="male">Male</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button  type="button" value="female">Female</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label onclick="focusOnInput(this)">Birth Date</label>
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text"></input>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-3">
+                                <label onclick="focusOnInput(this)">Email</label>
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="email"></input>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-3">
+                                <label onclick="focusOnInput(this)">Phone Numbers</label>
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="number"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- first load page showing a list of categories -->
@@ -331,9 +389,14 @@
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
             $("#login_page").noClickDelay();  
             $("#register_page").noClickDelay();
+            $("#profile_setting_page").noClickDelay();
             $("#category_page").noClickDelay();
             $("#map_page").noClickDelay();
             $("#therapy_profile_page").noClickDelay();
+
+            $('body').bind('focusin focus', function(e){
+                e.preventDefault();
+            })
         })
         $(".arrow_wrap a").click(function(){
             var text = $(this).text();
@@ -425,6 +488,11 @@
                 $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
                 $(".filter-wrap .filter-perference-wrap").toggleClass('toggle');
             }
+        }
+        //auto focus on the input when the corresponding label is clicked on
+        function focusOnInput(element){
+            var row = $(element).parent().parent('.row');
+            row.find(".ui-input-text").children('input').focus();
         }
     </script>
     </body>
