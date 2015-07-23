@@ -64,6 +64,8 @@ function startLoadMapPage(type, callback){
             $cateslider.slick('slickGoTo',index);
             
 			callback(type, updateDetailSlider);	
+			//there is a bug caused by fastClick and leaflet that has to click on the map once when it is reloaded
+			$("#map").click();
 			console.timeEnd('cateslider');
 		}
 		else{
@@ -114,6 +116,7 @@ function addLayer(type,callback){
 	}
 	getUserCurrentLocation();
 	callback(markersInView_array);
+
 }
 
 //update the layer when the map view is changed
@@ -243,18 +246,18 @@ function loadProfile(therapy){
 	$("#therapy_profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
 	$("#therapy_profile_page .ui-header .therapy_city").text(therapy.City);
 
-	$("#therapy_profile_page .therapy_details .therapy_name").text(therapy.Name);
-	$("#therapy_profile_page .therapy_details .therapy_address").text(therapy['Full Address']);	
-	$("#therapy_profile_page .therapy_details .therapy_tel").text(therapy['Telephone Number']);	
+	$("#therapy_profile_page .therapy-details .therapy_name").text(therapy.Name);
+	$("#therapy_profile_page .therapy-details .therapy_address").text(therapy['Full Address']);	
+	$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);	
 	if(therapy['Rating']){
-		$("#therapy_profile_page .therapy_details .therapy_rating").text("Rating: "+therapy['Rating']);	
+		$("#therapy_profile_page .therapy-details .therapy_rating").text("Rating: "+therapy['Rating']);	
 	}
 	if(therapy['Opening hours']){
 		var openhour_array = therapy['Opening hours'].split(/\n/);
 		for(i in openhour_array){
 			innerhtml += openhour_array[i] + "<br />";	
 		}
-		$("#therapy_profile_page .therapy_details .therapy_openhour").html(innerhtml);
+		$("#therapy_profile_page .therapy-details .therapy_openhour").html(innerhtml);
 	}
 
 }

@@ -261,14 +261,14 @@
                
                 <div class="map-wrap animated">
                     <div class="overlay" onClick=""></div>
-                    <div class="search_content">
+                   <!--  <div class="search_content">
                         <div class="input_wrap">
                             <form id="search_form">
                                 <div class="form-group has-feedback right-feedback">
                                     <input type="search" id="search_input" class="form-control" results=5 placeholder="Search" onfocus="searchFocused()">
-                                   <!--  <span  class="form-control-feedback" id="location_btn">
+                                    <span  class="form-control-feedback" id="location_btn">
                                         <i class="icon icon-2x icon-location"></i>
-                                    </span> -->
+                                    </span>
                                     </input>
                                 </div>
                                 <ul id="search_history_list">
@@ -278,7 +278,7 @@
                                 </ul>
                             </form>
                         </div>
-                      <!--   <div class="timepicker_wrap">
+                        <div class="timepicker_wrap">
                             <div class="container">
                             <div class="row">
                                     <div class="col-xs-6">
@@ -293,8 +293,8 @@
                         </div>
                         <div class="arrow_wrap">
                             <a herf="#" class="ui-btn no-border">Select Time</a>
-                        </div> -->
-                    </div>
+                        </div>
+                    </div> -->
                     <div id="map"></div>
                     <!-- <div id="detail_slider"></div> -->
                     <!-- a wrp showing timetable ? -->
@@ -306,8 +306,18 @@
                                 <label class="therapy_name"></label>
                                 <label class="therapy_address"></label>
                             </div>
-                            <div>
+                            <div class="fw-btn-wrap">
+                                <button type="button" class="ui-btn active" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Timetable</button>
+                                <button type="button" class="ui-btn" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Services</button>
+                                <div class="clear"></div>
                             </div>
+                            <div class="detail-timetable-wrap detail-inner-wrap animated">
+                                timetable wrap
+                            </div>
+                            <div class="detail-service-wrap detail-inner-wrap animated">
+                                service wrap
+                            </div>
+                            
                             
 
                          </div>
@@ -359,16 +369,19 @@
                             </div>
                         </div>
                         <div class="filter-container">
-                            <div class="filter-button-wrap">
-                                <button class="btn btn-large btn-block filter-switch-button active" onclick="switchFilterContent(this);return false;">Type</button>
-                                <button class="btn btn-large btn-block filter-switch-button" onclick="switchFilterContent(this);return false;">Perference</button>
+                            <div class="therapy-details text-center">
+                                <label class="therapy_name"></label>
+                                <label class="therapy_address"></label>
+                            </div>
+                            <div class="fw-btn-wrap">
+                                <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Details</button>
+                                <button type="button" class="ui-btn" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Filters</button>
                                 <div class="clear"></div>
                             </div>
-
-                            <div class="filter-type-wrap animated">
-                                filter type wrap
+                            <div class="filter-details-wrap filter-inner-wrap animated">
+                                filter detail wrap
                             </div>
-                            <div class="filter-perference-wrap animated">
+                            <div class="filter-filters-wrap filter-inner-wrap animated">
                                 <div>
                                     <label>Distance within</label>
                                     <input type="range" min="1" max="10"></input>
@@ -379,6 +392,10 @@
                     </div>
                 </div>
                 <div class="list-wrap animated">
+                    <div class="fw-btn-wrap">
+                        <button type="button" class="ui-btn">Dublin 2</button>
+                        <button type="button" class="ui-btn">5 - 8 pm</button>
+                    </div>
                     <div id="therapy_list">
                     </div>
                 </div>
@@ -397,7 +414,7 @@
                 <a href="#" class="menu_btn">Menu</a>
             </div>
             <div role="main" class="ui-content">
-                <div class="therapy_details text-center">
+                <div class="therapy-details text-center">
                     <h3 class="therapy_name"></h3>
                     <label class="therapy_address"></label> 
                     <label class="therapy_tel"></label>
@@ -433,31 +450,25 @@
     <script type="text/javascript">
     
        
-        var loop_number = 0;
-        // function changeBackgroundImage()
-        // {
-        //      var numberOfImages = [1, 2];
-        //      $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
-        //      $("#register_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
+        // var loop_number = 0;
+        // // function changeBackgroundImage()
+        // // {
+        // //      var numberOfImages = [1, 2];
+        // //      $("#login_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
+        // //      $("#register_page").css("background","url(img/b" + numberOfImages[loop_number] + ".png)");
 
-        //      loop_number ++;
+        // //      loop_number ++;
 
-        //      if(loop_number == numberOfImages.length)
-        //         loop_number = 0;
-        // }
+        // //      if(loop_number == numberOfImages.length)
+        // //         loop_number = 0;
+        // // }
         $(document).ready(function()
         {    
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
-            //initial the page with noClickDelay() that the inner elements wont have delay in click event
-            // $("#login_page").noClickDelay();  
-            // $("#register_page").noClickDelay();
-            // $("#profile_setting_page").noClickDelay();
-            // $("#category_page").noClickDelay();
-            // $("#map_page").noClickDelay();
-            // $("#therapy_profile_page").noClickDelay();
-            $(function() {
-              FastClick.attach(document.body);
-            });
+            //initial the page with fastclick that the inner elements wont have delay in click event
+            
+            FastClick.attach(document.body);
+            FastClick.attach("#map");
             $('body').bind('focusin focus', function(e){
                 e.preventDefault();
             })
@@ -497,6 +508,7 @@
                 else{
                     $(".filter-wrap").toggleClass('toggle').addClass('slider-appear');   
                 }
+                $("#map").click();   
             }
             else{
                 if($(".filter-wrap").hasClass('toggle')){
@@ -504,7 +516,8 @@
                 }
                 if($(".detail-wrap").hasClass('toggle')){
                     $(".detail-wrap").removeClass('toggle').addClass('slider-appear');
-                }   
+                }
+                $("#map").click();   
             }
             if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){
                 $(".ui-header .cancel-btn").hide();
@@ -573,9 +586,13 @@
                 return;
             }
             else{
-                $(".filter-wrap .filter-button-wrap .filter-switch-button").toggleClass('active');
-                $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
-                $(".filter-wrap .filter-perference-wrap").toggleClass('toggle');
+                var target = currentContent.attr("data-target");
+                //console.log(target);
+                // $(".filter-wrap .fw-btn-wrap button").toggleClass('active');
+                // $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
+                // $(".filter-wrap .filter-perference-wrap").toggleClass('toggle');
+                currentContent.parent(".fw-btn-wrap").children('button').toggleClass('active');
+                $('.'+target).toggleClass('toggle');
             }
         }
         //auto focus on the input when the corresponding label is clicked on

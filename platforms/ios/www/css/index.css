@@ -37,7 +37,6 @@ body {
     margin:0px;
     padding:0px;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
     -moz-transition: all .1s ease-in-out;
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
@@ -297,8 +296,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 #map_page{
     height: 100%;
     width: 100%;
-     overflow-y:scroll;
-    -webkit-overflow-scrolling: touch; 
 }
 #map_page .ui-header{
     position: absolute;
@@ -319,13 +316,14 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 .filter-wrap, .detail-wrap{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
+    height: 125%;
 }
 .animated{
     -webkit-transition-duration: 250ms;
@@ -345,7 +343,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 }
 .filter-wrap{
     z-index: 10;
-    background-color: rgba(240,240,240,0.95);
+    background-color: rgba(240,240,240,0.98);
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
 }
@@ -357,11 +355,11 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 }
 .filter-wrap.slider-appear{
     transform: translate3d(0,72%,0);
-    -webkit-transform: translate3d(0,72%,0);
+    -webkit-transform: translate3d(0,70%,0);
 }
 .detail-wrap.slider-appear{
     transform: translate3d(0,72%,0);
-    -webkit-transform: translate3d(0,72%,0);
+    -webkit-transform: translate3d(0,70%,0);
 }
 .map-wrap.toggle{
      transform: translate3d(-100%,0,0);
@@ -373,56 +371,78 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 }
 .filter-wrap.toggle{
     transform: translate3d(0,-16%,0);
-    -webkit-transform: translate3d(0,-16%,0);
+    -webkit-transform: translate3d(0,-18%,0);
 }
 .detail-wrap.toggle{
      transform: translate3d(0,-16%,0);
-    -webkit-transform: translate3d(0,-16%,0);
+    -webkit-transform: translate3d(0,-18%,0);
 }
-
-
-.filter-wrap .filter-type-wrap{
+.detail-wrap .detail-timetable-wrap{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 }
-.filter-wrap .filter-type-wrap.toggle{
+.detail-wrap .detail-timetable-wrap.toggle{
      transform: translate3d(-100%,0,0);
     -webkit-transform: translate3d(-100%,0,0);
 }
-.filter-wrap .filter-perference-wrap{
+.detail-wrap .detail-service-wrap{
      transform: translate3d(100%,0,0);
     -webkit-transform: translate3d(100%,0,0);
 }
-.filter-wrap .filter-perference-wrap.toggle{
+.detail-wrap .detail-service-wrap.toggle{
      transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 }
-.filter-button-wrap{
-    width: 90%;
-    margin: 0.5em 5% 0 5%;
-    border: 1px solid  #d6d6d6;
-    border-radius: 4.375px;
+.filter-wrap .filter-details-wrap{
+     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
-.filter-button-wrap::after{
+.filter-wrap .filter-details-wrap.toggle{
+     transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-100%,0,0);
+}
+.filter-wrap .filter-filters-wrap{
+     transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+}
+.filter-wrap .filter-filters-wrap.toggle{
+     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+.fw-btn-wrap{
+    width: 100%;
+    margin: 0;
+}
+.fw-btn-wrap:after{
     clear: both;
 }
-.filter-button-wrap .filter-switch-button{
+.fw-btn-wrap button{
     float: left;
     position: relative;
     width: 50%;
     margin: 0;
     opacity: 0.75;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #E5E5E5; 
 }
-.filter-button-wrap .filter-switch-button.active{
-    background-color: rgba(33,33,33,0.6);
-    color:#FFFFFF;
-    opacity: 1;
+.fw-btn-wrap button:first-child{
+    border-right: 1px solid #E5E5E5; 
 }
-.filter-wrap .filter-container{
+.fw-btn-wrap button.active{
+   border-bottom: 1px solid #FF6860; 
+}
+.detail-wrap .therapy-details{
+
+}
+.detail-wrap .detail-container,.filter-wrap .filter-container{
     position: relative;
-    height: 82%;
-    margin-top: 10%;
+    height: 80%;
+    margin-top: 12%;
+    overflow: hidden;
 }
+
+
 .filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
     position: absolute;
     font-size: 1.2em;
@@ -433,7 +453,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border: 2px solid #d6d6d6;
 
 }
-.filter-wrap .filter-type-wrap, .filter-wrap .filter-perference-wrap{
+.filter-wrap .filter-inner-wrap, .detail-wrap .detail-inner-wrap{
     height: 75%;
     width: 100%;
     position: absolute;
