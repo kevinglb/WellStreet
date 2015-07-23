@@ -91,10 +91,6 @@ function resetMapPage(){
 	console.log("therapy_list is emptyed");
 	//$detailslider.children(".slick-list").children(".slick-track").empty();
 	
-	// if($detailslider.is(":hidden")){
-	// 	$detailslider.slideToggle(200);
-	// }
-	
 	if($cateslider.is(":hidden")){
 		$cateslider.slideToggle(200);
 	}
@@ -119,18 +115,6 @@ function slideBack(target_page,callback){
         changeHash: true
     });
     
-	//toggle two wraps
-    // if(target_page == "category_page"){
-    // 	if($(".filter-wrap").hasClass('toggle')){
-    // 		$(".filter-wrap").toggleClass('toggle');
-    // 	}
-    // 	if($(".detail-wrap").hasClass('toggle')){
-    // 		$(".detail-wrap").toggleClass('toggle');
-    // 	}
-    // }
-  //   if(target_page == "map_page"){
-  //      $detailslider.slick('refresh');
- 	// }
     if(typeof(callback) == "function"){
     	callback();
     }

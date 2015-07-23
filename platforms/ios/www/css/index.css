@@ -36,6 +36,8 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     -moz-transition: all .1s ease-in-out;
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;

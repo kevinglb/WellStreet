@@ -30,7 +30,6 @@ function startLoadMapPage(type, callback){
         transition: "slide",
         changeHash: false
     });
-    //console.log(type);
 	/*detecet whether map is initialized and will not initial in the future*/
     if(typeof($map) == "undefined"){
     	initialMap();
@@ -72,7 +71,6 @@ function startLoadMapPage(type, callback){
 			alert("failed in loading data");	
 		}
     });
-   //return false;
 }
 
 function endLoading(){
@@ -82,13 +80,10 @@ function endLoading(){
 
 /*function for adding new layer on the map or change layer of another category*/
 function addLayer(type,callback){
-
 	therapy_array = getDataAray(type);
 	//add content to the list
 	addList(therapy_array);
 	var currentBounds = $map.getBounds().pad(-0.1);
-
-
 	
 	for(var i = 0,len=therapy_array.length; i< len;i++){
 		var DivIcon =new WSDivIcon({html: i});
@@ -341,9 +336,6 @@ function initialDetailSlider(){
 		}
 	});
 
-	// $detailslider.on('swipeup',function(){
-	// 	$(".detail-wrap").removeClass('slider-appear').toggleClass('toggle');
-	// });
 }
 
 //initial the cateslider
@@ -363,12 +355,12 @@ function initialCateSlider(){
             switchCategory(addLayer);
         }
     });
- 	$cateslider.on('swipeup',function(e){
- 		$(".filter-wrap").toggleClass('toggle');
- 		$(".ui-header .back-btn").hide();
- 		$(".ui-header .list-btn").hide();
- 		$(".ui-header .cancel-btn").show();
- 	});
+ 	// $cateslider.on('swipeup',function(e){
+ 	// 	$(".filter-wrap").toggleClass('toggle');
+ 	// 	$(".ui-header .back-btn").hide();
+ 	// 	$(".ui-header .list-btn").hide();
+ 	// 	$(".ui-header .cancel-btn").show();
+ 	// });
 }
 
 function addDivIcon(){

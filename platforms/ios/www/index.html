@@ -153,7 +153,7 @@
             <div data-role="main" class="ui-content">
                 <div id="main_content" class="main_content">
                     <div class="row">
-                        <a href="#" id="acupuncturist" data-transition="slide" onClick="startLoadMapPage(this.id,addLayer);return false;">
+                        <a href="#" id="acupuncturist" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id,addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -165,7 +165,7 @@
                             
                         </a>
 
-                        <a href="#" id="allergy" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                        <a href="#" id="allergy" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -177,7 +177,7 @@
                             
                         </a>
 
-                        <a href="#" id="aromatherapist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                        <a href="#" id="aromatherapist" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
                             <div class="row list_item">
                                 <div class="col-xs-3 vertical-middle text-center">
                                     <img class="main_page_logo" src="img/triage-logo.png"></img>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div data-role="footer">        
+           <!--  <div data-role="footer">        
                 <div data-role="navbar" data-theme='b'>
                     <ul>
                         <li><a href="#">One</a></li>
@@ -223,15 +223,15 @@
                         <li><a href="#">Three</a></li>
                         <li><a href="#">Four</a></li>
                     </ul>
-                </div><!-- /navbar -->
-            </div>
+                </div>
+            </div> -->
         </div>
        
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
             <div class="ui-header" data-role="header" position="fixed">
                 <div class="ui-btn-left" >
-                    <a href="#" class="back-btn ui-btn" onclick="slideBack('category_page',resetMapPage())">
+                    <a href="#" class="back-btn ui-btn nodelay" onclick="slideBack('category_page',resetMapPage())">
                         <i class="icon icon-2x icon-arrow-left"></i>
                     </a>
                     <a href="#" class="cancel-btn ui-btn" style="display:none;" onclick="toggleBottomWrap();return false;">Cancel</a>
@@ -301,6 +301,16 @@
                     <div class="detail-wrap animated">
                         <!--  <button id="detail-wrap-trigger" class="wrap-trigger-btn" onclick="triggerBottomWrap(this);"></button> -->
                          <div id="detail_slider"></div>
+                         <div class="detail-container">
+                            <div class="therapy_details text-center">
+                                <label class="therapy_name"></label>
+                                <label class="therapy_address"></label>
+                            </div>
+                            <div>
+                            </div>
+                            
+
+                         </div>
                          <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">OK</button>
                     </div>
                    
@@ -412,11 +422,13 @@
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/fastClick.js"></script>
     <script type="text/javascript" src="js/json_array.min.js"></script>
-    <script type="text/javascript" src="js/noClickDelay.js"></script>
+    <!-- <script type="text/javascript" src="js/noClickDelay.js"></script> -->
     <script type="text/javascript" src="js/swipe.js"></script>
     <script type="text/javascript" src="js/customMarker.js"></script>
     <script type="text/javascript" src="js/customIcon.js"></script>
+    
     <script type="text/javascript" src="js/mapInitial.js"></script>
     <script type="text/javascript">
     
@@ -437,13 +449,15 @@
         {    
              navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
             //initial the page with noClickDelay() that the inner elements wont have delay in click event
-            $("#login_page").noClickDelay();  
-            $("#register_page").noClickDelay();
-            $("#profile_setting_page").noClickDelay();
-            $("#category_page").noClickDelay();
-            $("#map_page").noClickDelay();
-            $("#therapy_profile_page").noClickDelay();
-
+            // $("#login_page").noClickDelay();  
+            // $("#register_page").noClickDelay();
+            // $("#profile_setting_page").noClickDelay();
+            // $("#category_page").noClickDelay();
+            // $("#map_page").noClickDelay();
+            // $("#therapy_profile_page").noClickDelay();
+            $(function() {
+              FastClick.attach(document.body);
+            });
             $('body').bind('focusin focus', function(e){
                 e.preventDefault();
             })
@@ -497,6 +511,11 @@
                 $(".ui-header .list-btn").show();
                 $(".ui-header .back-btn").show();
             }
+            else if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
+                $(".ui-header .cancel-btn").show();
+                $(".ui-header .list-btn").hide();
+                $(".ui-header .back-btn").hide();
+            }
 
         }
 
@@ -507,13 +526,14 @@
             else if($(element).hasClass('detail-wrap-trigger')){
                 $('.detail-wrap').removeClass('slider-appear').addClass('toggle');
             }
-
-            if ($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
+            
+            if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
                 $(".ui-header .cancel-btn").show();
                 $(".ui-header .list-btn").hide();
                 $(".ui-header .back-btn").hide();
-            }
+            }   
         }
+
         function toggleLoginContent(){
              if($(".login-inner-wrap").is(":visible")){
                 $('#register_email').blur();
@@ -537,9 +557,7 @@
         }
         function showSearchWrap(){
             $(".search_wrap").addClass('appear');
-           
             setTimeout(function(){$(".search_wrap form input").focus();},300);
-        
             $(".search_wrap form").on('submit', function(e){
                 e.preventDefault();
                 hideSearchWrap();
