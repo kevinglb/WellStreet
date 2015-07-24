@@ -109,7 +109,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
     width: 100%;
     background-color: transparent;
 }
-
 #login_page .btn-block{
     color:white;
     width: 95%;
@@ -296,6 +295,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 #map_page{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 #map_page .ui-header{
     position: absolute;
@@ -316,14 +316,28 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left: 0;
     width: 100%;
     height: 100%;
+    padding-top: 9.5vh;
     overflow: hidden;
 }
-.filter-wrap, .detail-wrap{
+.category-wrap, .detail-wrap{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 125%;
+}
+.filter-wrap{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top:9.5vh;
+    overflow: hidden;
+    z-index: 30;
+    background-color: #FFF;
+    transform: translate3d(0,100%,0);
+    -webkit-transform: translate3d(0,100%,0);
 }
 .animated{
     -webkit-transition-duration: 250ms;
@@ -341,7 +355,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     transform: translate3d(100%,0,0);
     -webkit-transform: translate3d(100%,0,0);
 }
-.filter-wrap{
+.category-wrap{
     z-index: 10;
     background-color: rgba(240,240,240,0.98);
     transform: translate3d(0,100%,0);
@@ -353,12 +367,12 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
      transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
 }
-.filter-wrap.slider-appear{
-    transform: translate3d(0,72%,0);
+.category-wrap.slider-appear{
+    transform: translate3d(0,70%,0);
     -webkit-transform: translate3d(0,70%,0);
 }
 .detail-wrap.slider-appear{
-    transform: translate3d(0,72%,0);
+    transform: translate3d(0,70%,0);
     -webkit-transform: translate3d(0,70%,0);
 }
 .map-wrap.toggle{
@@ -369,13 +383,25 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 }
-.filter-wrap.toggle{
-    transform: translate3d(0,-16%,0);
-    -webkit-transform: translate3d(0,-18%,0);
+.category-wrap.toggle{
+    transform: translate3d(0,-20%,0);
+    -webkit-transform: translate3d(0,-20%,0);
 }
 .detail-wrap.toggle{
-     transform: translate3d(0,-16%,0);
-    -webkit-transform: translate3d(0,-18%,0);
+     transform: translate3d(0,-20%,0);
+    -webkit-transform: translate3d(0,-20%,0);
+}
+.filter-wrap.toggle{
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+.filter-wrap.right{
+    transform: translate3d(100%,100%,0);
+    -webkit-transform: translate3d(100%,100%,0);
+}
+.filter-wrap.right.toggle{
+    transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
 }
 .detail-wrap .detail-timetable-wrap{
      transform: translate3d(0,0,0);
@@ -425,6 +451,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border: none;
     font-size: 16px;
     border-bottom: 1px solid #E5E5E5; 
+    border-top: 1px solid #E5E5E5;
 }
 .fw-btn-wrap button:first-child{
     border-right: 1px solid #E5E5E5; 
@@ -435,48 +462,75 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 .detail-wrap .therapy-details{
 
 }
-.detail-wrap .detail-container,.filter-wrap .filter-container{
+.detail-wrap .detail-container, .category-wrap .category-container{
     position: relative;
     height: 80%;
-    margin-top: 12%;
     overflow: hidden;
 }
+.blank-block{
+    position: relative;
+    height: 10%;
+    width: 100%;
+}
+.detail-container .therapy_details{
+    padding: 15px 0;
+}
+.detail-container .therapy_details label{
+    margin-bottom: 0.6em;
+}
 
-
-.filter-wrap .bottom-btn, .detail-wrap .bottom-btn{
-    position: absolute;
-    font-size: 1.2em;
-    bottom: 30px;
-    left: 0;
-    width: 90%;
-    margin: 0 5%;
-    border: 2px solid #d6d6d6;
-
+.detail-container .detail-inner-item{
+    border-bottom: 1px solid #c6c6c6;
+    padding: 10px;
+}
+.filter-wrap .filter-container{
+    position: relative;
+    height: 100%;
+    
+    overflow: hidden;
+}
+.inner-wrap-container{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    max-height: 80%;
+    overflow: hidden;
 }
 .filter-wrap .filter-inner-wrap, .detail-wrap .detail-inner-wrap{
-    height: 75%;
+    height: 100%;
     width: 100%;
     position: absolute;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     top: 0;
     left: 0;
-   margin-top: 4em;
+}
+.save-btn{
+    position: absolute;
+    margin:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 0 !important;
+    background-color: #00CFC1 !important;
+    color: #fff !important;
 }
 /*trigger button for bottom wraps*/
 .wrap-trigger-btn{
-    position:absolute;
-    left: 20%;
-    top: -30px;
-    height: 50px;
-    width: 50px !important;
-    margin:0 auto;
+    position:relative;
+    height: 48px;
+    width: 48px !important;
     z-index: 30;
-    border-radius: 8px !important;
+    margin: 0 auto;
+    border-radius: 10px !important;
 }
 .detail-wrap-trigger{
     background-color: #FFC145;
     border:2px solid #FFC145;
 }
-.filter-wrap-trigger{
+.category-wrap-trigger{
     background-color: #3185FC !important;
     border:2px solid #3185FC;
 }
@@ -496,8 +550,9 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -webkit-overflow-scrolling: touch; 
 }
 
-.therapy_list_item{
-    padding: 15px 10px;
+
+div.row.therapy_list_item{
+    padding: 10px 5px;
     border-bottom: 1px solid #d6d6d6;
 }
 .loading_wrap{
@@ -590,7 +645,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border-radius: 0.325em;
 }
 #map {
-    height: 88%;
+    height: 87%;
     width: 100%;
     z-index: 1;
     display: block;
@@ -602,7 +657,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     top: 0;
     left: 0;
     width: 100%;
-    height: 12%;
+    height: 10%;
     z-index: 3;
 }
 /* bottom slider*/
@@ -615,7 +670,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 12%;
+    height: 10%;
     background-color: #fff;
 }
 #category_slider .detail_content{

@@ -15,8 +15,8 @@ div[class^="col-xs-"]{
     height: 9.5vh;
 }
 .map-wrap, .list-wrap{
-    margin-top: 9.5vh;
+    padding-top: 9.5vh;
 }
-.map-wrap, .list-wrap{
-	height: 90.5%;
+.detail-wrap .detail-container, .category-wrap .category-container{
+	padding-top: 9.5vh; 
 }

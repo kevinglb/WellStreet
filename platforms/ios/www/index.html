@@ -236,6 +236,7 @@
                     </a>
                     <a href="#" class="cancel-btn ui-btn" style="display:none;" onclick="toggleBottomWrap();return false;">Cancel</a>
                 </div>
+                <h1 class="ui-title"></h1>
                 <!-- <h1 onclick="showSearchWrap();return false;">Search</h1> -->
                 <div class="ui-btn-right" >
                     <a href="#" class="ui-btn list-btn" onClick="toggleContent();return false;">
@@ -301,85 +302,102 @@
                     <div class="detail-wrap animated">
                         <!--  <button id="detail-wrap-trigger" class="wrap-trigger-btn" onclick="triggerBottomWrap(this);"></button> -->
                          <div id="detail_slider"></div>
+                         <div class="blank-block"></div>
                          <div class="detail-container">
                             <div class="therapy_details text-center">
                                 <label class="therapy_name"></label>
                                 <label class="therapy_address"></label>
                             </div>
-                            <div class="fw-btn-wrap">
+                            <div class="row fw-btn-wrap">
                                 <button type="button" class="ui-btn active" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Timetable</button>
                                 <button type="button" class="ui-btn" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Services</button>
-                                <div class="clear"></div>
                             </div>
-                            <div class="detail-timetable-wrap detail-inner-wrap animated">
-                                timetable wrap
+                            <div class="inner-wrap-container">
+                                <div class="detail-timetable-wrap detail-inner-wrap animated">
+                                    <div class="detail-inner-item row">
+                                        <div class="col-xs-8">
+                                            <label>Single Session</label>
+                                            <label>Today 5 - 7 pm</label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button class="button" onclick="changePage('booking_page','slide');">50&#8364</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail-service-wrap detail-inner-wrap animated">
+                                    <div class="detail-inner-item row">
+                                        <div class="col-xs-8">
+                                            <label>Iyengar Yoga</label>
+                                            <label>Monday and Wednesday</label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button class="button">Book</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="detail-service-wrap detail-inner-wrap animated">
-                                service wrap
-                            </div>
-                            
-                            
-
                          </div>
-                         <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">OK</button>
                     </div>
-                   
                     <!-- a wrap showing the peference filter -->
-                    <div class="filter-wrap animated slider-appear">
-                        <div id="category_slider">
-                            <div class="detail_content text-center" data-index='0' data-type="acupuncturist">
-                                <div class="col-xs-9">
-                                    <label>Acupuncturist</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
-                                </div>
+                </div>
+                <div class="category-wrap animated slider-appear">
+                    <div id="category_slider">
+                        <div class="detail_content text-center" data-index='0' data-type="acupuncturist">
+                            <div class="col-xs-9">
+                                <label>Acupuncturist</label>
                             </div>
-                            <div class="detail_content text-center" data-index='1' data-type="allergy">
-                                <div class="col-xs-9">
-                                    <label>allergy</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
-                                </div>
-                            </div>
-                            <div class="detail_content text-center" data-index='2' data-type="aromatherapist">
-                                <div class="col-xs-9">
-                                    <label>Aromatherapist</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
-                                </div>
-                            </div>
-                            <div class="detail_content text-center" data-index='3' data-type="ciropodist">
-                                <div class="col-xs-9">
-                                    <label>Ciropodist</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
-                                </div>
-                            </div>
-                            <div class="detail_content text-center" data-index='4' data-type="chiropractor">
-                                <div class="col-xs-9">
-                                    <label>Chiropractor</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="wrap-trigger-btn filter-wrap-trigger" onclick="triggerBottomWrap(this);"></button>
-                                </div>
+                            <div class="col-xs-3 text-center">
+                                <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
                             </div>
                         </div>
-                        <div class="filter-container">
-                            <div class="therapy-details text-center">
-                                <label class="therapy_name"></label>
-                                <label class="therapy_address"></label>
+                        <div class="detail_content text-center" data-index='1' data-type="allergy">
+                            <div class="col-xs-9">
+                                <label>Allergy</label>
                             </div>
-                            <div class="fw-btn-wrap">
-                                <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Details</button>
-                                <button type="button" class="ui-btn" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Filters</button>
-                                <div class="clear"></div>
+                            <div class="col-xs-3 text-center">
+                                <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
                             </div>
+                        </div>
+                        <div class="detail_content text-center" data-index='2' data-type="aromatherapist">
+                            <div class="col-xs-9">
+                                <label>Aromatherapist</label>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
+                            </div>
+                        </div>
+                        <div class="detail_content text-center" data-index='3' data-type="ciropodist">
+                            <div class="col-xs-9">
+                                <label>Ciropodist</label>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
+                            </div>
+                        </div>
+                        <div class="detail_content text-center" data-index='4' data-type="chiropractor">
+                            <div class="col-xs-9">
+                                <label>Chiropractor</label>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blank-block"></div>
+                    <div class="category-container">
+                        <button type="button" class="save-btn">Save</button>
+                    </div>
+
+                </div>
+                <div class="filter-wrap animated">
+                    <div class="filter-container">
+                        <div class="row fw-btn-wrap">
+                            <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Details</button>
+                            <button type="button" class="ui-btn" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Filters</button>
+                        </div>
+                        <div class="inner-wrap-container">
                             <div class="filter-details-wrap filter-inner-wrap animated">
-                                filter detail wrap
+                                    filter detail wrap
                             </div>
                             <div class="filter-filters-wrap filter-inner-wrap animated">
                                 <div>
@@ -387,8 +405,8 @@
                                     <input type="range" min="1" max="10"></input>
                                 </div>
                             </div>
-                            <button class="btn btn-large btn-block bottom-btn" onclick="toggleBottomWrap(this);return false;">Done</button>
                         </div>
+                        <button type="button" class="save-btn">Save</button>
                     </div>
                 </div>
                 <div class="list-wrap animated">
@@ -402,7 +420,6 @@
            <!--  </div> -->
            </div>
         </div>
-
         <!-- page for showing the profile of selected therapy -->
         <div id="therapy_profile_page" data-role="page">
             <div data-role="header"  class="ui-header" position="fixed">
@@ -423,14 +440,34 @@
                 </div>
             </div>
         </div>
-
+        <div id="booking_page" data-role="page">
+                <div data-role="header"  class="ui-header" position="fixed">
+                    <div class="ui-btn-left">
+                        <a href="#" class=" ui-btn" onclick="slideBack('map_page')">
+                            <i class="icon icon-2x icon-arrow-left"></i>
+                        </a>
+                    </div>
+                    <h1 class="ui-title">Confirmation</h1>
+                     <div class="ui-btn-right">
+                    </div>
+                </div>
+            <div role="main" class="ui-content">
+                <button type="button" class="save-btn">BOOk NOW</button>
+            </div>
+        </div>
         <!-- page for payment operation-->
         <div id="payment_page" data-role="page">
             <div data-role="header"  class="ui-header" position="fixed">
                 <a href="#" class="header-back-btn" onclick="">Back</i></a>
             </div>
             <div role="main" class="ui-content">
-
+                <div class="therapy_details text-center">
+                    <h3 class="therapy_name"></h3>
+                    <label class="therapy_address"></label> 
+                    <label class="therapy_tel"></label>
+                    <label class="therapy_rating"></label>
+                    <div class="therapy_openhour"></div>
+                </div>
             </div>
         </div>
 
@@ -501,40 +538,51 @@
         });
         function toggleBottomWrap(element){
             if(element){
-                var target = $(element).parent('.animated');
-                if(target.hasClass('detail-wrap')){
-                    target.toggleClass('toggle').addClass('slider-appear');
+                if($(element).hasClass('wrap-trigger-btn')){
+                    $(".filter-wrap").toggleClass('toggle');
+                    console.log("wrap-trigger-btn");
                 }
-                else{
-                    $(".filter-wrap").toggleClass('toggle').addClass('slider-appear');   
+                else if($(element).hasClass('detail-wrap')){
+                    //console.log("wrap");
+                    $(element).removeClass('slider-appear').addClass('toggle');
+                }
+                else if($(element).hasClass('category-wrap')){
+                    $(element).removeClass('slider-appear').addClass('toggle');   
+                }
+                else {
+                    return;
                 }
                 $("#map").click();   
             }
             else{
-                if($(".filter-wrap").hasClass('toggle')){
-                    $(".filter-wrap").removeClass('toggle').addClass('slider-appear');
+                if($(".category-wrap").hasClass('toggle')){
+                    $(".category-wrap").removeClass('toggle').addClass('slider-appear');
                 }
-                if($(".detail-wrap").hasClass('toggle')){
+                else if($(".detail-wrap").hasClass('toggle')){
                     $(".detail-wrap").removeClass('toggle').addClass('slider-appear');
                 }
+                else if($(".filter-wrap").hasClass('toggle')){
+                     $(".filter-wrap").toggleClass('toggle');
+                }
+                $('#map_page .ui-header .ui-title').text('');
                 $("#map").click();   
             }
             if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){
-                $(".ui-header .cancel-btn").hide();
+                $(".ui-header .cancel-btn").hide(100);
                 $(".ui-header .list-btn").show();
-                $(".ui-header .back-btn").show();
+                $(".ui-header .back-btn").show(100);
             }
             else if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
-                $(".ui-header .cancel-btn").show();
-                $(".ui-header .list-btn").hide();
                 $(".ui-header .back-btn").hide();
+                $(".ui-header .list-btn").hide();
+                $(".ui-header .cancel-btn").show();
             }
 
         }
 
         function triggerBottomWrap(element){
-            if($(element).hasClass('filter-wrap-trigger')){
-                $('.filter-wrap').removeClass('slider-appear').addClass('toggle');
+            if($(element).hasClass('category-wrap-trigger')){
+                $('.category-wrap').removeClass('slider-appear').addClass('toggle');
             }
             else if($(element).hasClass('detail-wrap-trigger')){
                 $('.detail-wrap').removeClass('slider-appear').addClass('toggle');
@@ -588,9 +636,9 @@
             else{
                 var target = currentContent.attr("data-target");
                 //console.log(target);
-                // $(".filter-wrap .fw-btn-wrap button").toggleClass('active');
-                // $(".filter-wrap .filter-type-wrap").toggleClass('toggle');
-                // $(".filter-wrap .filter-perference-wrap").toggleClass('toggle');
+                // $(".category-wrap .fw-btn-wrap button").toggleClass('active');
+                // $(".category-wrap .filter-type-wrap").toggleClass('toggle');
+                // $(".category-wrap .filter-perference-wrap").toggleClass('toggle');
                 currentContent.parent(".fw-btn-wrap").children('button').toggleClass('active');
                 $('.'+target).toggleClass('toggle');
             }

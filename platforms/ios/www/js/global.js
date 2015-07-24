@@ -7,7 +7,7 @@ var $cateslider = $("#category_slider");
 var maplayer;/*layer stores all markers*/
 var markersInView_array=[]; /*stores all current visible markers on the map*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
-
+var category_array = [{'Name': 'Acupuncturist'},{'Name': 'Allergy'},{'Name': 'Aromatherapist'},{'Name': 'Ciropodist'},{'Name': 'Chiropractor'}]; //array stors all categories in order
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],draggable:true});//icon setting
 var CurrentLocation = [];/*array stores geographical info: latitude and longitude*/
 var CurrentLocation_array = [];
@@ -82,9 +82,9 @@ function resetMapPage(){
 	/*clear mapslide and re-initial*/
 	removeAllMarkers();
 	console.time("resetMapPage");
-	if($(".map-wrap").hasClass("toggle") || $(".list-wrap").hasClass("toggle")){
-		toggleContent();
-	}
+	// if($(".map-wrap").hasClass("toggle") || $(".list-wrap").hasClass("toggle")){
+	// 	toggleContent();
+	// }
 
 	//empty the list
 	$("#therapy_list").empty();
@@ -139,37 +139,15 @@ function changePage(target_page, transition,callback){
 }
 
 function toggleContent(){
-	if($(".filter-wrap").hasClass("toggle")){
-		$(".filter-wrap").toggleClass('toggle');
-	}
+	// if($(".filter-wrap").hasClass("toggle")){
+	// 	$(".filter-wrap").toggleClass('toggle');
+	// }
 	$(".map-wrap").toggleClass('toggle');
 	$(".list-wrap").toggleClass('toggle');
+	if(!$('.category-wrap').hasClass('slider-appear')){
+		console.log('no slider appear');
+		$('.category-wrap').toggleClass('slider-appear');
+	}
+	//$(".filter-wrap").toggleClass('right');
 }
 
-function getCategory(){
-	$.ajax(
-    {
-        url : categery_url,
-        username:  "123@123.com",
-        password: 123,
-        type: "POST",
-        data : {key: api_key},
-        dataType: 'json',
-        success: function(response)
-        {
-          if(response.status == "1")
-          {
-            console.log(JSON.stringify(response.results));
-          }
-          else
-          {
-           	console.log("failed");
-          }
-        },
-        error: function (error)
-        {
-          //alert("Sorry, failed to load patient triage history. Please check your network and try again later");
-         console.log(error);
-        }
-    });
-}

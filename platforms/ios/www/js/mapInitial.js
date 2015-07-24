@@ -84,7 +84,7 @@ function endLoading(){
 function addLayer(type,callback){
 	therapy_array = getDataAray(type);
 	//add content to the list
-	addList(therapy_array);
+	addToList(therapy_array);
 	var currentBounds = $map.getBounds().pad(-0.1);
 	
 	for(var i = 0,len=therapy_array.length; i< len;i++){
@@ -114,7 +114,7 @@ function addLayer(type,callback){
 	else{
 		endLoading();
 	}
-	getUserCurrentLocation();
+	//getUserCurrentLocation();
 	callback(markersInView_array);
 
 }
@@ -174,7 +174,7 @@ function clickOnMarker(e){
 /*detect whether the slider is visible when click on any marker on the map*/
 function toggleSliders(){
 	if($cateslider.is(":visible") ){
-		$(".filter-wrap").removeClass('toggle slider-appear');
+		$(".category-wrap").removeClass('toggle slider-appear');
 		$(".detail-wrap").removeClass('toggle').addClass('slider-appear');
 		//$detailslider.slideToggle(200);
 		//updateDetailSlider();
@@ -232,16 +232,38 @@ function getDataAray(type){
 }
 
 //get the index of the therapy in the array and then load profile(now it is a common function)
-function getTherapy(element, callback){
+function getTherapy(element, target_page,callback){
+	console.time("getTherapy");
 	// var index = $detailslider.slick('slickCurrentSlide');
 	var currentindex = $(element).attr('data-index');
 	var therapy = therapy_array[currentindex];
+	if(target_page){
+		$('#'+target_page+' .ui-header .ui-title').text(therapy.Name);
+	}
+	// changePage("therapy_profile_page", "slide");	
 	callback(therapy);
-	changePage("therapy_profile_page", "slide");	
+	console.timeEnd("getTherapy");
+	
+}
+//get the index of the category in the array and load profile
+function getCategory(element, target_page,callback){
+	var currentindex = $(element).attr('data-slick-index');
+	var category = category_array[currentindex];
+	// changePage("therapy_profile_page", "slide");	
+	if(target_page){
+		$('#'+target_page+' .ui-header .ui-title').text(category.Name);
+	}
+	callback(category);
+	
+}
+
+function loadCategoryInfo(category){
+	
 }
 
 //load info of the selected therapy
 function loadProfile(therapy){
+	console.time('loadtherapy');
 	var innerhtml  = "";
 	$("#therapy_profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
 	$("#therapy_profile_page .ui-header .therapy_city").text(therapy.City);
@@ -249,6 +271,10 @@ function loadProfile(therapy){
 	$("#therapy_profile_page .therapy-details .therapy_name").text(therapy.Name);
 	$("#therapy_profile_page .therapy-details .therapy_address").text(therapy['Full Address']);	
 	$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);	
+	$(" .therapy_details .therapy_name").text(therapy.Name);
+	$(".therapy_details .therapy_address").text(therapy['Full Address']);
+
+	
 	if(therapy['Rating']){
 		$("#therapy_profile_page .therapy-details .therapy_rating").text("Rating: "+therapy['Rating']);	
 	}
@@ -259,6 +285,7 @@ function loadProfile(therapy){
 		}
 		$("#therapy_profile_page .therapy-details .therapy_openhour").html(innerhtml);
 	}
+	console.timeEnd('loadtherapy');
 
 }
 
@@ -276,10 +303,10 @@ function switchCategory(callback){
 	}
 }
 
-function addList(DataArray){
+function addToList(DataArray){
 	var div='';
 	for(var i = 0,len=DataArray.length; i< len;i++){
-		div += '<div class="therapy_list_item" onclick="getTherapy(this,loadProfile)" data-index="'+i+'"><label class="text-center">'+DataArray[i].Name+'</label><label class="text-center">'+DataArray[i]['Full Address']+'</label></div>';
+		div += '<div class="row therapy_list_item"  data-index="'+i+'"><div class="col-xs-9"><label>'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div><div class="col-xs-3"><button class="button ui-btn" onclick="changePage(booking_page,"slide")>50&#8364</button></div></div>';
 	}
 	$("#therapy_list").append(div);
 }
@@ -307,7 +334,7 @@ function updateDetailSlider(DataArray){
 //return a div including the brief info of the marker
 function createItem(layer){
 	//" onclick="getTherapy(this,loadProfile)"
-	var div='<div data-index="'+layer.options['index']+'"><div class="col-xs-9"><label>'+ layer.options['name']+'</label><label>'+ layer.options['address']+'</label></div><div class="col-xs-3"><button class="wrap-trigger-btn detail-wrap-trigger" onclick="triggerBottomWrap(this);"></button><span>See More</span></div></div>';
+	var div='<div data-index="'+layer.options['index']+'"><div class="col-xs-9"><label>'+ layer.options['name']+'</label><label>'+ layer.options['address']+'</label></div><div class="col-xs-3 text-center"><button class="wrap-trigger-btn detail-wrap-trigger" onclick="toggleBottomWrap(this);"></button></div></div>';
 	return div;
 }
 //initial the detailslider
@@ -325,20 +352,29 @@ function initialDetailSlider(){
 	// 	//$map.panTo(markers_array[currentindex].getLatLng(),{animate: true, duration: 0.5});
 	// 	markersInView_array[currentindex].openPopup();
 	// });
+	$detailslider.on('swipeup',function(){
+		var wrap = $(".detail-wrap");
+		var currentslide = $detailslider.children('.slick-list').children('.slick-track').children('.slick-current');
+		
+		//need a callback function to fill the title and details part(including the timetable & services)
+		if(wrap.hasClass('slider-appear')){
+			toggleBottomWrap(wrap);
+			getTherapy(currentslide,"map_page",loadProfile);
+		}
+	});
 
 	$detailslider.on('swipedown', function(){
 		if($('.detail-wrap').hasClass("slider-appear")){
 			//$cateslider.slideToggle(200);
 			// $detailslider.slideToggle(150);
 			$('.detail-wrap').removeClass('slider-appear');
-			$('.filter-wrap').addClass('slider-appear');
+			$('.category-wrap').addClass('slider-appear');
 			
 		}
 		else{
 			return;
 		}
 	});
-
 }
 
 //initial the cateslider
@@ -358,12 +394,14 @@ function initialCateSlider(){
             switchCategory(addLayer);
         }
     });
- 	// $cateslider.on('swipeup',function(e){
- 	// 	$(".filter-wrap").toggleClass('toggle');
- 	// 	$(".ui-header .back-btn").hide();
- 	// 	$(".ui-header .list-btn").hide();
- 	// 	$(".ui-header .cancel-btn").show();
- 	// });
+ 	$cateslider.on('swipeup',function(e){
+ 		var wrap = $(".category-wrap");
+ 		var currentslide = $cateslider.children('.slick-list').children('.slick-track').children('.slick-current');
+		if(wrap.hasClass('slider-appear')){
+			toggleBottomWrap(wrap);
+			getCategory(currentslide,"map_page",loadCategoryInfo);
+		}
+ 	});
 }
 
 function addDivIcon(){

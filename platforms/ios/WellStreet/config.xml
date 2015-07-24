@@ -18,6 +18,7 @@
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="fullscreen" value="true" />
+    <preference name="exit-on-suspend" value="false" />
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -42,6 +43,9 @@
         <array>
             <string>NSLocationAlwaysUsageDescription</string>
         </array>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="UIApplicationExitsOnSuspend" overwrite="true">
+        <false/>
     </gap:config-file>
     <content src="index.html" />
     <access origin="*" />
