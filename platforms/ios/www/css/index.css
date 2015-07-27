@@ -93,6 +93,9 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
 .icon-delete{
     background-image: url("../icon/icon-delete.svg");
 }
+.red-text{
+    color: #FF6860;
+}
 /* Login page goes here */
 .bg-wrap{
     background: url(../img/b1.png);
@@ -339,6 +342,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
 }
+
 .animated{
     -webkit-transition-duration: 250ms;
     -moz-transition-duration: 250ms;
@@ -451,7 +455,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border: none;
     font-size: 16px;
     border-bottom: 1px solid #E5E5E5; 
-    border-top: 1px solid #E5E5E5;
+
 }
 .fw-btn-wrap button:first-child{
     border-right: 1px solid #E5E5E5; 
@@ -472,13 +476,19 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     height: 10%;
     width: 100%;
 }
-.detail-container .therapy_details{
+
+/*common css for therapy_details div*/
+.therapy_details{
     padding: 15px 0;
+    border-bottom: 1px solid #B2B2B2;
 }
-.detail-container .therapy_details label{
+.therapy_details label{
     margin-bottom: 0.6em;
 }
-
+.therapy_details .therapy_name{
+    font-weight: bold;
+    font-size: 18px;
+}
 .detail-container .detail-inner-item{
     border-bottom: 1px solid #c6c6c6;
     padding: 10px;
@@ -504,6 +514,25 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -webkit-overflow-scrolling: touch;
     top: 0;
     left: 0;
+}
+
+ul.filter-list{
+    
+}
+ul.filter-list li{
+    line-height: 2em;
+    padding: 0.5em 1em;
+}
+ul.filter-list .ui-li-divider{
+    border-bottom: 1px solid #d6d6d6;
+}
+
+ul.filter-list .row{
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active{
+    background-color: #DD5050;
 }
 .save-btn{
     position: absolute;
@@ -659,6 +688,7 @@ div.row.therapy_list_item{
     width: 100%;
     height: 10%;
     z-index: 3;
+    border-top: 1px solid #d6d6d6;
 }
 /* bottom slider*/
 #detail_slider::after{
@@ -671,6 +701,7 @@ div.row.therapy_list_item{
     left: 0;
     width: 100%;
     height: 10%;
+    border-top: 1px solid #d6d6d6;
     background-color: #fff;
 }
 #category_slider .detail_content{
@@ -829,34 +860,72 @@ div.current-location-icon:after{
 #profile_setting_page{
     font-size: 16px;
 }
-#profile_setting_page label{
-    margin:0.5em 0;
+
+label.form-input-title{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 1em 0;
 }
-.profile-setting-block{
+.form-input-block{
     width: 90%;
     margin: 0 5%;
     background-color: #fff;
     border-radius: 3.75px;
    /* font-size: 16px;*/
 }
-.profile-setting-block .row{
+
+.form-input-block .row{
     padding: 0;
     margin: 0 10px;
     border-bottom: 1px solid #d6d6d6;
 }
-.profile-setting-block .row:last-child{
+.form-input-block .row:last-child{
     border-bottom: none;
 }
-.profile-setting-block .row *{
+.form-input-block .row *{
     padding: 0;
 }
-.profile-setting-block .row label{
+.form-input-block .row label{
     line-height: 2.2em;
     height: 2.2em;
     color: #A6A6A6;
+    margin: 0.5em 0;
 }
-.profile-setting-block .row input{
+.form-input-block .row input{
     padding: 0;
     text-align: right;
 }
 
+ul.sortable li{
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+}
+
+/*booking page content*/
+div.service_details{
+    width:90%;
+    margin:5% auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 3.75px;
+}
+div.service_details label{
+    font-size: 16px;
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+div.service_price_details label{
+    margin-bottom: 0;
+    color: #00CFC1;
+}
+div.service_price_details .service_price{
+    font-size: 1.8em;
+    line-height: 2em;
+}
+
+.notice{
+    width: 90%;
+    margin:2em auto 0 auto;
+
+}

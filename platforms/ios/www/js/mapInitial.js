@@ -194,7 +194,7 @@ function getUserCurrentLocation()
 		if(CurrentLocation_array.length == 0){
 			var CurrentLocationMarker = L.marker(CurrentLocation,{icon: currentIcon});//.bindPopup('You Are Here',{autoPan:false});
 			CurrentLocation_array.push(CurrentLocationMarker);
-			CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
+			var CurrentLocationLayer = L.layerGroup(CurrentLocation_array).addTo($map);
 		}
 		else{
 			console.log('CurrentLocation marker exists');
@@ -258,7 +258,7 @@ function getCategory(element, target_page,callback){
 }
 
 function loadCategoryInfo(category){
-	
+
 }
 
 //load info of the selected therapy
@@ -268,10 +268,10 @@ function loadProfile(therapy){
 	$("#therapy_profile_page .ui-header .therapy_county").text(therapy['County/State']+'.'+therapy.Country);
 	$("#therapy_profile_page .ui-header .therapy_city").text(therapy.City);
 
-	$("#therapy_profile_page .therapy-details .therapy_name").text(therapy.Name);
-	$("#therapy_profile_page .therapy-details .therapy_address").text(therapy['Full Address']);	
-	$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);	
-	$(" .therapy_details .therapy_name").text(therapy.Name);
+	//$("#therapy_profile_page .therapy-details .therapy_name").text(therapy.Name);
+	//$("#therapy_profile_page .therapy-details .therapy_address").text(therapy['Full Address']);	
+	//$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);	
+	$(".therapy_details .therapy_name").text(therapy.Name);
 	$(".therapy_details .therapy_address").text(therapy['Full Address']);
 
 	
@@ -305,10 +305,13 @@ function switchCategory(callback){
 
 function addToList(DataArray){
 	var div='';
+	
 	for(var i = 0,len=DataArray.length; i< len;i++){
-		div += '<div class="row therapy_list_item"  data-index="'+i+'"><div class="col-xs-9"><label>'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div><div class="col-xs-3"><button class="button ui-btn" onclick="changePage(booking_page,"slide")>50&#8364</button></div></div>';
+		div += '<div class="row therapy_list_item"  data-index="'+i+'"><div class="col-xs-9"><label>'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div><div class="col-xs-3"><button data-index="'+i+'" class="button ui-btn" onclick="loadBookingPage(this,loadProfile)">50&#8364</button></div></div>';
 	}
+	
 	$("#therapy_list").append(div);
+	//$("#therapy_list").replaceWith(div);
 }
 //update the detailslider content based on the markersInView_array
 function updateDetailSlider(DataArray){
@@ -359,7 +362,9 @@ function initialDetailSlider(){
 		//need a callback function to fill the title and details part(including the timetable & services)
 		if(wrap.hasClass('slider-appear')){
 			toggleBottomWrap(wrap);
+
 			getTherapy(currentslide,"map_page",loadProfile);
+			$(".detail-container .inner-wrap-container button").attr('data-index',currentslide.attr('data-index'));
 		}
 	});
 
@@ -412,4 +417,16 @@ function addDivIcon(){
 		$(e.target._icon).toggleClass('active');
 		//$(e.target._icon).html('the content is changed');
 	})
+}
+
+function loadBookingPage(element,callback){
+	if(element){
+		var currentindex = $(element).attr('data-index');
+		var therapy = therapy_array[currentindex];
+		callback(therapy);
+		changePage("booking_page", "slide");
+		
+		//console.timeEnd("getTherapy");
+		
+	}
 }
