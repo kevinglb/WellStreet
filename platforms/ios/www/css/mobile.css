@@ -14,9 +14,13 @@ div[class^="col-xs-"]{
 	padding-top: 3.5vh;
     height: 9.5vh;
 }
+div.wrap-header{
+	padding-top: 3.5vh;
+    height: 9.5vh;
+}
 .map-wrap, .list-wrap{
     padding-top: 9.5vh;
 }
-.detail-wrap .detail-container, .category-wrap .category-container{
+/*.detail-wrap .detail-container, .category-wrap .category-container{
 	padding-top: 9.5vh; 
-}
+}*/

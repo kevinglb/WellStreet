@@ -232,27 +232,25 @@ function getDataAray(type){
 }
 
 //get the index of the therapy in the array and then load profile(now it is a common function)
-function getTherapy(element, target_page,callback){
+function getTherapy(element, callback){
 	console.time("getTherapy");
 	// var index = $detailslider.slick('slickCurrentSlide');
 	var currentindex = $(element).attr('data-index');
 	var therapy = therapy_array[currentindex];
-	if(target_page){
-		$('#'+target_page+' .ui-header .ui-title').text(therapy.Name);
-	}
+	// if(target_page){
+	// 	$('.'+target_page+' .ui-header .ui-title').text(therapy.Name);
+	// }
 	// changePage("therapy_profile_page", "slide");	
 	callback(therapy);
 	console.timeEnd("getTherapy");
 	
 }
 //get the index of the category in the array and load profile
-function getCategory(element, target_page,callback){
+function getCategory(element,callback){
 	var currentindex = $(element).attr('data-slick-index');
 	var category = category_array[currentindex];
 	// changePage("therapy_profile_page", "slide");	
-	if(target_page){
-		$('#'+target_page+' .ui-header .ui-title').text(category.Name);
-	}
+	
 	callback(category);
 	
 }
@@ -270,7 +268,8 @@ function loadProfile(therapy){
 
 	//$("#therapy_profile_page .therapy-details .therapy_name").text(therapy.Name);
 	//$("#therapy_profile_page .therapy-details .therapy_address").text(therapy['Full Address']);	
-	//$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);	
+	//$("#therapy_profile_page .therapy-details .therapy_tel").text(therapy['Telephone Number']);
+	$(".detail-wrap .wrap-header .ui-title").text(therapy.Name);	
 	$(".therapy_details .therapy_name").text(therapy.Name);
 	$(".therapy_details .therapy_address").text(therapy['Full Address']);
 
@@ -363,7 +362,7 @@ function initialDetailSlider(){
 		if(wrap.hasClass('slider-appear')){
 			toggleBottomWrap(wrap);
 
-			getTherapy(currentslide,"map_page",loadProfile);
+			getTherapy(currentslide,loadProfile);
 			$(".detail-container .inner-wrap-container button").attr('data-index',currentslide.attr('data-index'));
 		}
 	});
@@ -404,7 +403,7 @@ function initialCateSlider(){
  		var currentslide = $cateslider.children('.slick-list').children('.slick-track').children('.slick-current');
 		if(wrap.hasClass('slider-appear')){
 			toggleBottomWrap(wrap);
-			getCategory(currentslide,"map_page",loadCategoryInfo);
+			getCategory(currentslide,loadCategoryInfo);
 		}
  	});
 }

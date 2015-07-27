@@ -305,8 +305,11 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     top:0;
     left:0;
     width: 100%;
-    z-index: 20;
+    z-index: 1;
     background-color: rgba(143, 205, 190, 0.9);
+}
+#map_page .ui-header.toggle{
+    z-index: auto !important;
 }
 #map_page .ui-header .ui-title{
     margin:0.6em 30% 0 30%;
@@ -335,7 +338,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top:9.5vh;
+    
     overflow: hidden;
     z-index: 30;
     background-color: #FFF;
@@ -343,6 +346,40 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     -webkit-transform: translate3d(0,100%,0);
 }
 
+/*wrap-header*/
+div.wrap-header{
+    position: relative;
+    width: 100%;
+    color: #FFFFFF;
+    z-index: 10;
+    background-color: rgba(143, 205, 190, 0.9);
+}
+div.wrap-header .ui-btn-left, div.wrap-header.ui-btn-right{
+    position: absolute;
+    top: 0;
+    margin: 3.5vh 0 0 0;
+    height: 6vh;
+    color: #fff;
+    box-sizing: border-box;
+    width: auto;
+}
+
+div.wrap-header .ui-btn-left .ui-btn, div.wrap-header  .ui-btn-right .ui-btn {
+    height: 100%;
+    color: #fff;
+}
+div.wrap-header .ui-title{
+    font-size: 1em;
+min-height: 1.1em;
+text-align: center;
+display: block;
+margin: 0 30%;
+/*padding: .7em 0;*/
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+outline: 0 !important;
+}
 .animated{
     -webkit-transition-duration: 250ms;
     -moz-transition-duration: 250ms;
@@ -495,8 +532,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 }
 .filter-wrap .filter-container{
     position: relative;
-    height: 100%;
-    
+    height: 90.5%;
     overflow: hidden;
 }
 .inner-wrap-container{
@@ -530,7 +566,21 @@ ul.filter-list .ui-li-divider{
 ul.filter-list .row{
     border-bottom: 1px solid #d6d6d6;
 }
-
+.perference-seting-wrap{
+    width: 90%;
+    margin: 0 auto;
+}
+.perference-seting-wrap button{
+    float: left;
+    width: 45%;
+    margin: 0 2.5%;
+    border-radius: 2em;
+    border:1px solid #FFC145;
+}
+.perference-seting-wrap button.toggle{
+    background-color: #FFC145;
+    color: #fff;
+}
 .ui-page-theme-a .ui-slider-track .ui-btn-active{
     background-color: #DD5050;
 }
@@ -676,7 +726,7 @@ div.row.therapy_list_item{
 #map {
     height: 87%;
     width: 100%;
-    z-index: 1;
+    
     display: block;
 }
 
@@ -719,6 +769,7 @@ div.row.therapy_list_item{
     color: #FFFFFF;
     background-color: rgba(143, 205, 190, 0.9);
 }
+
 .ui-page .ui-header .ui-btn-left, .ui-page .ui-header .ui-btn-right{
     margin: 3.5vh 0 0 0;
     height: 6vh;

@@ -231,7 +231,7 @@
        
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
-            <div class="ui-header" data-role="header" position="fixed">
+            <div class="ui-header">
                 <div class="ui-btn-left" >
                     <a href="#" class="back-btn ui-btn nodelay" onclick="slideBack('category_page',resetMapPage())">
                         <i class="icon icon-2x icon-arrow-left"></i>
@@ -303,8 +303,16 @@
                     <!-- a wrp showing timetable ? -->
                     <div class="detail-wrap animated">
                         <!--  <button id="detail-wrap-trigger" class="wrap-trigger-btn" onclick="triggerBottomWrap(this);"></button> -->
-                         <div id="detail_slider"></div>
-                         <div class="blank-block"></div>
+                        <div id="detail_slider"></div>
+                        <div class="blank-block"></div>
+                        <div class="wrap-header">
+                            <div class="ui-btn-left" >
+                                <a href="#" class="cancel-btn ui-btn" onclick="toggleBottomWrap();return false;">Cancel</a>
+                            </div>
+                            <h1 class="ui-title"></h1>
+                            <div class="ui-btn-right" >
+                            </div>
+                        </div>
                          <div class="detail-container">
                             <div class="therapy_details text-center">
                                 <label class="therapy_name"></label>
@@ -386,6 +394,14 @@
                         </div>
                     </div>
                     <div class="blank-block"></div>
+                     <div class="wrap-header">
+                            <div class="ui-btn-left" >
+                                <a href="#" class="cancel-btn ui-btn"  onclick="toggleBottomWrap();return false;">Cancel</a>
+                            </div>
+                            <h1 class="ui-title">Categories</h1>
+                            <div class="ui-btn-right" >
+                            </div>
+                        </div>
                     <div class="category-container">
                         <ul class="sortable" data-role="listview">
                                     <li>Acupuncturist</li>
@@ -399,6 +415,14 @@
 
                 </div>
                 <div class="filter-wrap animated">
+                    <div class="wrap-header">
+                            <div class="ui-btn-left" >
+                                <a href="#" class="cancel-btn ui-btn"  onclick="toggleBottomWrap();return false;">Cancel</a>
+                            </div>
+                            <h1 class="ui-title"></h1>
+                            <div class="ui-btn-right" >
+                            </div>
+                        </div>
                     <div class="filter-container">
                         <div class="row fw-btn-wrap">
                             <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Details</button>
@@ -465,9 +489,15 @@
                                 </ul>
                             </div>
                             <div class="filter-filters-wrap filter-inner-wrap animated">
-                                <div>
-                                    <label>Distance within</label>
-                                    <input type="range" min="1" max="10"></input>
+                                <ul id="filter-filters-list" class="filter-list" data-role="listview">
+                                    <li><div class="row">Search within</div></li>
+                                    <li><div class="row">Providers</div></li>
+                                    <li><div class="row">Home</div></li>
+                                    <li><div class="row">Work</div></li>
+                                </ul>
+                                <div class="perference-seting-wrap row">
+                                    <button class="ui-btn toggle" onclick="togglePerferenceSetting()">Pilates Only</button>
+                                    <button class="ui-btn" onclick="togglePerferenceSetting()">Everything</button>
                                 </div>
                             </div>
                         </div>
@@ -716,6 +746,7 @@
         });
         function toggleBottomWrap(element){
             if(element){
+                $("#map_page .ui-header").css('z-index','auto');
                 if($(element).hasClass('wrap-trigger-btn')){
                     $(".filter-wrap").toggleClass('toggle');
                     console.log("wrap-trigger-btn");
@@ -730,6 +761,7 @@
                 else {
                     return;
                 }
+
                 $("#map").click();   
             }
             else{
@@ -742,19 +774,19 @@
                 else if($(".filter-wrap").hasClass('toggle')){
                      $(".filter-wrap").toggleClass('toggle');
                 }
-                $('#map_page .ui-header .ui-title').text('');
+                $("#map_page .ui-header").css('z-index',1);
                 $("#map").click();   
             }
-            if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){
-                $(".ui-header .cancel-btn").hide(100);
-                $(".ui-header .list-btn").show();
-                $(".ui-header .back-btn").show(100);
-            }
-            else if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
-                $(".ui-header .back-btn").hide();
-                $(".ui-header .list-btn").hide();
-                $(".ui-header .cancel-btn").show();
-            }
+            // if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){
+            //     $(".ui-header .cancel-btn").hide(100);
+            //     $(".ui-header .list-btn").show();
+            //     $(".ui-header .back-btn").show(100);
+            // }
+            // else if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
+            //     $(".ui-header .back-btn").hide();
+            //     $(".ui-header .list-btn").hide();
+            //     $(".ui-header .cancel-btn").show();
+            // }
 
         }
 
@@ -828,7 +860,11 @@
         }
 
         function toggleSwitchButton(element){
-            
+
+        }
+
+        function togglePerferenceSetting(){
+            $(".perference-seting-wrap button").toggleClass('toggle');
         }
     </script>
     </body>
