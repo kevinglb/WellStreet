@@ -352,7 +352,7 @@
                 </div>
                 <div class="category-wrap animated slider-appear">
                     <div id="category_slider">
-                        <div class="detail_content text-center" data-index='0' data-type="acupuncturist">
+                       <!--  <div class="detail_content text-center" data-index='0' data-type="acupuncturist">
                             <div class="col-xs-9">
                                 <label>Acupuncturist</label>
                             </div>
@@ -391,7 +391,7 @@
                             <div class="col-xs-3 text-center">
                                 <button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="blank-block"></div>
                      <div class="wrap-header">
@@ -403,13 +403,59 @@
                             </div>
                         </div>
                     <div class="category-container">
-                        <ul class="sortable" data-role="listview">
-                                    <li>Acupuncturist</li>
-                                    <li>Allergy</li>
-                                    <li>Aromatherapist</li>
-                                    <li>Ciropodist</li>
-                                    <li>Chiropractor</li>
-                                </ul>
+                        <ul id="category-list" class="sortable filter-list" data-role="listview">
+                                <li data-role="list-divider">Favourites</li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-9" >Acupuncturist</div>
+                                        <div class="col-xs-3 text-right">
+                                            <!-- <select name="Acupuncturist" id="Acupuncturist" data-role="slider" data-mini="true" style="display:none">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select> -->
+                                        </div>
+                                </li>
+                                <li>
+                                     <div class="row">
+                                        <div class="col-xs-9" >Allergy</div>
+                                        <div class="col-xs-3 text-right">
+                                           <!--  <select name="Allergy" id="Allergy" data-role="slider" data-mini="true" style="display:none">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select> -->
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-9" >Aromatherapist</div>
+                                        <div class="col-xs-3 text-right">
+                                            <!-- <select name="Aromatherapist" id="Aromatherapist" data-role="slider" data-mini="true" style="display:none">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select> -->
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-9">Ciropodist</div>
+                                        <div class="col-xs-3 text-right">
+                                           <!--  <select name="Ciropodist" id="Ciropodist" data-role="slider" data-mini="true" style="display:none">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select> -->
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-9">Chiropractor</div>
+                                        <div class="col-xs-3 text-right">
+                                          <!--   <select name="Chiropractor" id="Chiropractor" data-role="slider" data-mini="true" style="display:none">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select> -->
+                                        </div>
+                                </li>
+                        </ul>
                         <button type="button" class="save-btn">Save</button>
                     </div>
 
@@ -711,7 +757,7 @@
         $( "ul.sortable" ).bind( "sortstop", function(event, ui) {
             $('ul.sortable').listview('refresh');
         });
-
+            initialCateSlider();
          FastClick.attach(document.body);
             FastClick.attach("#map");
             $('body').bind('focusin focus', function(e){
@@ -774,7 +820,7 @@
                 else if($(".filter-wrap").hasClass('toggle')){
                      $(".filter-wrap").toggleClass('toggle');
                 }
-                $("#map_page .ui-header").css('z-index',1);
+                setTimeout(function(){$("#map_page .ui-header").css('z-index',1);},200);
                 $("#map").click();   
             }
             // if ($(".ui-header .cancel-btn").is(":visible") || $(".ui-header .list-btn").is(":hidden") ){

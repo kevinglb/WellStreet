@@ -51,18 +51,23 @@ function startLoadMapPage(type, callback){
 		if(type){
 			//detect whether the $cateslider has initialized already
 			//if is not initialized it, otherwise goto the selected slide of type
-			console.time('cateslider');
+			
 			if(!$cateslider.hasClass('slick-initialized')){
            		initialCateSlider();
 			}
+			// else{
+			// 	$cateslider.slick('refresh');
+			// }
           	var	index;
-            $cateslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
-            	if($(this).attr("data-type") == type){
-            		index = $(this).attr('data-index');
-            	}
-            });
+          	
+            // $cateslider.children('.slick-list').children('.slick-track').children('.slick-slide').each(function(){
+            // 	if($(this).attr("data-type") == type){
+            // 		index = $(this).attr('data-index');
+            // 	}
+            // });
+    		index = getCategoryIndex(type);
             $cateslider.slick('slickGoTo',index);
-            
+            console.time('cateslider');
 			callback(type, updateDetailSlider);	
 			//there is a bug caused by fastClick and leaflet that has to click on the map once when it is reloaded
 			$("#map").click();
@@ -77,9 +82,17 @@ function startLoadMapPage(type, callback){
 
 function endLoading(){
 	$.mobile.loading('hide');
-	$(".loading_wrap").fadeOut(150);
+	$(".loading_wrap").fadeOut(100);
 }
 
+function getCategoryIndex(type){
+	for(var i = 0, len = category_array.length;i<len; i++){
+		if(type == category_array[i].Name){
+			return i;
+		}
+	}
+
+}
 /*function for adding new layer on the map or change layer of another category*/
 function addLayer(type,callback){
 	therapy_array = getDataAray(type);
@@ -310,6 +323,17 @@ function addToList(DataArray){
 	}
 	
 	$("#therapy_list").append(div);
+
+	$("#therapy_list").on('scroll', function(){
+		if($(this).scrollTop() <= 0){
+			$(".category-wrap").addClass('slider-appear');
+		}
+		else if($(this).scrollTop() > 0){
+			$(".category-wrap").removeClass('slider-appear');
+		}
+	
+        
+	});
 	//$("#therapy_list").replaceWith(div);
 }
 //update the detailslider content based on the markersInView_array
@@ -383,13 +407,21 @@ function initialDetailSlider(){
 
 //initial the cateslider
 function initialCateSlider(){
+	console.time('initial');
+	var div='';
+	for(var i=0, len = category_array.length; i<len;i++){
+		div += '<div class="detail_content text-center" data-index="'+i+'" data-type="'+category_array[i].Name+'"><div class="col-xs-9"><label>'+category_array[i].Name+'</label></div><div class="col-xs-3 text-center"><button class="wrap-trigger-btn category-wrap-trigger" onclick="toggleBottomWrap(this);"></button></div></div>';
+	}
+	$cateslider.append(div);
+
 	$cateslider.slick({
         arrows: false,
         infinite:false,
         dots: false,
         speed: 150
     });
-
+    //$cateslider.slick('refresh');
+    console.timeEnd('initial');
     $cateslider.on('afterChange',function(e){
         if(typeof(maplayer) == 'undefined'){
             return;

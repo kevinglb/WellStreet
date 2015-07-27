@@ -8,7 +8,7 @@ var maplayer;/*layer stores all markers*/
 var markersInView_array=[]; /*stores all current visible markers on the map*/
 var therapy_array = [];/*array stores all therapies under selected categery*/
 var currentTherapy;
-var category_array = [{'Name': 'Acupuncturist'},{'Name': 'Allergy'},{'Name': 'Aromatherapist'},{'Name': 'Ciropodist'},{'Name': 'Chiropractor'}]; //array stors all categories in order
+var category_array = [{'Name': 'acupuncturist'},{'Name': 'allergy'},{'Name': 'aromatherapist'},{'Name': 'ciropodist'},{'Name': 'chiropractor'}]; //array stors all categories in order
 var myIcon = L.icon({iconUrl: 'icon/location-dark.svg',iconRetinaUrl: 'icon/location-dark.svg',iconSize: [30, 30],draggable:true});//icon setting
 var CurrentLocation = [];/*array stores geographical info: latitude and longitude*/
 var CurrentLocation_array = [];
