@@ -12,11 +12,9 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="webviewbounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="disallowOverscroll" value="true" />
+    <!-- <preference name="disallowOverscroll" value="true" /> -->
     <preference name="HideKeyboardFormAccessoryBar" value="true" />
     <preference name="KeyboardShrinksView" value="false" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="fullscreen" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <feature name="LocalStorage">

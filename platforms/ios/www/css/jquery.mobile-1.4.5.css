@@ -968,7 +968,7 @@ html .ui-panel-page-container-a {
 }
 /* Links */
 /* Button up */
-.ui-page-theme-a .ui-btn,
+/*.ui-page-theme-a .ui-btn,*/
 html .ui-bar-a .ui-btn,
 html .ui-body-a .ui-btn,
 html body .ui-group-theme-a .ui-btn,
@@ -1004,11 +1004,11 @@ html head + body .ui-btn.ui-btn-a:active {
 	text-shadow: 0 ;
 }*/
 /* Active button */
-.ui-page-theme-a .ui-btn.ui-btn-active,
+/*.ui-page-theme-a .ui-btn.ui-btn-active,
 html .ui-bar-a .ui-btn.ui-btn-active,
 html .ui-body-a .ui-btn.ui-btn-active,
 html body .ui-group-theme-a .ui-btn.ui-btn-active,
-html head + body .ui-btn.ui-btn-a.ui-btn-active,
+html head + body .ui-btn.ui-btn-a.ui-btn-active,*/
 /* Active checkbox icon */
 .ui-page-theme-a .ui-checkbox-on:after,
 html .ui-bar-a .ui-checkbox-on:after,
@@ -1275,11 +1275,11 @@ button[disabled],
 }
 /* Viewport */
 .ui-mobile-viewport {
-	margin: 0;
+	/*margin: 0;
 	overflow-x: visible;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
 }
 /* Issue #2066 */
 body.ui-mobile-viewport,
@@ -2006,28 +2006,28 @@ button.ui-btn-icon-notext,
 	animation-duration: 100ms;
 }
 @-webkit-keyframes slideinfromtop {
-    from { -webkit-transform: translateY(-100%); }
+    from { -webkit-transform: translateY(0); }
     to { -webkit-transform: translateY(0); }
 }
 @-moz-keyframes slideinfromtop {
-    from { -moz-transform: translateY(-100%); }
+    from { -moz-transform: translateY(0); }
     to { -moz-transform: translateY(0); }
 }
 @keyframes slideinfromtop {
-    from { transform: translateY(-100%); }
+    from { transform: translateY(0); }
     to { transform: translateY(0); }
 }
 @-webkit-keyframes slideouttotop {
     from { -webkit-transform: translateY(0); }
-    to { -webkit-transform: translateY(-100%); }
+    to { -webkit-transform: translateY(0); }
 }
 @-moz-keyframes slideouttotop {
     from { -moz-transform: translateY(0); }
-    to { -moz-transform: translateY(-100%); }
+    to { -moz-transform: translateY(0); }
 }
 @keyframes slideouttotop {
     from { transform: translateY(0); }
-    to { transform: translateY(-100%); }
+    to { transform: translateY(0); }
 }
 /* slide up */
 .slideup.out {

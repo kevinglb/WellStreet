@@ -319,16 +319,16 @@ function addToList(DataArray){
 	var div='';
 	
 	for(var i = 0,len=DataArray.length; i< len;i++){
-		div += '<div class="row therapy_list_item"  data-index="'+i+'"><div class="col-xs-9"><label>'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div><div class="col-xs-3"><button data-index="'+i+'" class="button ui-btn" onclick="loadBookingPage(this,loadProfile)">50&#8364</button></div></div>';
+		div += '<div class="row therapy_list_item"  data-index="'+i+'"><div class="col-xs-9"><label>'+DataArray[i].Name+'</label><label>'+DataArray[i]['Full Address']+'</label></div><div class="col-xs-3 text-right"><div class="row"><span class="red-text">Today</span></div><div class="row"><button data-index="'+i+'" class="ui-btn button green-btn ui-corner-all" onclick="loadBookingPage(this,loadProfile)">50&#8364</button></div></div></div>';
 	}
 	
 	$("#therapy_list").append(div);
 
 	$("#therapy_list").on('scroll', function(){
-		if($(this).scrollTop() <= 0){
+		if($(this).scrollTop() <= 50){
 			$(".category-wrap").addClass('slider-appear');
 		}
-		else if($(this).scrollTop() > 0){
+		else if($(this).scrollTop() > 50){
 			$(".category-wrap").removeClass('slider-appear');
 		}
 	

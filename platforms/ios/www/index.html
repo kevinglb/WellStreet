@@ -23,49 +23,100 @@
         <script type="text/javascript" src="plugins/slick.js"></script>
         <title>WellStreet</title>
     </head>
-    <body>
+    <body onload="setHeight()">
          <!-- page for user logining -->
-        <div id="login_page" data-role="page">
+        <div id="celluar_page" data-role="page">
+            <div data-role="header" class="ui-header">
+            </div>
             <div data-role="main" class="ui-content">
                 <div class="bg-wrap"></div>
                 <div class="logo-wrap text-center">
                     <img src="img/wellstreet-logo.png"></img>
                 </div>
-                <div class="btn-wrap">
-                    <a id="register_btn" name="register_btn" class="btn btn-large btn-block" href="#" onclick="changePage('register_page','slideup')">Create an Account</a>
-                    <a id="login_btn" name="login_btn" data-transition="slideup" class="btn btn-large btn-block" href="#" onclick="changePage('category_page','slideup')">Login In</a>
+                <div class="fw-btn-wrap row">
+                    <button id="register_btn"  class="ui-btn button" onclick="changePage('register_page','slideup')">Join Us</button>
+                    <button id="login_btn" class="ui-btn button" onclick="changePage('login_page','slideup')">Login In</button>
                 </div>
             </div>
         </div>
 
-        <!-- page for registration -->
-        <div id="register_page" data-role="page">
+        <div id="login_page" data-role="page">
             <div data-role="header" class="ui-header" position="fixed">
-                <a href="#" onclick="slideBack('login_page');return false;">
+
+                <a href="#" data-transition="reverse" data-rel="back">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <h1>Log In</h1>
-                <a href="#" class="delete-btn" style="display:none;" onclick="toggleLoginContent()">
+                <a href="#" class="delete-btn" style="display:none;" onclick="toggleLoginContent('login_page','btn')">
                     <i class="icon icon-2x icon-delete" ></i>
                 </a>
             </div>
 
             <div data-role="main" class="ui-content">
                 <div class="bg-wrap"></div>
-                 <div class="row email-login-wrap">
-                    <p>Use your email:</p>
-                    <form id="register-form">
-                        <input type="email" id="register_email" placeholder="Email">
-                        <div class="login-inner-wrap" style="display:none;">
-                            <input type="password" id="register_password" placeholder="Password">
-                            <button type="button" id="register_sub" onclick="changePage('profile_setting_page','slide')">Log In</button>
-                        </div>
-                    </form>
+                <div class="row social-account-wrap">
+                    <p>Quickly log in with:</p>
+                    <button  class="fb-btn ui-btn button">Facebook</a>
+                    <button id="register_google_btn" class="g-btn ui-btn button">Google</a>
                 </div>
-                <div class="row social-login-wrap">
-                    <p>Or qucikly sign up with:</p>
-                    <a id="register_fb_btn" name="register_fb_btn" class="btn btn-large btn-block">Facebook</a>
-                    <a id="register_google_btn" name="register_google_btn" class="btn btn-large btn-block">Google</a>
+                <div class="row email-account-wrap">
+                    <p>Or use your email:</p>
+                    <div class="form-input-block">
+                        <div class="row">
+                            <input type="email" id="login_email" class="email-input" placeholder="Email" readonly="readonly" onclick="toggleLoginContent('login_page',this)"></input>
+                        </div>
+                        <div class="row" style="display:none">
+                           <input type="password" id="login_password" placeholder="Password"></input>
+                        </div>
+                    </div>
+                    <button type="button" id="login_sub" onclick="changePage('category_page','slide')" style="display:none">Log In</button>
+                       
+                </div>
+                
+            </div>
+        </div>
+        <!-- page for registration -->
+        <div id="register_page" data-role="page">
+            <div data-role="header" class="ui-header" position="fixed">
+                <a href="#" data-transition="reverse" data-rel="back">
+                    <i class="icon icon-2x icon-arrow-left"></i>
+                </a>
+                <h1>Sign Up</h1>
+                <a href="#" class="delete-btn" style="display:none;" onclick="toggleLoginContent('register_page','btn')">
+                    <i class="icon icon-2x icon-delete" ></i>
+                </a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="bg-wrap"></div>
+                 <div class="row social-account-wrap">
+                    <p>Quickly sign up with:</p>
+                    <button  class="fb-btn ui-btn button">Facebook</a>
+                    <button id="register_google_btn" class="g-btn ui-btn button">Google</a>
+                </div>
+                <div class="row email-account-wrap">
+                    <p>Or use your email:</p>
+                    <!-- <form id="login_form">
+                        <input type="email" id="register_email" placeholder="Email" ></input>
+                        <div class="login-inner-wrap" style="display:none;">
+                            <input type="password" id="register_password" placeholder="Password"></input>
+                            <button type="button" id="login_sub" onclick="changePage('category_page','slide')">Log In</button>
+                        </div>
+                    </form> -->
+                    <div class="form-input-block">
+                        <div class="row">
+                            <input type="email" id="register_email" class="email-input" placeholder="Email" readonly="readonly" onclick="toggleLoginContent('register_page',this)"></input>
+                        </div>
+                        <div class="row" style="display:none">
+                           <input type="password" id="register_password" placeholder="Password"></input>
+                        </div>
+                         <div class="row" style="display:none">
+                           <input type="password" id="register_password_confirm" placeholder="Password Comfirmation"></input>
+                        </div>
+
+                    </div>
+                    <button type="button" id="register_sub" onclick="changePage('category_page','slide')" style="display:none">Sign Up</button>
+                       
                 </div>
             </div>
         </div>
@@ -142,93 +193,88 @@
         </div>
         <!-- first load page showing a list of categories -->
         <div id="category_page" data-role="page">
+            <!-- panel -->
+           <!--  <div data-role="panel" id="user-panel" data-position="right" data-display="overlay">
+                
+            </div> -->
             <!-- header -->
             <div data-role="header"  class="ui-header" data-position="fixed">
-                <a href="#" onclick="slideBack('login_page')">
-                    <i class="icon icon-2x icon-arrow-left"></i>
-                </a>
-                <a href="#main_right_menu">
-                    <i class="icon icon-2x icon-bars"></i>
-                </a>
+                <div class="ui-btn-left" >
+                    <a href="#" class="ui-btn" onclick="slideBack('celluar_page')">
+                        <i class="icon icon-2x icon-arrow-left"></i>
+                    </a>
+                </div>
+                <h1 class="ui-title"></h1>
+                <div class="ui-btn-right">
+                   
+                </div>
             </div>
             <!-- content -->
             <div data-role="main" class="ui-content">
-                <div id="main_content" class="main_content">
-                    <div class="row">
-                        <a href="#" id="acupuncturist" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id,addLayer);return false;">
-                            <div class="row list_item">
-                                <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
-                                </div>
-                                <div class="col-xs-9 vertical-middle">
-                                    <p>Acupuncturist</p>
-                                </div>
-                            </div>
+                <div class="overlay"></div>
+                <!-- <div class="category_list_wrap"> -->
+                <div id="category_list" class="main_content">
+                    <div class="row category_list_item">
+                        <div id="acupuncturist" class="row category_item_text text-center" onClick="startLoadMapPage(this.id,addLayer);return false;">
+                            <h1>Acupuncturist</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum suscipit felis, vel finibus sapien viverra eget.</p>
+                        </div>
+                        <div class="category_item_offer">
+                        </div>
+                    </div>    
+                    <div class="row category_list_item">
+                        <div id="allergy" class="row category_item_text text-center" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                            <h1>Allergy</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum suscipit felis, vel finibus sapien viverra eget.</p>
+                        </div>
+                         <div class="category_item_offer">
+                        </div>
+                    </div>
+                    <div class="row category_list_item">
+                        <div id="aromatherapist" class="row category_item_text text-center"  onClick="startLoadMapPage(this.id, addLayer);return false;">
                             
-                        </a>
-
-                        <a href="#" id="allergy" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
-                            <div class="row list_item">
-                                <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
-                                </div>
-                                <div class="col-xs-9 vertical-middle">
-                                    <p>Allergy</p>
-                                </div>
-                            </div>
-                            
-                        </a>
-
-                        <a href="#" id="aromatherapist" class="nodelay" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
-                            <div class="row list_item">
-                                <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
-                                </div>
-                                <div class="col-xs-9 vertical-middle">
-                                    <p>Aromatherapist</p>
-                                </div>
-                            </div>
-                            
-                        </a>
-
-                        <a href="#" id="ciropodist" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
-                            <div class="row list_item">
-                                <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
-                                </div>
-                                <div class="col-xs-9 vertical-middle">
-                                    <p>Ciropodist</p>
-                                </div>
-                            </div>
-                          
-                        </a>
-
-                        <a href="#" id="chiropractor" data-transition="slide" onClick="startLoadMapPage(this.id, addLayer);return false;">
-                            <div class="row list_item">
-                                <div class="col-xs-3 vertical-middle text-center">
-                                    <img class="main_page_logo" src="img/triage-logo.png"></img>
-                                </div>
-                                <div class="col-xs-9 vertical-middle">
-                                    <p>Chiropractor</p>
-                                </div>
-                            </div>
-                        </a>
-
+                            <h1>Aromatherapist</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum suscipit felis, vel finibus sapien viverra eget.</p>
+                                           
+                        </div>
+                        <div class="category_item_offer">
+                        </div>
+                    </div>
+                    <div class="row category_list_item">
+                        <div id="ciropodist" class="row category_item_text text-center" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                            <h1>Ciropodist</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum suscipit felis, vel finibus sapien viverra eget.</p>
+                        </div>
+                        <div class="category_item_offer">
+                        </div>
+                    </div>
+                    <div class="row category_list_item">
+                        <div id="chiropractor" class="row category_item_text text-center" onClick="startLoadMapPage(this.id, addLayer);return false;">
+                            <h1>Chiropractor</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum suscipit felis, vel finibus sapien viverra eget.</p>
+                        </div>
+                        <div class="category_item_offer">
+                        </div>
+                    </div>
+                    
+               <!--  </div> -->
+            </div>
+            <div id="user-panel" class="right-panel animated">
+            </div>    
+            
+        </div>
+                <div class="ui-footer" data-role="footer" data-tap-toggle="false">        
+                    <div data-role="navbar" data-theme='b'>
+                        <ul>
+                            <li><a href="#">One</a></li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                            <li><a href="#" onclick="showRightPanel()">Four</a></li>
+                        </ul>
                     </div>
                 </div>
+                
             </div>
-           <!--  <div data-role="footer">        
-                <div data-role="navbar" data-theme='b'>
-                    <ul>
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li>
-                        <li><a href="#">Four</a></li>
-                    </ul>
-                </div>
-            </div> -->
-        </div>
-       
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
             <div class="ui-header">
@@ -330,7 +376,7 @@
                                             <label>Today 5 - 7 pm</label>
                                         </div>
                                         <div class="col-xs-4">
-                                            <button class="button" onclick="loadBookingPage(this,loadProfile)">50&#8364</button>
+                                            <button class="button green-btn" onclick="loadBookingPage(this,loadProfile)">50&#8364</button>
                                         </div>
                                     </div>
                                 </div>
@@ -341,7 +387,7 @@
                                             <label>Monday and Wednesday</label>
                                         </div>
                                         <div class="col-xs-4">
-                                            <button class="button" onclick="loadBookingPage(this,loadProfile)">Book</button>
+                                            <button class="button green-btn" onclick="loadBookingPage(this,loadProfile)">Book</button>
                                         </div>
                                     </div>
                                 </div>
@@ -751,19 +797,20 @@
             //                     //alert("dropped");
             //                  }
             //     });
-        $( "ul.sortable" ).sortable();
-        $( "ul.sortable" ).disableSelection();
-        //Refresh list to the end of sort to have a correct display -->
-        $( "ul.sortable" ).bind( "sortstop", function(event, ui) {
-            $('ul.sortable').listview('refresh');
-        });
+        // $( "ul.sortable" ).sortable();
+        // $( "ul.sortable" ).disableSelection();
+        // //Refresh list to the end of sort to have a correct display -->
+        // $( "ul.sortable" ).bind( "sortstop", function(event, ui) {
+        //     $('ul.sortable').listview('refresh');
+        // });
             initialCateSlider();
-         FastClick.attach(document.body);
+            FastClick.attach(document.body);
             FastClick.attach("#map");
-            $('body').bind('focusin focus', function(e){
+            $('input').bind('focusin focus', function(e){
                 e.preventDefault();
             });
-        })
+        });
+
         $(".arrow_wrap a").click(function(){
             var text = $(this).text();
             $(this).toggleClass('extend');
@@ -778,18 +825,75 @@
             console.log('search submitted');
             return false;
         });
-        $('#register_email').on('focus',function(e){
-            if($(".login-inner-wrap").is(":visible")){
+
+        //animation for focusing on the email input on register page and login page
+        // $(".email-account-wrap .form-input-block .email-input").on('click', function(e){
+        //     e.preventDefault();
+        //     var $input = $(e.target);
+        //     $(".ui-header .delete-btn").fadeIn(200);
+        //     $input.removeAttr("readonly");
+        //     setTimeout(function(){$input.focus();},200);
+        //     $input.parents('.email-account-wrap').prev('.social-account-wrap').slideToggle(200);
+        //     $input.parents('.row').nextAll().slideToggle(200);
+        //     $input.parents('.form-input-block').nextAll().slideToggle(200);
+        //     //$(".ui-header .delete-btn").fadeIn(100);
+            
+        // });
+        //animation for focusing on the email input on register page and login page
+        function toggleLoginContent(current_page,element){
+            var $input =  $("#"+current_page+" .email-account-wrap .form-input-block .email-input");
+            var $btn = $("#"+current_page+" .ui-header .delete-btn");
+            if(element == 'btn'){
+                console.log('on btn');
+                $btn.fadeOut(200);
+                setTimeout(function(){$input.blur();},200);
+                $input.prop("readonly",true);
+                $input.parents('.email-account-wrap').prev('.social-account-wrap').slideToggle(200);
+                $input.parents('.row').nextAll().slideToggle(200);
+                $input.parents('.form-input-block').nextAll().slideToggle(200);
+            }
+            else if($(element) && $(element).is('[readonly]')){
+                console.log('on input readonly');
+                $btn.fadeIn(200);
+                setTimeout(function(){$input.focus();},200);
+                $input.removeAttr("readonly");
+                $input.parents('.email-account-wrap').prev('.social-account-wrap').slideToggle(200);
+                $input.parents('.row').nextAll().slideToggle(200);
+                $input.parents('.form-input-block').nextAll().slideToggle(200);
+            }
+            else if($(element) && !$(element).is('[readonly]'))
+            {
                 return;
             }
-            else{
-                e.preventDefault();
-                $(".social-login-wrap").slideToggle(300);
-                $(".login-inner-wrap").slideToggle(300);
-                $(".ui-header .delete-btn").fadeIn(300);
-                $('#register_email').focus();
-            }
-        });
+            
+            
+        }
+
+
+        // $('#register_email').on('focus',function(e){
+        //     // window.scrollTo(0, 0);
+        //     // document.body.scrollTop = 0;
+        //     e.preventDefault();
+        //     // $(this).style.webkitTransform = 'translate3d(0px,-10000px,0)'; 
+        //     //     webkitRequestAnimationFrame(function() { this.style.webkitTransform = ''; 
+        //     //  });
+        //     if($(".login-inner-wrap").is(":visible")){
+        //         return;
+        //     }
+        //     else{
+        //         e.preventDefault();
+        //         $(".social-account-wrap").slideToggle(100);
+        //         $(".login-inner-wrap").slideToggle(300);
+        //         $(".ui-header .delete-btn").fadeIn(300);
+        //         $('#register_email').focus();
+        //     }
+        // });
+
+        function setHeight(){
+            var windowHeight = $(window).outerHeight();
+            console.log(windowHeight);
+            $(".ui-header").height(windowHeight*0.095);
+        }
         function toggleBottomWrap(element){
             if(element){
                 $("#map_page .ui-header").css('z-index','auto');
@@ -851,17 +955,7 @@
             }   
         }
 
-        function toggleLoginContent(){
-             if($(".login-inner-wrap").is(":visible")){
-                $('#register_email').blur();
-                $(".social-login-wrap").slideToggle(300);
-                $(".login-inner-wrap").slideToggle(300);
-                $(".ui-header .delete-btn").fadeOut(200);
-            }
-            else{
-                return;
-            }
-        }
+        
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
@@ -911,6 +1005,16 @@
 
         function togglePerferenceSetting(){
             $(".perference-seting-wrap button").toggleClass('toggle');
+        }
+
+        function showRightPanel(){
+            //e.preventDefault();
+            $("#user-panel").toggleClass('toggle');
+            $(".overlay").toggle();
+            
+            $("#user-panel").on('swiperight', function(){
+                $(this).toggleClass('toggle');
+            });
         }
     </script>
     </body>
