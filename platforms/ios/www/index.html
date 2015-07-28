@@ -43,7 +43,7 @@
         <div id="login_page" data-role="page">
             <div data-role="header" class="ui-header" position="fixed">
 
-                <a href="#" data-transition="reverse" data-rel="back">
+                <a href="#" onclick="slideBack('celluar_page',toggleLoginContent('login_page','clear'));">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <h1>Log In</h1>
@@ -78,7 +78,7 @@
         <!-- page for registration -->
         <div id="register_page" data-role="page">
             <div data-role="header" class="ui-header" position="fixed">
-                <a href="#" data-transition="reverse" data-rel="back">
+                <a href="#" onclick="slideBack('celluar_page',toggleLoginContent('register_page','clear'))">
                     <i class="icon icon-2x icon-arrow-left"></i>
                 </a>
                 <h1>Sign Up</h1>
@@ -861,6 +861,14 @@
                 $input.parents('.row').nextAll().slideToggle(200);
                 $input.parents('.form-input-block').nextAll().slideToggle(200);
             }
+            else if(element == 'clear'){
+                $btn.fadeOut(200);
+                setTimeout(function(){$input.blur();},200);
+                $input.prop("readonly",true);
+                $input.parents('.email-account-wrap').prev('.social-account-wrap').fadeIn(200);
+                $input.parents('.row').nextAll().fadeOut(200);
+                $input.parents('.form-input-block').nextAll().fadeOut(200);
+            }
             else if($(element) && !$(element).is('[readonly]'))
             {
                 return;
@@ -1012,9 +1020,10 @@
             $("#user-panel").toggleClass('toggle');
             $(".overlay").toggle();
             
-            $("#user-panel").on('swiperight', function(){
-                $(this).toggleClass('toggle');
-            });
+            // $("#user-panel").on('swiperight', function(){
+            //     $(this).toggleClass('toggle');
+            //     $(".overlay").toggle();
+            // });
         }
     </script>
     </body>
