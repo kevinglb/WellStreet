@@ -193,12 +193,8 @@
         </div>
         <!-- first load page showing a list of categories -->
         <div id="category_page" data-role="page">
-            <!-- panel -->
-           <!--  <div data-role="panel" id="user-panel" data-position="right" data-display="overlay">
-                
-            </div> -->
             <!-- header -->
-            <div data-role="header"  class="ui-header" data-position="fixed" data-tap-toggle="false">
+            <div class="ui-header" >
                 <div class="ui-btn-left" >
                     <a href="#" class="ui-btn" onclick="slideBack('celluar_page')">
                         <i class="icon icon-2x icon-arrow-left"></i>
@@ -206,13 +202,30 @@
                 </div>
                 <h1 class="ui-title"></h1>
                 <div class="ui-btn-right">
-                   
                 </div>
             </div>
+            <!-- the overlay and panel not included in ui-content as they will be overlayed by the header -->
+            <div class="overlay"></div>
+            <div id="user-panel" class="panel right-panel animated">
+                <div class="row panel-portrait-wrap text-center">
+                    <img></img>
+                </div>
+                <div class="panel-list-wrap">
+                    <ul data-role="listview">
+                        <li>Setting</li>
+                        <li>How it works</li>
+                        <li>Why WellStreet</li>
+                        <li>List your activity</li>
+                        <li>Help</li>
+                    </ul>
+                    <div class="row login-link" >
+                        <a href="#">Log in or Sign up</a>
+                    </div>
+                </div>
+            </div>  
             <!-- content -->
             <div data-role="main" class="ui-content">
-                
-                <!-- <div class="category_list_wrap"> -->
+                <div class="category-list-wrap">
                 <div id="category_list" class="main_content">
                     <div class="row category_list_item">
                         <div id="acupuncturist" class="row category_item_text text-center" onClick="startLoadMapPage(this.id,addLayer);return false;">
@@ -257,15 +270,10 @@
                         </div>
                     </div>
                     
-               <!--  </div> -->
                 </div>
-              
-            
-            </div>
-            <div class="overlay"></div>
-            <div id="user-panel" class="right-panel animated">
-            </div>  
-            <div class="ui-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">        
+                </div>
+                
+            <div class="ui-footer">        
                 <div data-role="navbar" data-theme='b'>
                     <ul>
                         <li><a href="#">One</a></li>
@@ -276,6 +284,8 @@
                 </div>
             </div>
                 
+            </div>
+            
         </div>
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">

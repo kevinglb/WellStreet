@@ -50,7 +50,8 @@ body {
     height: 100%;
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;     
-    color: #495559;  
+    color: #495559; 
+    /*background-color: #E5E5E5; */
 }
 a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-right.ui-btn.ui-shadow.ui-corner-all
 {
@@ -165,11 +166,13 @@ div.email-account-wrap #register_sub{
     position: absolute;
     left: 0;
     bottom: 0;
+    padding: 0;
     width: 100%;
 }
 #celluar_page .fw-btn-wrap button{
     border: none;
     color: #FFF;
+    font-size: 18px;
 }
 #register_btn
 {
@@ -204,11 +207,24 @@ div.email-account-wrap #register_sub{
 /* Registration page end */
 
 /* Categories page goes here */
+#category_page .ui-content{
+    height: 100vh;
+}
+.category-list-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+    padding-bottom: 44pt;
+    top:0;
+    left: 0;
+    display: block;
+}
 #category_list
 {
     height:100%;
     width: 100%;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
     position: relative;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; 
@@ -230,20 +246,40 @@ div.email-account-wrap #register_sub{
     background-color: #fff;
 }
 
-.right-panel{
+.panel{
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 70%;
+    width: 75%;
     z-index: 30;
-    background-color: rgba(240,240,240,1);
-     transform: translate3d(133%,0,0);
+    background-color: #fff;
+    
+}
+.right-panel{
+    transform: translate3d(133%,0,0);
     -webkit-transform: translate3d(133%,0,0);
 }
 .right-panel.toggle{
      transform: translate3d(40%,0,0);
     -webkit-transform: translate3d(40%,0,0);
+}
+
+.panel .panel-portrait-wrap{
+    height: 30%;
+    background-color: #E5E5E5;
+}
+.panel .panel-list-wrap{
+    height: 70%;   
+}
+.panel .panel-list-wrap .login-link{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;  
+}
+.panel .panel-list-wrap .login-link a{
+    color:#333;
 }
 /* Categories page end*/
 
@@ -318,7 +354,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     width: 100%;
     overflow: hidden;
 }
-/*#category_page .ui-header,*/#map_page .ui-header{
+#category_page .ui-header, #map_page .ui-header{
     position: absolute;
     top:0;
     left:0;
@@ -807,11 +843,14 @@ div.row.therapy_list_item{
     left: 0;
     width: 100%;
     background-color: #E5E5E5;
-    height: 10%;
 }
-.ui-footer .ui-navbar, .ui-footer .ui-navbar ul{
-    height: 100%;
+.ui-footer .ui-navbar, .ui-footer .ui-navbar ul, .ui-footer .ui-navbar ul li a{
+    height: 44pt;
 }
+.ui-navbar{
+
+}
+
 
 /*DivIcon*/
 .leaflet-div-icon {
