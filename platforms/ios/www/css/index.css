@@ -53,11 +53,11 @@ body {
     color: #495559; 
     /*background-color: #E5E5E5; */
 }
-a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-right.ui-btn.ui-shadow.ui-corner-all
+/*a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-right.ui-btn.ui-shadow.ui-corner-all
 {
     border: none;
     background-color: transparent;
-}
+}*/
 /*icons setting*/
 .icon
 {
@@ -115,7 +115,6 @@ a.ui-link.ui-btn-left.ui-btn.ui-btn.ui-shadow.ui-corner-all, a.ui-link.ui-btn-ri
     color: #FFF;
     overflow: hidden;
 }
-
 div.social-account-wrap{
     width:90%;
     margin: 0 auto;
@@ -203,9 +202,6 @@ div.email-account-wrap #register_sub{
     padding-top: 65px;
     color: #ffffff;
 }
-
-/* Registration page end */
-
 /* Categories page goes here */
 #category_page .ui-content{
     height: 100vh;
@@ -246,6 +242,7 @@ div.email-account-wrap #register_sub{
     background-color: #fff;
 }
 
+/*panel*/
 .panel{
     position: absolute;
     left: 0;
@@ -281,8 +278,6 @@ div.email-account-wrap #register_sub{
 .panel .panel-list-wrap .login-link a{
     color:#333;
 }
-/* Categories page end*/
-
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -349,6 +344,7 @@ a{
 input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
     background-color: transparent;
 }
+/*map_page*/
 #map_page{
     height: 100%;
     width: 100%;
@@ -390,7 +386,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left: 0;
     width: 100%;
     height: 100%;
-    
     overflow: hidden;
     z-index: 30;
     background-color: #FFF;
@@ -647,7 +642,6 @@ ul.filter-list .row{
     background-color: #00CFC1 !important;
     color: #fff !important;
 }
-
 button.green-btn{
     border:1.5px solid #00CFC1;
     color: #00CFC1;
@@ -677,6 +671,7 @@ button.green-btn{
     margin:0 auto;
     text-align: center;
 }
+/*therapy_list*/
 #therapy_list{
     position: relative;
     display: block;
@@ -685,8 +680,6 @@ button.green-btn{
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch; 
 }
-
-
 div.row.therapy_list_item{
     padding: 10px 5px;
     border-bottom: 1px solid #d6d6d6;
@@ -782,8 +775,7 @@ div.row.therapy_list_item{
 }
 #map {
     height: 87%;
-    width: 100%;
-    
+    width: 100%;    
     display: block;
 }
 
@@ -912,6 +904,7 @@ div.current-location-icon:after{
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
 }
+
 .no-border {
     border:none;
     background-color: transparent;
@@ -1026,7 +1019,6 @@ ul.sortable li{
     width: 100%;
     padding: 10px;
 }
-
 /*booking page content*/
 div.service_details{
     width:90%;
@@ -1048,7 +1040,6 @@ div.service_price_details .service_price{
     font-size: 1.8em;
     line-height: 2em;
 }
-
 .notice{
     width: 90%;
     margin:2em auto 0 auto;

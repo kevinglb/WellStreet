@@ -18,7 +18,7 @@
         <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="plugins/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="plugins/jquery-ui.js"></script>
-        <script type="text/javascript" src="plugins/jquery-ui-punch.js"></script>
+       
         <script type="text/javascript" src="plugins/leaflet-master.js"></script>
         <script type="text/javascript" src="plugins/slick.js"></script>
         <title>WellStreet</title>
@@ -321,7 +321,7 @@
                 </div>
                
                 <div class="map-wrap animated">
-                    <div class="overlay" onClick=""></div>
+                    <!-- <div class="overlay" onClick=""></div> -->
                    <!--  <div class="search_content">
                         <div class="input_wrap">
                             <form id="search_form">
@@ -765,8 +765,8 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script src="plugins/com.phonegap.plugins.sqlite/www/SQLitePlugin.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="plugins/sortable.js"></script>
-    
+     <!-- <script type="text/javascript" src="plugins/sortable.js"></script> -->
+     <script type="text/javascript" src="plugins/jquery-ui-punch.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/fastClick.js"></script>
     <script type="text/javascript" src="js/json_array.min.js"></script>
@@ -809,12 +809,7 @@
             //                     //alert("dropped");
             //                  }
             //     });
-        // $( "ul.sortable" ).sortable();
-        // $( "ul.sortable" ).disableSelection();
-        // //Refresh list to the end of sort to have a correct display -->
-        // $( "ul.sortable" ).bind( "sortstop", function(event, ui) {
-        //     $('ul.sortable').listview('refresh');
-        // });
+       
             initialCateSlider();
             FastClick.attach(document.body);
             FastClick.attach("#map");
@@ -822,21 +817,30 @@
                 e.preventDefault();
             });
         });
-
-        $(".arrow_wrap a").click(function(){
-            var text = $(this).text();
-            $(this).toggleClass('extend');
-            $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
-            $("#search_form").slideToggle(200);
-            $(".timepicker_wrap").slideToggle(200);
-            $(".overlay").toggle();
-
+        $("#map_page").on('pageinit', function(){
+             //initial the sortable list when map_page is initialized
+            $( ".sortable" ).sortable();
+            $( ".sortable" ).disableSelection();
+             //Refresh list to the end of sort to have a correct display -->
+            $( ".sortable" ).bind( "sortstop", function(event, ui) {
+                 $('.sortable').listview('refresh');
+             });
         });
-        $("#search_form").on('submit', function(){
-            resetMapSearch();
-            console.log('search submitted');
-            return false;
-        });
+
+        // $(".arrow_wrap a").click(function(){
+        //     var text = $(this).text();
+        //     $(this).toggleClass('extend');
+        //     $(this).text( text == "Select Time" ? "Apply Time" : "Select Time");
+        //     $("#search_form").slideToggle(200);
+        //     $(".timepicker_wrap").slideToggle(200);
+        //     $(".overlay").toggle();
+
+        // });
+        // $("#search_form").on('submit', function(){
+        //     resetMapSearch();
+        //     console.log('search submitted');
+        //     return false;
+        // });
 
         //animation for focusing on the email input on register page and login page
         // $(".email-account-wrap .form-input-block .email-input").on('click', function(e){
@@ -885,8 +889,6 @@
             {
                 return;
             }
-            
-            
         }
 
 
@@ -914,6 +916,7 @@
             console.log(windowHeight);
             $(".ui-header").height(windowHeight*0.095);
         }
+
         function toggleBottomWrap(element){
             if(element){
                 $("#map_page .ui-header").css('z-index','auto');
@@ -931,7 +934,6 @@
                 else {
                     return;
                 }
-
                 $("#map").click();   
             }
             else{
@@ -960,22 +962,6 @@
 
         }
 
-        function triggerBottomWrap(element){
-            if($(element).hasClass('category-wrap-trigger')){
-                $('.category-wrap').removeClass('slider-appear').addClass('toggle');
-            }
-            else if($(element).hasClass('detail-wrap-trigger')){
-                $('.detail-wrap').removeClass('slider-appear').addClass('toggle');
-            }
-            
-            if($(".ui-header .cancel-btn").is(":hidden") || $(".ui-header .list-btn").is(":visible") ){
-                $(".ui-header .cancel-btn").show();
-                $(".ui-header .list-btn").hide();
-                $(".ui-header .back-btn").hide();
-            }   
-        }
-
-        
         function GPSonSuccess(position)
         {
             // latutude and longitude are declared in Global.js
