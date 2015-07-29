@@ -139,12 +139,13 @@ function changePage(target_page, transition,callback){
     
 }
 
-function toggleContent(){
+function toggleContent(element){
 	// if($(".filter-wrap").hasClass("toggle")){
 	// 	$(".filter-wrap").toggleClass('toggle');
 	// }
 	$(".map-wrap").toggleClass('toggle');
 	$(".list-wrap").toggleClass('toggle');
+	$(element).children("i").toggleClass("hidden");
 	if(!$('.category-wrap').hasClass('slider-appear')){
 		console.log('no slider appear');
 		$('.category-wrap').toggleClass('slider-appear');

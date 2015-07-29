@@ -58,42 +58,7 @@ body {
     border: none;
     background-color: transparent;
 }*/
-/*icons setting*/
-.icon
-{
-    display: inline-block;
-    background-position: center center;
-    background-size: cover;
-}
-.icon-2x 
-{
-    width: 2em;
-    height: 2em;
-}
-.icon-location
-{
-    background-image: url('../icon/location-dark.svg'); 
-}
-.icon-arrow-left
-{
-    background-image: url("../icon/icon-arrow-left.png");
-}
-.icon-arrow-left-g
-{
-    background-image: url("../icon/icon-arrow-left-g.png");
-}
 
-.icon-bars
-{
-    background-image: url("../icon/icon-bars-w.png");
-}
-.icon-bars-g
-{
-    background-image: url("../icon/icon-bars-g.png");
-}
-.icon-delete{
-    background-image: url("../icon/icon-delete.svg");
-}
 .red-text{
     color: #FF6860;
 }
@@ -211,7 +176,7 @@ div.email-account-wrap #register_sub{
     width: 100%;
     height: 100%;
     padding-top: 65px;
-    padding-bottom: 44pt;
+    padding-bottom: 34pt;
     top:0;
     left: 0;
     display: block;
@@ -356,7 +321,7 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left:0;
     width: 100%;
     z-index: 1;
-    background-color: rgba(143, 205, 190, 0.9);
+    background-color: #FFF;
 }
 
 #map_page .ui-header .ui-title{
@@ -370,7 +335,6 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 9.5vh;
     overflow: hidden;
 }
 .category-wrap, .detail-wrap{
@@ -399,7 +363,7 @@ div.wrap-header{
     width: 100%;
     color: #FFFFFF;
     z-index: 10;
-    background-color: rgba(143, 205, 190, 0.9);
+    background-color: #fff;
 }
 div.wrap-header .ui-btn-left, div.wrap-header.ui-btn-right{
     position: absolute;
@@ -411,19 +375,18 @@ div.wrap-header .ui-btn-left, div.wrap-header.ui-btn-right{
 
 div.wrap-header .ui-btn-left .ui-btn, div.wrap-header  .ui-btn-right .ui-btn {
     height: 100%;
-    color: #fff;
 }
 div.wrap-header .ui-title{
     font-size: 1em;
-min-height: 1.1em;
-text-align: center;
-display: block;
-margin: 0 30%;
-/*padding: .7em 0;*/
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-outline: 0 !important;
+    min-height: 1.1em;
+    text-align: center;
+    display: block;
+    margin: 0 30%;
+    /*padding: .7em 0;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0 !important;
 }
 .animated{
     -webkit-transition-duration: 250ms;
@@ -524,6 +487,7 @@ outline: 0 !important;
 .fw-btn-wrap{
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 .fw-btn-wrap:after{
     clear: both;
@@ -532,12 +496,13 @@ outline: 0 !important;
     float: left;
     position: relative;
     width: 50%;
+
     margin: 0;
     opacity: 0.75;
     border: none;
     font-size: 16px;
     border-bottom: 1px solid #E5E5E5; 
-
+    border-top: 1px solid #E5E5E5;
 }
 .fw-btn-wrap button:first-child{
     border-right: 1px solid #E5E5E5; 
@@ -630,7 +595,7 @@ ul.filter-list .row{
     background-color: #DD5050;
 }
 /*btns*/
-.save-btn{
+.fw-save-btn{
     position: absolute;
     margin:0;
     bottom: 0;
@@ -816,9 +781,14 @@ div.row.therapy_list_item{
     padding-top: 20px;
     height: 65px;
     color: #FFFFFF;
-    background-color: rgba(143, 205, 190, 0.9);
+    background-color: #FFF;
 }
-
+.ui-page .ui-header .ui-btn-left{
+    left: 0.2em;
+}
+.ui-page .ui-header .ui-btn-right{
+    right: 0.2em;
+}
 .ui-page .ui-header .ui-btn-left, .ui-page .ui-header .ui-btn-right{
     margin: 20px 0 0 0;
     height: 45px;
@@ -834,13 +804,12 @@ div.row.therapy_list_item{
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #E5E5E5;
+    background-color: #fff;
 }
 .ui-footer .ui-navbar, .ui-footer .ui-navbar ul, .ui-footer .ui-navbar ul li a{
-    height: 44pt;
-}
-.ui-navbar{
-
+    height: 34pt;
+    line-height: 34pt;
+    padding: 0;
 }
 
 
@@ -1017,7 +986,12 @@ label.form-input-title{
 ul.sortable li{
     list-style-type: none;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px !important;
+    border-bottom: 1px solid #d6d6d6 !important; 
+}
+ul.sortable li .row{
+    border: none;
+    padding: 10px 5px;
 }
 /*booking page content*/
 div.service_details{

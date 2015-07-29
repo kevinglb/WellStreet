@@ -1,0 +1,85 @@
+/*icons setting*/
+.icon
+{
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+}
+.icon.hidden{
+	display: none;
+}
+.icon-1x{
+	width: 0.8em;
+	height: 0.8em;
+}
+.icon-2x 
+{
+    width: 2em;
+    height: 2em;
+}
+.icon-3x{
+	width: 3em;
+	height: 3em;
+}
+.navbar-icon{
+	vertical-align: middle;
+	width: 19pt;
+	height: 19pt;
+}
+.icon-location
+{
+    background-image: url('../icon/location-dark.svg'); 
+}
+.icon-back-r
+{
+    background-image: url("../icon/icon-back-red.png");
+}
+.icon-back-w{
+	 background-image: url("../icon/icon-back-white.png");
+}
+.icon-back-g{
+	background-image: url("../icon/icon-back-grey.png");
+}
+.icon-arrow-left-g
+{
+    background-image: url("../icon/icon-arrow-left-g.png");
+}
+.icon-bars
+{
+    background-image: url("../icon/icon-bars-w.png");
+}
+.icon-bars-g
+{
+    background-image: url("../icon/icon-bars-g.png");
+}
+.icon-delete{
+    background-image: url("../icon/icon-delete.svg");
+}
+.icon-setting{
+	background-image: url("../icon/icon-setting.png");
+}
+.icon-cancel-w{
+	background-image: url("../icon/icon-cancel-white.png");	
+}
+.icon-cancel-r{
+	background-image: url("../icon/icon-cancel-red.png");	
+}
+.icon-list{
+	background-image: url("../icon/icon-list.png");	
+}
+.icon-map{
+	background-image: url("../icon/icon-map.png");
+}
+/*navbar icons*/
+.icon-logo-r{
+	background-image: url("../icon/icon-logo-red.png");
+}
+.icon-favourite{
+	background-image: url("../icon/icon-favourite.png");	
+}
+.icon-calendar{
+	background-image: url("../icon/icon-calendar.png");	
+}
+.icon-profile{
+	background-image: url("../icon/icon-profile.png");	
+}

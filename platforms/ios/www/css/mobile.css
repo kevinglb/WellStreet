@@ -19,12 +19,12 @@ div.wrap-header{
     height: 65px;
 }
 .map-wrap, .list-wrap{
-    padding-top: 9.5vh;
+    padding-top: 65px;
 }
 /*.detail-wrap .detail-container, .category-wrap .category-container{
 	padding-top: 9.5vh; 
 }*/
-div.wrap-header .ui-btn-left, div.wrap-header.ui-btn-right{
+div.wrap-header .ui-btn-left, div.wrap-header .ui-btn-right{
 	margin: 20px 0 0 0;
     height: 45px;
 }
