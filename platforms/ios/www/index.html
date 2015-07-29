@@ -198,7 +198,7 @@
                 
             </div> -->
             <!-- header -->
-            <div data-role="header"  class="ui-header" data-position="fixed">
+            <div data-role="header"  class="ui-header" data-position="fixed" data-tap-toggle="false">
                 <div class="ui-btn-left" >
                     <a href="#" class="ui-btn" onclick="slideBack('celluar_page')">
                         <i class="icon icon-2x icon-arrow-left"></i>
@@ -211,7 +211,7 @@
             </div>
             <!-- content -->
             <div data-role="main" class="ui-content">
-                <div class="overlay"></div>
+                
                 <!-- <div class="category_list_wrap"> -->
                 <div id="category_list" class="main_content">
                     <div class="row category_list_item">
@@ -258,23 +258,25 @@
                     </div>
                     
                <!--  </div> -->
-            </div>
-            <div id="user-panel" class="right-panel animated">
-            </div>    
-            
-        </div>
-                <div class="ui-footer" data-role="footer" data-tap-toggle="false">        
-                    <div data-role="navbar" data-theme='b'>
-                        <ul>
-                            <li><a href="#">One</a></li>
-                            <li><a href="#">Two</a></li>
-                            <li><a href="#">Three</a></li>
-                            <li><a href="#" onclick="showRightPanel()">Four</a></li>
-                        </ul>
-                    </div>
                 </div>
-                
+              
+            
             </div>
+            <div class="overlay"></div>
+            <div id="user-panel" class="right-panel animated">
+            </div>  
+            <div class="ui-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">        
+                <div data-role="navbar" data-theme='b'>
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#" onclick="showRightPanel()">Four</a></li>
+                    </ul>
+                </div>
+            </div>
+                
+        </div>
         <!--  page for showing the map -->
         <div id="map_page" data-role="page">
             <div class="ui-header">
@@ -1020,10 +1022,22 @@
             $("#user-panel").toggleClass('toggle');
             $(".overlay").toggle();
             
-            // $("#user-panel").on('swiperight', function(){
-            //     $(this).toggleClass('toggle');
-            //     $(".overlay").toggle();
-            // });
+
+            $("#user-panel").on('swiperight', function(event){
+                event.stopImmediatePropagation();
+                console.log('swiperight on panel');
+                $(this).toggleClass('toggle');
+                $(".overlay").toggle();
+            });
+            $(".overlay").on('click',function(event){
+                event.stopImmediatePropagation();
+                console.log('click on overlay');
+                $(this).toggle();
+                $("#user-panel").toggleClass('toggle');
+            });
+
+            return false;
+
         }
     </script>
     </body>

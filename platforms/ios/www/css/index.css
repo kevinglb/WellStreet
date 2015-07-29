@@ -235,15 +235,15 @@ div.email-account-wrap #register_sub{
     left: 0;
     top: 0;
     height: 100%;
-    width: 80%;
+    width: 70%;
     z-index: 30;
     background-color: rgba(240,240,240,1);
-     transform: translate3d(125%,0,0);
-    -webkit-transform: translate3d(125%,0,0);
+     transform: translate3d(133%,0,0);
+    -webkit-transform: translate3d(133%,0,0);
 }
 .right-panel.toggle{
-     transform: translate3d(25%,0,0);
-    -webkit-transform: translate3d(25%,0,0);
+     transform: translate3d(40%,0,0);
+    -webkit-transform: translate3d(40%,0,0);
 }
 /* Categories page end*/
 
@@ -672,8 +672,8 @@ div.row.therapy_list_item{
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
-    background-color: rgba(22, 22, 22, 0.7);
+    z-index: 20;
+    background-color: rgba(30, 30, 30, 0.7);
     display: none;
 }
 .search_wrap{

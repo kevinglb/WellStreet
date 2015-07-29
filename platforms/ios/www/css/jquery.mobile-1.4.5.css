@@ -2593,7 +2593,7 @@ li.ui-block-e {
 	right: 0;
 	width: 100%;
 	position: fixed;
-	z-index: 1000;
+	z-index: 10;
 }
 .ui-header-fixed {
 	top: -1px;
