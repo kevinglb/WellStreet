@@ -1426,12 +1426,12 @@ div.ui-mobile-viewport {
 }
 .ui-header .ui-title,
 .ui-footer .ui-title {
-	font-size: 1em;
-	min-height: 1.1em;
+	/*font-size: 1em;
+	min-height: 1.1em;*/
 	text-align: center;
 	display: block;
-	margin: 0 30%;
-	/*padding: .7em 0;*/
+	/*margin: 0 30%;*/
+	padding: .7em 0;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -1466,7 +1466,7 @@ div.ui-mobile-viewport {
 /* Buttons and icons */
 .ui-btn {
 	margin: .5em 0;
-	padding: .7em;
+	padding: .5em;
 	display: block;
 	position: relative;
 	text-align: center;

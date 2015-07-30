@@ -379,8 +379,8 @@
                                 <label class="therapy_address"></label>
                             </div>
                             <div class="row fw-btn-wrap">
-                                <button type="button" class="ui-btn active" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Timetable</button>
-                                <button type="button" class="ui-btn" data-target="detail-inner-wrap" onclick="switchFilterContent(this);return false;">Services</button>
+                                <button type="button" class="ui-btn active" data-target="detail-inner-wrap" onclick="switchInnerWrapContent(this);return false;">Timetable</button>
+                                <button type="button" class="ui-btn" data-target="detail-inner-wrap" onclick="switchInnerWrapContent(this);return false;">Services</button>
                             </div>
                             <div class="inner-wrap-container">
                                 <div class="detail-timetable-wrap detail-inner-wrap animated">
@@ -464,65 +464,97 @@
                             </div>
                         </div>
                     <div class="category-container">
-                        <div class="row" style="padding:20px 15px; border-bottom:1px solid #d6d6d6;">
-                            <div class="col-xs-9 red-text" >Favourites</div>
-                            <div class="col-xs-3 text-right"><i class="icon icon-2x icon-setting"></i></div>
+                        <div class="inner-wrap-container">
+                            <div class="category-sort-wrap category-inner-wrap animated">
+                                <div class="row" style="padding:8pt; border-bottom:1px solid #d6d6d6;">
+                                    <div class="col-xs-9 red-text" style="line-height:2em;">Favourites</div>
+                                    <div class="col-xs-3 text-right"><i data-target="category-inner-wrap" class="icon icon-2x icon-setting" onclick="switchInnerWrapContent(this);return false;"></i></div>
+                                </div>
+                                <ul id="category-sort-list" class="sortable filter-list" data-role="listview">
+                                    <li>
+                                        <div class="row">
+                                            <label>Acupuncturist</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                           <label>Allergy</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <label>Aromatherapist</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <label>Ciropodist</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <label>Chiropractor</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-switch-wrap category-inner-wrap animated">
+                                <ul id="category-switch-list" class="filter-list" data-role="listview">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-9" >Acupuncturist</div>
+                                            <div class="col-xs-3 text-right">
+                                                <select name="Acupuncturist" id="acupuncturist-switch" data-role="slider" data-mini="true">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select>
+                                            </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-9" >Allergy</div>
+                                            <div class="col-xs-3 text-right">
+                                                <select name="Allergy" id="allergy-switch" data-role="slider" data-mini="true">
+                                                    <option value="off"></option>
+                                                    <option value="on"></option>
+                                                </select>
+                                            </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-9" >Aromatherapist</div>
+                                            <div class="col-xs-3 text-right">
+                                                <select name="Aromatherapist" id="aromatherapist-switch" data-role="slider" data-mini="true">
+                                                    <option value="off"></option>
+                                                    <option value="on"></option>
+                                                </select>
+                                            </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-9">Ciropodist</div>
+                                            <div class="col-xs-3 text-right">
+                                            <select name="Ciropodist" id="ciropodist-switch" data-role="slider" data-mini="true">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select>
+                                            </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-9">Chiropractor</div>
+                                            <div class="col-xs-3 text-right">
+                                            <select name="Chiropractor" id="chiropractor-switch" data-role="slider" data-mini="true">
+                                                <option value="off"></option>
+                                                <option value="on"></option>
+                                            </select>
+                                            </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <button type="button" class="fw-save-btn">Save</button> -->
                         </div>
-                        <ul id="category-list" class="sortable filter-list" data-role="listview">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-xs-9" >Acupuncturist</div>
-                                        <div class="col-xs-3 text-right">
-                                            <!-- <select name="Acupuncturist" id="Acupuncturist" data-role="slider" data-mini="true" style="display:none">
-                                                <option value="off"></option>
-                                                <option value="on"></option>
-                                            </select> -->
-                                        </div>
-                                </li>
-                                <li>
-                                     <div class="row">
-                                        <div class="col-xs-9" >Allergy</div>
-                                        <div class="col-xs-3 text-right">
-                                           <!--  <select name="Allergy" id="Allergy" data-role="slider" data-mini="true" style="display:none">
-                                                <option value="off"></option>
-                                                <option value="on"></option>
-                                            </select> -->
-                                        </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-xs-9" >Aromatherapist</div>
-                                        <div class="col-xs-3 text-right">
-                                            <!-- <select name="Aromatherapist" id="Aromatherapist" data-role="slider" data-mini="true" style="display:none">
-                                                <option value="off"></option>
-                                                <option value="on"></option>
-                                            </select> -->
-                                        </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-xs-9">Ciropodist</div>
-                                        <div class="col-xs-3 text-right">
-                                           <!--  <select name="Ciropodist" id="Ciropodist" data-role="slider" data-mini="true" style="display:none">
-                                                <option value="off"></option>
-                                                <option value="on"></option>
-                                            </select> -->
-                                        </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-xs-9">Chiropractor</div>
-                                        <div class="col-xs-3 text-right">
-                                          <!--   <select name="Chiropractor" id="Chiropractor" data-role="slider" data-mini="true" style="display:none">
-                                                <option value="off"></option>
-                                                <option value="on"></option>
-                                            </select> -->
-                                        </div>
-                                </li>
-                        </ul>
-                        <button type="button" class="fw-save-btn">Save</button>
                     </div>
-
                 </div>
                 <div class="filter-wrap animated">
                     <div class="wrap-header">
@@ -535,8 +567,8 @@
                         </div>
                     <div class="filter-container">
                         <div class="row fw-btn-wrap">
-                            <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Details</button>
-                            <button type="button" class="ui-btn" data-target="filter-inner-wrap" onclick="switchFilterContent(this);return false;">Filters</button>
+                            <button type="button" class="ui-btn active" data-target="filter-inner-wrap" onclick="switchInnerWrapContent(this);return false;">Details</button>
+                            <button type="button" class="ui-btn" data-target="filter-inner-wrap" onclick="switchInnerWrapContent(this);return false;">Filters</button>
                         </div>
                         <div class="inner-wrap-container">
                             <div class="filter-details-wrap filter-inner-wrap animated">
@@ -929,8 +961,8 @@
 
         function setHeight(){
             var windowHeight = $(window).outerHeight();
-            console.log(windowHeight);
-            $(".ui-header").height(windowHeight*0.095);
+            // console.log(windowHeight);
+            // $(".ui-header").height(windowHeight*0.095);
         }
 
         function toggleBottomWrap(element){
@@ -1000,18 +1032,21 @@
              $(".search_wrap form input").blur();
             $(".search_wrap").removeClass('appear');
         }
-        function switchFilterContent(element){
+        function switchInnerWrapContent(element){
             var currentContent = $(element);
             if(currentContent.hasClass("active")){
                 return;
             }
             else{
                 var target = currentContent.attr("data-target");
+                var parentDiv = currentContent.parent("div");
                 //console.log(target);
                 // $(".category-wrap .fw-btn-wrap button").toggleClass('active');
                 // $(".category-wrap .filter-type-wrap").toggleClass('toggle');
                 // $(".category-wrap .filter-perference-wrap").toggleClass('toggle');
-                currentContent.parent(".fw-btn-wrap").children('button').toggleClass('active');
+                if(parentDiv.hasClass("fw-btn-wrap")){
+                    parentDiv.children('button').toggleClass('active');
+                }
                 $('.'+target).toggleClass('toggle');
             }
         }

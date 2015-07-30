@@ -1,10 +1,13 @@
 /* css only for phones (tablet not included)*/
 
 body{
-    font-size: 14px;
+    font-size: 12.5pt;
 }
 .row{
 	padding: 0 5px;
+}
+label{
+	font-size: 16px; 
 }
 div[class^="col-xs-"]{
 	padding-left: 5px;
@@ -12,14 +15,19 @@ div[class^="col-xs-"]{
 }
 .ui-page .ui-header{
 	padding-top: 20px;
-    height: 9.5vh;
+	/*height:9.5vh;*/
+    height: 64px;
+}
+.ui-header .ui-title{
+	font-size: 13.5pt;
+	line-height: 13.5pt;
 }
 div.wrap-header{
 	padding-top: 20px;
-    height: 65px;
+    height: 64px;
 }
 .map-wrap, .list-wrap{
-    padding-top: 65px;
+    padding-top: 64px;
 }
 /*.detail-wrap .detail-container, .category-wrap .category-container{
 	padding-top: 9.5vh; 
@@ -27,4 +35,18 @@ div.wrap-header{
 div.wrap-header .ui-btn-left, div.wrap-header .ui-btn-right{
 	margin: 20px 0 0 0;
     height: 45px;
+}
+.ui-page .ui-header .ui-btn-left, div.wrap-header .ui-btn-left{
+    left: 8pt;
+    padding-left: 0;
+}
+div.ui-btn-left .ui-btn{
+	padding-left: 0;
+}
+.ui-page .ui-header .ui-btn-right, div.wrap-header .ui-btn-right{
+    right: 8pt;
+    padding-right: 0;
+}
+div.ui-btn-right .ui-btn{
+	padding-right: 0;
 }

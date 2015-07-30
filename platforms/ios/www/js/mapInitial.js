@@ -25,11 +25,19 @@ function reinitialMap(){
 }
 
 function startLoadMapPage(type, callback){
+	$(".loading_wrap").fadeIn(100);
+    
 	$.mobile.changePage("#map_page", 
     {
         transition: "slide",
         changeHash: false
     });
+    $.mobile.loading( 'show', {
+			text: 'loading',
+			textVisible: true,
+			theme: 'd',
+			html: ""
+		});
 	/*detecet whether map is initialized and will not initial in the future*/
     if(typeof($map) == "undefined"){
     	initialMap();
@@ -37,13 +45,13 @@ function startLoadMapPage(type, callback){
     else{
     	reinitialMap();
     }
-    $(".loading_wrap").fadeIn(100);
-    $.mobile.loading( 'show', {
-			text: 'loading',
-			textVisible: true,
-			theme: 'd',
-			html: ""
-		});
+  //   $(".loading_wrap").fadeIn(100);
+  //   $.mobile.loading( 'show', {
+		// 	text: 'loading',
+		// 	textVisible: true,
+		// 	theme: 'd',
+		// 	html: ""
+		// });
     if(!$detailslider.hasClass('slick-initialized')){
     	    initialDetailSlider();
     }
